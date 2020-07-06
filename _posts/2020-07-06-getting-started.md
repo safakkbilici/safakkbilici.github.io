@@ -1,4 +1,5 @@
 ---
+<img src="/images/tex.png" alt="drawing" width="200"/>
 title: "Getting Started"
 date: "2020-07-06"
 tages: [templates, tex]
@@ -7,7 +8,7 @@ header:
 excerpt: "Templates, TeX"
 mathjax: "true"
 ---
-<img src="/images/tex.png" alt="drawing" width="200"/>
+
 # H1 Heading
 
 Text 3. *italics*
