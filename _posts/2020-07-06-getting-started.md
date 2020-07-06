@@ -1,13 +1,13 @@
 ---
-title: "Getting Started"
+title: "Weekly Problem 1: Sum of Independent Gaussians"
 date: "2020-07-06"
-tages: [templates, tex]
+tages: [Gaussians]
 header:
 
-excerpt: "Templates, TeX"
+excerpt: "Weekly, Gaussian"
 mathjax: "true"
 ---
-![test image size](/images/asd.png){:height="50%" width="50%"}
+![test image size](/images/WeeklyP1/gaussians1.png){:height="50%" width="50%"}
 # H1 Heading
 
 Text 3. *italics*
