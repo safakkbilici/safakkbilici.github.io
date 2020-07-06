@@ -42,4 +42,4 @@ $$(\mathop{\mathbb{E}}[z_iy_j]-\mathop{\mathbb{E}}[z_i]\mathop{\mathbb{E}}[y_j])
 is just zero! This last two terms dropout. Therefore, we have lastly:
 
 $$(\mathop{\mathbb{E}}[y_iy_j] - \mathop{\mathbb{E}}[y_i]\mathop{\mathbb{E}}[y_j]) + (\mathop{\mathbb{E}}[z_iz_j]-\mathop{\mathbb{E}}[z_i]\mathop{\mathbb{E}}[z_j])$$
-$$=\boldsymbol\Sigma_{1{ij}} + \boldsymbol\Sigma_{2_{ij}}$$
+$$=\boldsymbol\Sigma_{1_{ij}} + \boldsymbol\Sigma_{2_{ij}}$$
