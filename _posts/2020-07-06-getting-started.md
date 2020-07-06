@@ -27,6 +27,6 @@ To show independency, say that $$y=-z$$, clearly we can say $$z \sim \mathcal{N}
 
 ...as we said, this is the linearity property of expactation. We showed that the mean of $$y+z$$ is simply $$\mu_1 + \mu_2$$.
 
-- Also for the covariance and the "dummy" index $$(i,j)$$ entry of the covariance matrix \boldsymbol\Sigma$$
-$$\mathop{\mathbb{E}}[(y_i + z_i)(y_j+z_j)] - \mathop{\mathbb{E}}[y_i + z_i]\mathop{\mathbb{E}}[y_j + z_j]
+- Also for the covariance and the "dummy" index $$(i,j)$$ entry of the covariance matrix $$\boldsymbol\Sigma$$
+$$\mathop{\mathbb{E}}[(y_i + z_i)(y_j+z_j)] - \mathop{\mathbb{E}}[y_i + z_i]\mathop{\mathbb{E}}[y_j + z_j]$$
 $$= \mathop{\mathbb{E}}[y_i y_j+z_i y_j+y_i z_j+z_i z_j] - (\mathop{\mathbb{E}}[y_i]+\mathop{\mathbb{E}}[z_i])(\mathop{\mathbb{E}}[y_j]+\mathop{\mathbb{E}}[z_j])$$
