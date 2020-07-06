@@ -45,3 +45,4 @@ $$(\mathop{\mathbb{E}}[y_iy_j] - \mathop{\mathbb{E}}[y_i]\mathop{\mathbb{E}}[y_j
 $$=\boldsymbol\Sigma_{1_{ij}} + \boldsymbol\Sigma_{2_{ij}}$$
 
 From this, we can say that the covariance matrix of $$y+z$$ is simply $$=\boldsymbol\Sigma_{1} + \boldsymbol\Sigma_{2}$$.
+$$Q.E.D$$
