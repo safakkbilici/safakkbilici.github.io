@@ -16,7 +16,7 @@ So, this week's problem is:
 
 ### Proof
 
-What do I mean by independent? Why a must? Firstly let' say $$y \sim \mathcal{N}(\mu_1,\boldsymbol\Sigma_1^2)$$ and $$z \sim \mathcal{N}(\mu_2,\boldsymbol\Sigma_2^2)$$. And our problem says that
+What do I mean by independent? Why a must? Firstly let' say $$y \sim \mathcal{N}(\mu_1,\boldsymbol\Sigma_1)$$ and $$z \sim \mathcal{N}(\mu_2,\boldsymbol\Sigma_2)$$. And our problem says that $$y+z \sim \mathcal{N}(\mu_1 +\mu_2,\boldsymbol\Sigma_1+\boldsymbol\Sigma_2)$$ is also Gaussian.
 
 ### H3 Heading
 
