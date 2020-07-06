@@ -14,11 +14,9 @@ So, this week's problem is:
 
 *Sum of independent Gaussian random variables is Gaussian*
 
-Text 3. *italics*
-
 ### Proof
 
-What do I mean by independent? Why a must? Firstly let' say $$y \sim \mathcal{N}(\mu_1,\sigma_1^2)$$
+What do I mean by independent? Why a must? Firstly let' say $$y \sim \mathcal{N}(\mu_1,\boldsymbol\Sigma_1^2)$$ and $$z \sim \mathcal{N}(\mu_2,\boldsymbol\Sigma_2^2)$$. And our problem says that
 
 ### H3 Heading
 
