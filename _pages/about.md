@@ -1,10 +1,8 @@
 ---
-layout: home
 author_profile: true
 title: "About"
 permalink: /about/
 header:
-  image: "/images/phen.jpg"
 ---
 
 I am a Computer Science student at Yıldız Technical University.
