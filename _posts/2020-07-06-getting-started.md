@@ -34,4 +34,4 @@ Numbers:
 
 Tex:
 
-$$\frac{\partial f(x,y)}{\partial x}
+$$\frac{\partial f(x,y)}{\partial x}$$
