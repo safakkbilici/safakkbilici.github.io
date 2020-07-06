@@ -50,4 +50,6 @@ $$Q.E.D$$
 
 ### Result
 
-Let's have a look what we have just done. We used some properties of expectation like linearity and properies of independent random variables. Then we computed mean vector and covariance matrix of $$y+z$$.
+Let's have a look what we have just done. We used some properties of expectation like linearity and properies of independent random variables. Then we computed mean vector and covariance matrix of $$y+z$$. The results show us that, addition of two Gaussian random variables is also a Gaussian random variable.
+
+But, stop! What is the meaning of adding two Gaussian densities?
