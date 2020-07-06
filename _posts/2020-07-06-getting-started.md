@@ -3,12 +3,11 @@ title: "Getting Started"
 date: "2020-07-06"
 tages: [templates, tex]
 header:
-  image: "/images/asd.png"
 
 excerpt: "Templates, TeX"
 mathjax: "true"
 ---
-
+![test image size](/images/asd.png){:height="50%" width="50%"}
 # H1 Heading
 
 Text 3. *italics*
