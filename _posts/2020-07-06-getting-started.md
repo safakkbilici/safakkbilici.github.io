@@ -7,7 +7,7 @@ header:
 excerpt: "Weekly, Gaussian"
 mathjax: "true"
 ---
-![test image size](/images/WeeklyP1/gaussians1.png){:height="50%" width="50%"}
+![test image size](/images/WeeklyP1/gaussians1.png){:height="70%" width="80%"}
 # H1 Heading
 
 Text 3. *italics*
