@@ -3,6 +3,7 @@ title: "Getting Started"
 date: "2020-07-06"
 tages: [templates, tex]
 header:
+  image: "/images/asd.png"
 
 excerpt: "Templates, TeX"
 mathjax: "true"
