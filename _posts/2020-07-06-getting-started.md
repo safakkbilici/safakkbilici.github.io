@@ -8,17 +8,17 @@ excerpt: "Weekly, Gaussian"
 mathjax: "true"
 ---
 ![test image size](/images/WeeklyP1/gaussians1.png){:height="70%" width="80%"}
-# The Problem
-This is the start of "Weekly Problems". I will upload selected problems, that are my favorite ones (mostly abour mathematics), to my blog.
+## The Problem
+This is the start of "Weekly Problems". I will upload selected problems, that are my favorite ones (mostly about mathematics), to my blog.
 So, this week's problem is:
 
-**Sum of independent Gaussian random variables is Gaussian** 
+*Sum of independent Gaussian random variables is Gaussian*
 
 Text 3. *italics*
 
-## H2 Heading
+### Proof
 
-Text 3. **bold**
+What do I mean by independent? Why a must? Firstly let' say $y$ $\sim$ $\mathcal{N}(\mu_1,\sigma_1^)$
 
 ### H3 Heading
 
