@@ -43,3 +43,5 @@ is just zero! Because for independent variables of $$y$$ and $$z$$, $$\mathop{\m
 
 $$(\mathop{\mathbb{E}}[y_iy_j] - \mathop{\mathbb{E}}[y_i]\mathop{\mathbb{E}}[y_j]) + (\mathop{\mathbb{E}}[z_iz_j]-\mathop{\mathbb{E}}[z_i]\mathop{\mathbb{E}}[z_j])$$
 $$=\boldsymbol\Sigma_{1_{ij}} + \boldsymbol\Sigma_{2_{ij}}$$
+
+From this, we can say that the covariance matrix of $$y+z$$ is simply $$=\boldsymbol\Sigma_{1} + \boldsymbol\Sigma_{2}$$.
