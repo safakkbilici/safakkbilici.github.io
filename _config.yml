@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Şafak Bilici"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/phen.jpg"
   bio              : "A personal and nerdy blog. Posts on mathematics, computer science and music."
   location         : "Istanbul, Turkey"
   email            :
