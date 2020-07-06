@@ -18,7 +18,7 @@ Text 3. *italics*
 
 ### Proof
 
-What do I mean by independent? Why a must? Firstly let' say $y$ $\sim$ $\mathcal{N}(\mu_1,\sigma_1^)$
+What do I mean by independent? Why a must? Firstly let' say $y$ $\sim$ $\mathcal{N}(\mu_1,\sigma_1^2)$
 
 ### H3 Heading
 
