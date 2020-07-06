@@ -1,1 +1,0 @@
-# safakkbilici.github.io
