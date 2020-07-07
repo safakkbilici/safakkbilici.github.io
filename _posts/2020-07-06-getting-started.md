@@ -61,3 +61,8 @@ The convolution of two Gaussian densities (also for other distributions) corresp
 $$p(X+Y=z) = \sum_{x}p(X=x,Y=z-x)$$
 
 Yes, that's the convolution.  
+
+This property can be used for in continuous way (in our case, for Gauissan distribution). For example, if $$x$$ and $$y$$ is unvariate Gaussian random variables, then the convolution of their probability densities (PDF) is given by
+
+$$p(x+y;\mu_x,\mu_y,\sigma_x^2,\sigma_y^2) = \int_{-\infty}^{\infty}p(n;\mu_x,\mu_sigma^2)p(x+y-n;\mu_y,\sigma_y^2) dn$$
+$$=\int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi}\sigma_x}\exp(\frac{-1}{2\sigma_x^2}(n-\mu_x)^2)\frac{1}{\sqrt{2\pi}\sigma_y}\exp(\frac{-1}{2\sigma_y^2}(x+y-n-\mu_y)^2)dn$$
