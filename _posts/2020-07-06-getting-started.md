@@ -69,3 +69,5 @@ $$p(x+y;\mu_x,\mu_y,\sigma_x^2,\sigma_y^2)$$
 $$= \int_{-\infty}^{\infty}p(n;\mu_x,\sigma_x^2)p(x+y-n;\mu_y,\sigma_y^2) dn$$
 $$=\int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi}\sigma_x}\exp\left(\frac{-1}{2\sigma_x^2}(n-\mu_x)^2\right)$$
 $$\;\;\;\;\;\frac{1}{\sqrt{2\pi}\sigma_y}\exp\left(\frac{-1}{2\sigma_y^2}(x+y-n-\mu_y)^2\right)dn$$
+
+We have learned meaning of addition of probability density functions too. Can you proof this problem using convolutions?   
