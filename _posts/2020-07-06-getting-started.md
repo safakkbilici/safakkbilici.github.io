@@ -30,11 +30,11 @@ To show independency, say that $$y=-z$$, clearly we can say $$z \sim \mathcal{N}
 - Also for the covariance and the "dummy" index $$(i,j)$$ entry of the covariance matrix $$\boldsymbol\Sigma$$:
 $$\mathop{\mathbb{E}}[(y_i + z_i)(y_j+z_j)] - \mathop{\mathbb{E}}[y_i + z_i]\mathop{\mathbb{E}}[y_j + z_j]$$
 $$= \mathop{\mathbb{E}}[y_i y_j+z_i y_j+y_i z_j+z_i z_j]$$
-$$- (\mathop{\mathbb{E}}[y_i]+\mathop{\mathbb{E}}[z_i])(\mathop{\mathbb{E}}[y_j]+\mathop{\mathbb{E}}[z_j])$$
+$$\;\;\;- (\mathop{\mathbb{E}}[y_i]+\mathop{\mathbb{E}}[z_i])(\mathop{\mathbb{E}}[y_j]+\mathop{\mathbb{E}}[z_j])$$
 $$=\mathop{\mathbb{E}}[y_iy_j]+\mathop{\mathbb{E}}[z_iy_j]+\mathop{\mathbb{E}}[y_iz_j]+\mathop{\mathbb{E}}[z_iz_j]$$
-$$-\mathop{\mathbb{E}}[y_i]\mathop{\mathbb{E}}[y_j]-\mathop{\mathbb{E}}[z_i]\mathop{\mathbb{E}}[y_j]-\mathop{\mathbb{E}}[y_i]\mathop{\mathbb{E}}[z_j]-\mathop{\mathbb{E}}[z_i]\mathop{\mathbb{E}}[z_j]$$
+$$\;\;\;-\mathop{\mathbb{E}}[y_i]\mathop{\mathbb{E}}[y_j]-\mathop{\mathbb{E}}[z_i]\mathop{\mathbb{E}}[y_j]-\mathop{\mathbb{E}}[y_i]\mathop{\mathbb{E}}[z_j]-\mathop{\mathbb{E}}[z_i]\mathop{\mathbb{E}}[z_j]$$
 $$=(\mathop{\mathbb{E}}[y_iy_j] - \mathop{\mathbb{E}}[y_i]\mathop{\mathbb{E}}[y_j]) + (\mathop{\mathbb{E}}[z_iz_j]-\mathop{\mathbb{E}}[z_i]\mathop{\mathbb{E}}[z_j])$$
-$$ + (\mathop{\mathbb{E}}[z_iy_j]-\mathop{\mathbb{E}}[z_i]\mathop{\mathbb{E}}[y_j])+(\mathop{\mathbb{E}}[y_iz_j] - \mathop{\mathbb{E}}[y_i]\mathop{\mathbb{E}}[z_j])$$
+$$\;\;\;+ (\mathop{\mathbb{E}}[z_iy_j]-\mathop{\mathbb{E}}[z_i]\mathop{\mathbb{E}}[y_j])+(\mathop{\mathbb{E}}[y_iz_j] - \mathop{\mathbb{E}}[y_i]\mathop{\mathbb{E}}[z_j])$$
 
 Oh! Remember that we said they are independent Gauissans. So we can use the fact that
 
