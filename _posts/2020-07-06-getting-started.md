@@ -53,3 +53,11 @@ $$Q.E.D$$
 Let's have a look what we have just done. We used some properties of expectation like linearity and properies of independent random variables. Then we computed mean vector and covariance matrix of $$y+z$$. The results show us that, addition of two Gaussian random variables is also a Gaussian random variable.
 
 But, stop! What is the meaning of adding two Gaussian densities?
+
+### Addition of Two Gaussian Densities
+
+The convolution of two Gaussian densities (also for other distributions) corresponds to the addition of two independent Gaussian random variables. To see in discrete way, consider the case where all three variables $$X, Y$$ and $$X+Y$$ have a probability mass function (PMF): by definition, the PMF for $$X+Y$$ at any variable $$z$$, where the sum $$X+Y$$ equals $$z$$, written $$p(X+Y=z)$$. The PMF of $$X+Y=z$$, written $$p(X+Y=z)$$, must equals the sum over all possible values of $$x$$ where $$X=x$$ and $$X+Y=z$$, written $$p(X=x, X+Y=z)$$. Because $$X=x$$ and $$X+Y=z$$ imply $$Y=z-x$$, this expression can be re-written as in the terms of original variables $$X$$ and $$Y$$:
+
+$$p(X+Y=z) = \sum_{x}p(X=x,Y=z-x)$$
+
+Yes, that's the convolution.  
