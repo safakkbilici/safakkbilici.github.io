@@ -9,6 +9,7 @@ TeX: {
 excerpt: "Weekly, Gaussian"
 mathjax: "true"
 ---
+<meta property="og:image" content="/images/WeeklyP1/gaussians1.png">
 ![test image size](/images/WeeklyP1/gaussians1.png#thumbnail){:height="70%" width="80%"}
 ## The Problem
 This is the start of "Weekly Problems". I will upload selected problems, that are my favorite ones (mostly about mathematics), to my blog.
