@@ -9,7 +9,7 @@ TeX: {
 excerpt: "Weekly, Gaussian"
 mathjax: "true"
 ---
-![test image size](/images/WeeklyP1/gaussians1.png#thumbnail){:height="70%" width="80%"}
+[![test image size](/images/WeeklyP1/gaussians1.png#thumbnail){:height="70%" width="80%"}]
 ## The Problem
 This is the start of "Weekly Problems". I will upload selected problems, that are my favorite ones (mostly about mathematics), to my blog.
 So, this week's problem is:
