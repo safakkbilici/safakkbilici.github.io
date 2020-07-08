@@ -50,8 +50,8 @@ $$\;\;\;\;\;\;= -\frac{1}{2\sigma_i^3}\sum_{j=1}^{m}\frac{\partial L}{a_i^{(j)}}
 $$\frac{\partial L}{\partial \mu_i} = \sum_{j=1}^{m} \frac{\partial L}{\partial \hat{x}_i^{(j)}} \frac{\partial \hat{x}_i^{(j)}}{\partial \mu_i} + \frac{\partial L}{\partial \sigma_i^2}\frac{\partial \sigma_i^2 }{\partial \mu_i}$$
 $$\;\;\;\;\;\;= -\frac{1}{\sigma_i}\sum_{j=1}^{m}\frac{\partial L }{\hat{x}_i^{(j)}}-2\frac{\partial L}{\partial \sigma_i^2}\frac{\sum_{j=1}^{m}(x_i^{(j)} - \mu_i)}{m}$$
 
-$$\;\;\;\;\;\;=-\frac{\gamma_i}{\mu_i}\sum_{j=1}^{m}\frac{\partial L}{\partial a_i^{(j)}}+\left[\left(\frac{1}{\sigma_i^3}\right)\left(\sum_{j=1}^{m}\frac{\partial L}{\partial a_i^{(j)}}\gamma_i(x_i^{(j)} - \mu_i)\right)$$
-$$\;\;\;\;\;\;\;\;\;\;\;\;\left(\frac{\sum_{j=1}^{m}(x_i^{(j)} - \mu_i)}{m}\right)\right]$$
+$$\;\;\;\;\;\;=-\frac{\gamma_i}{\mu_i}\sum_{j=1}^{m}\frac{\partial L}{\partial a_i^{(j)}}+\left(\frac{1}{\sigma_i^3}\right)\left(\sum_{j=1}^{m}\frac{\partial L}{\partial a_i^{(j)}}\gamma_i(x_i^{(j)} - \mu_i)\right)$$
+$$\;\;\;\;\;\;\;\;\;\;\;\;\left(\frac{\sum_{j=1}^{m}(x_i^{(j)} - \mu_i)}{m}\right)$$
 
 ### Results
 
