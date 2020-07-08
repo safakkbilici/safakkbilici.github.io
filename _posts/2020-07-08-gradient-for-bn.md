@@ -51,7 +51,7 @@ $$\frac{\partial L}{\partial \mu_i} = \sum_{j=1}^{m} \frac{\partial L}{\partial 
 $$\;\;\;\;\;\;= -\frac{1}{\sigma_i}\sum_{j=1}^{m}\frac{\partial L }{\hat{x}_i^{(j)}}-2\frac{\partial L}{\partial \sigma_i^2}\frac{\sum_{j=1}^{m}(x_i^{(j)} - \mu_i)}{m}$$
 
 $$\;\;\;\;\;\;=-\frac{\gamma_i}{\mu_i}\sum_{j=1}^{m}\frac{\partial L}{\partial a_i^{(j)}}+\left(\frac{1}{\sigma_i^3}\right)\left(\sum_{j=1}^{m}\frac{\partial L}{\partial a_i^{(j)}}\gamma_i(x_i^{(j)} - \mu_i)\right)$$
-$$\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\left(\frac{\sum_{j=1}^{m}(x_i^{(j)} - \mu_i)}{m}\right)$$
+$$\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\left(\frac{\sum_{j=1}^{m}(x_i^{(j)} - \mu_i)}{m}\right)$$
 
 ### Results
 
