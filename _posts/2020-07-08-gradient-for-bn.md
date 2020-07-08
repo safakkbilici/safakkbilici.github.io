@@ -41,6 +41,7 @@ $$\frac{\partial L}{\hat{x}_i^{(r)}} = \gamma_i \frac{\partial L}{\partial a_i^{
 and we have following,
 
 $$\frac{\partial L}{\partial x_i^{(r)}}=\frac{\partial L}{\partial a_i^{(r)}} \left(\frac{\gamma_i}{m}\right) + \frac{\partial L}{\partial \mu_i} \left(\frac{1}{m}\right)$$
+
 $$\;\;\;\;\;\;\;\;\;\;\;\;+\frac{\partial L}{\partial \sigma_i^2} \left(\frac{2(x_i^{(r)} - \mu_i)}{m}\right)$$
 
 So... It is time to compute the partial derivation of the loss respect to the mean and the variance.
