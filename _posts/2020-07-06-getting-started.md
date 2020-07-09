@@ -3,6 +3,7 @@ title: "Weekly Problem 1: Sum of Independent Gaussians"
 date: "2020-07-06"
 tages: [Gaussians]
 header:
+  teaser: "images/gaussians1.png"
 TeX: {
   extensions: ["AMSmath.js", "AMSsymbols.js"]
 }
