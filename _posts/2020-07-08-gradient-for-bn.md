@@ -3,6 +3,7 @@ title: "Gradient Calculation For Batch Normalization"
 date: "2020-07-06"
 tages: [Batch Normalization]
 header:
+  overlay_image: "/images/BN/grads.png"
 TeX: {
   extensions: ["AMSmath.js", "AMSsymbols.js"]
 }
