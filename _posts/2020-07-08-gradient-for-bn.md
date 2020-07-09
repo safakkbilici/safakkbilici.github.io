@@ -60,4 +60,9 @@ $$\;\;\;\;\;\;\;\;\;\;\left(\sum_{j=1}^{m}\frac{\partial L}{\partial a_i^{(j)}}\
 This equations provides us a full view of the backpropagation of the loss through the batch normalization layer corresponding to the BN node. The other aspects of bacpropagation remain similiar to traditional case. Also batch normalization enables faster inference because it prevents problems such as the exploding and vanishing gradient which cause slow learning. A natural question about batch normalization arises during prediction time. Since the transformation parameters $$\mu_i$$ and $$\sigma_i$$ depend on natch, how should one compute them during testing when a single test instance is available? In this case, the values of $$\mu_i$$ and $$\sigma_i$$ are computed up front using the entire population, and then treated these values as constants during testing time.
 An interesting property of batch normalization is that it also acts as a regularizer. Note that same data point can cause somewhat different updates depending on which batch it is included in. One can view this effect as a king of noise added to the update process. Regularization is often achieved by adding a small amount of noise to the training data. It has been experimentally observed that regularization methods like dropout do not seem to improve perfomance when batch normalization is used although there is not a complete agreement on this point. Batch normalization is oftenly used in CNNs.
 
-### Why not Batch Normalization on Recurrent Neural Networks?
+So, we have learned the fundamentals of batch normalization. Ask yourself that should I use batch normalization with Recurrent Neural Networks?
+
+#### References
+
+- Neural Networks and Deep Learning, Charu C. Aggarwal, Springer International Publishing, ISBN 978-3-319-94463-0
+- Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift, Szegedy et al., https://arxiv.org/pdf/1502.03167.pdf
