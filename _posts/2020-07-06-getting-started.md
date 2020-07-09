@@ -9,6 +9,8 @@ TeX: {
 }
 excerpt: "Weekly, Gaussian"
 mathjax: "true"
+image:
+  thumb: "/images/WeeklyP1/gaussians1.png"
 ---
 <meta property="og:image" content="/images/WeeklyP1/gaussians1.png">
 ![test image size](/images/WeeklyP1/gaussians1.png#thumbnail){:height="70%" width="80%"}
