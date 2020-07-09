@@ -11,8 +11,6 @@ excerpt: "Batch Normalization, Gradient"
 mathjax: "true"
 ---
 
-![test image size](/images/BN/grads.png#thumbnail){:height="90%" width="100%"}
-
 ## Batch Normalization
 Batch normalization is a recent method to address the vanishing and exploding gradient problems, which cause activation gradients in successive layers to either reduce or increase in magnitude. Another very imprortant problem in training a deep learning model is that of internal covariate shift. The problem is that the parameters change during training, and therefore the hidden variable activations change as well. In other words, the hidden inputs from early layers to later layers keep changing. Changing inputs from early layers to later layers causes slower convergence during training because the training data for later layers is not stable. Batch Normalization reduces this effect.(Charu C. Aggarwal, 2018)
 
