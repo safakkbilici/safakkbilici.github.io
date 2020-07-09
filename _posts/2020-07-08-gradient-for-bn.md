@@ -1,5 +1,6 @@
 ---
 title: "Gradient Calculation For Batch Normalization"
+color: "red"
 date: "2020-07-06"
 tages: [Batch Normalization]
 header:
