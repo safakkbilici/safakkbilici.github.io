@@ -12,7 +12,6 @@ excerpt: "Free Jazz, Music"
 mathjax: "true"
 ---
 
-```
-"Although they were freeing up certain strictures of bebop, were in fact each developing new structures of composition."
-```
+
+> "Although they were freeing up certain strictures of bebop, were in fact each developing new structures of composition."
 
