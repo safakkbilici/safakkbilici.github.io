@@ -90,7 +90,7 @@ Coltrane has divided the scale that he uses into three parts of major 3's and st
 
 To give an example:
 
-| II-V-I in C Minor    | Coleman's C Minor (with II-V-I)                |
+| II-V-I in C Minor    | Coltranes's C Minor (with II-V-I)              |
 | -------------------- |:----------------------------------------------:|
 | Dmin, G7, Cmaj, Cmaj |        Dmin - E♭7, A♭maj - B7, Emaj - G7, Cmaj |
 
