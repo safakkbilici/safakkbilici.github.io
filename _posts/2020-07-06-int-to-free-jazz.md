@@ -90,6 +90,8 @@ COLTRANE has divided the scale that he uses into three parts of major 3's and st
 
 To give an example:
 
-| II-V-I in C Minor    | Coleman's C Minor (with II-V-I)         |
-| -------------------- |:---------------------------------------:|
-| Dmin, G7, Cmaj, Cmaj | Dmin - E♭7, A♭maj - B7, Emaj - G7, Cmaj |
+| II-V-I in C Minor    | Coleman's C Minor (with II-V-I)                |
+| -------------------- |:----------------------------------------------:|
+| Dmin, G7, Cmaj, Cmaj |        Dmin - E♭7, A♭maj - B7, Emaj - G7, Cmaj |
+
+Other composers (!) in Coltrane's era, generally said "he is not that much" before this album. Coltrane gave the answer with this album and especially with the song in that album, named Countdown. This song is in 346 bpm, and all notes is semiquaver.
