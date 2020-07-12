@@ -5,7 +5,7 @@ title: "Sources"
 permalink: /sources/
 header:
 ---
-This section covers my favorite textbook/paper, album (and others) recommendations.
+This section covers my favorite textbooks/papers, albums (and others) recommendations.
 
 # Textbooks/Papers
 
