@@ -11,7 +11,7 @@ TeX: {
 excerpt: "Free Jazz, Music"
 mathjax: "true"
 ---
-
+![test image size](/images/freejazz/freej.png){:height="110%" width="110%"}
 
 > "Although they were freeing up certain strictures of bebop, were in fact each developing new structures of composition."
 
@@ -60,3 +60,5 @@ While performing Free Jazz, the general rule is actually using the weapon of imp
 Jazz is far less academic about atonality. The high degree of structure found in serialism is not found in Jazz. This is probably because it’s too difficult to improvise using such rigid and complex rules, and because it completely defeats the purpose of Free Jazz – which is to have more freedom to improvise. There’s no point breaking the old rules just to create new ones. In Free Jazz, you’re allowed to play both tonally and atonally, it’s up to you. But of course, Free Jazz is about more than just playing ‘atonally’. As I mentioned at the [x], Free Jazz is the systematic rejection of musical norms. And there are plenty of other musical norms to reject.
 
 ### Coleman And The Others
+
+Ornette Coleman... Although he is the most important jazz composer for me, we can also define himself as the milestone of Free Jazz. What role does Ornette Coleman play here?
