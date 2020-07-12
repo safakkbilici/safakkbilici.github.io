@@ -86,7 +86,7 @@ It’s worth discussing how various Free Jazz musicians approached atonality.
 
 Let's talk about, John Coltrane, he is my favorite sax player. He recorded a album that is named 'Giant Steps'. The Giant Steps album is a jazz / hard bop album released on January 27, 1960 by John. Although this album is the most known album of John, perhaps we can say that it is the album that does the most work both harmonically and melodically. As the first part of the album "Giant Steps" started, there is a harmonic difference in this album. You can hear it. So what is this different to our ear?
 
-COLTRANE has divided the scale that he uses into three parts of major 3's and started improvisation over them. He applied these division to the progression of II-V-I (minor7-dominant7-major7), which was walked through a chord sequence, which we encountered very frequently in modal jazz, with ups and downs.
+Coltrane has divided the scale that he uses into three parts of major 3's and started improvisation over them. He applied these division to the progression of II-V-I (minor7-dominant7-major7), which was walked through a chord sequence, which we encountered very frequently in modal jazz, with ups and downs.
 
 To give an example:
 
@@ -95,3 +95,18 @@ To give an example:
 | Dmin, G7, Cmaj, Cmaj |        Dmin - E♭7, A♭maj - B7, Emaj - G7, Cmaj |
 
 Other composers (!) in Coltrane's era, generally said "he is not that much" before this album. Coltrane gave the answer with this album and especially with the song in that album, named Countdown. This song is in 346 bpm, and all notes is semiquaver.
+
+We can easily say that:
+- John Coltrane took non-functional chords (like in Modal Jazz) but improvised over them using a lot of chromaticism so that he wasn’t just playing in a single mode.
+- In fact, he played ‘outside’ the mode more than ‘inside’ the mode so that the whole modal framework collapsed.
+- The mode just functioned as a starting point from which to depart into atonality.
+- He also often created ‘noise’ rather than ‘sound’ by doing things like overblowing his saxophone.
+
+And we mentionet Cecil Taylor. He is a Free Jazz pianist:
+- He abandoned the Modal Framework used by Coltrane and Tonal Centres used by Coleman and instead made wide use of Tone Clusters to avoid playing in any specific key or tonal centre.
+- A ‘Tone Cluster’ is simply playing 3 or more neighbouring notes at once (so mashing the keyboard)
+⋅⋅⋅ Tone Clusters can be Chromatic, Diatonic or Pentatonic.
+⋅⋅⋅ All tone clusters are classifiable as secundal chords—that is, chord built out of 2nds (minor, major, or augmented)
+
+
+...And this is what all we meant when we said that Free Jazz was hard to classify. Three different Free Jazz musicians used three different approaches to free improvisation and atonality – modal, tonal centred, and tone clustered – and all are still classified as ‘Free Jazz’.
