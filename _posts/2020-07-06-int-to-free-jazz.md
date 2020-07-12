@@ -33,7 +33,9 @@ In Modal Jazz, you can:
 - Target to any note in the scale.
 - Start and finish a phrase whenever you like.
 - Build and resolve tension whenever you like.
-..in modal jazz the solo does **NOT** need to fit a particular chord progression, and instead must just be an interesting and unique melody. But, even though a Modal Jazz solo is ‘freer’ than a tonal solo, there are, nevertheless, still some restrictions in modal improvisation. You should generally:
+..in modal jazz the solo does **NOT** need to fit a particular chord progression, and instead must just be an interesting and unique melody.
+
+But, even though a Modal Jazz solo is ‘freer’ than a tonal solo, there are, nevertheless, still some restrictions in modal improvisation. You should generally:
 - Stick to the relevant scale/mode (with occasional chromatic passing notes).
 - Avoid the diatonic tritone [1] (as it sounds tonal).
 - Emphasise the root note in the bass.
