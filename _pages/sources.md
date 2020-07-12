@@ -7,7 +7,7 @@ header:
 ---
 This section covers my favorite textbook/paper, album (and others) recommendations.
 
-# Textbook/Paper
+# Textbooks/Papers
 
 - **Convex Optimization: Stephen Boyd, Lieven Vandenberghe**
 
