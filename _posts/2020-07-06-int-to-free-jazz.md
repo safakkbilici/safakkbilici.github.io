@@ -97,12 +97,12 @@ To give an example:
 Other composers (!) in Coltrane's era, generally said "he is not that much" before this album. Coltrane gave the answer with this album and especially with the song in that album, named Countdown. This song is in 346 bpm, and all notes is semiquaver.
 
 We can easily say that:
-- John Coltrane took non-functional chords (like in Modal Jazz) but improvised over them using a lot of chromaticism so that he wasn’t just playing in a single mode.
+- John Coltrane took non-functional chords (like in Modal Jazz) but improvised over them using a lot of chromaticism [3] so that he wasn’t just playing in a single mode.
 - In fact, he played ‘outside’ the mode more than ‘inside’ the mode so that the whole modal framework collapsed.
 - The mode just functioned as a starting point from which to depart into atonality.
 - He also often created ‘noise’ rather than ‘sound’ by doing things like overblowing his saxophone.
 
-And we mentionet Cecil Taylor. He is a Free Jazz pianist:
+And we mentioned Cecil Taylor. He is a Free Jazz pianist:
 - He abandoned the Modal Framework used by Coltrane and Tonal Centres used by Coleman and instead made wide use of Tone Clusters to avoid playing in any specific key or tonal centre.
 - A ‘Tone Cluster’ is simply playing 3 or more neighbouring notes at once (so mashing the keyboard)
 ⋅⋅⋅ Tone Clusters can be Chromatic, Diatonic or Pentatonic.
@@ -110,3 +110,24 @@ And we mentionet Cecil Taylor. He is a Free Jazz pianist:
 
 
 ...And this is what all we meant when we said that Free Jazz was hard to classify. Three different Free Jazz musicians used three different approaches to free improvisation and atonality – modal, tonal centred, and tone clustered – and all are still classified as ‘Free Jazz’.
+
+## Have Listen In Order
+- Wayne Shorter - Speak No Evil (best example for Horizontal Modal Improvisation)
+- Ornette Coleman - The Shape Of Jazz To Come
+- Eric Dolpyh - Out to Lunch!
+- John Coltrane - Ascension
+- Ornette Coleman - Science Fiction
+- Anthony Braxton - 4 Improvisations
+- Ornette Coleman - Free Jazz (lastly)
+
+## Additional Reading
+- [[1]: Diatonic Tritone](https://en.wikipedia.org/wiki/Tritone)
+- [[2]: Timbre](https://en.wikipedia.org/wiki/Timbre)
+- [[3]: Chromaticism](https://en.wikipedia.org/wiki/Chromaticism)
+
+## References
+
+- http://www.thejazzpianosite.com/
+- Caz Müziğinde Akor Dizileri, Nail Yavuzoğlu
+- https://en.wikipedia.org/wiki/Modal_jazz
+- https://en.wikipedia.org/wiki/Free_jazz
