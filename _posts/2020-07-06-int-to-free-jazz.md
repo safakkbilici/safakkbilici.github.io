@@ -121,9 +121,9 @@ And we mentioned Cecil Taylor. He is a Free Jazz pianist:
 - Ornette Coleman - Free Jazz (lastly)
 
 ## Additional Reading
-- [[1]: Diatonic Tritone](https://en.wikipedia.org/wiki/Tritone)
-- [[2]: Timbre](https://en.wikipedia.org/wiki/Timbre)
-- [[3]: Chromaticism](https://en.wikipedia.org/wiki/Chromaticism)
+- [1]: Diatonic Tritone: https://en.wikipedia.org/wiki/Tritone
+- [2]: Timbre: https://en.wikipedia.org/wiki/Timbre
+- [3]: Chromaticism: https://en.wikipedia.org/wiki/Chromaticism
 
 ## References
 
