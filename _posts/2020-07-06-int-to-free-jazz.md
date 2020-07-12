@@ -83,3 +83,13 @@ It’s worth discussing how various Free Jazz musicians approached atonality.
 | John Coltrane        | Ornette Coleman           | Cecil Taylor  |
 | -------------------- |:-------------------------:| -------------:|
 |Modal	               |Tonal Centers              |Tone Clusters  |
+
+Let's talk about, John Coltrane, he is my favorite sax player. He recorded a album that is named 'Giant Steps'. The Giant Steps album is a jazz / hard bop album released on January 27, 1960 by John. Although this album is the most known album of John, perhaps we can say that it is the album that does the most work both harmonically and melodically. As the first part of the album "Giant Steps" started, there is a harmonic difference in this album. You can hear it. So what is this different to our ear?
+
+COLTRANE has divided the scale that he uses into three parts of major 3's and started improvisation over them. He applied these division to the progression of II-V-I (minor7-dominant7-major7), which was walked through a chord sequence, which we encountered very frequently in modal jazz, with ups and downs.
+
+To give an example:
+
+| II-V-I in C Minor    | Coleman's C Minor (with II-V-I)         |
+| -------------------- |:---------------------------------------:|
+| Dmin, G7, Cmaj, Cmaj | Dmin - E♭7, A♭maj - B7, Emaj - G7, Cmaj |
