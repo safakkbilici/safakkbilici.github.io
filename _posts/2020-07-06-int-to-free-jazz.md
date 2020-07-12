@@ -61,4 +61,12 @@ Jazz is far less academic about atonality. The high degree of structure found in
 
 ### Coleman And The Others
 
+![test image size](/images/freejazz/comic.jpg){:height="110%" width="110%"}
+
 Ornette Coleman... Although he is the most important jazz composer for me, we can also define himself as the milestone of Free Jazz. What role does Ornette Coleman play here?
+
+The fact that he started this journey started with his album 'The Shape of Jazz To Come'. In this album, the revolt against the modal theory was to off work the pianist Walter Norris to produce an album without a piano by showing great courage, rather than a 'free' dynamics. Jazz has never been so polyrhythmic and modal free.
+
+So what was this album that gave its name to its style?
+
+It has two channel records; Ornette Coleman (alto sax), Don Cherry (pocket trumpet), Scott LaFaro (bass), Billy Higgins (drums) on the left channel; on the right channel Eric Dolpy (bass clar), Freddie Hubbard (trumpet), Charlie Haden (bass), Ed Blackwell (drum). It is a collective improvisation. 
