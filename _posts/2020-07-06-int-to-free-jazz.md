@@ -111,7 +111,7 @@ And we mentioned Cecil Taylor. He is a Free Jazz pianist:
 
 ...And this is what all we meant when we said that Free Jazz was hard to classify. Three different Free Jazz musicians used three different approaches to free improvisation and atonality – modal, tonal centred, and tone clustered – and all are still classified as ‘Free Jazz’.
 
-## Have Listen In Order
+## Have a Listen In Order
 - Wayne Shorter - Speak No Evil (best example for Horizontal Modal Improvisation)
 - Ornette Coleman - The Shape Of Jazz To Come
 - Eric Dolpyh - Out to Lunch!
