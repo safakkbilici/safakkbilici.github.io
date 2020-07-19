@@ -34,3 +34,5 @@ Here is a very good visual comparsion (images are taken from [colah's blog](http
 
 *Figure 3:* Bidirectional Recurrent Neural Networks
 ![2](/images/bidirectionalrnns/2.png){:height="80%" width="80%"}
+
+In general, any property of the current word can be predicted more effectively using this approach, because it uses the context on both sides. For example, the ordering of words in several languages is somewhat different depending on grammatical structure. 
