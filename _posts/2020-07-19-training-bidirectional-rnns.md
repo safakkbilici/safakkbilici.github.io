@@ -20,4 +20,4 @@ Throughout the vanishing and exploding gradient problems and long-term dependenc
 
 Let's give an very simple example based on a very simple sentence: "The rat ate cheese"
 
-![test image size](/images/bidirectionalrnns/phrase.png){:height="110%" width="110%"}
+![test image size](/images/bidirectionalrnns/phrase.png){:height="80%" width="80%"}
