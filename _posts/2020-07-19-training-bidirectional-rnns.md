@@ -28,8 +28,7 @@ The word "rat" and the word "cheese" are related in someway. There is a 'passive
 In the bidirectional Recurrent Neural Networks, we have seperate hidden states/layers $$h_t$$ and $$h_t'$$ for the forward and backward directions. The forward hidden states interact with each other and the same is true for the backward hidden states. There is no multilayered connections between them. However, both $$h_t$$ and $$h_t'$$ receive input from the same vector $$x_t$$ and they interact with same output vector $$ \hat{y}_t$$.
 Here is a very good visual comparsion (images are taken from [colah's blog](http://colah.github.io/posts/2015-09-NN-Types-FP/)) between traditional Recurrent Neural Networks and bidirectional Recurrent Neural Networks:
 
-!["1"](/images/bidirectionalrnns/1.png){:height="80%" width="80%"}
-*Fig. 1: Traditional Recurrent Neural Networks*
+![Figure 1: Traditional Recurrent Neural Networks](/images/bidirectionalrnns/1.png){:height="80%" width="80%"}
 
-!["2"](/images/bidirectionalrnns/2.png){:height="80%" width="80%"}
-*Fig. 1: Bidirectional Recurrent Neural Networks*
+
+![Figure 2: Bidirectional Recurrent Neural Networks](/images/bidirectionalrnns/2.png){:height="80%" width="80%"}
