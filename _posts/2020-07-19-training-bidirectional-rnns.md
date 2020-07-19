@@ -22,7 +22,7 @@ In certain applications like language modelling, the results are vastly improved
 
 ![test image size](/images/bidirectionalrnns/phrase.png){:height="80%" width="80%"}
 
-The word "rat" and the word "cheese" are related in someway. There is a 'passive' advatage in using knowledge about both the past and future words. Cheese generally eaten by rats and rats generally eat cheese. As I said this is a very simple example.
+The word "rat" and the word "cheese" are related in someway. There is a 'passive' advatage in using knowledge about both the past and future words. Cheese is generally eaten by rats and rats generally eat cheese. As I said this is a very simple example.
 
 ## The Architecture of Bidirectional Recurrent Neural Networks
 In the bidirectional Recurrent Neural Networks, we have seperate hidden states/layers $$h_t$$ and $$h_t'$$ for the forward and backward directions. The forward hidden states interact with each other and the same is true for the backward hidden states. There is no multilayered connections between them.
