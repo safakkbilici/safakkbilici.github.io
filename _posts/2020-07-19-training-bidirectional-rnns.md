@@ -87,3 +87,13 @@ $$\frac{\partial E_t}{\partial \hat{y}_{t_k}} = -\frac{y_{t_k}}{\hat{y}_{t_k}}$$
 Now, we will derive $$\hat{y}_{t_k} = softmax(q_{t_l})$$, which is $$\frac{\partial \hat{y}_{t_k}}{\partial q_{t_l}}$$. But, firstly, we have to evaluate the derivation of softmax function.
 
 $$ \hat{y}_{t_k} = \frac{\exp(q_{t_k})}{\sum_{n}^{N}\exp(q_{t_n})}$$
+
+so softmax is a $$\mathbb{R}^n \rightarrow \mathbb{R}^n$$ mapping function:
+
+$$\hat{y}_{t_k}: \begin{bmatrix}
+q_{t_1} \\
+q_{t_2} \\
+q_{t_3}\\
+\vdots\\
+q_{t_N}
+\end{bmatrix}$$
