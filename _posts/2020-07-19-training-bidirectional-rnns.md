@@ -84,6 +84,6 @@ You can clearly see that for $$E_t = -y_{t_k}\;log\;\hat{y}_{t_k}$$, the derivat
 
 $$\frac{\partial E_t}{\partial \hat{y}_{t_k}} = -\frac{y_{t_k}}{\hat{y}_{t_k}}$$
 
-Now, we will derive $$\hat{y}_{t_k} = softmax(q_{t_l})$$, which is $$\frac{\partial \hat{y}_{t_k}}{\partial q_{t_l}}. But, firstly, we have to evaluate the derivation of softmax function.
+Now, we will derive $$\hat{y}_{t_k} = softmax(q_{t_l})$$, which is $$\frac{\partial \hat{y}_{t_k}}{\partial q_{t_l}}$$. But, firstly, we have to evaluate the derivation of softmax function.
 
 $$ \hat{y}_{t_k} = \frac{\exp(q_{t_k})}{\sum_{n}^{N}\exp(q_{t_n})}$$
