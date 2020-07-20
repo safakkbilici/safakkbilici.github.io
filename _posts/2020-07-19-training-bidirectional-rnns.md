@@ -188,7 +188,7 @@ We can apply this again and again (6):
 
 $$\frac{\partial h_{t_m}}{\partial W_{ij}} \longrightarrow \frac{\partial h_{t_m}}{\partial W_{ij}} +  \frac{\partial h_{t_m}}{\partial h_{t-1_n}} \frac{\partial h_{t-1_n}}{\partial W_{ij}} +  \frac{\partial h_{t_m}}{\partial h_{t-1_n}} \frac{\partial h_{t-1_n}}{\partial h_{t-2_p}} \frac{\partial h_{t-2_p}}{\partial W_{ij}}$$
 
-This equation continues until $$h_{-1}$$ is reached. $$h_{-1} is a vector of zeros$$
+This equation continues until $$h_{-1}$$ is reached. $$h_{-1}$$ is a vector of zeros.
 
 Note that of these four terms we have already calculated first two derivatives.
 
