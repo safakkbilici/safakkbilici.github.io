@@ -186,4 +186,4 @@ $$\frac{\partial h_{t_m}}{\partial W{ij}} \longrightarrow \frac{\partial h_{t_m}
 
 We can apply this again and again:
 
-$$\frac{\partial h_{t_m}}{\partial W{ij}} \longrightarrow \frac{\partial h_{t_m}}{\partial W{ij}} + \frac{\partial h_{t_m}}{\partial h_{t-1_n}} \frac{\partial h_{t-1_n}}{\partial W{ij}} + \frac{\partial h_{t_m}}{\partial h_{t-1_n}} \frac{\partial h_{t-1_n}}{\partial h_{t-2_p}} \frac{\partial h_{t-2_p}}{\partial W{ij}}$$
+$$\frac{\partial h_{t_m}}{\partial W{ij}} \longrightarrow \frac{\partial h_{t_m}}{\partial W{ij}} + \frac{\partial h_{t_m}}{\partial h_{{t-1}_n}} \frac{\partial h_{{t-1}_n}}{\partial W{ij}} + \frac{\partial h_{t_m}}{\partial h_{{t-1}_n}} \frac{\partial h_{{t-1}_n}}{\partial h_{{t-2}_p}} \frac{\partial h_{{t-2}_p}}{\partial W{ij}}$$
