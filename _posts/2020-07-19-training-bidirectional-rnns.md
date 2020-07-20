@@ -130,3 +130,11 @@ $$\frac{\partial}{\partial q_{t_l}} \frac{\exp(q_{t_k})}{\sum_{n}^{N}\exp(q_{t_n
 $$\;\;\;\;= - \frac{\exp(q_{t_l})}{\sum_{n}^{N}\exp(q_{t_n})} \frac{\exp(q_{t_k})}{\sum_{n}^{N}\exp(q_{t_n})}$$
 
 $$\;\;\;\; = -\hat{y}_{t_k} \hat{y}_{t_l}$$
+
+Similiarly, derive the gradient of $$diag(\partial \hat{y}_k / \partial q_l) for $$k=l$$, we have that:
+
+$$\frac{\partial}{\partial q_{t_l}} \frac{\exp(q_{t_k})}{\sum_{n}^{N}\exp(q_{t_n})} = \frac{\exp(q_{t_k}) \sum_{n}^{N}\exp(q_{t_n}) - \exp(q_{t_l}+q_{t_k})}{\left[\sum_{n}^{N}\exp(q_{t_n})\right]^2}
+
+$$\;\; = \frac{\exp(q_{t_k})\left(\sum_{n}^{N} \exp(q_{t_n}) - \exp(\q_{t_l})\right)}{\left[\sum_{n}^{N}\exp(q_{t_n})\right]^2}$$
+
+$$\;\;\;\; = \hat{y}_{t_k} (1-\hat{y}_{t_l})$$
