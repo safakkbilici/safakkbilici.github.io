@@ -74,7 +74,7 @@ Then the loss is,
 
 $$L(y,\hat{y}) = -\frac{1}{N}\sum_{t}^{T}y_t \;log\; \hat{y}_y$$
 
-- *Now let's calculate the gradients for* $$V$$:
+- **Now let's calculate the gradients for** $$V$$:
 
 It is more clear for derivatives with denoting $$q_t = V h_t + V' h_t'$$:
 
@@ -174,4 +174,4 @@ To combining our results we obtain (5):
 
 $$\frac{\partial E}{\partial V} = (\hat{y}_t - y_y) \otimes h_t $$
 
-- *Now let's calculate the gradients for* $$W$$:
+- **Now let's calculate the gradients for** $$W$$:
