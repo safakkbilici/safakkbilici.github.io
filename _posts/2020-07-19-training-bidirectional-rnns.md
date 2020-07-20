@@ -54,7 +54,7 @@ The forward propagation is similiar with traditional Recurrent Networks. The onl
 
  $$ h_t' = tanh(U' x_t + W' h_{t+1}')$$
 
- $$ \hat{y}_t = V h_t + V' h_t' $$
+ $$ \hat{y}_t = softmax(V h_t + V' h_t') $$
 
 It is easy to see that the bidirectional equations are simple generalizations of the conditions used in a single direction. It is assumed that there are a total $$T$$ time-stamps in the neural network shown above, where $$T$$ is the length of the squence. One question is about the forward input at the boundary conditions corresponding to $$t=1$$ and the backward input at $$t=T$$, which are not defined. In such cases, one can use a default constant value of 0.5 in each case, although one can also make the determination of these values as a part of the learning process.
 
