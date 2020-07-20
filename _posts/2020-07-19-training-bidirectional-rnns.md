@@ -68,11 +68,11 @@ Loss is to be the cross-entropy loss:
 
 $$\mathop{\mathbb{E_t}}[y_{t_i},\hat{y}_{t_i}] = -y_{t_i} log \hat{y}_{t_i}$$
 
-$$\mathop{\mathbb{E_t}}[y_t,\hat{y}_t] = -y_{t}\;\; log \; \hat{y}_{t}$$
+$$\mathop{\mathbb{E_t}}[y_t,\hat{y}_t] = -y_{t}\; log \; \hat{y}_{t}$$
 
 Then the loss is,
 
-$$L(y,\hat{y}) = -\frac{1}{N}\sum_{t}^{T}y_t \;\;log\; \hat{y}_y$$
+$$L(y,\hat{y}) = -\frac{1}{N}\sum_{t}^{T}y_t \;log\; \hat{y}_y$$
 
 - Now let's calculate the gradients for $$V$$:
 
@@ -80,6 +80,6 @@ It is more clear for derivatives with denoting $$q_t = V h_t + V h_t'$$:
 
 $$\frac{\partial E_t}{\partial V_{ij}} = \frac{\partial E_t}{\partial \hat{y}_{t_k}} \frac{\hat{y}_{t_k}}{\partial q_{t_l}} \frac{\partial q_{t_l}}{\partial V_{ij}}$$
 
-You can clearly see that for $$E_t = -y_{t_k}\;\;log\;\hat{y}_{t_k}$$, the derivative is
+You can clearly see that for $$E_t = -y_{t_k}\;log\;\hat{y}_{t_k}$$, the derivative is
 
 $$\frac{\partial E_t}{\partial \hat{y}_{t_k}} = -\frac{y_{t_k}}{\hat{y}_{t_k}}$$
