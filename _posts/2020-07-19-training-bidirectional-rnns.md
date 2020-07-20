@@ -121,4 +121,4 @@ You all remember the quotient rule for derivatives from high school; for $$f(x) 
 
 $$f'(x) = \frac{g'(x) h(x) - h'(x) g(x)}{h^2(x)}$$
 
-  
+So, in our case, $$g_k = \exp(q_{t_k})$$ and $$h_k = \sum_{n}^{N}\exp(q_{t_n})$$. **NO** matter what the derivative $$\frac{\partial}{\partial q_{t_l}} h_k = \frac{\partial}{\partial q_{t_l}} \sum_{n}^{N}\exp(q_{t_n})$$ is equal to $$\exp(q_{t_l})$$ because $$\frac{\partial}{\partial q_{t_l}} \exp(q_{t_n}) = 0$$ for $$l \neq n$$.
