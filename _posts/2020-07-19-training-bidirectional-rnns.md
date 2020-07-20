@@ -62,7 +62,7 @@ An important property of this forward process, the hidden states of forward dire
 
 ### Gradients Over Directions
 
-We shown the generalized forward propagations above. Not it is time to compute gradients over weights. First, the partial derivatives are computed with respect to the output states due to both forward and backward states point to the output nodes.
+We shown the generalized forward propagations above. Not it is time to compute gradients over weights. First, the partial derivatives are computed with respect to the output states due to both forward and backward states point to the output nodes. (the subscripts of subscripts are just for "dummy indexing".)
 
 Loss is to be the cross-entropy loss:
 
@@ -83,3 +83,7 @@ $$\frac{\partial E_t}{\partial V_{ij}} = \frac{\partial E_t}{\partial \hat{y}_{t
 You can clearly see that for $$E_t = -y_{t_k}\;log\;\hat{y}_{t_k}$$, the derivative is
 
 $$\frac{\partial E_t}{\partial \hat{y}_{t_k}} = -\frac{y_{t_k}}{\hat{y}_{t_k}}$$
+
+Now, we will derive $$\hat{y}_{t_k} = softmax(q_{t_l})$$, which is $$\frac{\partial \hat{y}_{t_k}}{\partial q_{t_l}}. But, firstly, we have to evaluate the derivation of softmax function.
+
+$$ \hat{y}_{t_k} = \frac{\exp(q_{t_k})}{\sum_{n}^{N}\exp(q_{t_n})}$$
