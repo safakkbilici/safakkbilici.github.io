@@ -80,7 +80,7 @@ It is more clear for derivatives with denoting $$q_t = V h_t + V h_t'$$:
 
 $$\frac{\partial E_t}{\partial V_{ij}} = \frac{\partial E_t}{\partial \hat{y}_{t_k}} \frac{\hat{y}_{t_k}}{\partial q_{t_l}} \frac{\partial q_{t_l}}{\partial V_{ij}}$$
 
-You can clearly see that for $$E_t = -y_{t_k}\;log\;\hat{y}_{t_k}$$, the derivative is
+You can clearly see that for $$E_t = -y_{t_k}\;log\;\hat{y}_{t_k}$$, the derivative is (1)
 
 $$\frac{\partial E_t}{\partial \hat{y}_{t_k}} = -\frac{y_{t_k}}{\hat{y}_{t_k}}$$
 
@@ -139,7 +139,7 @@ $$\;\; = \frac{\exp(q_{t_k})\left(\sum_{n}^{N} \exp(q_{t_n}) - \exp(q_{t_l})\rig
 
 $$\;\;\;\; = \hat{y}_{t_k} (1-\hat{y}_{t_l})$$
 
-So ve have (1)...
+So ve have (2)...
 
 $$
     \frac{\partial \hat{y}_{t_k}}{\partial q_{t_l}}=
