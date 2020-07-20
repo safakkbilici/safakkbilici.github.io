@@ -156,10 +156,16 @@ $$ = -y_{t_l} + y_{t_l} \hat{y}_{t_l} + \sum_{k \neq l} y_{t_k} \hat{y}_{t_l}$$
 
 $$ = -y_{t_l} + \hat{y}_{t_l} \sum_{k} y_{t_k}$$
 
-If you recall that $$y_t$$ are all one-hot vectors, then that sum is just equal to 1. So,
+If you recall that $$y_t$$ are all one-hot vectors, then that sum is just equal to 1. So we have (3),
 
 $$\frac{\partial E_t}{\partial q_{t_l}} = \hat{y}_{t_l} - y_{t_l}$$
 
-Recall that we defined $$q_t = V h_t + V h_t'$$, so for dummy indexing, we can say $$q_{t_l} = V_{lm} h_{t_m} + V_{lm}' h_{t_m}'$$. Then,
+Recall that we defined $$q_t = V h_t + V h_t'$$, so for dummy indexing, we can say $$q_{t_l} = V_{lm} h_{t_m} + V_{lm}' h_{t_m}'$$. Then we have (4),
 
 $$ \frac{\partial q_{t_l}}{\partial V_{ij}} = \frac{\partial}{\partial V_{ij}} (V_{lm} h_{t_m} + V_{lm}' h_{t_m}')$$
+
+$$ \;\; = \frac{\partial}{\partial V_{ij}} (V_{lm} h_{t_m})$$
+
+$$ = \delta_{il} \delta_{jm} h_{t_m}$$
+
+$$ = \delta_{il} h_{t_j} $$
