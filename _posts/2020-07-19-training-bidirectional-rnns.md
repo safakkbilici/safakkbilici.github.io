@@ -147,3 +147,11 @@ $$
     -\hat{y}_{t_k} \hat{y}_{t_l},& \text{if } k \neq l\\
     \hat{y}_{t_k} (1-\hat{y}_{t_l}), & \text{if } k = l
 \end{cases}$$
+
+If we put (1) and (2) together, gives us a sum over all values of $$k$$ to obtain $$\frac{\partial E_t}{\partial q_{t_l}} = $$
+
+$$- \frac{y_{t_l}}{\hat{y}_{t_l}} \hat{y}_{t_l} + \sum_{k \neq l} \left(\frac{y_{t_k}}{\hat{y}_{t_k}} \right) (-\hat{y}_{t_k} \hat{y}_{t_l}$$
+
+$$ = -y_{t_l} + y_{t_l} \hat{y}_{t_l} + \sum_{k \neq l} y_{t_k} \hat{y}_{t_l}$$
+
+$$ = -y_{t_l} + \hat{y}_{t_l} \sum_{k} y_{t_k}$$
