@@ -45,3 +45,13 @@ Before we go for forward propagation equations, it is easier to understand the s
 
 *Figure 4:* Computational graph for 3 layered Bidirectional RNN.
 ![2](/images/bidirectionalrnns/rnn.png){:height="80%" width="80%"}
+
+Backward layers and weights are shown with a single apostrophe. To make a simpler representation, bias units are not shown.
+
+The forward propagation is similiar with traditional Recurrent Networks. The only difference is there are two equations for backward units and forward units.
+
+- $$ h_t = tanh(U x_t + W h_{t-1})$$
+
+- $$ h_t' = tanh(U' x_t + W' h_{t+1}')$$
+
+- $$ \hat{y}_t = V h_t + V' h_t' $$
