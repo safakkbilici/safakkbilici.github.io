@@ -138,3 +138,12 @@ $$\frac{\partial}{\partial q_{t_l}} \frac{\exp(q_{t_k})}{\sum_{n}^{N}\exp(q_{t_n
 $$\;\; = \frac{\exp(q_{t_k})\left(\sum_{n}^{N} \exp(q_{t_n}) - \exp(q_{t_l})\right)}{\left[\sum_{n}^{N}\exp(q_{t_n})\right]^2}$$
 
 $$\;\;\;\; = \hat{y}_{t_k} (1-\hat{y}_{t_l})$$
+
+So ve have (1)...
+
+$$
+    \frac{\hat{y}_{t_k}}{q_{t_l}}=
+\begin{cases}
+    -\hat{y}_{t_k} \hat{y}_{t_l},& \text{if } k \neq l\\
+    \hat{y}_{t_k} (1-\hat{y}_{t_l}), & \text{if } k = l
+\end{cases}$$
