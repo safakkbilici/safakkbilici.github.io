@@ -96,4 +96,10 @@ q_{t_2} \\
 q_{t_3}\\
 \vdots\\
 q_{t_N}
+\end{bmatrix} \rightarrow \begin{bmatrix}
+\hat{y}_{t_1} \\
+\hat{y}_{t_2} \\
+\hat{y}_{t_3}\\
+\vdots\\
+\hat{y}_{t_N}
 \end{bmatrix}$$
