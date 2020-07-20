@@ -194,9 +194,9 @@ Note that of these four terms we have already calculated first two derivatives.
 
 The third one is:
 
-$$\frac{\partial q_{t_l}}{\partial h_{t_m}} = \frac{\partial}{\partial \h_{t_m}} (V_{lb} h_{t_b} + V_{lb}' h_{t_b}')$$
+$$\frac{\partial q_{t_l}}{\partial h_{t_m}} = \frac{\partial}{\partial h_{t_m}} (V_{lb} h_{t_b} + V_{lb}' h_{t_b}')$$
 
-$$\;\;=\frac{\partial}{\partial \h_{t_m}} (V_{lb} h_{t_b})$$
+$$\;\;=\frac{\partial}{\partial h_{t_m}} (V_{lb} h_{t_b})$$
 
 $$ = V_{lb} \delta_{bm}$$
 
@@ -212,4 +212,34 @@ $$\frac{\partial h_{t_m}}{\partial W_{ij}} = \sum_{x=0}^{t} \frac{\partial h_{t_
 
 And, combining all:
 
-$$\frac{\partial E_t}{\partial W_{ij}} = (\hat{y}_{t_l} - y_{t_l}) V_{lm} sum_{x=0}^{t} \frac{\partial h_{t_m}}{\partial h_{x_n}} \frac{\partial h_{x_n}}{\partial W_{ij}}$$
+$$\frac{\partial E_t}{\partial W_{ij}} = (\hat{y}_{t_l} - y_{t_l}) V_{lm} \sum_{x=0}^{t} \frac{\partial h_{t_m}}{\partial h_{x_n}} \frac{\partial h_{x_n}}{\partial W_{ij}}$$
+
+- **Now let's calculate the gradients for** $$U$$:
+
+It is similiar to calculating the gradient for $$U$$:
+
+$$\frac{\partial E_t}{\partial U_{ij}} = \frac{\partial E_t}{\partial \hat{y}_{t_k}} \frac{\partial \hat{y}_{t_k}}{\partial q_{t_l}} \frac{\partial q_{t_l}}{\partial h_{t_m}} \frac{\partial h_{t_m}}{\partial U_{ij}}
+
+$$\frac{\partial h_{t_m}}{\partial U_{ij}} = \sum_{x=0}^{t} \frac{\partial h_{t_m}}{\partial h_{x_n}} \frac{\partial h_{x_n}}{\partial U_{ij}}$$
+
+Then we have, $$\frac{\partial E_t}{\partial U_{ij}} = (\hat{y}_{t_l} - y_{t_l}) V_{lm} \sum_{x=0}^{t} \frac{\partial h_{t_m}}{\partial h_{x_n}} \frac{\partial h_{x_n}}{\partial U_{ij}}$$
+
+#### Backward Gradients
+
+Backpropagation through time over backward direction is the same as the forward direction. It is useless to rewrite the same equations. Check partial derivatives for $$V', W'$$ and $$U'$$ yourself.
+
+### Results
+
+To serve up these steps:
+
+- Compute forward and backwards hidden states in independent and separate passes.
+- Compute output states from backwards and forward hidden states.
+- Compute partial derivatives of loss with respect to output states and each copy of the output parameters.
+- Compute partial derivatives of loss with respect to forward states and backward states INDEPENDENTLY using backpropagation algorithm. Use these computations to evaulate partial derivatives with respect to each copy of the forwards and backwards parameters.
+- Aggregate partial derivatives over shared parameters.
+
+## References
+
+- Neural Networks and Deep Learning, Charu C. Aggarwal, Springer International Publishing, ISBN 978-3-319-94463-0
+- [BPTT post of Denny Britz](http://www.wildml.com/2015/10/recurrent-neural-networks-tutorial-part-3-backpropagation-through-time-and-vanishing-gradients/)
+- [Figure 2 and Figure 3 from colah's blog](http://colah.github.io/posts/2015-09-NN-Types-FP/)
