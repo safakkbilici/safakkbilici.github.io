@@ -112,3 +112,13 @@ $$\frac{\partial \hat{y}_{t}}{\partial q_{t}} = \begin{bmatrix}
 \vdots & \vdots & \cdots & \vdots \\
 \frac{\partial \hat{y}_{t_N}}{\partial q_{t_1}} & \frac{\partial \hat{y}_{t_N}}{\partial q_{t_2}} & \cdots & \frac{\partial \hat{y}_{t_N}}{\partial q_{t_N}}
 \end{bmatrix}$$
+
+Let's compute the $$\frac{\partial \hat{y}_{t_k}}{\partial q_{t_l}}$$:
+
+$$\frac{\partial \hat{y}_{t_k}}{\partial q_{t_l}} = \frac{\partial}{\partial q_{t_l}} \frac{\exp(q_{t_k})}{\sum_{n}^{N} \exp(q_{t_n})}$$
+
+You all remember the quotient rule for derivatives from high school; for $$f(x) = \frac{g(x)}{h(x)}$$, the derivative of $$f(x)$$ is given by:
+
+$$f'(x) = \frac{g'(x) h(x) - h'(x) g(x)}{h^2(x)}$$
+
+  
