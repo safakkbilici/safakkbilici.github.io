@@ -183,3 +183,7 @@ $$\frac{\partial E_t}{\partial W{ij}} = \frac{\partial E_t}{\partial \hat{y}_{t_
 Yes this is the partial derivatives respect to $$W{ij}$$ but note that at the last term, there is an implicit dependency of $$h_t$$ on $$W{ij}$$ through $$h_{t_1}$$. Hence, we Have
 
 $$\frac{\partial h_{t_m}}{\partial W{ij}} \longrightarrow \frac{\partial h_{t_m}}{\partial W{ij}} + \frac{\partial h_{t_m}}{\partial h_{{t-1}_n}} \frac{\partial h_{{t-1}_n}}{\partial W{ij}}$$
+
+We can apply this again and again:
+
+$$\frac{\partial h_{t_m}}{\partial W{ij}} \longrightarrow \frac{\partial h_{t_m}}{\partial W{ij}} + \frac{\partial h_{t_m}}{\partial h_{{t-1}_n}} \frac{\partial h_{{t-1}_n}}{\partial W{ij}} + \frac{\partial h_{t_m}}{\partial h_{{t-1}_n}} \frac{\partial h_{{t-1}_n}}{\partial h_{{t-2}_p}} \frac{\partial h_{{t-2}_p}}{\partial W{ij}}$$
