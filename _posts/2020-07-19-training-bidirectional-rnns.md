@@ -184,6 +184,32 @@ Yes this is the partial derivatives respect to $$W{ij}$$ but note that at the la
 
 $$\frac{\partial h_{t_m}}{\partial W_{ij}} \longrightarrow \frac{\partial h_{t_m}}{\partial W_{ij}} +  \frac{\partial h_{t_m}}{\partial h_{t-1_n}} \frac{\partial h_{t-1_n}}{\partial W_{ij}}$$
 
-We can apply this again and again:
+We can apply this again and again (6):
 
 $$\frac{\partial h_{t_m}}{\partial W_{ij}} \longrightarrow \frac{\partial h_{t_m}}{\partial W_{ij}} +  \frac{\partial h_{t_m}}{\partial h_{t-1_n}} \frac{\partial h_{t-1_n}}{\partial W_{ij}} +  \frac{\partial h_{t_m}}{\partial h_{t-1_n}} \frac{\partial h_{t-1_n}}{\partial h_{t-2_p}} \frac{\partial h_{t-2_p}}{\partial W_{ij}}$$
+
+This equation continues until $$h_{-1}$$ is reached. $$h_{-1} is a vector of zeros$$
+
+Note that of these four terms we have already calculated first two derivatives.
+
+The third one is:
+
+$$\frac{\partial q_{t_l}}{\partial h_{t_m}} = \frac{\partial}{\partial \h_{t_m}} (V_{lb} h_{t_b} + V_{lb}' h_{t_b}')$$
+
+$$\;\;=\frac{\partial}{\partial \h_{t_m}} (V_{lb} h_{t_b})$$
+
+$$ = V_{lb} \delta_{bm}$$
+
+$$ = V_{lm}$$
+
+The last term in (6) collapses to $$\frac{\partial h_{t_m}}{\partial h_{t-2_n}} \frac{h_{t-2_n}}{\partial W_{ij}}$$ and we can turn the first item into $$\frac{\partial h_{t_m}}{\partial h_{t_n}} \frac{\partial h_{t_n}}{\partial W_{ij}}$$. Then we have the compact form that is:
+
+$$\frac{\partial h_{t_m}}{\partial W_{ij}} = \frac{\partial h_{t_m}}{\partial h_{x_n}} \frac{\partial h_{x_n}}{\partial W_{ij}}$$
+
+And we rewrite this as sum over all values of $$x$$ less than $$t$$, we have (7):
+
+$$\frac{\partial h_{t_m}}{\partial W_{ij}} = \sum_{x=0}^{t} \frac{\partial h_{t_m}}{\partial h_{x_n}} \frac{\partial h_{x_n}}{\partial W_{ij}}$$
+
+And, combining all:
+
+$$\frac{\partial E_t}{\partial W_{ij}} = (\hat{y}_{t_l} - y_{t_l}) V_{lm} sum_{x=0}^{t} \frac{\partial h_{t_m}}{\partial h_{x_n}} \frac{\partial h_{x_n}}{\partial W_{ij}}$$
