@@ -218,7 +218,7 @@ $$\frac{\partial E_t}{\partial W_{ij}} = (\hat{y}_{t_l} - y_{t_l}) V_{lm} \sum_{
 
 It is similiar to calculating the gradient for $$U$$:
 
-$$\frac{\partial E_t}{\partial U_{ij}} = \frac{\partial E_t}{\partial \hat{y}_{t_k}} \frac{\partial \hat{y}_{t_k}}{\partial q_{t_l}} \frac{\partial q_{t_l}}{\partial h_{t_m}} \frac{\partial h_{t_m}}{\partial U_{ij}}
+$$\frac{\partial E_t}{\partial U_{ij}} = \frac{\partial E_t}{\partial \hat{y}_{t_k}} \frac{\partial \hat{y}_{t_k}}{\partial q_{t_l}} \frac{\partial q_{t_l}}{\partial h_{t_m}} \frac{\partial h_{t_m}}{\partial U_{ij}}$$
 
 $$\frac{\partial h_{t_m}}{\partial U_{ij}} = \sum_{x=0}^{t} \frac{\partial h_{t_m}}{\partial h_{x_n}} \frac{\partial h_{x_n}}{\partial U_{ij}}$$
 
