@@ -31,11 +31,11 @@ Here is a very good visual comparsion (images are taken from [colah's blog](http
 
 
 ![1](/images/bidirectionalrnns/1.png){:height="80%" width="80%"}
-*Figure 2:* Traditional Recurrent Neural Networks
+*Figure 2:* Traditional Recurrent Neural Networks.
 
 
 ![2](/images/bidirectionalrnns/2.png){:height="80%" width="80%"}
-*Figure 3:* Bidirectional Recurrent Neural Networks
+*Figure 3:* Bidirectional Recurrent Neural Networks.
 
 In general, any property of the current word can be predicted more effectively using this approach, because it uses the context on both sides. For example, the ordering of words in several languages is somewhat different depending on grammatical structure. Bidirectional Recurrent Neural Networks work well in tasks where the predictions are based on bidirectional context like handwrittings.
 
@@ -45,4 +45,4 @@ Before we go for forward propagation equations, it is easier to understand the s
 
 
 ![2](/images/bidirectionalrnns/rnn.png){:height="80%" width="80%"}
-*Figure 4:* Bidirectional Recurrent Neural Networks
+*Figure 4:* Computational graph for 3 layered Bidirectional RNN.
