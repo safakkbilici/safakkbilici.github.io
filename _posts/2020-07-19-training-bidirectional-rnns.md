@@ -76,7 +76,7 @@ $$L(y,\hat{y}) = -\frac{1}{N}\sum_{t}^{T}y_t \;log\; \hat{y}_y$$
 
 - Now let's calculate the gradients for $$V$$:
 
-It is more clear for derivatives with denoting $$q_t = V h_t + V h_t'$$:
+It is more clear for derivatives with denoting $$q_t = V h_t + V' h_t'$$:
 
 $$\frac{\partial E_t}{\partial V_{ij}} = \frac{\partial E_t}{\partial \hat{y}_{t_k}} \frac{\hat{y}_{t_k}}{\partial q_{t_l}} \frac{\partial q_{t_l}}{\partial V_{ij}}$$
 
@@ -155,3 +155,11 @@ $$- \frac{y_{t_l}}{\hat{y}_{t_l}} \hat{y}_{t_l} + \sum_{k \neq l} \left(\frac{y_
 $$ = -y_{t_l} + y_{t_l} \hat{y}_{t_l} + \sum_{k \neq l} y_{t_k} \hat{y}_{t_l}$$
 
 $$ = -y_{t_l} + \hat{y}_{t_l} \sum_{k} y_{t_k}$$
+
+If you recall that $$y_t$$ are all one-hot vectors, then that sum is just equal to 1. So,
+
+$$\frac{\partial E_t}{\partial q_{t_l}} = \hat{y}_{t_l} - y_{t_l}$$
+
+Recall that we defined $$q_t = V h_t + V h_t'$$, so for dummy indexing, we can say $$q_{t_l} = V_{lm} h_{t_m} + V_{lm}' h_{t_m}'$$. Then,
+
+$$ \frac{\partial q_{t_l}}{\partial V_{ij}} = \frac{\partial}{\partial V_{ij}} (V_{lm} h_{t_m} + V_{lm}' h_{t_m}')$$
