@@ -61,3 +61,15 @@ It is easy to see that the bidirectional equations are simple generalizations of
 An important property of this forward process, the hidden states of forward direction and backward direction do not interract with one another at all. So, in the learning process, one can first run the forward propagation for the forward direction to compute hidden states and then run the forward propagation for the backward direction to compute hidden states. After that, the output states are computed from the hidden states in the two directions. Also, one can compute forward propagations with parallelization.
 
 ### Gradients Over Directions
+
+We shown the generalized forward propagations above. Not it is time to compute gradients over weights. First, the partial derivatives are computed with respect to the output states due to both forward and backward states point to the output nodes.
+
+Loss is to be the cross-entropy loss:
+
+$$\mathop{\mathbb{E}}_t[y_{t_i},\hat{y}_{t_i}] = -y_{t_i} log \hat{y}_{t_i}$$
+
+$$\mathop{\mathbb{E}}_t[y_t,\hat{y}_t] = -y_{t} log \hat{y}_{t}$$
+
+Then the loss is,
+
+$$L(y,\hat{y}) = -\frac{1}{N}\sum_{t}^{T}y_t \hat{y}_y$$
