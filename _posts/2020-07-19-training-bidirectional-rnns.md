@@ -180,4 +180,6 @@ It is clear that $$\hat{y}_{t}$$ depends on $$W$$ both directly and indirectly. 
 
 $$\frac{\partial E_t}{\partial W{ij}} = \frac{\partial E_t}{\partial \hat{y}_{t_k}} \frac{\partial \hat{y}_{t_k}}{\partial q_{t_l}} \frac{\partial q_{t_l}}{\partial h_{t_m}} \frac{\partial h_{t_m}}{\partial W{ij}}$$
 
-Yes this is the partial derivatives respect to $$W{ij}$$ but note that at the last term, there is an implicit dependency of $$h_t$$ on $$W{ij}$$ through $$h_{t_1}$$. Hence, we Have
+Yes this is the partial derivatives respect to $$W{ij}$$ but note that at the last term, there is an implicit dependency of $$h_t$$ on $$W{ij}$$ through $$h_{t_1}$$. Hence, we have
+
+$$\frac{}{} \longrightarrow \frac{\partial h_{t_m}}{\partial W_{ij}} +  \frac{\partial h_{t_m}}{\partial h_{t-1_n}} \frac{\partial h_{t-1_n}}{\partial W_{ij}}$$
