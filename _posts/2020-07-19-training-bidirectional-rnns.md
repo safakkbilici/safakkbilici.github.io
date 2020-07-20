@@ -73,3 +73,9 @@ $$\mathop{\mathbb{E_t}}[y_t,\hat{y}_t] = -y_{t}\;\; log \; \hat{y}_{t}$$
 Then the loss is,
 
 $$L(y,\hat{y}) = -\frac{1}{N}\sum_{t}^{T}y_t \;\;log\; \hat{y}_y$$
+
+- Now let's calculate the gradients for $$V$$:
+
+It is more clear for derivatives with denoting $$q_t = V h_t$$:
+
+$$\frac{\partial E_t}{\partial V_{i\;j}} = \frac{\partial E_t}{\partial \hat{y}_{t_k}} \frac{\hat{y}_{t_k}}{\partial q_{t_l}} \frac{\partial q_{t_l}}{\partial V_{i\;j}}$$
