@@ -127,6 +127,6 @@ Derivative of $$g_k$$ respect to $$q_{t_l}$$ is $$\exp(q_{t_l})$$ only if $$k=l$
 
 $$\frac{\partial}{\partial q_{t_l}} \frac{\exp(q_{t_k})}{\sum_{n}^{N}\exp(q_{t_n})} = \frac{0 \sum_{n}^{N}\exp(q_{t_n}) - \exp(q_{t_l}) \exp(q_{t_k})}{\left[\sum_{n}^{N}\exp(q_{t_n}\right]^2}$$
 
-$$\;\;\;\;\;\;\;\;= - \frac{\exp(q_{t_l})}{\sum_{n}^{N}\exp(q_{t_n})} \frac{\exp(q_{t_k})}{\sum_{n}^{N}\exp(q_{t_n})}
+$$\;\;\;\;= - \frac{\exp(q_{t_l})}{\sum_{n}^{N}\exp(q_{t_n})} \frac{\exp(q_{t_k})}{\sum_{n}^{N}\exp(q_{t_n})}$$
 
-$$\;\;\;\;\;\;\;\; = -\hat{y}_{t_k} \hat{y}_{t_l}$$
+$$\;\;\;\; = -\hat{y}_{t_k} \hat{y}_{t_l}$$
