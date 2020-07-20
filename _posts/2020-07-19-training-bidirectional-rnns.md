@@ -29,13 +29,13 @@ The word "rat" and the word "cheese" are related in someway. There is a 'passive
 In the bidirectional Recurrent Neural Networks, we have seperate hidden states/layers $$h_t$$ and $$h_t'$$ for the forward and backward directions. The forward hidden states interact with each other and the same is true for the backward hidden states. There is no multilayered connections between them. However, both $$h_t$$ and $$h_t'$$ receive input from the same vector $$x_t$$ and they interact with same output vector $$ \hat{y}_t$$.
 Here is a very good visual comparsion (images are taken from [colah's blog](http://colah.github.io/posts/2015-09-NN-Types-FP/)) between traditional Recurrent Neural Networks and bidirectional Recurrent Neural Networks:
 
-
-![1](/images/bidirectionalrnns/1.png){:height="80%" width="80%"}
 *Figure 2:* Traditional Recurrent Neural Networks.
+![1](/images/bidirectionalrnns/1.png){:height="80%" width="80%"}
 
 
-![2](/images/bidirectionalrnns/2.png){:height="80%" width="80%"}
 *Figure 3:* Bidirectional Recurrent Neural Networks.
+![2](/images/bidirectionalrnns/2.png){:height="80%" width="80%"}
+
 
 In general, any property of the current word can be predicted more effectively using this approach, because it uses the context on both sides. For example, the ordering of words in several languages is somewhat different depending on grammatical structure. Bidirectional Recurrent Neural Networks work well in tasks where the predictions are based on bidirectional context like handwrittings.
 
@@ -43,6 +43,5 @@ In general, any property of the current word can be predicted more effectively u
 
 Before we go for forward propagation equations, it is easier to understand the structure of equations with a simple computational graph.
 
-
-![2](/images/bidirectionalrnns/rnn.png){:height="80%" width="80%"}
 *Figure 4:* Computational graph for 3 layered Bidirectional RNN.
+![2](/images/bidirectionalrnns/rnn.png){:height="80%" width="80%"}
