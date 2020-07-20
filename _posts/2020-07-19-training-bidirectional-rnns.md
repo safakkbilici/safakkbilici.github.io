@@ -66,10 +66,10 @@ We shown the generalized forward propagations above. Not it is time to compute g
 
 Loss is to be the cross-entropy loss:
 
-$$\mathop{\mathbb{E}}_t[y_{t_i},\hat{y}_{t_i}] = -y_{t_i} log \hat{y}_{t_i}$$
+$$\mathop{\mathbb{E_t}}[y_{t_i},\hat{y}_{t_i}] = -y_{t_i} log \hat{y}_{t_i}$$
 
-$$\mathop{\mathbb{E}}_t[y_t,\hat{y}_t] = -y_{t} log \hat{y}_{t}$$
+$$\mathop{\mathbb{E_t}}[y_t,\hat{y}_t] = -y_{t}\;\; log \; \hat{y}_{t}$$
 
 Then the loss is,
 
-$$L(y,\hat{y}) = -\frac{1}{N}\sum_{t}^{T}y_t \hat{y}_y$$
+$$L(y,\hat{y}) = -\frac{1}{N}\sum_{t}^{T}y_t \;\;log\; \hat{y}_y$$
