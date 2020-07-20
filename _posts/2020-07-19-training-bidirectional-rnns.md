@@ -122,3 +122,7 @@ You all remember the quotient rule for derivatives from high school; for $$f(x) 
 $$f'(x) = \frac{g'(x) h(x) - h'(x) g(x)}{h^2(x)}$$
 
 So, in our case, $$g_k = \exp(q_{t_k})$$ and $$h_k = \sum_{n}^{N}\exp(q_{t_n})$$. **NO** matter what the derivative $$\frac{\partial}{\partial q_{t_l}} h_k = \frac{\partial}{\partial q_{t_l}} \sum_{n}^{N}\exp(q_{t_n})$$ is equal to $$\exp(q_{t_l})$$ because $$\frac{\partial}{\partial q_{t_l}} \exp(q_{t_n}) = 0$$ for $$l \neq n$$.
+
+Derivative of $$g_k$$ respect to $$q_{t_l}$$ is $$\exp(q_{t_l})$$ only if $$k=l$$, otherwise it is a constant 0. Therefore, if we derive the gradient of the off-diagonal entries of the Jacobian will yield:
+
+$$\frac{\partial}{\partial q_{t_l}} \frac{\exp(q_{t_k})}{\sum_{n}^{N}\exp(q_{t_n})} = \frac{0 \sum_{n}^{N}\exp(q_{t_n} - \exp(q_{t_l}) \exp(q_{t_k}}{\left[\sum_{n}^{N}\exp(q_{t_n}\right]^2}$$
