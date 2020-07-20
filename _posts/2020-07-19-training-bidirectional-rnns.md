@@ -109,6 +109,6 @@ Therefore, the Jacobian of the softmax will be:
 $$\frac{\partial \hat{y}_{t}}{\partial q_{t}} = \begin{bmatrix}
 \frac{\partial \hat{y}_{t_1}}{\partial q_{t_1}} & \frac{\partial \hat{y}_{t_1}}{\partial q_{t_2}} & \cdots & \frac{\partial \hat{y}_{t_1}}{\partial q_{t_N}}\\
 \frac{\partial \hat{y}_{t_2}}{\partial q_{t_1}} & \frac{\partial \hat{y}_{t_2}}{\partial q_{t_2}} & \cdots & \frac{\partial \hat{y}_{t_2}}{\partial q_{t_N}}\\
-\vdots & \vdots & \cdots \\
+\vdots & \vdots & \cdots & \vdots \\
 \frac{\partial \hat{y}_{t_N}}{\partial q_{t_1}} & \frac{\partial \hat{y}_{t_N}}{\partial q_{t_2}} & \cdots & \frac{\partial \hat{y}_{t_N}}{\partial q_{t_N}}
 \end{bmatrix}$$
