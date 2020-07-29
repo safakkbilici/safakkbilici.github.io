@@ -7,7 +7,7 @@ header:
 ---
 This section covers my favorite textbooks/papers, albums (and others) recommendations.
 
-# Textbooks/Papers
+# Textbooks
 
 - **Convex Optimization: Stephen Boyd, Lieven Vandenberghe**; good book for who studies deep learning. It covers convex sets, optimizers and its applications like approximation and fitting.
 
@@ -17,7 +17,13 @@ This section covers my favorite textbooks/papers, albums (and others) recommenda
 
 - **An Introduction to Statistical Learning With Applications in R: Robert Tibshirani (et al.)**; I started to learn Machine Learning with this book. It is a very good introduction for undergraduate CS students who already studied Statistics, Algorithms, Calculus, Linear Algebra. It gives examples/exercises in R Programming Language. I do not recommend exercises due to I am not a fan of R. The book covers traditional machine learning algorithms (regression, classification, clustering etc.) and its applications in real world datas.
 
-- **Deep Learning: Ian Goodfellow, Yoshua Bengio, Aaron Courville**; I started to learn Deep Learning with this book. An excellent, comprehensive textbook on Deep Learning. But, strongly, I do not recommend this book for beginners in this field. It requires very good mathematics knowledge (Linear Algebra, Advanced Calculus, Statistics and Probability, Information Theory etc. etc.). Yes it covers some mathematical concepts in first chapters but still not enough. If you feel comfortable with deriving matrices, interpreting distribubtions and others. Go on my friend, read the "bible". 
+- **Deep Learning: Ian Goodfellow, Yoshua Bengio, Aaron Courville**; I started to learn Deep Learning with this book. An excellent, comprehensive textbook on Deep Learning. But, strongly, I do not recommend this book for beginners in this field. It requires very good mathematics knowledge (Linear Algebra, Advanced Calculus, Statistics and Probability, Information Theory etc. etc.). Yes it covers some mathematical concepts in first chapters but still not enough. If you feel comfortable with deriving matrices, interpreting distribubtions and others. Go on my friend, read the "bible".
+
+
+# Papers
+
+- ImageNet Classification with Deep Convolutional Neural Networks [[NIPS Paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)]
+
 
 
 # Albums
