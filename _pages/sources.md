@@ -24,6 +24,10 @@ This section covers my favorite textbooks/papers, albums (and others) recommenda
 
 - ImageNet Classification with Deep Convolutional Neural Networks [[NIPS Paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)]
 
+- Very Deep Convolutional Networks For Large-Scale Image Recognition [[arXiv](https://arxiv.org/pdf/1409.1556.pdf)]
+
+- On The Difficulty Of Training Recurrent Neural Networks [[arXiv](https://arxiv.org/pdf/1211.5063.pdf)]
+
 
 
 # Albums
