@@ -36,6 +36,8 @@ This section covers my favorite textbooks/papers/blog posts, albums (and others)
 
 - [Initialization Of Deep Networks Case of Rectifiers](https://www.jefkine.com/deep/2016/08/08/initialization-of-deep-networks-case-of-rectifiers/)
 
+- [Attention and Augmented Recurrent Neural Networks](https://distill.pub/2016/augmented-rnns/#neural-turing-machines)
+
 # Papers
 
 - ImageNet Classification with Deep Convolutional Neural Networks [[NIPS Paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)]
