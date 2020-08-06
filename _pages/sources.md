@@ -46,6 +46,7 @@ This section covers my favorite textbooks/papers/blog posts, albums (and others)
 
 - On The Difficulty Of Training Recurrent Neural Networks [[arXiv](https://arxiv.org/pdf/1211.5063.pdf)]
 
+- Deep Neural Networks for Object Detection [[NIPS Paper](https://papers.nips.cc/paper/5207-deep-neural-networks-for-object-detection.pdf)]
 
 
 # Albums
