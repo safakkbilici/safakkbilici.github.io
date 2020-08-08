@@ -50,3 +50,7 @@ This section covers my favorite textbooks/papers/blog posts, albums (and others)
 
 
 # Albums
+
+- Have you heard about microtonals?: **King Gizzard And The Lizard Wizard - Flying Microtonal Banana**
+
+- I have this album's tattoo on my body: **Genesis - Nursery Cryme**
