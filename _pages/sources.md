@@ -38,6 +38,8 @@ This section covers my favorite textbooks/papers/blog posts, albums (and others)
 
 - [Attention and Augmented Recurrent Neural Networks](https://distill.pub/2016/augmented-rnns/#neural-turing-machines)
 
+- [Byte Pair Encoding](https://leimao.github.io/blog/Byte-Pair-Encoding/)
+
 # Papers
 
 - ImageNet Classification with Deep Convolutional Neural Networks [[NIPS Paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)]
