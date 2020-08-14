@@ -19,6 +19,8 @@ This section covers my favorite textbooks/papers/blog posts, albums (and others)
 
 - **Deep Learning: Ian Goodfellow, Yoshua Bengio, Aaron Courville**; I started to learn Deep Learning with this book. An excellent, comprehensive textbook on Deep Learning. But, strongly, I do not recommend this book for beginners in this field. It requires very good mathematics knowledge (Linear Algebra, Advanced Calculus, Statistics and Probability, Information Theory etc. etc.). Yes it covers some mathematical concepts in first chapters but still not enough. If you feel comfortable with deriving matrices, interpreting distribubtions and others. Go on my friend, read the "bible".
 
+- **Machine Learning: Ethem Alpaydın***; Very good introduction for mathematical interpretation of Machine Learning. I always recommend this book for starters who wants to study this area. 
+
 
 # Blog Posts
 
@@ -56,3 +58,5 @@ This section covers my favorite textbooks/papers/blog posts, albums (and others)
 - Have you heard about microtonals?: **King Gizzard And The Lizard Wizard - Flying Microtonal Banana**
 
 - I have this album's tattoo on my body: **Genesis - Nursery Cryme**
+
+- Some experimental electronic baroque: **Igorrr - Hallelujah**
