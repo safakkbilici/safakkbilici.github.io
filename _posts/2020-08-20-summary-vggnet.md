@@ -30,3 +30,7 @@ VGGNet is not the winner of classification task in 2014's ILSVRC (ImageNet Large
 * *Task 2b: Classification+localization with additional training data*: Adobe-UIUC 
 
 The ImageNet 2014 dataset includes images of 1000 classes and split into three sets: training set has 1.3M images, validation set has 50K images, test set 100K images with held-out class labels. Classification performance is evaluated on two measures: top-1 error and top-5 error. In top-1 error, you check if the top class probability is the same as the target label; in top-5 error, you check if the target label is one of your top 5 predictions.
+
+# Model Architecture and Configurations
+
+![test image size](/images/vgg/arch.png){:height="100%" width="70%"}
