@@ -14,4 +14,6 @@ image:
   thumb: "/images/vgg/header.png"
 ---
 
-demo
+# Abstract For Summary
+
+The paper named "Very Deep Convolutional Networks for Large-Scale Image Recognition", also known as "VGGNet", proposes six different Convolutional Neural Network models and compares them based on architectural differences and results on top-1 and top-5 error rates.
