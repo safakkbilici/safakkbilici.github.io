@@ -22,7 +22,7 @@ The paper named "Very Deep Convolutional Networks for Large-Scale Image Recognit
 
 ![test image size](/images/vgg/imagenet.jpeg){:height="70%" width="100%"}
 
-VGGNet is not the winner of classification task in 2014's ILSVRC (ImageNet Large Scale Visual Recognition Competition). To see who were the winners ([for more information](http://www.image-net.org/challenges/LSVRC/2014/results):
+VGGNet is not the winner of classification task in 2014's ILSVRC (ImageNet Large Scale Visual Recognition Competition). To see who were the winners ([for more information](http://www.image-net.org/challenges/LSVRC/2014/results)):
 
 * *Task 1a: Object detection with provided training data*: NUS
 * *Task 1b: Object detection with additional training data*: GoogLeNet	
