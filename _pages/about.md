@@ -6,7 +6,7 @@ permalink: /about/
 header:
 ---
 
-#<img align="left" width="300" height="300" src="/images/me2.jpg">
+
 ![myimg](/images/me2.jpg){: height="75px" width="300px" style="float:left; padding-right:10px" }
 I am a Computer Science/Engineer student for three years at Yildiz Technical University.
 
