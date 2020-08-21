@@ -33,4 +33,4 @@ The ImageNet 2014 dataset includes images of 1000 classes and split into three s
 
 # Model Architecture and Configurations
 
-![test image size](/images/vgg/arch2.png){:height="100%" width="100%"}
+![test image size](/images/vgg/arch3.png){:height="100%" width="100%"}
