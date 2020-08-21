@@ -64,6 +64,9 @@ Training configurations is like this:
 	* Batch size of 256.
 	* Momentum of 0.9.
 * The L2 regularizer is used.
-	* $$\lambda$$ = 5 $$\times 10^{-4}$$
+	* $$\lambda$$ = $$5\times 10^{-4}$$
 * Dropout is used.
 	* p = 0.5.
+* Learning rate $$\eta = 10^{-2}$$
+	* Learning rate is increased by factor 10 when performance on validation set not improved (in paper, 3 times).
+* 74 epochs.
