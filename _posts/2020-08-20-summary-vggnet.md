@@ -34,3 +34,14 @@ The ImageNet 2014 dataset includes images of 1000 classes and split into three s
 # Model Architecture and Configurations
 
 ![test image size](/images/vgg/arch3.png){:height="100%" width="100%"}
+
+As we can see above, model has 6 configurations;
+
+* **A** is 11 layered.
+* **A-LRN** is 11 layered but have Local Response Normalization.
+* **B** is 13 layered.
+* **C** is 16 layered but have 1x1 convolutional layers.
+* **D** is 16 layered but 1x1 convolutional layers in **C** are replaced with 3x3 convolutional layers.
+* **E** is 19 layered.
+
+For being more clear about figures, nonlinear ReLU layers was not shown in above figure.
