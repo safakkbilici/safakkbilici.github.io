@@ -49,9 +49,21 @@ For being more clear about figures, nonlinear ReLU layers was not shown in above
 During training, the input is RGB images of fixed-size 224x224. The only preprocessing for data is subtracting the mean EGB value from each pixel. Max-poolings are performed over a 2x2 kernel with stride of 2. 
 All hidden non-linear activation functions are ReLU. Fully connected layers are designed as 4096 $$\rightarrow$$ 4096 $$\rightarrow$$ 1000 (1000 class), and softmax is used in output layer. 
 Except for configuration **C** all kernels have size of 3x3 with stride of 1 in convolutional layers. **C** layer also has 1x1 convolutional layers. Also the padding is 1 pixel for 3x3 convolutional layers.
-
+The configuration **A-LRN** is the same with configuration **A** except for Local Response Normalization (LRN) layer. But LRN does not improve the performance on ILSVRC dataset, but leads into increased memory consumption and computation time.
 ## Going Smaller With Kernel Sizes
 Rather than using relatively large kernel sizes in first convolutional layers (e.g. 5x5: stride 2, 7x7: stride 2, 11x11: stride 4), VGGNet uses three 3x3 convolutional laters which is equivalent with one 7x7 convolutional layer.
 Also using 3 3x3 convolutional layers rather than one 7x7 convolutional layer has benefits:
 * Adding more non-linearity: more non-linear rectified unit (ReLU).
-* Decreasing number of parameters: with $$C$$ channnel, $$49C^2$$ reduced to $$27C^2$$. 
+* Decreasing number of parameters: with $$C$$ channnel, $$49C^2$$ reduced to $$27C^2$$.
+* Using 1x1 convolutional layers is a way to increase the non-linearity without affecting the receptive fileds of the convolutional layers. 
+ 
+## Training
+Training configurations is like this:
+* Objective function is multinomial logistic regression.
+* Optimizer is mini-batch gradient descent with momentum.
+	* Batch size of 256.
+	* Momentum of 0.9.
+* The L2 regularizer is used.
+	* $$\lambda = 5 \times 10^{-4}$$
+* Dropout is used.
+	* p = 0.5.
