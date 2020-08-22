@@ -81,6 +81,6 @@ If we only train the network at the same scale, we might miss the detection or h
 ![test image size](/images/vgg/singlescaleeval.png){:height="70%" width="100%"}
 
 * Single-Scale Training / Multi-Scale Training with Multi-Scale Evaluation 
-	* Model is evaluated with for fixed $$S$$, $$Q = {S-32, S, S+32}$$; for $$S \in [S_{min},S_{max}]$$, $$Q={S_{min}, 0.5(S_{min}+S_{max}, S_{max}}$$
+	* Model is evaluated with for fixed $$S\;$$, $$Q = \{S-32, S, S+32\}$$; for $$S \in [S_{min},S_{max}]$$, $$Q=\{S_{min}, 0.5(S_{min}+S_{max}, S_{max}\}$$
 	* You can clearly see that scale jittering in testing gives us better results in ILSVRC Dataset.
 ![test image size](/images/vgg/mseval.png){:height="70%" width="100%"}
