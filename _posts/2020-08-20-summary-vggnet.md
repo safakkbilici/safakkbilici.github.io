@@ -95,5 +95,5 @@ If we only train the network at the same scale, we might miss the detection or h
 	(due to both the convolutions and spatial pooling), which substantially increases the overall network receptive field, so more context is captured.
 	* We can see this performance results clearly.
 
-![test image size](/images/vgg/densemc.png){:height="70%" width="100%"}
+![test image size](/images/vgg/densemc.png){:height="70%" width="80%"}
 
