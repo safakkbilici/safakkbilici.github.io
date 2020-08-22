@@ -76,7 +76,8 @@ If we only train the network at the same scale, we might miss the detection or h
 *Single-Scale Training / Multi-Scale Training with Single-Scale Evaluation 
 
 	* For training image size $$S$$ and $$Q$$, test image size is set as $$Q = S$$ for fixed $$S$$, and $$Q=0.5(S_{min}+S_{max})$$ for $$S \in [S_{min},S_{max}]$$ 
-	* Since the model accepts fixed sized images; this means that for range $$S=256$$ to $$S=512$$, image is scaled into range from 256x256 to 512x512 then cropped to 224x224.
+	* Since the model accepts fixed sized images; this means that during training, the image is rescaled to set the length of the shortest side to $$S$$ and then cropped; in other words, 
+	image is scaled into range from 256x256 to 512x512 then cropped to 224x224.
 	* You can clearly see that scale jittering in training gives us better results in ILSVRC Dataset.
 ![test image size](/images/vgg/singlescaleeval.png){:height="70%" width="100%"}
 
