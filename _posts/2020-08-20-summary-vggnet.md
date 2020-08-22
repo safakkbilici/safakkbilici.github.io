@@ -94,6 +94,5 @@ If we only train the network at the same scale, we might miss the detection or h
 	while in the case of dense evaluation the padding for the same crop naturally comes from the neighbouring parts of an image 
 	(due to both the convolutions and spatial pooling), which substantially increases the overall network receptive field, so more context is captured.
 	* We can see this performance results clearly.
-
 ![test image size](/images/vgg/densemc.png){:height="70%" width="80%"}
 
