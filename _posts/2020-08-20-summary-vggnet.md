@@ -70,3 +70,14 @@ Training configurations is like this:
 * Learning rate $$\eta = 10^{-2}$$
 	* Learning rate is increased by factor 10 when performance on validation set not improved (in paper, 3 times).
 * 74 epochs.
+
+## Varying Image Scales
+If we only train the network at the same scale, we might miss the detection or have the wrong classification for the objects with other scales. For this problem multi-scale evaluation is propoesed.
+
+* For training image size $$S$$ and $$Q$$, test image size is set as $$Q = S$$ for fixed $$S$$, and $$Q=0.5(S_{min}+S_{max})$$ for $$S \in [S_{min},S_{max}]$$ 
+* Since the model accepts fixed sized images; this means that for range $$S=256$$ to $$S=512$$, image is scaled into range from 256x256 to 512x512 then cropped to 224x224.
+* You can clearly see that scale jittering in training gives us better results in ILSVRC Dataset.
+
+
+
+
