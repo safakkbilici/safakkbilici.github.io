@@ -81,6 +81,19 @@ If we only train the network at the same scale, we might miss the detection or h
 ![test image size](/images/vgg/singlescaleeval.png){:height="70%" width="100%"}
 
 * Single-Scale Training / Multi-Scale Training with Multi-Scale Evaluation 
-	* Model is evaluated with for fixed $$S\;$$, $$Q = \{S-32, S, S+32\}$$; for $$S \in [S_{min},S_{max}]$$, $$Q=\{S_{min}, 0.5(S_{min}+S_{max}, S_{max}\}$$
+	* Model is evaluated with for fixed $$S\;$$, $$Q = \{S-32, S, S+32\}$$; for $$S \in [S_{min},S_{max}]$$, $$Q=\{S_{min}, 0.5(S_{min}+S_{max}), S_{max}\}$$
 	* You can clearly see that scale jittering in testing gives us better results in ILSVRC Dataset.
 ![test image size](/images/vgg/mseval.png){:height="70%" width="100%"}
+
+* Dense versus Multi-Crop Evaluation
+	* In dense evaluation, the fully connected layers are converted to convolutional layers at test time, and the uncropped image is 
+	passed through the fully convolutional net to get dense class scores. Scores are averaged for the uncropped image and its flip to obtain the final fixed-width class posteriors.
+	* This is compared against taking multiple crops of the test image and averaging scores obtained by passing each of these through the CNN.
+	* Multi-crop evaluation works slightly better than dense evaluation, but the methods are somewhat complementary as averaging scores from both did better than each of them individually.
+	* The authors hypothesize that this is probably because of the different boundary conditions: when applying a ConvNet to a crop, the convolved feature maps are padded with zeros, 
+	while in the case of dense evaluation the padding for the same crop naturally comes from the neighbouring parts of an image 
+	(due to both the convolutions and spatial pooling), which substantially increases the overall network receptive field, so more context is captured.
+	* We can see this performance results clearly.
+
+![test image size](/images/vgg/densemc.png){:height="70%" width="100%"}
+
