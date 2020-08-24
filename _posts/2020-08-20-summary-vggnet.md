@@ -195,5 +195,6 @@ if __name__ == "__main__":
 - [Review: VGGNet — 1st Runner-Up (Image Classification), Winner (Localization) in ILSVRC 2014](https://medium.com/coinmonks/paper-review-of-vggnet-1st-runner-up-of-ilsvlc-2014-image-classification-d02355543a11)
 - [Multiple Crops At Test Time](https://machinelearning.wtf/terms/multiple-crops-at-test-time/)
 - [ImageNet Large Scale Visual Recognition Challenge 2014 (ILSVRC2014)](http://www.image-net.org/challenges/LSVRC/2014/results)
+- [Deep Learning Top Research Papers List](https://www.commonlounge.com/discussion/4b5392d3bc0840f9a492000869cb67bb)
 
  
