@@ -95,3 +95,104 @@ If we only train the network at the same scale, we might miss the detection or h
 	(due to both the convolutions and spatial pooling), which substantially increases the overall network receptive field, so more context is captured.
 	* We can see this performance results clearly.
 ![test image size](/images/vgg/densemc.png){:height="70%" width="100%"}
+
+# Combining ConvNet Models and Final Reports
+
+The above models are evaluated individually. With ConvNet Fusion, authors combine the outputs of several models by averaging their soft-max class posteriors. This improves model performance. Visual Geometry 
+Group reached 23.7 top-1 val error after ILSVRC submission! You can see the table from paper to see what ensembles and performances:
+![test image size](/images/vgg/densemc.png){:height="90%" width="120%"}
+
+# My Thoughts
+
+- Model was constructed very thoughtful, design of image scales, and dense v/s multi-crop evaluations is very important. 
+- Also it is tricky that authors began with training
+the configuration A, shallow enough to be trained with random initialisation; Then, when training deeper architectures, they initialised the first four convolutional layers and the 
+last three fully connected layers with the layers of net A and the intermediate layers were initialised randomly. 
+- Using small kernels and reducing slowly spatial resolution of the feature maps are important for extracting features from images. 
+- Authors showed that using Local Response Normalization does not improve the performance on the ILSVRC dataset.
+- Increasing the nonlinearity of the decision function without affecting the receptive fields of the conv. layers is showed with 1x1 Convolutional layers.
+- Also; paper is readable, the desing and wording of paper is so clean.
+
+A more deeper convolutional architecture shows its power.
+
+# A Simple Configuration Code
+
+```python
+"""
+@author: safak
+"""
+import numpy as np
+import math
+import torch
+import torch.nn as nn
+import torchvision.transforms as transforms
+import torchvision.datasets as datasets
+import matplotlib.pyplot as plt
+class VGG(nn.Module):
+    def __init__(self,features,init_h):
+        super(VGG,self).__init__()
+        self.features = features
+        self.classifier = nn.Sequential(
+            nn.Dropout(p=0.5,inplace=False),
+            nn.Linear(in_features = 512,out_features = 512),
+            nn.ReLU(inplace=True),
+            nn.Dropout(p=0.5,inplace=False),
+            nn.Linear(in_features = 512,out_features = 512),
+            nn.ReLU(inplace=True),
+            nn.Linear(512,init_h),
+            )
+        for module in self.modules():
+            if isinstance(module, nn.Conv2d):
+                n = module.kernel_size[0] * module.kernel_size[1] * module.out_channels
+                module.weight.data.normal_(0,math.sqrt(2. / n))
+                module.bias.data.zero_()
+    def forward(self,x):
+        out = self.features(x)
+        out = out.view(out.size(0),-1)
+        out = self.classifier(out)
+        return out
+
+    def addLayer(self,config,batch_norm=False,in_channels=1):
+        if type(config) is not list:
+            raise TypeError("Configuration must be in type of dictionary.")
+        else:
+            layers = []
+            for v in config:
+                if v == 'MP':
+                    layers += [nn.MaxPool2d(kernel_size=2,stride=2)]
+                else:
+                    if type(v) is not int:
+                        raise TypeError("Except MaxPool, configuration feature type must be integer.")
+                    else:
+                        conv2d = nn.Conv2d(in_channels=in_channels, 
+                                           out_channels=v, kernel_size=3,
+                                           padding = 1)
+                        if batch_norm:
+                            layers += [conv2d, nn.BatchNorm2d(v),
+                                       nn.ReLU(inplace=True)]
+                        else:
+                             layers += [conv2d, nn.ReLU(inplace=True)]
+                        in_channels = v
+            return nn.Sequential(*layers)
+
+    @staticmethod
+    def __config__():
+        return  {
+    'VGG11': [64, 'MP', 128, 'MP', 256, 256, 'MP', 512, 512, 'MP', 512, 512, 'MP'],
+    'VGG13': [64, 64, 'MP', 128, 128, 'MP', 256, 256, 'MP', 512, 512, 'MP', 512, 512, 'MP'],
+    'VGG16': [64, 64, 'MP', 128, 128, 'MP', 256, 256, 256, 'MP', 512, 512, 512, 'MP', 512, 512, 512, 'MP'],
+    'VGG19': [64, 64, 'MP', 128, 128, 'MP', 256, 256, 256, 256, 'MP', 512, 512, 512, 512, 'MP', 
+          512, 512, 512, 512, 'MP'],
+    }
+if __name__ == "__main__":
+	configuration = VGG.__config__()
+	model = VGG(VGG.addLayer(configuration['VGG13'],True),10)
+```
+
+# References
+- [Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/pdf/1409.1556.pdf)
+- [Going Deeper With Convolutions](https://arxiv.org/pdf/1409.4842.pdf)
+- [Review: VGGNet — 1st Runner-Up (Image Classification), Winner (Localization) in ILSVRC 2014](https://medium.com/coinmonks/paper-review-of-vggnet-1st-runner-up-of-ilsvlc-2014-image-classification-d02355543a11)
+- [Multiple Crops At Test Time](https://machinelearning.wtf/terms/multiple-crops-at-test-time/)
+
+ 
