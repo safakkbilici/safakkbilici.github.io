@@ -100,7 +100,7 @@ If we only train the network at the same scale, we might miss the detection or h
 
 The above models are evaluated individually. With ConvNet Fusion, authors combine the outputs of several models by averaging their soft-max class posteriors. This improves model performance. Visual Geometry 
 Group reached 23.7 top-1 val error after ILSVRC submission! You can see the table from paper to see what ensembles and performances:
-![test image size](/images/vgg/densemc.png){:height="90%" width="120%"}
+![test image size](/images/vgg/final.png){:height="90%" width="120%"}
 
 # My Thoughts
 
