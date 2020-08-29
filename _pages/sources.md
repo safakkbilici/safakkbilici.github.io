@@ -52,6 +52,10 @@ This section covers my favorite textbooks/papers/blog posts, albums (and others)
 
 - Deep Neural Networks for Object Detection [[NIPS Paper](https://papers.nips.cc/paper/5207-deep-neural-networks-for-object-detection.pdf)]
 
+- An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling [[arXiv](https://arxiv.org/pdf/1803.01271.pdf)]
+
+- Temporal Convolutional Attention-based Network For Sequence Modeling [[arXiv](https://arxiv.org/pdf/2002.12530.pdf)]
+
 
 # Albums
 
