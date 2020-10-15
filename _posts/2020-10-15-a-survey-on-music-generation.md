@@ -1,5 +1,5 @@
 ---
-title: "A Survey On Music Generation"
+title: "A Survey On Music Generation With Deep Neural Networks"
 date: "2020-10-15"
 tages: [Music Generation, RNNs, GANs, VAEs]
 header:
