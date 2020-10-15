@@ -121,7 +121,7 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url:  "https://www.linkedin.com/in/mesutsafakbilici/"
     - label: "Resume"
-      icon: "fab fa-fw fa-file-pdf"
+      icon: "fa-file"
       url: "/assets/data/sb.pdf"
 
 # Site Footer
