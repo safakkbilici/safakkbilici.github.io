@@ -120,7 +120,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url:  "https://www.linkedin.com/in/mesutsafakbilici/"
-    resume: "/assets/data/sb.pdf"
+    - label: "Resume"
+      icon: "fab fa-fw fa-resume"
+      url: "/assets/data/sb.pdf"
 
 # Site Footer
 footer:
