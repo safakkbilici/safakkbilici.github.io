@@ -14,5 +14,8 @@ image:
   thumb: "/images/music-generation/sdg(2).png"
 ---
 
+![test image size](/images/music-generation/sdg(2).png){:height="100%" width="100%"}
+
+
 # Problem Definition
 
