@@ -22,6 +22,6 @@ Music is an art of time. It is formed by the colaboration of instruments -compos
 
 # Generating Music With Recurrent Neural Networks
 
-![test image size](/images/music-generation/rnn.png){:height="100%" width="100%"}
+![test image size](/images/music-generation/rnn.png){:height="50%" width="50%"}
 
 Recurrent Neural Networks are very simple way to represent sequential data like music. RNNs learns a probability distribution over the next notes given all the previous notes.
