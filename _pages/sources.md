@@ -64,3 +64,11 @@ This section covers my favorite textbooks/papers/blog posts, albums (and others)
 - I have this album's tattoo on my body: **Genesis - Nursery Cryme**
 
 - Some experimental electronic baroque: **Igorrr - Hallelujah**
+
+# Test
+I test stuff here.
+
+```haskell
+let a = 1 : 2 : 3 : []
+foo (x:xs) = x + foo(xs)
+```
