@@ -52,15 +52,28 @@ MuseGAN has 3+2 proposals. The first three represent different techniques to gen
 
 ## Jamming Model
 ![test image size](/images/music-generation/jamming.png){:height="90%" width="90%"}
+
 Multiple generators work independently and generate music of its own instrument. The generators receive critics from different discriminators. It can be seen as, different instrument players improvize in different studios. Like [free jazz](https://safakkbilici.github.io/int-to-free-jazz/) (!). They can't hear each other but they create a song collectively.
 
 ## Composer Model
 ![test image size](/images/music-generation/composer.png){:height="90%" width="90%"}
+
 One single generator creates multi-channel pianoroll with each channel representing a specific instrument. This model requires only one shared random vector (like conducting) and one discriminator.
 
 ## Hybrid Model
 ![test image size](/images/music-generation/hybrid.png){:height="90%" width="90%"}
-Combining the idea of jamming and composer models. Generator takes input as inter-track z and a intra-track z_i. Inter-track can coordinate the generation of different instruments like composer does. And one discriminator to evaluate instruments collectively. It can be seen as; every instrument has its own individuality, at the sime time, each instrument creates a song collectively by hearing each other.
+
+Combining the idea of jamming and composer models. Generator takes input as inter-track $z$ and a intra-track $z_i$. Inter-track can coordinate the generation of different instruments like composer does. And one discriminator to evaluate instruments collectively. It can be seen as; every instrument has its own individuality, at the sime time, each instrument creates a song collectively by hearing each other.
+
+## Track Unconditional Temporal Model
+![test image size](/images/music-generation/trackuc.png){:height="90%" width="90%"}
+
+Generating bars with coherence among the bars. Temporal structure generator $G_{\text{temp}}$, bar generator $G_{\text{bar}}$. $G_{\text{temp}}$ maps noise vector $z$ to sequence of latent vectors. $G_{\text{bar}}$ is used for generating pianorolls sequentially.
+
+$$G(z) = \{G_{\text{bar}}(G_{\text{temp}}(z)^(t))\}_{t=1}^T$$
+
+## Track Unconditional Temporal Model
+![test image size](/images/music-generation/trackc.png){:height="90%" width="90%"}
 
 
 
