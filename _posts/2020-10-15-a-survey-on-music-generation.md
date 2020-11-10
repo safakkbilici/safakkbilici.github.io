@@ -37,6 +37,7 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
 # Generating Music With Generative Adversarial Networks
 
 [MuseGAN](https://arxiv.org/abs/1709.06298) is a Generative Adversarial Network for music generation. It uses piano-roll representation of MIDI files. A piano-roll dataset called [Lakh](https://salu133445.github.io/lakh-pianoroll-dataset/) is used for MuseGAN. But what is piano-roll?
@@ -46,4 +47,14 @@ The term bar has same meaning with bar in music.
 Bar In Lakh                |  Bar In Music
 :-------------------------:|:-------------------------:
 ![](/images/music-generation/musegan.png)   |  ![](/images/music-generation/thelick.jpeg)
+
+MuseGAN has 3+2 proposals. The first three represent different techniques to generate tracks (instruments). The last two represent different techniques to represent temporal structure of music.
+
+## Jamming Model
+![test image size](/images/music-generation/jamming.png){:height="90%" width="90%"}
+Multiple generators work independently and generate music of its own instrument. The generators receive critics from different discriminators. It can be seen as, different instrument players improvize in different studios. Like [free jazz](https://safakkbilici.github.io/int-to-free-jazz/) (!). They can't hear each other but they create a song collectively.
+
+
+
+
 
