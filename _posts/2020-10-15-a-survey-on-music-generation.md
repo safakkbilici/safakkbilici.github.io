@@ -74,6 +74,9 @@ $$G(z) = \{G_{\text{bar}}(G_{\text{temp}}(z)^{(t)})\}_{t=1}^T$$
 
 ## Track Unconditional Temporal Model
 ![test image size](/images/music-generation/trackc.png){:height="90%" width="90%"}
+The vector y is given by human and tries to learn the temporal structure underlying that instrument and to generate the remaining tracks. One can add a encoder to achieve such conditional generation with highdimensional conditions, an additional encoder $E$ is trained.
+
+$$G^{\circ}(z,y) = \{G^{\circ}_{\text{bar}}(z^{(t)}, E(y^{(t)}))\}_{t=1}^T$$
 
 
 
