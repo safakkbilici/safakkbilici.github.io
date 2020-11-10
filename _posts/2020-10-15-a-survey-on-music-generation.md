@@ -93,4 +93,5 @@ if __name__ == '__main__':
     main()
 ```
 
+<script src="https://github.com/safakkbilici/Synthetic-Music-Generation-with-Deep-Neural-Networks/blob/main/midihelper/midihelper.py"></script>
 
