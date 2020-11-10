@@ -45,5 +45,5 @@ The term bar has same meaning with bar in music.
 
 Bar In Lakh                |  Bar In Music
 :-------------------------:|:-------------------------:
-![](/images/music-generation/musegan.png)   |  ![](/images/music-generation/thelick.png)
+![](/images/music-generation/musegan.png)   |  ![](/images/music-generation/thelick.jpeg)
 
