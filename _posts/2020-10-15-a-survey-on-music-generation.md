@@ -80,7 +80,7 @@ The vector y is given by human and tries to learn the temporal structure underly
 $$G^{\circ}(z,y) = \{G^{\circ}_{\text{bar}}(z^{(t)}, E(y^{(t)}))\}_{t=1}^T$$
 
 ## The Model
-![test image size](/images/music-generation/themodel.png){:height="90%" width="90%"}
+![test image size](/images/music-generation/themodel.png){:height="110%" width="110%"}
 
 MuseGAN is an integration and extension of the proposed models that we discussed. Input is composed into 4 parts. Inter-track time-independent random vectors $$z$$, intra-track time-independent vectors $$z_i$$, inter-track time-dependent random vectors $$z_t$$, intra-track time-dependent random vectors $$z_{i, t}$$. Index $$i$$ is for instruments, index $$t$$ is for sequence of time.
 
