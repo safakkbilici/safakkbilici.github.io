@@ -26,6 +26,10 @@ Music is an art of time. It is formed by the colaboration of instruments -compos
 
 Recurrent Neural Networks are very simple way to represent sequential data like music. RNNs learns a probability distribution over the next notes given all the previous notes. We have to give an training data to the model, which can be either audo file or symbolic representation of music. MIDI itself does not make sound, it is just a series of messages like “note on,” “note off,” “note/pitch,” “pitch-bend,” and many more. These messages are interpreted by a MIDI instrument to produce sound. A software called Music21 can transform midi file into textual chord form (A,B,C etc.). One can easily get the notes from mid file and convert it to sequential data to use with RNNs:
 
+<details>
+  <summary>
+    Code 1
+  </summary>
 ```python
 from glob import glob
 import os
@@ -83,6 +87,7 @@ def noteToSequence(notes,nvocab):
     return (inp,out)
 
 ```
+</details>
 
 ```python
 def main():
