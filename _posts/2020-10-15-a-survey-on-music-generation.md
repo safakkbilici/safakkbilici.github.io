@@ -37,3 +37,13 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+# Generating Music With Generative Adversarial Networks
+
+[MuseGAN](https://arxiv.org/abs/1709.06298) is a Generative Adversarial Network for music generation. It uses piano-roll representation of MIDI files. A piano-roll dataset called [Lakh](https://salu133445.github.io/lakh-pianoroll-dataset/) is used for MuseGAN. But what is piano-roll?
+The Lakh Pianoroll Dataset (LPD) is a collection of 174,154 multitrack pianorolls derived from the Lakh MIDI Dataset (LMD). The dataset contains 5 dimensions. (30,887 X number of bars X time step by a bar (96) X notes in roll [pitches] (128) X tracks (instruments)).
+The term bar has same meaning with bar in music.
+
+Bar In Lakh                |  Bar In Music
+:-------------------------:|:-------------------------:
+![](/images/music-generation/musegan.png)   |  ![](/images/music-generation/thelick.png)
+
