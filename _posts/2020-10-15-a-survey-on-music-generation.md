@@ -72,12 +72,19 @@ Generating bars with coherence among the bars. Temporal structure generator $$G_
 
 $$G(z) = \{G_{\text{bar}}(G_{\text{temp}}(z)^{(t)})\}_{t=1}^T$$
 
-## Track Unconditional Temporal Model
+## Track Conditional Temporal Model
 ![test image size](/images/music-generation/trackc.png){:height="90%" width="90%"}
+
 The vector y is given by human and tries to learn the temporal structure underlying that instrument and to generate the remaining tracks. One can add a encoder to achieve such conditional generation with highdimensional conditions, an additional encoder $E$ is trained.
 
 $$G^{\circ}(z,y) = \{G^{\circ}_{\text{bar}}(z^{(t)}, E(y^{(t)}))\}_{t=1}^T$$
 
+## The Model
+![test image size](/images/music-generation/themodel.png){:height="90%" width="90%"}
+
+MuseGAN is an integration and extension of the proposed models that we discussed. Input is composed into 4 parts. Inter-track time-independent random vectors $$z$$, intra-track time-independent vectors $$z_i$$, inter-track time-dependent random vectors $$z_t$$, intra-track time-dependent random vectors $$z_{i, t}$$. Index $i$ is for instruments, index $t$ is for sequence of time.
+
+$$G(\hat{z}) = \{ G_{\text{bar},i} (z, G_{\text{temp}}(z_t)^{(t)}, z_i, G_{\text{temp},i}(z_{i,t})^{(t)})\}_{i,t=1}^{M,T}
 
 
 
