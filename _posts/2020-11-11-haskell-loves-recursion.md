@@ -13,6 +13,7 @@ mathjax: "true"
 image:
   thumb: "/images/haskellrecursion/header.jpg"
 ---
+# Haskell Loves Recursion
 
 Some of us love while loops or for loops. Well... Haskell does not. There are no for or while loops in Haskell. Unlike imperative languages (like Java, C++ etc.), you do computations in Haskell by declaring what something is instead of declaring how you get it. That's why there are no while loops or for loops in Haskell. It seems quite weird right now. 
 
@@ -200,4 +201,23 @@ let mul3'9'2'2 = mul3'9'2 2
 ```
 
 If you call the function let mul3'9'2'2, it returns 32. (Do not forget that the apostrophe just a naming convesion).
+
+What about the famous recursive problem, quicksort?
+
+```haskell
+quicksort :: (Ord a) => [a] -> [a]
+quicksort [] = []
+quicksort (x:xs) =
+  let smallerSorted = quicksort [a | a<-xs, a<=x]
+      biggerSorted  = quicksort [a | a<-xs, a>x]
+  in  smallerSorted ++ [x] ++ biggerSorted
+```
+
+The analysis of quicksort is left to the my lovely readers.
+
+# References
+- \[1\] [Learn You Haskell](http://learnyouahaskell.com/) 
+- \[2\] [Recursive Lambda Functions](https://sookocheff.com/post/fp/recursive-lambda-functions/)
+- \[3\] Haskell Programming from first principles, Christopher Allen and Julie Moronuki
+- \[4\] [Tour of the haskell syntax](http://www.cse.chalmers.se/edu/year/2014/course/TDA452/haskell-syntax.html)
 
