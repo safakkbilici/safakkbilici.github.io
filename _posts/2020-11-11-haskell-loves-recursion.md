@@ -98,3 +98,59 @@ $$ = 1 + (1 + (1 + ( 1 + 0)))$$
 
 $$ = 4$$
 
+Let's move on to another example, maximum of the list
+
+```haskell
+max' :: (Ord a) => [a] -> a  
+maximum' [] = error "maximum of empty list"  
+max' [x] = x  
+max' (x:xs) = max x (maximum' xs) 
+```
+
+$$ max' [137,15,16] = max 137 (max' [15,16]$$
+
+$$ = max 137 (max 15 max' [16])$$
+
+$$ = max 137 (max 15 16) = 137$$ 
+
+It is easy to read! What about some replication?
+
+```haskell
+replicate' :: (Num i, Ord i) => i-> a -> [a]
+replicate' n x
+  | n <= 0 = []
+  | otherwise = x: replicate' (n-1) x
+```
+
+I hope that you know [pattern guards](https://wiki.haskell.org/Pattern_guard) in Haskell, actually it can be seen as if-else statements.
+
+$$ replicate' 5 3 = 5 : replicate' 5 2$$
+
+$$ = 5 : 5 : replicate' 5 1$$
+
+$$ = 5 : 5 : 5 : replicate' 5 0$$
+
+$$ = 5 : 5 : 5 : [] = [5,5,5]$$
+
+
+More list example, let's make a reverse function for lists
+
+```
+reverse' :: [a] -> [a]
+reverse' [] = error "empty list"
+reverse' (x:xs) = reverse' xs ++ [x]
+```
+
+You already know that plus plus (++) operator means list concatenation. We dont have initial conditions except the error one, it will look like this
+
+$$reverse' [1,2,3,4] = reverse' [2,3,4] ++ [1]$$
+
+$$= reverse' [3,4] ++ [2] ++ [1]$$
+
+$$= reverse' [4] ++ [3] ++ [2] ++ [1]$$
+
+$$= [4] ++ [3] ++ [2] ++ [1] = [4,3,2,1]$$
+
+
+
+
