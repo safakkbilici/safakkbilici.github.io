@@ -181,7 +181,7 @@ Every function in Haskell officially only takes one parameter... For example max
 
 What about another shot?
 
-```
+```haskell
 mul3 :: (Num a) => a -> a -> a -> a
 mul3 x y z = x * y * z
 ``` 
