@@ -109,9 +109,9 @@ max' (x:xs) = max x (maximum' xs)
 
 $$ max' [137,15,16] = max 137 (max' [15,16]$$
 
-$$ = max 137 (max 15 max' [16])$$
+$$ = max \;137 (max \;15 max' \;[16])$$
 
-$$ = max 137 (max 15 16) = 137$$ 
+$$ = max \;137 (max \;15 \;16) = 137$$ 
 
 It is easy to read! What about some replication?
 
@@ -124,11 +124,11 @@ replicate' n x
 
 I hope that you know [pattern guards](https://wiki.haskell.org/Pattern_guard) in Haskell, actually it can be seen as if-else statements.
 
-$$ replicate' 5 3 = 5 : replicate' 5 2$$
+$$ replicate' \;5 \;3 = 5 : replicate' \;5 \;2$$
 
-$$ = 5 : 5 : replicate' 5 1$$
+$$ = 5 : 5 : replicate' \;5 \;1$$
 
-$$ = 5 : 5 : 5 : replicate' 5 0$$
+$$ = 5 : 5 : 5 : replicate' \;5 \;0$$
 
 $$ = 5 : 5 : 5 : [] = [5,5,5]$$
 
