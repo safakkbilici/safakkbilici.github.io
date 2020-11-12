@@ -135,7 +135,7 @@ $$ = 5 : 5 : 5 : [] = [5,5,5]$$
 
 More list example, let's make a reverse function for lists
 
-```
+```haskell
 reverse' :: [a] -> [a]
 reverse' [] = error "empty list"
 reverse' (x:xs) = reverse' xs ++ [x]
@@ -152,5 +152,52 @@ $$= reverse' [4] ++ [3] ++ [2] ++ [1]$$
 $$= [4] ++ [3] ++ [2] ++ [1] = [4,3,2,1]$$
 
 
+So, there was an error called stack overflow. Do you remember? If your recursion goes to infinity in C programming, you mostly see that error. Well... You know Haskell is lazy. It won’t try to evaluate lists immediately. It will wait to see what you want to get out of that infinite list. So does in recursions.
 
+```haskell
+repeat' :: a -> [a]
+repeat' x = x:repeat' x
+```
+
+When calling repeat' 15, it will give you an infinite list with elements 15. But it do not store it in your computer's memory, Haskell do not make a computation until you want. If you want a index of $i$, then Haskell will do this computation.
+
+Let's go harder with high order functions plus recursion! Can I write a recursive function that have a argument of function? Before this, here is a simple high order function that takes a function and returns this function.
+
+```haskell
+applyTwice :: (a -> a) -> a -> a -- (+3) == (a->a)
+applyTwice foo x = foo (foo x)
+```
+
+How should I call this function? Well, like this
+
+```haskell
+applyTwice (+2) 8
+```
+
+Wait, what? Is '+2' is a function? Actually, this is the main idea in pure functional programming languages. **Everything is a function**. What will be the answer of appylyTwice (+2) 8? Yes, 12. '(+2)' is a function that returns its parameter + 2. 
+
+Every function in Haskell officially only takes one parameter... For example max function. Doing max 9 7 first creates a function that takes a parameter and returns either 9 or that parameter, depending on which is bigger. Then, 7 is applied to that function and that function produces our desired result. So, (max 9) 7 and max 9 7 are same. Max is defined as max :: (Ord a) => a -> a -> a but also can be defined as max :: (Ord a) => a -> a -> a. I know, it is hard to digest.
+
+What about another shot?
+
+```
+mul3 :: (Num a) => a -> a -> a -> a
+mul3 x y z = x * y * z
+``` 
+
+This function takes 3 parameters and gives you the multiplication of them. Lets define another function
+
+```haskell
+let mul3'9 = mul3 9
+```
+
+mul3 9 returns a function that needs 2 parameters. We assing this function to mul3'9. Now, mul3'9 takes two parameters and returns multiplication of 9 and other 2 parameters. So, mul3'9 2 2 is equal to 36. You can do the same thing as
+
+```haskell
+let mul3'9 = mul3 9
+let mul3'9'2 = mul3'9 2
+let mul3'9'2'2 = mul3'9'2 2
+```
+
+If you call the function let mul3'9'2'2, it returns 32. (Do not forget that the apostrophe just a naming convesion).
 
