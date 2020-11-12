@@ -175,7 +175,7 @@ How should I call this function? Well, like this
 applyTwice (+2) 8
 ```
 
-Wait, what? Is '+2' is a function? Actually, this is the main idea in pure functional programming languages. **Everything is a function**. What will be the answer of appylyTwice (+2) 8? Yes, 12. '(+2)' is a function that returns its parameter + 2. 
+Wait, what? Is '+2' a function? Actually, this is the main idea in pure functional programming languages. **Everything is a function**. What will be the answer of appylyTwice (+2) 8? Yes, 12. '(+2)' is a function that returns its parameter + 2. 
 
 Every function in Haskell officially only takes one parameter... For example max function. Doing max 9 7 first creates a function that takes a parameter and returns either 9 or that parameter, depending on which is bigger. Then, 7 is applied to that function and that function produces our desired result. So, (max 9) 7 and max 9 7 are same. Max is defined as max :: (Ord a) => a -> a -> a but also can be defined as max :: (Ord a) => a -> a -> a. I know, it is hard to digest.
 
