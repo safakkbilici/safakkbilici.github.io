@@ -39,7 +39,7 @@ One can look at the [fixed-point combinator](https://sookocheff.com/post/fp/recu
 
 Let's move on to another example, equivalent to factorial one, the power operation:
 
-```
+```haskell
 power' :: Int -> Int -> Int
 power' n 0 = 1
 power' n x= n * (power' n (x-1))
