@@ -87,9 +87,14 @@ So our recursive function *lengthrec'* takes a list like (_:ls). And in its recu
 And so on. This recursion reduces our list elements in someway. At the initial condition, we have empty list [] with length of 0. Recursion definition have a addition function "+1", this helps us to compute the length of list. In every single parameter "reducing" we add 1 to initial zero.
 
 $$length'([137,15,16,17]) = 1 + length'([15,16,17])$$
+
 $$ =  1 + (1 + length'([16,17]))$$
+
 $$ = 1 + (1 + (1 + length'([17])))$$
+
 $$ = 1 + (1 + (1 + ( 1 + length'([]))))$$
+
 $$ = 1 + (1 + (1 + ( 1 + 0)))$$
+
 $$ = 4$$
 
