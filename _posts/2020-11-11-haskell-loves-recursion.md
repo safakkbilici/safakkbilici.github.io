@@ -200,7 +200,7 @@ let mul3'9'2 = mul3'9 2
 let mul3'9'2'2 = mul3'9'2 2
 ```
 
-If you call the function let mul3'9'2'2, it returns 32. (Do not forget that the apostrophe just a naming conventions).
+If you call the function let mul3'9'2'2, it returns 32. (Do not forget that the apostrophe just a naming convention).
 
 What about the famous recursive problem, quicksort?
 
