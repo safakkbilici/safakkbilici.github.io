@@ -50,23 +50,23 @@ This section covers my favorite textbooks/papers/blog posts.
 
 ### 2013
 - Deep Neural Networks for Object Detection [[NIPS Paper](https://papers.nips.cc/paper/5207-deep-neural-networks-for-object-detection.pdf)]
-- Auto-Encoding Variational Bayes [[arXiv](https://arxiv.org/pdf/1312.6114.pdf)
+- Auto-Encoding Variational Bayes [[arXiv](https://arxiv.org/pdf/1312.6114.pdf)]
 
 ### 2014
 - Very Deep Convolutional Networks For Large-Scale Image Recognition [[arXiv](https://arxiv.org/pdf/1409.1556.pdf)]
 - Generative Adversarial Networks [[arXiv](https://arxiv.org/pdf/1406.2661.pdf)]
 
 ### 2016
-- Tutorial on Variational Autoencoders [[arXiv](https://arxiv.org/pdf/1606.05908.pdf)
+- Tutorial on Variational Autoencoders [[arXiv](https://arxiv.org/pdf/1606.05908.pdf)]
 
 ### 2017
-- MuseGAN: Multi-track Sequential Generative Adversarial Networks for Symbolic Music Generation and Accompaniment [[arXiv](https://arxiv.org/pdf/1709.06298.pdf)
+- MuseGAN: Multi-track Sequential Generative Adversarial Networks for Symbolic Music Generation and Accompaniment [[arXiv](https://arxiv.org/pdf/1709.06298.pdf)]
 
 ### 2018
 - An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling [[arXiv](https://arxiv.org/pdf/1803.01271.pdf)]
 
 ### 2020
-- Jukebox: A Generative Model for Music [[arXiv](https://arxiv.org/pdf/2005.00341.pdf)
+- Jukebox: A Generative Model for Music [[arXiv](https://arxiv.org/pdf/2005.00341.pdf)]
 
 # Test
 I test stuff here.
