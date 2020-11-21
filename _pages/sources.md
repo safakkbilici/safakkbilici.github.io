@@ -5,7 +5,7 @@ title: "Sources"
 permalink: /sources/
 header:
 ---
-This section covers my favorite textbooks/papers/blog posts, albums (and others) recommendations.
+This section covers my favorite textbooks/papers/blog posts.
 
 # Textbooks
 
@@ -24,7 +24,7 @@ This section covers my favorite textbooks/papers/blog posts, albums (and others)
 
 # Blog Posts
 
--  [Frequentism and Bayesianism: A Practical Introduction](http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/)
+- [Frequentism and Bayesianism: A Practical Introduction](http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/)
 
 - [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 
@@ -44,26 +44,29 @@ This section covers my favorite textbooks/papers/blog posts, albums (and others)
 
 # Papers
 
+### 2012
 - ImageNet Classification with Deep Convolutional Neural Networks [[NIPS Paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)]
-
-- Very Deep Convolutional Networks For Large-Scale Image Recognition [[arXiv](https://arxiv.org/pdf/1409.1556.pdf)]
-
 - On The Difficulty Of Training Recurrent Neural Networks [[arXiv](https://arxiv.org/pdf/1211.5063.pdf)]
 
+### 2013
 - Deep Neural Networks for Object Detection [[NIPS Paper](https://papers.nips.cc/paper/5207-deep-neural-networks-for-object-detection.pdf)]
+- Auto-Encoding Variational Bayes [[arXiv](https://arxiv.org/pdf/1312.6114.pdf)
 
+### 2014
+- Very Deep Convolutional Networks For Large-Scale Image Recognition [[arXiv](https://arxiv.org/pdf/1409.1556.pdf)]
+- Generative Adversarial Networks [[arXiv](https://arxiv.org/pdf/1406.2661.pdf)]
+
+### 2016
+- Tutorial on Variational Autoencoders [[arXiv](https://arxiv.org/pdf/1606.05908.pdf)
+
+### 2017
+- MuseGAN: Multi-track Sequential Generative Adversarial Networks for Symbolic Music Generation and Accompaniment [[arXiv](https://arxiv.org/pdf/1709.06298.pdf)
+
+### 2018
 - An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling [[arXiv](https://arxiv.org/pdf/1803.01271.pdf)]
 
-- Temporal Convolutional Attention-based Network For Sequence Modeling [[arXiv](https://arxiv.org/pdf/2002.12530.pdf)]
-
-
-# Albums
-
-- Have you heard about microtonals?: **King Gizzard And The Lizard Wizard - Flying Microtonal Banana**
-
-- I have this album's tattoo on my body: **Genesis - Nursery Cryme**
-
-- Some experimental electronic baroque: **Igorrr - Hallelujah**
+### 2020
+- Jukebox: A Generative Model for Music [[arXiv](https://arxiv.org/pdf/2005.00341.pdf)
 
 # Test
 I test stuff here.
