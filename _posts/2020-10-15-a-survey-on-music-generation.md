@@ -86,6 +86,10 @@ MuseGAN is an integration and extension of the proposed models that we discussed
 
 $$G(\hat{z}) = \{ G_{\text{bar},i} (z, G_{\text{temp}}(z_t)^{(t)}, z_i, G_{\text{temp},i}(z_{i,t})^{(t)})\}_{i,t=1}^{M,T}$$
 
+# Jukebox 
+
+to be continued...
+
 
 
 
