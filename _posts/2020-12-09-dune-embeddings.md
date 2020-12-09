@@ -3,7 +3,7 @@ title: "Dune Embeddings"
 date: "2020-12-09"
 tages: [Word Embeddings, Word2Vec, Science Fiction, Natural Language Processing]
 header:
-  overlay_image: "/images/dune/dune2.jpg"
+  overlay_image: "/images/dune/dune2.png"
   teaser: "/images/dune/dune1.jpg"
 TeX: {
   extensions: ["AMSmath.js", "AMSsymbols.js"]
