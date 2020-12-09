@@ -22,7 +22,7 @@ Let's go traditional by writing recursive factorial.
 ```haskell
 factorial :: (Integral a) => a->a
 factorial 0 = 1
-factorial n = n * factorialRecursive (n-1)
+factorial n = n * factorial (n-1)
 ```
 
 We define our initial condition with pattern matching "factorial 0 = 1". Most imperative languages don't have pattern matching so you have to make a lot of if else statements to test for edge conditions, and it will getting unreadable. For now, it is easy to read Haskell recursion, the factorial one is nearly same as in C. In factorial, we have 1 fixed point that is $$factorial(0)= 1$$. It can be read as
