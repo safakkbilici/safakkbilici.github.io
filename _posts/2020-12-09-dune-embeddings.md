@@ -14,6 +14,10 @@ image:
   thumb: "/images/dune/dune1.jpg"
 ---
 # Dune Embeddings
+
+Consider this as an unorthodox way to recommend Dune.
+
+
 This blog post covers some experimental word embeddings on the book series called Dune. I am writing this post just for fun. As you may know that, Dune has distinctive linguistic features (the universal language in Dune Universe is Galach), mostly based on varieties of Arabic. I trained a corpus of six main books of Dune: Dune (1), Dune Messiah (2), Children Of Dune (3), God Emperor Of Dune (4), Heretics of Dune (5), Chapterhouse Dune (6). Before dive in the code and analysis, here is the dependencies:
 
 - gensim == 3.6.0
@@ -399,7 +403,8 @@ def tsnescatterplot(model, word, list_names):
 10 most similar words versus 8 random words for word **Dune**
 
 ```python
-tsnescatterplot(word2vec, 'dune', ['fremen', 'atreides', 'harkonnen', 'paul', 'crysknife', 'spice', 'muad_dib', 'stilgar'])
+tsnescatterplot(word2vec, 'dune', ['fremen', 'atreides', 
+'harkonnen', 'paul', 'crysknife', 'spice', 'muad_dib', 'stilgar'])
 ```
 
 Output:
@@ -409,10 +414,26 @@ Output:
 10 most similar words versus 10 most dissimilar for word **muad_dib**
 
 ```python
-tsnescatterplot(w2v_model, 'muad_dib', [i[0] for i in w2v_model.wv.most_similar(negative=["muad_dib"])]) #10 Most similar words vs. 10 Most dissimilar
+tsnescatterplot(w2v_model, 'muad_dib', 
+[i[0] for i in w2v_model.wv.most_similar(negative=["muad_dib"])])
 ```
 
 Output:
 
 ![test image size](/images/dune/tsne2.png){:height="90%" width="90%"}
 
+## Conclusion
+>> “I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain.”
+
+Read Dune.
+
+
+## References
+
+- [Distributed Representations of Words and Phrases and their Compositionality (Mikolov et al., 2013)](https://papers.nips.cc/paper/2013/file/9aa42b31882ec039965f3c4923ce901b-Paper.pdf)
+- [Efficient Estimation of Word Representations in Vector Space (Mikolov et al., 2013)](https://arxiv.org/abs/1301.3781)
+- [Pytorch Implementation of Word2Vec](https://programmer.group/pytorch-implements-word2vec.html)
+- [Language Processing Pipelines](https://spacy.io/usage/processing-pipelines/)
+- [models.word2vec – Word2vec embeddings](https://radimrehurek.com/gensim/models/word2vec.html)
+- [Visualizing Data using t-SNE (Maaten et al., 2008)](https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf)
+- [Inzva's Applied AI Word2Vec Section](https://www.youtube.com/watch?v=b8iq7VWroXI)
