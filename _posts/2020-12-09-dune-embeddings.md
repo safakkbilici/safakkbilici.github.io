@@ -33,3 +33,13 @@ $$= \min \limits_{\theta} -\frac{1}{T} \prod_{t=1}^T \prod_{-c \leq j \leq c, j 
 
 $$= \min \limits_{\theta} -\frac{1}{T} \sum_{t=1}^T \sum_{-c \leq j \leq c, j \neq c} \log p(w_{t+j}|w_t; \theta)$$
 
+
+The term *center* and *context* can be expressed as an example (with a fixed window size): w = "to learn word vector representations"
+
+x (center)     | y (context)
+:-------------:|:-------------:
+word (w2)      | learn (w1)
+word (w2)      | vector (w3)
+vector (w3)    | word (w2)
+vector (w3)    | representations (w4)
+
