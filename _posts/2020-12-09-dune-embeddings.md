@@ -50,8 +50,14 @@ How can we calculate those probabilities? With a single softmax?
 
 $$p(w_O, | w_I) = \frac{\exp(V_{w_O}' V_{w_I}^T)}{\sum_{w'=1}^{\mid V \mid} \exp(V_{w'} V_{w_I}^T)}$$
 
-This softmax is class probability of context words in the entire vocabulary, we maximize this class probabilities. But this is impractical due to the cost of computing  is proportional to size of our vocabulary V, which is about 60k in our case. In order to computational efficiency, we use a simplified version of Noise Constrastive Estimation: Negative Sampling. This Negative Sampling objective is defined as
+This softmax is class probability of context words in the entire vocabulary, we maximize this class probabilities. But this is impractical due to the cost of computing $$\nabla \log p(w_O | w_I)$$ is proportional to size of our vocabulary V, which is about 60k in our case. In order to computational efficiency, we use a simplified version of Noise Constrastive Estimation: Negative Sampling. This Negative Sampling objective is defined as
 
 $$ \log \sigma(V_{w_O}' V_{w_I}^T) + \sum_{i=0}^{k} \mathbb{E}_{w_i \sim P_n(w)} \left[\log \sigma(- V_{w_i}' V_{w_I}^T) \right]$$
 
 This objective says that, "I want to classify the word sampling against the other classes higher". The term $$V_{w_O}'$$ is for "word around it", the term $$V_{w_I}$$ is for "word I considered". The sampling $$w_i \sim P_n(w)$$ means "sample word from your vocabulary at random and sample $$k$$ of them". When you maximize this objective, you also minimize the summation term. But what is $$P(w_i)$$?
+
+Authors of the paper said that, in very large corpora, the most frequent words can easily occur hundreds of millions of times. Such words usually provide less information value than the rare words. For example, while the Skip-gram model benefits from observing co-occurrences of "Fremen" and "Crysknife", it benefits much less from observing the frequent co-occurrences of "Fringe" and "the", as nearly every word co-occurs frequently within a sentence "the". To counter the imbalance between the rare and frequent words, such a subsampling approach is proposed:
+
+$$ P(w_i) = 1 - \sqrt{\frac{t}{frequency(w_i)}}$$
+
+Where $t$ is the temperature, chosen $$10^{-5}$$. This formulation aggressively subsamples words whose frequency is greater than t while preserving the ranking of the frequencies.
