@@ -77,9 +77,7 @@ from gensim.models.phrases import Phrases, Phraser
 from nltk.tokenize import word_tokenize
 from nltk.tokenize import sent_tokenize
 nltk.download('punkt')
-import warnings  
-warnings.filterwarnings(action='ignore',category=UserWarning,module='gensim')  
-warnings.filterwarnings(action='ignore',category=FutureWarning,module='gensim') 
+import warnings
 ```
 
 Then we read our book data, served as .txt file. We apply nltk's sentence tokenizer sent_tokenize() to tokenize the sentences in this text files.
@@ -141,8 +139,8 @@ In function preprocess(), we also not to choose sentences longer than 2. Word2Ve
 Other processing technique is detect common phrases (bigrams). For example Muad Dib is a bigram that is very useful for Dune context. Or bigram Bene Gesserit is indispensable. We use gensim to automatically detect common phrases (bigrams) from a list of sentences.
 
 ```python
-sentence = [row.split() for row in df_cleaned['cleaned']] # gensim.models.phrases.Phrases() takes a list of list of words as input
-phrases = Phrases(sentence, min_count=30, progress_per=10000) # detect common phrases (bigrams) from a list of sentences (why we do this: working class, communist party etc)
+sentence = [row.split() for row in df_cleaned['cleaned']]
+phrases = Phrases(sentence, min_count=30, progress_per=10000)
 sentences = phrases[sentence];
 ```
 
@@ -155,10 +153,10 @@ for sent in sentences:
         word_freq[i] += 1
 ```
 
-Now it is time to create our word2vec model.
+Now it is time to create our word2vec model. We set up the parameters of the model one-by-one.
 
 ```python
-w2v_model = Word2Vec(min_count=20,
+word2vec = Word2Vec(min_count=20,
                      window=2,
                      size=300,
                      sample=6e-5, 
@@ -168,7 +166,7 @@ w2v_model = Word2Vec(min_count=20,
                      workers=cores-1)
 ```
 
-Hyperparameters that we learnt:
+Hyperparameters that we learned:
 
 - min_count: Ignores all words with total absolute frequency lower than this.
 - window: The maximum distance between the current and predicted word within a sentence. (as you can see in the paper)
@@ -177,5 +175,98 @@ Hyperparameters that we learnt:
 - alpha: The initial learning rate
 - in_alpha: changing learning rage
 - negative: negative sampling, the int for negative specifies how many "noise words" should be drown.
+
+Then, we initialized our model with building the vocabulary from a sequence of sentences.
+
+```python
+word2vec.build_vocab(sentences, progress_per=10000)
+```
+
+Finally let's train our word2vec model.
+
+```python
+word2vec.train(sentences, total_examples=w2v_model.corpus_count, epochs=30, report_delay=1)
+w2v_model.init_sims(replace=True)
+```
+
+Let's play!
+
+What are the most similiar 10 word of **bene gesserit**? (explanation: The Bene Gesserit are a powerful and ancient order of women that are trained as a most patient, high analytical [and more](https://dune.fandom.com/wiki/Bene_Gesserit)).
+
+```python
+word2vec.wv.most_similar(positive=["bene_gesserit"])
+```
+Output:
+```
+[('superior', 0.9340497255325317),
+ ('teaching', 0.9308292865753174),
+ ('teacher', 0.9248643517494202),
+ ('sisterhood', 0.9196563959121704),
+ ('bene_tleilax', 0.9170730113983154),
+ ('analysis', 0.9170225858688354),
+ ('education', 0.9143076539039612),
+ ('breeding_program', 0.9017256498336792),
+ ('alliance', 0.90071702003479),
+ ('fact', 0.8998515009880066)]
+```
+
+What are the most similiar 10 word of **fremen**? (explanation: Fremens are native race of the planet Dune. Muad'Dib's Jihad launched by Paul Atreides, their adopted leader [and more](https://dune.fandom.com/wiki/Fremen))
+
+```python
+word2vec.wv.most_similar(positive=["fremen"])
+```
+Output:
+```
+[('spirit', 0.9168293476104736),
+ ('paradise', 0.9119386672973633),
+ ('legend', 0.9027668833732605),
+ ("muad'dib", 0.9022884368896484),
+ ('prophet', 0.8965635895729065),
+ ('demon', 0.8792929649353027),
+ ('soul', 0.8790735602378845),
+ ('world', 0.8738502264022827),
+ ('commentary', 0.8680400848388672),
+ ('folk', 0.8670632243156433)]
+```
+
+What are the most similiar 10 word of **lisan**? (explanation: Lisan al Gaib is the Fremen term for an off-world prophet. [and more](https://dune.fandom.com/wiki/Lisan_al_Gaib))
+
+```python
+word2vec.wv.most_similar(positive=["lisan"])
+```
+Output:
+
+```
+[('gaib', 0.9857056140899658),
+ ('harq', 0.9847873449325562),
+ ('al', 0.9727405309677124),
+ ('ada', 0.9507930874824524),
+ ('legend', 0.9193408489227295),
+ ('world', 0.8181276321411133),
+ ('flee', 0.7918423414230347),
+ ('atreides', 0.789204478263855),
+ ('commentary', 0.7849634885787964),
+ ("muad'dib", 0.7831201553344727)]
+```
+
+What are the most similiar 10 word of **spice**? (explanation: The Spice Melange, commonly referred to simply as 'the spice', was a naturally produced awareness spectrum narcotic that formed a fundamental block of commerce and technological development in the known universe for millennia [and more](https://dune.fandom.com/wiki/Spice_Melange))
+
+```python
+word2vec.wv.most_similar(positive=["spice"])
+```
+Output:
+
+```
+[('melange', 0.9448734521865845),
+ ('essence', 0.8954010009765625),
+ ('rich', 0.8934587240219116),
+ ('mass', 0.881293773651123),
+ ('pre', 0.8805406093597412),
+ ('diet', 0.8717115521430969),
+ ('food', 0.8487979173660278),
+ ('addiction', 0.8199436068534851),
+ ('trace', 0.8126449584960938),
+ ('growth', 0.8088463544845581)]
+```
 
 
