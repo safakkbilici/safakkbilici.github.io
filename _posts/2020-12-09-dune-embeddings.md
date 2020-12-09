@@ -52,6 +52,6 @@ $$p(w_O, | w_I) = \frac{\exp(V_{w_O}' V_{w_I}^T)}{\sum_{w'=1}^{|V|} \exp(V_{w'} 
 
 This softmax is class probability of context words in the entire vocabulary, we maximize this class probabilities. But this is impractical due to the cost of computing $$\nabla \log p(w_O | w_I)$$ is proportional to size of our vocabulary V, which is about 60k in our case. In order to ccomputational efficiency, we use a simplified version of Noise Constrastive Estimation: Negative Sampling. This Negative Sampling objective is defined as
 
-$$ \log \sigma(V_{w_O}' V_{w_I}^T) + \sum_{i=0}^{k} \mathbb{E}_{w_i \sim P_n(w)} \left[\log \sigma(- V_{w_i}' V_{w_I}^T)$$
+$$ \log \sigma(V_{w_O}' V_{w_I}^T) + \sum_{i=0}^{k} \mathbb{E}_{w_i \sim P_n(w)} \left[\log \sigma(- V_{w_i}' V_{w_I}^T) \right]$$
 
 This objective says that, "I want to classify the word sampling against the other classes higher". The term $$V_{w_O}'$$ is for "word around it", the term $$V_{w_I}$$ is for "word I considered". The sampling $$w_i \sim P_n(w)$$ means "sample word from your vocabulary at random and sample $$k$$ of them". When you maximize this objective, you also minimize the summation term. But what is $$P(w_i)$$?
