@@ -191,6 +191,11 @@ w2v_model.init_sims(replace=True)
 
 Let's play!
 
+![test image size](/images/dune/bene_geserit.png){:height="90%" width="90%"}
+
+FIGURE: Reverend Mother Gaius Mohiam (a Bene Gesserit) while testing Paul Atreides with a Gom Jabbar.
+
+
 What are the most similiar 10 word of **bene gesserit**? (explanation: The Bene Gesserit are a powerful and ancient order of women that are trained as a most patient, high analytical [and more](https://dune.fandom.com/wiki/Bene_Gesserit)).
 
 ```python
@@ -209,6 +214,11 @@ Output:
  ('alliance', 0.90071702003479),
  ('fact', 0.8998515009880066)]
 ```
+
+![test image size](/images/dune/fremen.jpg){:height="90%" width="90%"}
+
+FIGURE: A Fremen.
+
 
 What are the most similiar 10 word of **fremen**? (explanation: Fremens are native race of the planet Dune. Muad'Dib's Jihad launched by Paul Atreides, their adopted leader [and more](https://dune.fandom.com/wiki/Fremen))
 
@@ -269,4 +279,140 @@ Output:
  ('growth', 0.8088463544845581)]
 ```
 
+What are the most similiar 4 word of **choam**? (explanation: essentially controls all economic affairs across the cosmos [and more](https://dune.fandom.com/wiki/CHOAM))
+
+```python
+word2vec.wv.most_similar(positive=["choam"])
+```
+Output:
+```
+[('great_house', 0.9707689881324768),
+ ('landsraad', 0.9658929109573364),
+ ('profit', 0.9448226690292358),
+ ('company', 0.9420391321182251)]
+```
+
+What are the most similiar 4 word of **qanat**? (explanation: Open canal for carrying irrigation water under controlled conditions through a desert)
+
+```python
+word2vec.wv.most_similar(positive=["qanat"])
+```
+Output:
+```
+[('pole', 0.9524651765823364),
+ ('planting', 0.9271722435951233),
+ ('river', 0.9262102246284485)]
+```
+
+![test image size](/images/dune/atreides.png){:height="90%" width="90%"}
+
+FIGURE: Flag of House Atreides.
+
+
+And, lastly, for the glory of House Atreides, what are the most similiar 10 word of **atreides**? (explanation: House Atreides was one of the Houses Major within the infrastructure of the Galactic Padishah Empire. They were ruled by the patriarch of the Atreides family, who took the title of Duke [and more](https://dune.fandom.com/wiki/House_Atreides))
+
+```python
+word2vec.wv.most_similar(positive=["atreides"])
+```
+Output:
+```
+[('father', 0.9062684178352356),
+ ('son', 0.8857165575027466),
+ ('custom', 0.8835201263427734),
+ ('cousin', 0.8806978464126587),
+ ('atreide', 0.8775589466094971),
+ ('planetologist', 0.8765182495117188),
+ ("muad'dib", 0.8737363815307617),
+ ('grandfather', 0.8719019889831543),
+ ('title', 0.8706281185150146),
+ ('family', 0.8610590696334839)]
+```
+
+## t-SNE
+
+t-SNE [(Maaten et al., 2008)](https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf) is a non-linear dimensionality reduction algorithm that attempts to represent high-dimensional data and the underlying relationships between vectors in a lower-dimensional space.
+
+Let's plot our vectors.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+sns.set_style("darkgrid")
+from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
+
+def tsnescatterplot(model, word, list_names):
+    arrays = np.empty((0, 300), dtype='f')
+    word_labels = [word]
+    color_list  = ['red']
+    arrays = np.append(arrays, model.wv.__getitem__([word]), axis=0)# adds the vector of the query word
+    close_words = model.wv.most_similar([word])# gets list of most similar words
+    
+    for wrd_score in close_words:
+        wrd_vector = model.wv.__getitem__([wrd_score[0]])
+        word_labels.append(wrd_score[0])
+        color_list.append('blue')
+        arrays = np.append(arrays, wrd_vector, axis=0)
+    
+    for wrd in list_names:
+        wrd_vector = model.wv.__getitem__([wrd])
+        word_labels.append(wrd)
+        color_list.append('green')
+        arrays = np.append(arrays, wrd_vector, axis=0)
+
+    reduc = PCA(n_components=19).fit_transform(arrays) # Reduces the dimensionality from 300 to 19 dimensions with PCA
+    np.set_printoptions(suppress=True)# Finds t-SNE coordinates for 2 dimensions
+    Y = TSNE(n_components=2, random_state=0, perplexity=15).fit_transform(reduc)
+    
+    df = pd.DataFrame({'x': [x for x in Y[:, 0]],
+                       'y': [y for y in Y[:, 1]],
+                       'words': word_labels,
+                       'color': color_list})   
+    fig, _ = plt.subplots()
+    fig.set_size_inches(9, 9)
+    p1 = sns.regplot(data=df,
+                     x="x",
+                     y="y",
+                     fit_reg=False,
+                     marker="o",
+                     scatter_kws={'s': 40,
+                                  'facecolors': df['color']
+                                 }
+                    )
+    for line in range(0, df.shape[0]):
+         p1.text(df["x"][line],
+                 df['y'][line],
+                 '  ' + df["words"][line].title(),
+                 horizontalalignment='left',
+                 verticalalignment='bottom', size='medium',
+                 color=df['color'][line],
+                 weight='normal'
+                ).set_size(15)
+
+    plt.xlim(Y[:, 0].min()-50, Y[:, 0].max()+50)
+    plt.ylim(Y[:, 1].min()-50, Y[:, 1].max()+50)            
+    plt.title('t-SNE visualization for {}'.format(word.title()))
+```
+
+10 most similar words versus 8 random words for word **Dune**
+
+```python
+tsnescatterplot(word2vec, 'dune', ['fremen', 'atreides', 'harkonnen', 'paul', 'crysknife', 'spice', 'muad_dib', 'stilgar'])
+```
+
+Output:
+
+![test image size](/images/dune/tsne1.png){:height="90%" width="90%"}
+
+10 most similar words versus 10 most dissimilar for word **muad_dib**
+
+```python
+tsnescatterplot(w2v_model, 'muad_dib', [i[0] for i in w2v_model.wv.most_similar(negative=["muad_dib"])]) #10 Most similar words vs. 10 Most dissimilar
+```
+
+Output:
+
+![test image size](/images/dune/tsne2.png){:height="90%" width="90%"}
 
