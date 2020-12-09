@@ -36,12 +36,6 @@ $$= \min \limits_{\theta} -\frac{1}{T} \sum_{t=1}^T \sum_{-c \leq j \leq c, j \n
 
 The term *center* and *context* can be expressed as an example (with a fixed window size): w = "to learn word vector representations"
 
-x (center)     | y (context)
-:-------------:|:-------------:
-word (w2)      | learn (w1)
-word (w2)      | vector (w3)
-vector (w3)    | word (w2)
-vector (w3)    | representations (w4)
 
 
 Skip-gram objective is to find word representations that are useful for predicting the surrounding words in a sentence or a document. We maximize the probability of "this words (context) for these word (center)". Of course, increased fixed window size can give us better accuracy.
