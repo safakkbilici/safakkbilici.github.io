@@ -50,7 +50,7 @@ How can we calculate those probabilities? With a single softmax?
 
 $$p(w_O, | w_I) = \frac{\exp(V_{w_O}' V_{w_I}^T)}{\sum_{w'=1}^{\mid V \mid} \exp(V_{w'} V_{w_I}^T)}$$
 
-This softmax is class probability of context words in the entire vocabulary, we maximize this class probabilities. But this is impractical due to the cost of computing $$\nabla \log p(w_O | w_I)$$ is proportional to size of our vocabulary V, which is about 60k in our case. In order to computational efficiency, we use a simplified version of Noise Constrastive Estimation: Negative Sampling. This Negative Sampling objective is defined as
+This softmax is class probability of context words in the entire vocabulary, we maximize this class probabilities. But this is impractical due to the cost of computing gradient of this term is proportional to size of our vocabulary V, which is about 60k in our case. In order to computational efficiency, we use a simplified version of Noise Constrastive Estimation: Negative Sampling. This Negative Sampling objective is defined as
 
 $$ \log \sigma(V_{w_O}' V_{w_I}^T) + \sum_{i=0}^{k} \mathbb{E}_{w_i \sim P_n(w)} \left[\log \sigma(- V_{w_i}' V_{w_I}^T) \right]$$
 
@@ -149,11 +149,33 @@ sentences = phrases[sentence];
 Then we calculate the frequencies.
 
 ```python
-word_freq = defaultdict(int) #frequent words
+word_freq = defaultdict(int)
 for sent in sentences:
     for i in sent:
         word_freq[i] += 1
 ```
 
 Now it is time to create our word2vec model.
+
+```python
+w2v_model = Word2Vec(min_count=20,
+                     window=2,
+                     size=300,
+                     sample=6e-5, 
+                     alpha=0.03, 
+                     min_alpha=0.0007, 
+                     negative=20,
+                     workers=cores-1)
+```
+
+Hyperparameters that we learnt:
+
+- min_count: Ignores all words with total absolute frequency lower than this.
+- window: The maximum distance between the current and predicted word within a sentence. (as you can see in the paper)
+- size: Dimensionality of the feature vectors.
+- sample: The threshold for configuring which higher-frequency words are randomly downsampled. (as you can see in the paper)
+- alpha: The initial learning rate
+- in_alpha: changing learning rage
+- negative: negative sampling, the int for negative specifies how many "noise words" should be drown.
+
 
