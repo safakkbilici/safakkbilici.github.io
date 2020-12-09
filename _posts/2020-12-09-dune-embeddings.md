@@ -36,13 +36,22 @@ $$= \min \limits_{\theta} -\frac{1}{T} \sum_{t=1}^T \sum_{-c \leq j \leq c, j \n
 
 The term *center* and *context* can be expressed as an example (with a fixed window size): w = "to learn word vector representations"
 
+x (center)     | y (context)
+:-------------:|:-------------:
+word (w2)      | learn (w1)
+word (w2)      | vector (w3)
+vector (w3)    | word (w2)
+vector (w3)    | representations (w4)
 
 
 Skip-gram objective is to find word representations that are useful for predicting the surrounding words in a sentence or a document. We maximize the probability of "this words (context) for these word (center)". Of course, increased fixed window size can give us better accuracy.
+
+$$p(w_O, | w_I) = \frac{\exp(V_{w_O} V_{w_I}^T)}{\sum_{w'=1}^{|V|} \exp(V_{w'} V_{w_I}^T)}$$
+
 
 How can we calculate those probabilities? With a single softmax?
 
 
 
 
-This softmax is class probability of context words in the entire vocabulary, we maximize this class probabilities. But this is impractical due to the cost of computing $$\nabla \log p(w_O | w_I)$$ is proportional to $$|V|$$, which is about 60k in our case.
+This softmax is class probability of context words in the entire vocabulary, we maximize this class probabilities. But this is impractical due to the cost of computing $$\nabla \log p(w_O | w_I)$$ is proportional to $$\mid V\mid$$, which is about 60k in our case.
