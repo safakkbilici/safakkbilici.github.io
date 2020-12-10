@@ -13,4 +13,4 @@ And also a Computer Science student who loves Natural Language Processing, Bayes
 
 Pls listen my [compositions](https://www.youtube.com/channel/UCFVua8j3Ssal2hSY4VXLj8g?view_as=subscriber).
 
-Wow, you have an [Deep Learning lecture](https://www.youtube.com/playlist?list=PL8kGuiVdKeKh31pVMF-ObZxu3C2E5A3Y7) in Turkish?
+Wow, you have a [Deep Learning lecture](https://www.youtube.com/playlist?list=PL8kGuiVdKeKh31pVMF-ObZxu3C2E5A3Y7) in Turkish?
