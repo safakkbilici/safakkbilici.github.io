@@ -7,7 +7,7 @@ header:
 ---
 
 ------------------------
-A Classical Music composer who hates minimalism (wait, what? But this is a minimalist "about" page?) and loves modernism. 
+A Classical Music composer who hates minimalism (wait, what? But this is a minimalist "about" page?) and loves atonality. 
 
 And also a Computer Science student who loves Natural Language Processing, Bayesian Statistics and Haskell.
 
