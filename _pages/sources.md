@@ -30,19 +30,18 @@ This section covers my favorite textbooks/papers/blog posts.
 
 - [Deep Learning, NLP, and Representations](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)
 
-- [CS231n Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/convolutional-networks/)
-
 - [Backpropagation In Convolutional Neural Networks](https://www.jefkine.com/general/2016/09/05/backpropagation-in-convolutional-neural-networks/s)
 
 - [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
-
-- [Initialization Of Deep Networks Case of Rectifiers](https://www.jefkine.com/deep/2016/08/08/initialization-of-deep-networks-case-of-rectifiers/)
 
 - [Attention and Augmented Recurrent Neural Networks](https://distill.pub/2016/augmented-rnns/#neural-turing-machines)
 
 - [Byte Pair Encoding](https://leimao.github.io/blog/Byte-Pair-Encoding/)
 
 # Papers
+
+### 2011
+- Natural Language Processing (almost) from Scratch [[arXiv](https://arxiv.org/pdf/1103.0398.pdf)]
 
 ### 2012
 - ImageNet Classification with Deep Convolutional Neural Networks [[NIPS Paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)]
@@ -51,27 +50,27 @@ This section covers my favorite textbooks/papers/blog posts.
 ### 2013
 - Deep Neural Networks for Object Detection [[NIPS Paper](https://papers.nips.cc/paper/5207-deep-neural-networks-for-object-detection.pdf)]
 - Auto-Encoding Variational Bayes [[arXiv](https://arxiv.org/pdf/1312.6114.pdf)]
+- Distributed Representations of Words and Phrases and their Compositionality [[arXiv](https://arxiv.org/pdf/1310.4546.pdf)]
 
 ### 2014
 - Very Deep Convolutional Networks For Large-Scale Image Recognition [[arXiv](https://arxiv.org/pdf/1409.1556.pdf)]
 - Generative Adversarial Networks [[arXiv](https://arxiv.org/pdf/1406.2661.pdf)]
+- Adam: A Method for Stochastic Optimization [[arXiv](https://arxiv.org/pdf/1412.6980.pdf)]
 
 ### 2016
 - Tutorial on Variational Autoencoders [[arXiv](https://arxiv.org/pdf/1606.05908.pdf)]
 
 ### 2017
 - MuseGAN: Multi-track Sequential Generative Adversarial Networks for Symbolic Music Generation and Accompaniment [[arXiv](https://arxiv.org/pdf/1709.06298.pdf)]
+- Neural Discrete Representation Learning [[arXiv](https://arxiv.org/pdf/1711.00937.pdf)]
+- Attention Is All You Need [[arXiv](https://arxiv.org/pdf/1706.03762.pdf)]
 
 ### 2018
 - An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling [[arXiv](https://arxiv.org/pdf/1803.01271.pdf)]
 
+### 2019
+- Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer [[arXiv](https://arxiv.org/pdf/1910.10683.pdf- )]
+
 ### 2020
 - Jukebox: A Generative Model for Music [[arXiv](https://arxiv.org/pdf/2005.00341.pdf)]
 
-# Test
-I test stuff here.
-
-```haskell
-let a = 1 : 2 : 3 : []
-foo (x:xs) = x + foo(xs)
-```
