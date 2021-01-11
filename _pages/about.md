@@ -9,7 +9,7 @@ header:
 ------------------------
 A Classical Music composer who hates minimalism (wait, what? But this is a minimalist "about" page?) and loves atonality. 
 
-And also a Computer Science student who loves Natural Language Processing, Bayesian Statistics and Haskell.
+And also a Computer Science student who loves Natural Language Processing, Bayesian Inference and Haskell and hates web development.
 
 Pls listen my [compositions](https://www.youtube.com/channel/UCFVua8j3Ssal2hSY4VXLj8g?view_as=subscriber).
 
