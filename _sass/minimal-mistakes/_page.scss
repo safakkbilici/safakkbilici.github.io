@@ -228,11 +228,11 @@ body {
   padding: 2px 5px;
   color: #fff;
   font-family: $caption-font-family;
-  font-size: $type-size-7;
+  font-size: 0.6em;
   background: #000;
   text-align: right;
   z-index: 5;
-  opacity: 0.5;
+  opacity: 0.4;
   border-radius: $border-radius 0 0 0;
 
   @include breakpoint($large) {
