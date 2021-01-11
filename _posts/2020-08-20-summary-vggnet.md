@@ -115,79 +115,230 @@ last three fully connected layers with the layers of net A and the intermediate 
 
 A more deeper convolutional architecture shows its power.
 
-# A Simple Configuration Code
+# A Minimalist Implementation On CIFAR100
+
+Now we will make a minimalist implementation on CIFAR100 to get about 70% accuracy (PyTorch 1.7.0+cu101). Start with imports:
 
 ```python
-"""
-@author: safak
-"""
-import numpy as np
-import math
 import torch
+import torchvision as tv
+import numpy as np
 import torch.nn as nn
 import torchvision.transforms as transforms
-import torchvision.datasets as datasets
+import torch.optim as optim
 import matplotlib.pyplot as plt
-class VGG(nn.Module):
-    def __init__(self,features,init_h):
-        super(VGG,self).__init__()
-        self.features = features
-        self.classifier = nn.Sequential(
-            nn.Dropout(p=0.5,inplace=False),
-            nn.Linear(in_features = 512,out_features = 512),
-            nn.ReLU(inplace=True),
-            nn.Dropout(p=0.5,inplace=False),
-            nn.Linear(in_features = 512,out_features = 512),
-            nn.ReLU(inplace=True),
-            nn.Linear(512,init_h),
-            )
-        for module in self.modules():
-            if isinstance(module, nn.Conv2d):
-                n = module.kernel_size[0] * module.kernel_size[1] * module.out_channels
-                module.weight.data.normal_(0,math.sqrt(2. / n))
-                module.bias.data.zero_()
-    def forward(self,x):
-        out = self.features(x)
-        out = out.view(out.size(0),-1)
-        out = self.classifier(out)
-        return out
-
-    def addLayer(self,config,batch_norm=False,in_channels=1):
-        if type(config) is not list:
-            raise TypeError("Configuration must be in type of dictionary.")
-        else:
-            layers = []
-            for v in config:
-                if v == 'MP':
-                    layers += [nn.MaxPool2d(kernel_size=2,stride=2)]
-                else:
-                    if type(v) is not int:
-                        raise TypeError("Except MaxPool, configuration feature type must be integer.")
-                    else:
-                        conv2d = nn.Conv2d(in_channels=in_channels, 
-                                           out_channels=v, kernel_size=3,
-                                           padding = 1)
-                        if batch_norm:
-                            layers += [conv2d, nn.BatchNorm2d(v),
-                                       nn.ReLU(inplace=True)]
-                        else:
-                             layers += [conv2d, nn.ReLU(inplace=True)]
-                        in_channels = v
-            return nn.Sequential(*layers)
-
-    @staticmethod
-    def __config__():
-        return  {
-    'VGG11': [64, 'MP', 128, 'MP', 256, 256, 'MP', 512, 512, 'MP', 512, 512, 'MP'],
-    'VGG13': [64, 64, 'MP', 128, 128, 'MP', 256, 256, 'MP', 512, 512, 'MP', 512, 512, 'MP'],
-    'VGG16': [64, 64, 'MP', 128, 128, 'MP', 256, 256, 256, 'MP', 512, 512, 512, 'MP', 512, 512, 512, 'MP'],
-    'VGG19': [64, 64, 'MP', 128, 128, 'MP', 256, 256, 256, 256, 'MP', 512, 512, 512, 512, 'MP', 
-          512, 512, 512, 512, 'MP'],
-    }
-if __name__ == "__main__":
-	configuration = VGG.__config__()
-	model = VGG(VGG.addLayer(configuration['VGG13'],True),10)
 ```
+
+Then compute the mean and standard deviation of RGB channels to normalize the data for better performance. Befor doing this, define our dataset as a dataloader object in PyTorch.
+
+```python
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+transform_stats = transforms.Compose([
+    transforms.ToTensor(),
+])
+trainset_stats = tv.datasets.CIFAR100(root='./data/CIFAR100', train=True, download=True, transform=transform_stats)
+trainloader_stats = torch.utils.data.DataLoader(trainset_stats, 200, num_workers=2)
+```
+
+Now compute the mean
+
+```python
+dim_sum = 0
+h = 0
+w = 0
+for i, (input, target) in enumerate(trainloader_stats):
+    input, target = input.to(device), target.to(device)
+    if i == 0:
+        h, w = input.size(2), input.size(3)
+        dim_sum = input.sum(dim=(0, 2, 3), keepdim=True)
+    else:
+        dim_sum += input.sum(dim=(0, 2, 3), keepdim=True)
+mean = dim_sum/len(trainset_stats)/h/w
+print('mean: %s' % mean.view(-1))
+```
+
+and the standard deviation
+
+```python
+dim_sum = 0
+for i, (input, target) in enumerate(trainloader_stats):
+    input,target = input.to(device), target.to(device)
+    if i == 0:
+        dim_sum = (input - mean).pow(2).sum(dim=(0, 2, 3), keepdim=True)
+    else:
+        dim_sum += (input - mean).pow(2).sum(dim=(0, 2, 3), keepdim=True)
+std = torch.sqrt(dim_sum/(len(trainset_stats) * h * w - 1))
+print('std: %s' % std.view(-1))
+```
+
+the mean should be \[0.5071, 0.4865, 0.4409\] and the standard devition should be \[0.2673, 0.2564, 0.2762\].
+
+Now prepare our trainloader and testloader for training the model. RandomCrop and RandomHorizontalFlip are used for data augmentation.
+
+```python
+batch_size = 200
+transform_train = transforms.Compose([
+        transforms.RandomCrop(32, padding=4),
+        transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        transforms.Normalize((0.5071, 0.4865, 0.4409), (0.2673, 0.2564, 0.2762)),
+    ])
+
+transform_test = transforms.Compose([
+        transforms.ToTensor(),
+        transforms.Normalize((0.5071, 0.4865, 0.4409), (0.2673, 0.2564, 0.2762)),
+    ])
+
+trainset = tv.datasets.CIFAR100(root='./data/CIFAR100', train=True,
+                                        download=True, transform=transform_train)
+
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size,
+                                          shuffle=True, num_workers=2)
+
+testset = tv.datasets.CIFAR100(root='./data/CIFAR100', train=False,
+                                       download=True, transform=transform_test)
+
+testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size,
+                                         shuffle=False, num_workers=2)
+```
+
+Now it is time to implement our minimalist VGGNet and its configurations.
+
+
+```python
+class MyOwnNets(nn.Module):
+  def __init__(self,features,init_h):
+    super(MyOwnNets,self).__init__()
+    self.features = features
+    self.classifier = nn.Sequential(
+        nn.Dropout(p=0.5,inplace=False),
+        nn.Linear(in_features = 512,out_features = 512),
+        nn.ReLU(inplace=True),
+        nn.Dropout(p=0.5,inplace=False),
+        nn.Linear(in_features = 512,out_features = 512),
+        nn.ReLU(inplace=True),
+        nn.Linear(512,init_h),
+        )
+    for module in self.modules():
+      if isinstance(module, nn.Conv2d):
+        n = module.kernel_size[0] * module.kernel_size[1] * module.out_channels
+        module.weight.data.normal_(0,math.sqrt(2. / n))
+        module.bias.data.zero_()
+
+  def forward(self,x):
+    out = self.features(x)
+    out = out.view(out.size(0),-1)
+    out = self.classifier(out)
+    return out
+
+  @staticmethod
+  def addLayer(config,batch_norm=False,in_channels=3):
+    if type(config) != list:
+      raise TypeError("Configuration must be in type of list. {}".format(type(config)))
+    else:
+      layers = []
+      for v in config:
+        if v == 'MP':
+          layers += [nn.MaxPool2d(kernel_size=2,stride=2)]
+        else:
+          if type(v) is not int:
+            raise TypeError("Except MaxPool, configuration feature type must be integer.")
+          else:
+            conv2d = nn.Conv2d(in_channels=in_channels, 
+                                out_channels=v, kernel_size=3,
+                                padding = 1)
+            if batch_norm:
+              layers += [conv2d, nn.BatchNorm2d(v), nn.ReLU(inplace=True)]
+            else:
+              layers += [conv2d, nn.ReLU(inplace=True)]
+            in_channels = v
+      return nn.Sequential(*layers)
+
+  @staticmethod
+  def __config__():
+    return  {'11': [64, 'MP', 128, 'MP', 256, 256, 'MP', 512, 512, 'MP', 512, 512, 'MP'],
+             '13': [64, 64, 'MP', 128, 128, 'MP', 256, 256, 'MP', 512, 512, 'MP', 512, 512, 'MP'],
+             '16': [64, 64, 'MP', 128, 128, 'MP', 256, 256, 256, 'MP', 512, 512, 512, 'MP', 512, 512, 512, 'MP'],
+             '19': [64, 64, 'MP', 128, 128, 'MP', 256, 256, 256, 256, 'MP', 512, 512, 512, 512, 'MP', 512, 512, 512, 512, 'MP'],
+             }
+```
+
+Let's initialize our model objects
+
+```python
+config = MyOwnNets.__config__()
+model11 = MyOwnNets(MyOwnNets.addLayer(config = config['11'],batch_norm = True, in_channels = 3),100).to(device)
+model13 = MyOwnNets(MyOwnNets.addLayer(config = config['13'],batch_norm = True, in_channels = 3),100).to(device)
+model16 = MyOwnNets(MyOwnNets.addLayer(config = config['16'],batch_norm = True, in_channels = 3),100).to(device)
+model19 = MyOwnNets(MyOwnNets.addLayer(config = config['19'],batch_norm = True, in_channels = 3),100).to(device)
+```
+
+Defining objective function as Cross Entropy Loss, we use optimizer as AdaM. Learning rate scheduler with weight decay of 1e-5 is used for better performance. 
+
+```python
+CUDA = torch.cuda.is_available()
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model13.parameters(),lr=0.01, weight_decay=1e-5)
+scheduler = optim.lr_scheduler.OneCycleLR(optimizer, 0.01, epochs=epochs, steps_per_epoch=len(trainloader))
+```
+
+The model 13 gets highest accuracy on CIFAR100, writing the training and evaluating loop:
+
+```python
+epochs = 120
+training_loss = []
+training_accuracy= []
+test_loss = []
+test_accuracy = []
+
+for epoch in range(epochs):
+  correct = 0
+  iterations = 0
+  each_loss = 0.0
+
+  model13.train()
+  for i,(inputs, targets) in enumerate(trainloader): 
+    if CUDA:
+      inputs = inputs.cuda()
+      targets = targets.cuda()
+    outputs = model13.forward(inputs)
+    loss = criterion(outputs, targets)
+    each_loss+=loss.item()
+
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+    scheduler.step()
+    _, predicted=torch.max(outputs,1)
+    correct += (predicted == targets).sum().item()
+    iterations += 1
+  training_loss.append(each_loss/iterations)
+  training_accuracy.append(100 * correct/len(trainset))
+
+    
+  each_loss_test = 0.0
+  iterations = 0 
+  correct = 0
+  model13.eval()
+  for i,(inputs, targets) in enumerate(testloader):
+      if CUDA: 
+          inputs = inputs.cuda()
+          targets = targets.cuda()
+      outputs= model13.forward(inputs)
+      loss = criterion(outputs, targets)
+      each_loss_test+=loss.item()
+
+      _, predicted=torch.max(outputs,1)
+      correct += (predicted == targets).sum().item()
+      iterations += 1
+
+  test_loss.append(each_loss_test/iterations)
+  test_accuracy.append(100 * correct/len(testset))
+  print("Epoch {}/{} - Training Loss: {:.3f} - Training Accuracy: {:.3f} - Test Loss: {:.3f} - Test Accuracy: {:.3f}"
+  .format(epoch+1,epochs,training_loss[-1],training_accuracy[-1],test_loss[-1],test_accuracy[-1]))
+```
+
+The final loss and accuracy on test and train set: Epoch 120/120 - Training Loss: 0.251 - Training Accuracy: 92.712 - Test Loss: 1.494 - Test Accuracy: 70.720
 
 # References
 - [Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/pdf/1409.1556.pdf)
