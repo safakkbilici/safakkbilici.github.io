@@ -161,15 +161,19 @@ Figure source [1]
 
 {% include video id="ZvuxHGDD1mU" provider="youtube" %}
 
--Artist: Nirvana, Genre: Acoustic, Lyrics: Alice In Chains - Love, Hate, Love
+- Artist: Nirvana, Genre: Acoustic, Lyrics: Alice In Chains - Love, Hate, Love
 
 {% include video id="PiS_IjILngA" provider="youtube" %}
 
 - Artist: Alice In Chains, Genre: Acoustic
 - Lyrics: 
+
 Train what you want to overfit
+
 See that big graphics card 
+
 We love inzva, we love inzva
+
 I don't like cuda memory error
 
 {% include video id="b17NELJArRI" provider="youtube" %}
