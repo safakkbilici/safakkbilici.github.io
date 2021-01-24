@@ -155,6 +155,25 @@ Please see the success of the Jukebox in terms of genre/style conditioning:
 
 Figure source [1]
 
+## Generated Samples
+
+- Artist: Steven Wilson, Genre: Synthwave
+
+{% include video id="ZvuxHGDD1mU" provider="youtube" %}
+
+-Artist: Nirvana, Genre: Acoustic, Lyrics: Alice In Chains - Love, Hate, Love
+
+{% include video id="PiS_IjILngA" provider="youtube" %}
+
+- Artist: Alice In Chains, Genre: Acoustic
+- Lyrics: 
+Train what you want to overfit
+See that big graphics card 
+We love inzva, we love inzva
+I don't like cuda memory error
+
+{% include video id="b17NELJArRI" provider="youtube" %}
+
 # References
 
 \[1\] Prafulla Dhariwal, Heewoo Jun, Christine Payne, Jong Wook Kim, Alec Radford, Ilya Sutskever. Jukebox: A Generative Model for Music. URL: [https://cdn.openai.com/papers/jukebox.pdf](https://cdn.openai.com/papers/jukebox.pdf)
