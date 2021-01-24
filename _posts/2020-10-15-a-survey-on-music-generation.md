@@ -141,7 +141,7 @@ Figure source [1]
 Most of the operation is performed by the Scalable Transformer within the 
 prior model, which forms the performance bottleneck of the model. In addition to the common transformer architectures, Jukebox utilizes specific attention mechanisms (e.g. row, column and previous-row attentions) in residual layers to achieve perfect context-music harmony, which costs far more than the naive transformers. Other than the use of various attention strategies, residual layers are analogous to any other transformer architecture, in other words, the original structure is preserved.
 
-![test image size](/images/music-generation/attention.png){:height="90%" width="90%"}
+![test image size](/images/music-generation/attention.png){:height="60%" width="60%"}
 
 Figure source [1]
 
