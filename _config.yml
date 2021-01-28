@@ -27,6 +27,10 @@ repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-m
 teaser                   : /images/joel-filipe-small-warmer.jpg
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+
+
+header_feature_image: /images/joel-filipe-small-warmer.jpg
+
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
