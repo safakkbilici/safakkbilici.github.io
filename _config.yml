@@ -28,7 +28,7 @@ teaser                   : /images/joel-filipe-small-warmer.jpg
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 
-
+header_text:  " "
 header_feature_image: /images/joel-filipe-small-warmer.jpg
 
 # breadcrumbs            : false # true, false (default)
