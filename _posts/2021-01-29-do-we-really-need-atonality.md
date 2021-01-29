@@ -17,4 +17,5 @@ image:
 # Introduction
 
 {: .text-justify}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel eleifend odio, eu elementum purus. In hac habitasse platea dictumst. Fusce sed sapien eleifend, sollicitudin neque non, faucibus est. Proin tempus nisi eu arcu facilisis, eget venenatis eros consequat.
+&nbsp; &nbsp; This post includes personal opinions on classical music, atonality & tonality, composition. Also includes formal informations about atonality theory and its history.
+
