@@ -29,6 +29,6 @@ The most of the people believe that classical music to be calming and relaxing, 
 
 {: .text-justify}12-tone-technique also used by Igor Stravinsky (my favorite), Béla Bartók, Krzysztof Penderecki etc. The most of the composers after 1950 influenced by 12-tone-technique and Schoenberg, Webern, Berg. 
 
-
+{: .text-justify}Béla Bartók's The Miraculous Mandarin, Igor Stravinsky's Le Sacre du printemps, Krzysztof Penderecki's Threnody to the Victims of Hiroshima are good examples for chromaticism and atonality. Also Dmitri Shostakovich, Russian composer, was prone to use chromatic scales. His pieces are not completely atonal, but at the same time he often really abuses the key that he's in. The main difference between chromaticism and atonality is when you decide to use chromatic scales, you use a scale consisting of all 12 tones without actively trying to make it sound atonal; on the other hand, when you decide to use atonality, you use a scale consisting of all 12 tones, but with active avoidance of tonality.
 
 
