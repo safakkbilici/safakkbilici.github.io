@@ -17,6 +17,8 @@ mathjax: "true"
 
 ## First Of All
 
+{: .text-justify}
+
 Free jazz is a sub-genre of jazz that is a uprising from the traditional modal jazz rules. Before we talk about free jazz, we should talk about the roots of traditional modal jazz. To speak in musical parlance, the word “mode” (lemmatization: modal -> mode) simply means “scale”; it is often used to describe a scale other than major or minor (i.e.; Chromatic Scale, Diminished Scale etc.). In 20th and 21th century, major and minor scales derive from the “modes” of medieval music (modus). In the traditional system of eight modes (in 8th - 16th centuries) there are four pairs, each pair comprising an authentic mode and a plagal mode.
 
 ![test image size](/images/freejazz/modes.png){:height="110%" width="110%"}
