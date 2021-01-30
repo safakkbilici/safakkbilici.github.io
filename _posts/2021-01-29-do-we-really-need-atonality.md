@@ -42,7 +42,7 @@ Béla Bartók's The Miraculous Mandarin, Igor Stravinsky's Le Sacre du printemps
 {: .text-justify}
 Atonality comes from diversity. Getting stuck in tonal music is something common in music, especially in Romantic era. Even in the Baroque music, you may encounter similarity between compositions, for example in Antonio Vivaldi's compositions. Circling around a minor scale or major key  will create this simplicity and repeat yourself situation for you after a while. So should I be more atonal? Should I use chromatic scales in my compositions? Do not forget that Johann Sebastian Bach used only one or two keys in his compositions, especially D minor and G minor. And still, he achieved diversity in his compositions. For me, this is more about how you want to express your music with an arbitrary technique. Why were Romantic era musicians stuck in this repetition? They expressed same emotion and music with same technique.
 
-# Appendix: More About 12-tone-technique \[4\]
+# Appendix: More About 12-tone-technique \[3\]
 
 {: .text-justify}
 In a twelve-tone composition, every note can be accounted for as being a member of the original series or one of its permutations, providing unity to the piece as a whole. Additionally, a twelve-tone series is a repository of intervals and can be seen as an outgrowth of atonal music with its emphasis on interval over chord or scale. The basic premises of twelve-tone music are as follows:
@@ -71,10 +71,27 @@ However, the retrograde (R) and retrograde inversion (RI) row forms use the pitc
 
 ![test image size](/images/atonality/12-tone-3.svg){:height="90%" width="90%"}
 
+# Have a Listen In Order
+
+- [Shostakovich: String Quartets Nos. 1, 8 & 14 - Borodin Quartet](https://open.spotify.com/album/2SpbQrcEPqi9bAoMwunBdb?si=15p79xLKQue7zYOyEVKNMg)
+- [Bartók: The Miraculous Mandarin - Chicago Symphony Orhestra](https://open.spotify.com/album/1AX71LqJLs7dcbsrAzyoQI?si=hAcKyTJhQXWN4NCAUGsmyg)
+- [Stravinsky: The Rite of Spring - Berliner Philharmoniker](https://open.spotify.com/album/317b74rpNBO2uhaJFyMaxJ?si=q8DtkBK3Q5OvmKvzq9PNxA)
+- [Penderecki: Symphony No. 3 / Threnody - Polish National Radio Symphony Orchestra](https://open.spotify.com/album/1ob9Al3GJ59ZYnvS6fgCze?si=629tdwQXTkGyi4NwjJFB0w)
+- [Schoenberg: Piano Concerto, Op. 42 - Seiji Ozawa](https://open.spotify.com/album/1mWCNYeoL2mTynSc173nJA?si=ifdaLb_GS3isOHivb55smg)
+- [Berg: Wozzeck - Wiener Philharmoniker](https://open.spotify.com/album/6L4tcL7pQbzeNMyTasFFUr?si=fo7EhCvEQxCOi5N5YZD3Gw)
+
 # References
 
 \[1\] Twelve-tone technique, Wikipedia. URL: [https://en.wikipedia.org/wiki/Twelve-tone_technique](https://en.wikipedia.org/wiki/Twelve-tone_technique)
 
 \[2\] Scott Marino, Dissertation on Dmitry Shostakovich’s Harmonic Language. I.B Music Extended Essay. January 1, 2014. URL: [link](https://kent-islandora.s3.us-east-2.amazonaws.com/ugresearch/2015/Art_Fashion/4/Dissertation%20on%20Dmitry%20Shostakovichs%20Harmonic%20Language.pdf)
+
+\[3\] Robert Hutchinson, Music Theory for the 21st-Century Classroom. 34.1 Twelve-Tone Technique. URL: [https://musictheory.pugetsound.edu/mt21c/TwelveToneTechnique.html](https://musictheory.pugetsound.edu/mt21c/TwelveToneTechnique.html)
+
+\[4\] Moya K. Mason, Theodor Adorno's Theory of Music and its Social Implications. URL: [http://www.moyak.com/papers/adorno-schoenberg-atonality.html](http://www.moyak.com/papers/adorno-schoenberg-atonality.html)
+
+\[5\] Şafak Bilici, A Brief Introduction to Free Jazz. URL: [https://safakkbilici.github.io/int-to-free-jazz/](https://safakkbilici.github.io/int-to-free-jazz/)
+
+\[6\] Alban Berg, Wikipedia. URL: [https://en.wikipedia.org/wiki/Alban_Berg](https://en.wikipedia.org/wiki/Alban_Berg)
 
 
