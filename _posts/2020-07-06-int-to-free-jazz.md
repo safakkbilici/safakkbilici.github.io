@@ -23,6 +23,8 @@ Free jazz is a sub-genre of jazz that is a uprising from the traditional modal j
 
 ![test image size](/images/freejazz/modes.png){:height="110%" width="110%"}
 
+{: .text-justify}
+
 Given the confusion between ancient, medieval, and modern terminology, today it is more consistent and practical to use the traditional designation of the modes with numbers one to eight. But, for some stupid reason, jazz musicians are insistent in using Greek notation. Modes were used as a resource by some relatively modern classical composers like Claude Debussy and Béla Bartók, who felt the need to go beyond traditional major/minor tonality. In the 1950s, jazz musicians also began to work with modal approaches.
 
 Actually; modal jazz, as the name implies, is a genre of Jazz that arose in the late 1950’s and uses ‘modality’ rather than ‘tonality’. Let's talk about the jazz musician Miles Davis, always a trend-setter in jazz (unfortunately).Miles’ modal work was preceded by a number of contributing influences. Or, George Russell’s "Lydian Chromatic Concept of Tonal Organization" was a mode-based approach to music that influenced certain New York jazz musicians in the 1940s-1950s, notably Miles Davis, Bill Evans, and Gil Evans (both Bill Evans and Gil Evans worked with Miles Davis, and contributed to “Kind of Blue”, which is a bad album in my opinion).
@@ -31,6 +33,7 @@ Before we go for free jazz, let's talk about derivations of modal changes.
 
 ### Vertical versus Horizontal
 
+{: .text-justify}
 Before Modal Jazz, composers/player generally thought ‘vertically’. By removing the ‘functionality’ of chords – modality allows a composer/player to focus exclusively on the melody and not worry about the underlying harmony. You focus on creating melodies in a particular scale or key. This is called thinking ‘horizontally’ (i.e. in terms of scales and melodies). However, modality treats the chords as ‘decorative’ rather than ‘functional’. This gives you greater flexibility when improvising and, in fact, forces you to focus on creating interesting melodies – and not about just outlining the chords or modifying the solo to fit the chord progression.
 
 In Modal Jazz, you can:
@@ -49,6 +52,7 @@ But, even though a Modal Jazz solo is ‘freer’ than a tonal solo, there are, 
 
 > "Free Jazz is the systematic rejection of musical norms and established rules in favour of personal expression."
 
+{: .text-justify}
 As it is evident from the naming; freedom, a revolution. So what does this revolution or freedom contain or what does it say? The goal of free jazz is to allow greater freedom of expression through completely free improvisation. Each composer/player, naturally, expresses him/herself differently, and this is precisely why free jazz is a notoriously difficult genre to define. Until the 1960s, Jazz musicians were never found in 'courage' to move away from using certain tempo, tone, and modal music. Yes, when I talk about traditional jazz tempos, tones etc.; I mention bop music (bebop, hard bop etc.).
 
 The ambiguity of free jazz presents problems of definition. Although it is usually played by small groups or individuals, free jazz big bands have existed. Although musicians and critics claim it is innovative and forward-looking, it draws on early styles of jazz and has been described as an attempt to return to primitive, often religious, roots. Although jazz is an American invention, free jazz musicians drew heavily from world music and ethnic music traditions from around the world. Sometimes they played African or Asian instruments, unusual instruments, or invented their own. They emphasized emotional intensity and sound for its own sake, exploring timbres.
@@ -57,6 +61,7 @@ While performing Free Jazz, the general rule is actually using the weapon of imp
 
 ### Liberté, Equalité, Fraternité
 
+{: .text-justify}
 20th Century Classical music also made use of atonality. After a brief period of ‘free atonality’ in the early 1900’s, Classical composers like Schoenberg created a very rigid, structured, and academic way of playing atonally which was called 12 Tone Serialism. The goal was to create music which completely lacked any sense of tonality, where you use each of the 12 notes (or ‘pitch classes’) without repeating any, in such a way that no tonality is established.
 
 Jazz is far less academic about atonality. The high degree of structure found in serialism is not found in Jazz. This is probably because it’s too difficult to improvise using such rigid and complex rules, and because it completely defeats the purpose of Free Jazz – which is to have more freedom to improvise. There’s no point breaking the old rules just to create new ones. In Free Jazz, you’re allowed to play both tonally and atonally, it’s up to you. But of course, Free Jazz is about more than just playing ‘atonally’. As I mentioned at the [x], Free Jazz is the systematic rejection of musical norms. And there are plenty of other musical norms to reject.
@@ -65,6 +70,7 @@ Jazz is far less academic about atonality. The high degree of structure found in
 
 ![test image size](/images/freejazz/comic.jpg){:height="110%" width="110%"}
 
+{: .text-justify}
 Ornette Coleman... Although he is the most important jazz composer for me, we can also define himself as the milestone of Free Jazz. What role does Ornette Coleman play here?
 
 The fact that he started this journey started with his album 'The Shape of Jazz To Come'. In this album, the revolt against the modal theory was to off work the pianist Walter Norris to produce an album without a piano, by showing great courage, rather than a 'free' dynamics. Jazz has never been so polyrhythmic and modal free.
@@ -86,6 +92,7 @@ It’s worth discussing how various Free Jazz musicians approached atonality.
 | -------------------- |:-------------------------:| -------------:|
 |Modal	               |Tonal Centers              |Tone Clusters  |
 
+{: .text-justify}
 Let's talk about, John Coltrane, he is my favorite sax player. He recorded a album that is named 'Giant Steps'. The Giant Steps album is a jazz / hard bop album released on January 27, 1960 by John. Although this album is the most known album of John, perhaps we can say that it is the album that does the most work both harmonically and melodically. As the first part of the album "Giant Steps" started, there is a harmonic difference in this album. You can hear it. So what is this different to our ear?
 
 Coltrane has divided the scale that he uses into three parts of major 3's and started improvisation over them. He applied these division to the progression of II-V-I (minor7-dominant7-major7), which was walked through a chord sequence, which we encountered very frequently in modal jazz, with ups and downs.
