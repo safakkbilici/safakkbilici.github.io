@@ -27,7 +27,7 @@ I hate web development and Java. I hate minimalism, simplicity on music. I hate 
 
 * Academic Title Recommendation Using Seq2Seq Models and Transfer Learning [[Repository](https://github.com/safakkbilici/Academic-Paper-Title-Recommendation)]
 * Music Generation With Generative Adversarial Networks and Vector Quantized Variational Autoencoders [[Repository](https://github.com/safakkbilici/Synthetic-Music-Generation-with-Deep-Neural-Networks)]
-* Generating Random Turkish Sentences With Variational Inference \[on going\]
+* Generating Turkish Sentences With Variational Inference \[on going\]
 
 ### Compositions
 
