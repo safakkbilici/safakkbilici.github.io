@@ -7,9 +7,7 @@ header:
 ---
 
 ------------------------
-A pianist and Classical Music composer who is obsessed with atonality and microtonality.
-
-And also a Computer Science student who is focused on Natural Language Processing, Computational Linguistics, Bayesian Inference, Haskell.
+I am a pianist and Classical Music composer who is obsessed with atonality and microtonality. I am also a Computer Science student who is focused on Natural Language Processing, Computational Linguistics, Bayesian Inference, Haskell. I love everything about languages and probabilities.
 
 I hate web development and Java. I hate minimalism, simplicity on music. I hate a lot of things but this is not the place.
 
