@@ -1,14 +1,14 @@
 ---
 title: "Dune Embeddings"
 date: "2020-12-09"
-tages: [Word Embeddings, Word2Vec, Science Fiction, Natural Language Processing]
+tages: [Word2Vec, Vector Semantics, Distributional Semantics, Science Fiction, Natural Language Processing]
 header:
   overlay_image: "/images/dune/dune2.png"
   teaser: "/images/dune/dune1.jpg"
 TeX: {
   extensions: ["AMSmath.js", "AMSsymbols.js"]
 }
-excerpt: "Word Embeddings, Word2Vec, Science Fiction, Natural Language Processing"
+excerpt: "Word2Vec, Vector Semantics, Distributional Semantics, Science Fiction, Natural Language Processing"
 mathjax: "true"
 image:
   thumb: "/images/dune/dune1.jpg"
