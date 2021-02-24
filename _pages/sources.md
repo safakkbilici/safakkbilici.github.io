@@ -29,36 +29,43 @@ This section covers my favorite textbooks/papers/blog posts.
 # Paper List To Read
 
 ### 2011
-- Natural Language Processing (almost) from Scratch [[arXiv](https://arxiv.org/pdf/1103.0398.pdf)]
+- Natural Language Processing (almost) from Scratch [[arXiv](https://arxiv.org/abs/1103.0398.pdf)]
 
 ### 2012
 - ImageNet Classification with Deep Convolutional Neural Networks [[NIPS Paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)]
-- On The Difficulty Of Training Recurrent Neural Networks [[arXiv](https://arxiv.org/pdf/1211.5063.pdf)]
+- On The Difficulty Of Training Recurrent Neural Networks [[arXiv](https://arxiv.org/abs/1211.5063.pdf)]
 
 ### 2013
 - Deep Neural Networks for Object Detection [[NIPS Paper](https://papers.nips.cc/paper/5207-deep-neural-networks-for-object-detection.pdf)]
-- Auto-Encoding Variational Bayes [[arXiv](https://arxiv.org/pdf/1312.6114.pdf)]
-- Distributed Representations of Words and Phrases and their Compositionality [[arXiv](https://arxiv.org/pdf/1310.4546.pdf)]
+- Auto-Encoding Variational Bayes [[arXiv](https://arxiv.org/abs/1312.6114.pdf)]
+- Distributed Representations of Words and Phrases and their Compositionality [[arXiv](https://arxiv.org/abs/1310.4546.pdf)]
 
 ### 2014
-- Very Deep Convolutional Networks For Large-Scale Image Recognition [[arXiv](https://arxiv.org/pdf/1409.1556.pdf)]
-- Generative Adversarial Networks [[arXiv](https://arxiv.org/pdf/1406.2661.pdf)]
-- Adam: A Method for Stochastic Optimization [[arXiv](https://arxiv.org/pdf/1412.6980.pdf)]
+- Very Deep Convolutional Networks For Large-Scale Image Recognition [[arXiv](https://arxiv.org/abs/1409.1556.pdf)]
+- Generative Adversarial Networks [[arXiv](https://arxiv.org/abs/1406.2661.pdf)]
+- Adam: A Method for Stochastic Optimization [[arXiv](https://arxiv.org/abs/1412.6980.pdf)]
+- Neural Machine Translation by Jointly Learning to Align and Translate [[arXiv](https://arxiv.org/abs/1409.0473)]
+ 
+### 2015
+- Effective Approaches to Attention-based Neural Machine Translation [[arXiv](https://arxiv.org/abs/1508.04025)]
+- U-Net: Convolutional Networks for Biomedical Image Segmentation [[arXiv](https://arxiv.org/abs/1505.04597)]
+- Generating Sentences from a Continuous Space [[arXiv](https://arxiv.org/abs/1511.06349)]
 
 ### 2016
-- Tutorial on Variational Autoencoders [[arXiv](https://arxiv.org/pdf/1606.05908.pdf)]
+- Tutorial on Variational Autoencoders [[arXiv](https://arxiv.org/abs/1606.05908.pdf)]
 
 ### 2017
 - MuseGAN: Multi-track Sequential Generative Adversarial Networks for Symbolic Music Generation and Accompaniment [[arXiv](https://arxiv.org/pdf/1709.06298.pdf)]
-- Neural Discrete Representation Learning [[arXiv](https://arxiv.org/pdf/1711.00937.pdf)]
-- Attention Is All You Need [[arXiv](https://arxiv.org/pdf/1706.03762.pdf)]
+- Neural Discrete Representation Learning [[arXiv](https://arxiv.org/abs/1711.00937.pdf)]
+- Attention Is All You Need [[arXiv](https://arxiv.org/abs/1706.03762.pdf)]
 
 ### 2018
-- An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling [[arXiv](https://arxiv.org/pdf/1803.01271.pdf)]
+- An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling [[arXiv](https://arxiv.org/abs/1803.01271.pdf)]
+- Attention U-Net: Learning Where to Look for the Pancreas [[arXiv](https://arxiv.org/abs/1804.03999)]
 
 ### 2019
-- Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer [[arXiv](https://arxiv.org/pdf/1910.10683.pdf- )]
+- Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer [[arXiv](https://arxiv.org/abs/1910.10683.pdf)]
 
 ### 2020
-- Jukebox: A Generative Model for Music [[arXiv](https://arxiv.org/pdf/2005.00341.pdf)]
+- Jukebox: A Generative Model for Music [[arXiv](https://arxiv.org/abs/2005.00341.pdf)]
 
