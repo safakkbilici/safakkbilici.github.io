@@ -11,7 +11,7 @@ I am a pianist and Classical Music composer who is obsessed with atonality and m
 
 ![test image size](/images/i_could_care_less.png){:height="90%" width="90%"}
 
-I hate web development, Java and Windows OS. I hate minimalism and simplicity on music. I hate a lot of things but this is not the place.
+I hate web development, Java and Windows OS. I hate minimalism and simplicity on music. I hate Largo tempo. I hate a lot of things but this is not the place.
 
 ### Teaching
 
