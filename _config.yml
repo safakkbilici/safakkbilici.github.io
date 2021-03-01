@@ -123,7 +123,7 @@ author:
       # url: "https://instagram.com/"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url:  "https://www.linkedin.com/in/mesutsafakbilici/"
+      url:  "https://www.linkedin.com/in/msafakbilici/"
     - label: "Resume"
       icon: "fas fa-fw fa-file"
       url: "/assets/data/cv2.pdf"
