@@ -24,12 +24,12 @@ description              : "Personal Nerdy Blog"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : /images/joel-filipe-small-warmer.jpg
+teaser                   : /images/logo.png
 logo                     : /images/logo.png
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 
 header_text:  " "
-header_feature_image: /images/joel-filipe-small-warmer.jpg
+header_feature_image: /images/logo.png
 
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
