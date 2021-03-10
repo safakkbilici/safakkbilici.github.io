@@ -36,6 +36,7 @@ Let's define likelihood, prior and posterior distributions. **Likelihood** funct
 
 $$ \hat{\theta}_\text{MLE} = \underset{\theta}{\operatorname{argmax}} L(\theta; y)$$
 
+{: .text-justify}
 For example, the Bernoulli Distribution. Bernoulli Distribution takes the form $$p(Y=y \mid \mu) = \mu^y \cdot (1-\mu)^{(1-y)}$$ for $$y \sim \text{Bernoulli}(\mu)$$. This is the probability mass function. The likelihood of Bernoulli can be thought of as a function of theta.
 
 $$ p(Y=y \mid \theta) = p(Y_1=y_1, Y_2=y_2, ..., Y_n=y_n \mid \mu)$$
@@ -63,3 +64,13 @@ $$ \frac{d \ell(\mu)}{d \mu} = \frac{1}{\mu} \sum_i^n y_i - \frac{1}{1-\mu} \sum
 $$ \frac{\sum_i^n y_i}{\hat{\mu}} = \frac{\sum_i^n 1 - y_i}{1 - \hat{\mu}}$$
 
 $$ \hat{\mu}_\text{MLE} = \frac{\sum_i^n y_i}{n} = \bar{y} $$
+
+{: .text-justify}
+The **prior** distribution describes our beliefs about the likely values of the parameter \theta \in \Theta *before observing any data*. The prior distribution can be anything (I am going to explain conjugate priors), Beta Distribution [Appendix I], Gamma Distribution, Gaussian Distribution (self-conjugate) etc.
+
+{: .text-justify}
+**Marginal likelihood** (evidence or prior predictive distribution) is the normalizing term of the Bayes' theorem. It can be re-written as (in continuous form)
+
+$$p_{\Theta \mid Y}(\theta \mid y) = \int_\Theta p_{Y \mid \Theta}(y \mid \theta) p_\Theta(\theta) d\theta$$
+
+It is a distribution of our data with weighted average over all the possible parameter values.
