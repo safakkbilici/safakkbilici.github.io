@@ -123,15 +123,21 @@ $$ = \frac{a}{a+b} \cdot \frac{\Gamma(a) \cdot \Gamma(b) \cdot \Gamma(a+b)}{\Gam
 
 $$ \mathop{\mathbb{E}}[\mu] = \frac{a}{a+b}$$
 
+{: .text-justify}
 The parameters $$a$$, $$b$$ are called hyperparameters. We generally tune these hyperparameters. Now let's look the marginal likelihood of our example: tossing a coing with 3 times with 3 heads.
 
+{: .text-justify}
 The marginal likelihood takes the form
 
 $$p_Y(y) = \int_0^1 C(N,m) \cdot \mu^m \cdot (1-\mu)^l \cdot \frac{\mu^{a-1} \cdot (1-\mu)^{b-1}}{B(a,b)} d\mu$$
 
 Since $$B(a,b)$$ and $$C(N,m)$$ are independent from parameter $$\mu$$, integral takes the from
 
-$$ = \frac{B(m+a-1,l+b-1)}{B(a,b)} \cdot C(N,m) \cdot \int_0^1 \mu^{m+a-1} \cdot (1-\mu)^{l+b-1} d\mu$$
+$$ = \frac{C(N,m)}{B(a,b)} \cdot \int_0^1 \mu^{m+a-1} \cdot (1-\mu)^{l+b-1} d\mu$$
 
+{: .text-justify}
+The expression inside integral seems a little bit familiar. This is the $$Beta(m+a-1,l+b-1)$$ distribution without its normalizing term $$B(m+a-1,l+b-1)$$! So it will be very easy to convert it to this Beta distribution.
+
+$$ = \frac{B(m+a-1,l+b-1)}{B(a,b)} \cdot C(N,m) \cdot \underbrace{\int_0^1 \frac{B(m+a-1,l+b-1)}{\mu^{m+a-1} \cdot (1-\mu)^{l+b-1}} d\mu}_{=1}$$
 
 
