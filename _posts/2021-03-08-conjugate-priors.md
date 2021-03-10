@@ -225,3 +225,15 @@ legend('topleft', inset = .02,
 ```
 
 ![test image size](/images/priors/posterior.png){:height="95%" width="95%"}
+
+
+## Poisson-Gamma Model
+
+{: .text-justify}
+The last example is Poissan likelihood, Gamma prior. Poisson distribution is defined as for $$x_i \sim Poisson(\lambda)$$
+
+$$p(x) = \frac{\lambda^x \exp(-\lambda}{x!}$$
+
+Then the likelihood takes the form
+
+$$p_{Y \mid \Lambda}(y \mid \lambda) = \prod_{i=1}^n \lambda^{y_i} \cdot \frac{\exp(-\lambda)}{y_i!} \propto \lambda^{n\bar{y}} \cdot \exp(-n\lambda)$$
