@@ -26,4 +26,4 @@ In Bayesian Inference, parameters are not fixed constant as in classical statist
 
 Bayes' theorem is the cornerstone of making probabilistic statements about the parameter values,
 
-$$\underbrace{p_{\Theta | Y}(\theta | y)}{\text{posterior}} = \frac{\overbrace{p_{Y | \Theta}(y | \theta)}{\text{likelihood}} \cdot \overbrace{p_{\Theta}(\theta)}{\text{prior}}}{\underbrace{p_{Y}(y)}{\text{marginal likelihood}}}
+$$\underbrace{p_{\Theta \mid Y}(\theta \mid y)}{\text{posterior}} = \frac{\overbrace{p_{Y \mid \Theta}(y \mid \theta)}{\text{likelihood}} \cdot \overbrace{p_{\Theta}(\theta)}{\text{prior}}}{\underbrace{p_{Y}(y)}{\text{marginal likelihood}}}$$
