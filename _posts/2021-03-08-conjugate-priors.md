@@ -79,3 +79,7 @@ It is a distribution of our data with weighted average over all the possible par
 {: .text-justify}
 Lastly, **posterior** distribution describes our beliefs about the probable values of the parameter after we have observed the data.
 
+# Frequentist vs. Bayesian
+
+{: .text-justify}
+Suppose that we have an dataset, contains observations of coin flipping. But with a problem, our dataset contains only 3 sample and 3 of them are head! So we have a dataset $$D = \{1,1,1\}$$. In this case, the maximum likelihood result would predict that all future observations should give heads. This is an extreme example for overfitting associated with maximum likelihood estimation. For Binomial case our distribution is now $$Bin(m|N,\mu) = C(N,m) \cdot \mu^m \cdot (1-\mu)^(l)$$ where $$N=3$$, $$m=3$$, $$ l = N - m = 0$$ and  $$C(N,m) = \frac{N!}{(N-m)! m!}$$. 
