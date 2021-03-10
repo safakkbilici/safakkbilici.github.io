@@ -32,6 +32,6 @@ $$\underbrace{p_{\Theta \mid Y}(\theta \mid y)}_{\text{posterior}} = \frac{\over
 for $$\theta \in \Theta$$, $$y \in Y$$.
 
 {: .text-justify}
-Let's define likelihood, prior and posterior distributions. **Likelihood** function is just a probability density function (PDF) or probability mass function (PMF), which is considered as observations are parameterized by \theta. As you can remember from your introductory statistics & probability course at school, maximizing this likelihood function under \theta gives you the most likely value of the \theta given the data.
+Let's define likelihood, prior and posterior distributions. **Likelihood** function is just a probability density function (PDF) or probability mass function (PMF), which is considered as observations are parameterized by $$\theta$$. As you can remember from your introductory statistics & probability course at school, maximizing this likelihood function under $$\theta$$ gives you the most likely value of the $$\theta$$ given the data.
 
-$$ \hat{\theta}_\text{MLE} = \underset{\theta}{\operatorname{\argmax}} L(\theta; y)$$
+$$ \hat{\theta}_\text{MLE} = \underset{\theta}{\operatorname{argmax}} L(\theta; y)$$
