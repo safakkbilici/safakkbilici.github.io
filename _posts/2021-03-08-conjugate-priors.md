@@ -195,6 +195,6 @@ legend('topleft', inset = .02,
       col = c('red'), lwd = 2)
 ```
 
-![test image size](/images/priors/prior.png){:height="70%" width="70%"}
+![test image size](/images/priors/prior.png){:height="95%" width="95%"}
 
 
