@@ -138,7 +138,7 @@ $$ = \frac{C(N,m)}{B(a,b)} \cdot \int_0^1 \mu^{m+a-1} \cdot (1-\mu)^{l+b-1} d\mu
 {: .text-justify}
 The expression inside integral seems a little bit familiar. This is the $$Beta(m+a-1,l+b-1)$$ distribution without its normalizing term $$B(m+a-1,l+b-1)$$! So it will be very easy to convert it to this Beta distribution.
 
-$$\frac{B(m+a-1,l+b-1)}{B(a,b)} \cdot C(N,m) \cdot \underbrace{\int_0^1 \frac{\mu^{m+a-1} \cdot (1-\mu)^{l+b-1}} d\mu}{B(m+a-1,l+b-1)}_{=1}$$
+$$\frac{B(m+a-1,l+b-1)}{B(a,b)} \cdot C(N,m) \cdot \underbrace{\int_0^1 \frac{\mu^{m+a-1} \cdot (1-\mu)^{l+b-1}}{B(m+a-1,l+b-1)}d\mu}_{=1}$$
 
 {: .text-justify}
 Integrating this Beta distribution (cumulative density function) over the parameter space $$[0,1]$$ will give us 1. Therefore, the marginal likelihood is
@@ -150,7 +150,7 @@ just a constant! This allows us to write posterior distribution in the proportio
 
 Thus, the posterior is
 
-$$p_{\Theta \mid Y}(\mu \mid y) \propto \mu^{m+a-1} \cdot (1-\mu)^(l+b-1) \propto Beta(m+a,l+b)$$
+$$p_{\Theta \mid Y}(\mu \mid y) \propto \mu^{m+a-1} \cdot (1-\mu)^{(l+b-1)} \propto Beta(m+a,l+b)$$
 
 Now we can calculate our predictive distribution for $$y=1$$, instead of $$p_Y(y=1 \mid D) = \mathop{\mathbb{E}}[\mu] = \bar{y}$$ in frequentist approach, we have
 
