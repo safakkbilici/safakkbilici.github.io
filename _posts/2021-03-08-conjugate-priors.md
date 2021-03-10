@@ -347,7 +347,7 @@ $$ = \Gamma(a+b) \cdot \underbrace{\int_0^1 \mu^{a-1} \cdot (1-\mu)^{b-1} d\mu}_
 
 ### Notes
 
-Please warn me in the comment section if I do something wrong with mathematics.
+Please warn me in the comment section if I did something wrong with mathematics.
 
 # References
 
