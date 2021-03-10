@@ -319,3 +319,6 @@ So the equation takes the form $$Neg-Bin(a_1, \frac{b_1}{b_1 + 1})$$ and,
 
 $$ \hat{y_1} \mid y \sim Neg-Bin(a_1, \frac{b_1}{b_1 + 1})$$
 
+# Other Conjugate Pairs
+
+![image-center](/images/priors/pairs.png){: .align-center} There are other conjugate priors; for example: Normal likelihood + Inverse Gamma prior, Normal likelihood + Scaled inverse chi-squared prior, Uniform likelihood + Pareto prior, Gamma likelihood + Gamma prior etc.
