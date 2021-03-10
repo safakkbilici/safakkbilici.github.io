@@ -345,6 +345,9 @@ $$ = \int_0^1 e^{-t} \cdot t^{a+b-1} \cdot dt \cdot \int_0^t \mu^{a-1} \cdot (1-
 
 $$ = \Gamma(a+b) \cdot \underbrace{\int_0^1 \mu^{a-1} \cdot (1-\mu)^{b-1} d\mu}_{\text{normalizing term}}$$
 
+### Notes
+
+Please warn me in the comment section if I do something wrong with mathematics.
 
 # References
 
