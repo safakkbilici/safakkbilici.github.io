@@ -259,7 +259,12 @@ Let's examine this posterior mean. We can decompose this equality,
 
 $$\mathop{\mathbb{E}}[\mu]=\frac{b}{b+n} \cdot \underbrace{\frac{a}{b}}_{\text{prior mean}} + \frac{n}{b+n} \cdot \underbrace{\frac{\sum y_i}{n}}_{\text{data mean}}$$
 
-This is the wighted average of the prior mean and the data mean!
+This is the wighted average of the prior mean and the data mean! This means, if we choose our $$b$$ relatively high, then our posterior contains more information about our prior than likelihood. We call $$b$$ effective sample size.
 
+### Predictive Distribution
 
+Distribution of the new observations given the observed data is called a posterior predictive distribution. It can be written in the integral for new set of observation $$\hat{Y}$$
 
+$$p_{\hat{Y} \mid Y}(\hat{y} \mid y) = \int_\Theta p_{\hat{Y} \mid \Theta}(\hat{y} \mid \theta) \cdot p_{\Theta \mid Y}(\theta \mid y) d\theta$$
+
+The integrand in the formula is a product of the sampling distribution for the new observations given the parameter, and the posterior distribution of the parameter given the old observations.
