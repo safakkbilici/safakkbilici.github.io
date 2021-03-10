@@ -28,3 +28,10 @@ In Bayesian Inference, parameters are not fixed constant as in classical statist
 Bayes' theorem is the cornerstone of making probabilistic statements about the parameter values,
 
 $$\underbrace{p_{\Theta \mid Y}(\theta \mid y)}_{\text{posterior}} = \frac{\overbrace{p_{Y \mid \Theta}(y \mid \theta)}^{\text{likelihood}} \cdot \overbrace{p_{\Theta}(\theta)}^{\text{prior}}}{\underbrace{p_{Y}(y)}_{\text{marginal likelihood}}}$$
+
+for $$\theta \in \Theta$$, $$y \in Y$$.
+
+{: .text-justify}
+Let's define likelihood, prior and posterior distributions. **Likelihood** function is just a probability density function (PDF) or probability mass function (PMF), which is considered as observations are parameterized by \theta. As you can remember from your introductory statistics & probability course at school, maximizing this likelihood function under \theta gives you the most likely value of the \theta given the data.
+
+$$ \hat{\theta}_\text{MLE} = \underset{\theta}{\operatorname{\argmax}} L(\theta; y)$$
