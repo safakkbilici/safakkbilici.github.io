@@ -186,15 +186,28 @@ mu <- seq(from=0.01,to=0.99,by=0.01)
 The prior distribution can be visualized with
 
 ```R
+plot(mu,dbeta(mu,a,b),type="l",lwd = 3,
+     col="black",xlab = expression(mu),
+     ylab = expression(paste('f(', mu, ')')))
+
+legend('topleft', inset = .02,
+     legend = expression(paste("Prior Beta(a,b)")),
+     col = c('black'), lwd = 2)
+```
+
+![test image size](/images/priors/prior.png){:height="95%" width="95%"}
+
+The likelihood can be visualized with
+
+```R
 plot(mu,dbinom(N,m,mu),type="l",lwd = 3,
      col="red",xlab = expression(mu),
      ylab = expression(paste('f(y|', mu, ')')))
 
 legend('topleft', inset = .02,
-      legend = expression(paste("Likelihood Bin(m|N,",mu,")")),
-      col = c('red'), lwd = 2)
+       legend = expression(paste("Likelihood Bin(m|N,",mu,")")),
+       col = c('red'), lwd = 2)
 ```
 
-![test image size](/images/priors/prior.png){:height="95%" width="95%"}
 
 
