@@ -232,8 +232,34 @@ legend('topleft', inset = .02,
 {: .text-justify}
 The last example is Poissan likelihood, Gamma prior. Poisson distribution is defined as for $$x_i \sim Poisson(\lambda)$$
 
-$$p(x) = \frac{\lambda^x \exp(-\lambda}{x!}$$
+$$p(x) \overset{def}{=} \frac{\lambda^x \exp(-\lambda}{x!}$$
 
+{: .text-justify}
 Then the likelihood takes the form
 
-$$p_{Y \mid \Lambda}(y \mid \lambda) = \prod_{i=1}^n \lambda^{y_i} \cdot \frac{\exp(-\lambda)}{y_i!} \propto \lambda^{n\bar{y}} \cdot \exp(-n\lambda)$$
+$$p_{Y \mid \Lambda}(y \mid \lambda) = \prod_{i=1}^n \lambda^{y_i} \cdot \frac{\exp(-\lambda)}{y_i!} \propto \lambda^{n \cdot \bar{y}} \cdot \exp(-n\lambda)$$
+
+{: .text-justify}
+And prior for parameter $$\lambda$$ is Gamma distribution $$\lambda \sim \Gamma(a,b)$$ which is defined as
+
+$$p(\lambda) \overset{def}{=} \frac{b^a}{\Gamma(a)} \cdot \lambda^{a-1} \cdot \exp(-b\lambda) \propto \lambda^{a-1} \cdot \exp(-b\lambda)$$
+
+{: .text-justify}
+Then the posterior is
+
+$$p_{\Lambda \mid Y}(\lambda \mid y) \propto p_{Y \mid \Lambda}(y \mid \lambda) \cdot p_{\Lambda}(\lambda)$$
+
+$$\propto \lambda^{n \cdot \bar{y}} \cdot \exp(-n\lambda) \cdot \lambda^{a-1} \cdot \exp(-b\lambda)$$
+
+$$\propto \lambda^{a+n \cdot \bar{y} - 1} \cdot \exp(-(b+n)\lambda)$$
+
+Now our posterior is $$\theta \mid y$ \sim \Gamma(a+\sum y_i, b+n)$$. Recall that the expected value of random variable $$\lambda$$ in conditions of Gamma distribution is $$\mathop{\mathbb{E}}[\mu] = \frac{a}{b}$$, then the posterior mean is $$\mathop{\mathbb{E}}[\mu]=\frac{a+\sum y_i}{a+b+n+\sum y_i}$$
+
+Let's examine this posterior mean. We can decompose this equality,
+
+$$\mathop{\mathbb{E}}[\mu]=\frac{b}{b+n} \cdot \underbrace{\frac{a}{b}}_{\text{prior mean}} + \frac{n}{b+n} \cdot \underbrace{\frac{\sum y_i}{n}}_{\text{data mean}}$$
+
+This is the wighted average of the prior mean and the data mean!
+
+
+
