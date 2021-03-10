@@ -344,3 +344,22 @@ $$ = \int_0^\infty e^{-t} \cdot \left( t^{a+b-1} \cdot \int_0^t \mu^{a-1} \cdot 
 $$ = \int_0^1 e^{-t} \cdot t^{a+b-1} \cdot dt \cdot \int_0^t \mu^{a-1} \cdot (1-\mu)^{b-1} d\mu$$
 
 $$ = \Gamma(a+b) \cdot \underbrace{\int_0^1 \mu^{a-1} \cdot (1-\mu)^{b-1} d\mu}{\text{normalizing term}}$$
+
+
+# References
+
+- Wilks, Daniel S. Bayesian Inference, 2019, Statistical Methods in the Atmospheric Sciences.
+
+- Bishop, Christopher M. Pattern Recognition and Machine Learning, 2006, Springer-Verlag.
+
+- Baron, Michael. Probability and Statistics for Computer Scientists, Second Edition. 2013, hapman & Hall/CRC
+
+- University of California Santa Cruz. Bayesian Statistics: From Concept to Data Analysis. Coursera.
+
+- Barber, David. Bayesian Reasoning and Machine Learning, 2012. Cambridge University Press.
+
+- Conjugate prior. Wikipedia. URL: https://en.wikipedia.org/wiki/Conjugate_prior
+
+- John D. Cook. Conjugate prior relationships, URL: https://www.johndcook.com/blog/conjugate_prior_diagram/ (last image source)
+
+- Daniel Fink, A Compendium of Conjugate Priors. Environmental Statistics Group, Department of Biology Montana State Univeristy. 1997
