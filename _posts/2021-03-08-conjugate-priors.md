@@ -289,7 +289,7 @@ Define $$t=(b_1+1) \cdot \lambda$$, then the equation follows $$\lambda = \frac{
 {: .text-justify}
 Continue from the last integral,
 
-$$\int_0^\infty \lambda^{\hat{y_1} + a_1 - 1} \cdot \exp(-(b_1 + 1)\lambda)$$
+$$\int_0^\infty \lambda^{\hat{y_1} + a_1 - 1} \cdot \exp(-(b_1 + 1)\lambda) d\lambda$$
 
 $$ = \int_0^\infty \left(\frac{t}{b_1 + 1}\right)^{\hat{y_1} + a_1 - 1} \cdot \exp(-t) \cdot \frac{1}{b_1 + 1} dt$$
 
@@ -322,3 +322,25 @@ $$ \hat{y_1} \mid y \sim Neg-Bin(a_1, \frac{b_1}{b_1 + 1})$$
 # Other Conjugate Pairs
 
 ![image-center](/images/priors/pairs.png){: .align-center} There are other conjugate priors; for example: Normal likelihood + Inverse Gamma prior, Normal likelihood + Scaled inverse chi-squared prior, Uniform likelihood + Pareto prior, Gamma likelihood + Gamma prior etc.
+
+## Appendix I: Beta Distribution
+
+$$Beta(\mu \mid a,b) = \frac{\Gamma(a+b)}{\Gamma(a) \cdot \Gamma(b)} \mu^{a-1} \cdot (1 - \mu)^{b-1}$$
+
+$$\Gamma(a) \cdot \Gamma(b) = \int_0^\infty x^{a-1} \cdot e^{-x} \cdot dx \cdot \int_0^\infty x^{b-1} \cdot e^{-x} \cdot dx$$
+
+$$ = \int_0^\infty x^{a-1} \cdot e^{-x} \cdot dx \cdot \int_0^\infty y^{b-1} \cdot e^{-y} \cdot dy$$
+
+$$ = \int_0^\infty \int_0^\infty x^{a-1} \cdot e^{-x} \cdot y^{b-1} \cdot e^{-y} \cdot dx \; dy$$
+
+$$t=x+y \rightarrow dt = dx, \;\; dt=dy$$
+
+$$ = \int_0^\infty \int_0^\infty e^{-t} \cdot x^{a-1} \cdot (t-x)^{b-1} dx dt$$
+
+$$ = \int_0^\infty e^{-t} \cdot \left(\int_0^t x^{a-1} \cdot (t-x)^{b-1} dx\right) dt \xrightarrow{x=\mu \cdot t}$$
+
+$$ = \int_0^\infty e^{-t} \cdot \left( t^{a+b-1} \cdot \int_0^t \mu^{a-1} \cdot (1-\mu)^{b-1} d\mu \right) dt$$
+
+$$ = \int_0^1 e^{-t} \cdot t^{a+b-1} \cdot dt \cdot \int_0^t \mu^{a-1} \cdot (1-\mu)^{b-1} d\mu$$
+
+$$ = \Gamma(a+b) \cdot \underbrace{\int_0^1 \mu^{a-1} \cdot (1-\mu)^{b-1} d\mu}{\text{normalizing term}}$$
