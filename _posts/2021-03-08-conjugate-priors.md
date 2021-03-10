@@ -165,7 +165,7 @@ $$ = \frac{m+a}{m+a+l+b}$$
 {: .text-justify}
 In our example $$N=3$$ and $$m=3$$ for $$D={1,1,1}$$. The expected parameter value from maximum likelihood estimator is w
 
-$$\hat{\mu}_{\text{MLE}} = \frac{m}{N} = 3$$
+$$\hat{\mu}_{\text{MLE}} = \frac{m}{N} = 1$$
 
 {: .text-justify}
 and choosing $$a=2$$ and $$b=2$$, the expected parameter value from Bayesian Inference is
