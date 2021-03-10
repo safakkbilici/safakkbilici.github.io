@@ -34,7 +34,7 @@ for $$\theta \in \Theta$$, $$y \in Y$$.
 {: .text-justify}
 Let's define likelihood, prior and posterior distributions. **Likelihood** function is just a probability density function (PDF) or probability mass function (PMF), which is considered as observations are parameterized by $$\theta$$. As you can remember from your introductory statistics & probability course at school, maximizing this likelihood function under $$\theta$$ gives you the most likely value of the $$\theta$$ given the data.
 
-$$ \hat{\theta}_\text{MLE} = \underset{\theta}{\operatorname{argmax}} L(\theta; y)$$
+$$ \hat{\theta}_\text{MLE} = \underset{\theta}{\operatorname{argmax}} \mathscr{L}(\theta; y)$$
 
 {: .text-justify}
 For example, the Bernoulli Distribution. Bernoulli Distribution takes the form $$p(Y=y \mid \mu) = \mu^y \cdot (1-\mu)^{(1-y)}$$ for $$y \sim \text{Bernoulli}(\mu)$$. This is the probability mass function. The likelihood of Bernoulli can be thought of as a function of theta.
@@ -82,4 +82,12 @@ Lastly, **posterior** distribution describes our beliefs about the probable valu
 # Frequentist vs. Bayesian
 
 {: .text-justify}
-Suppose that we have an dataset, contains observations of coin flipping. But with a problem, our dataset contains only 3 sample and 3 of them are head! So we have a dataset $$D = \{1,1,1\}$$. In this case, the maximum likelihood result would predict that all future observations should give heads. This is an extreme example for overfitting associated with maximum likelihood estimation. For Binomial case our distribution is now $$Bin(m \mid N,\mu) = C(N,m) \cdot \mu^m \cdot (1-\mu)^(l)$$ where $$N=3$$, $$m=3$$, $$ l = N - m = 0$$ and  $$C(N,m) = \frac{N!}{(N-m)! m!}$$. 
+Suppose that we have an dataset, contains observations of coin flipping. But with a problem, our dataset contains only 3 sample and 3 of them are head! So we have a dataset $$D = \{1,1,1\}$$. In this case, the maximum likelihood result would predict that all future observations should give heads. This is an extreme example for overfitting associated with maximum likelihood estimation. For Binomial case our distribution is now $$Bin(m \mid N,\mu) = C(N,m) \cdot \mu^m \cdot (1-\mu)^{(l)}$$ where $$N=3$$, $$m=3$$, $$ l = N - m = 0$$ and  $$C(N,m) = \frac{N!}{(N-m)! m!}$$.
+
+## Conjugate Prior
+
+$$ p_{\Theta \mid Y}(\theta \mid y) \propto p_{Y \mid \Theta}(y \mid \theta) \cdot p_{\Theta}(\theta)$$
+
+If our posterior distribution is from the same family as the prior distribution, we call that prior "conjugate prior". As you can remember, marginal likelihood is computed with an integral over the paramter space \Theta. This integrals are generally computationally expensive. Exact solutions are known for a small class of distributions, when the marginalized-out parameter \theta is the conjugate prior of the likelihood. A conjugate prior is an algebraic convenience, giving a closed-form expression for the posterior. If we can't re-write this denominator integral (marginal likelihood) within closed-form expression, we may have to calculate posterior with numerical analysis methods such as Simpson's Rule, Trapezoidal Rule, Gibbs/Metropolis sampling, Monte Carlo method etc.
+
+## Binomial-Beta Model
