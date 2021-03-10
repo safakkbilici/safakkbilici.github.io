@@ -253,26 +253,69 @@ $$\propto \lambda^{n \cdot \bar{y}} \cdot \exp(-n\lambda) \cdot \lambda^{a-1} \c
 
 $$\propto \lambda^{a+n \cdot \bar{y} - 1} \cdot \exp(-(b+n)\lambda)$$
 
+{: .text-justify}
 Now our posterior is $$\theta \mid y \sim \Gamma(a+\sum y_i, b+n)$$. Recall that the expected value of random variable $$\lambda$$ in conditions of Gamma distribution is $$\mathop{\mathbb{E}}[\mu] = \frac{a}{b}$$, then the posterior mean is $$\mathop{\mathbb{E}}[\mu]=\frac{a+\sum y_i}{a+b+n+\sum y_i}$$
 
+{: .text-justify}
 Let's examine this posterior mean. We can decompose this equality,
 
 $$\mathop{\mathbb{E}}[\mu]=\frac{b}{b+n} \cdot \underbrace{\frac{a}{b}}_{\text{prior mean}} + \frac{n}{b+n} \cdot \underbrace{\frac{\sum y_i}{n}}_{\text{data mean}}$$
 
+{: .text-justify}
 This is the wighted average of the prior mean and the data mean! This means, if we choose our $$b$$ relatively high, then our posterior contains more information about our prior than likelihood. We call $$b$$ effective sample size.
 
 ### Predictive Distribution
 
+{: .text-justify}
 Distribution of the new observations given the observed data is called a posterior predictive distribution. It can be written in the integral for new set of observation $$\hat{Y}$$
 
 $$p_{\hat{Y} \mid Y}(\hat{y} \mid y) = \int_\Theta p_{\hat{Y} \mid \Theta}(\hat{y} \mid \theta) \cdot p_{\Theta \mid Y}(\theta \mid y) d\theta$$
 
+{: .text-justify}
 The integrand in the formula is a product of the sampling distribution for the new observations given the parameter, and the posterior distribution of the parameter given the old observations.
 
+{: .text-justify}
 Let's see what is the posterior predictive distribution for one new observation $$\hat{y_1}$$ for our Poisson-Gamma model. Define $$a_1 = a + n \cdot \bar{y}$$ and $$b_1 = b + n$$. The posterior predictive distribution is
 
-$$p_{\hat{Y} \mid y}(\hat{y_1} \mid y) = \int_\Lambda p_{\hat{Y} \mid \Lambda}(\hat{y} \mid \lambda) \cdot \p_{\Lambda \mid Y}(\lambda \mid y) d\lambda$$
+$$p_{\hat{Y} \mid Y}(\hat{y_1} \mid y) = \int_\Lambda p_{\hat{Y} \mid \Lambda}(\hat{y} \mid \lambda) \cdot p_{\Lambda \mid Y}(\lambda \mid y) d\lambda$$
 
 $$ = \int_0^\infty \lambda^{\hat{y_1}} \cdot \frac{\exp(-\lambda)}{\hat{y_1}!} \cdot \frac{b_1^{a_1}}{\Gamma(a_1)} \cdot \lambda^{a_1 - 1} \cdot \exp(-b_1\lambda) d\lambda$$
 
 $$ = \frac{b_1^{a_1}}{\Gamma(a_1) \cdot \hat{y_1}} \int_0^\infty \lambda^{\hat{y_1} + a_1 -1} \cdot \exp(-(b_1 + 1)\cdot \lambda) d\lambda$$
+
+{: .text-justify}
+Define $$t=(b_1+1) \cdot \lambda$$, then the equation follows $$\lambda = \frac{t}{b_1 + 1}$$. Making this function as differentiable: $$g(t) = \frac{t}{b_1 + 1} \rightarrow d\lambda \frac{1}{b_1 + 1} dt$$
+
+{: .text-justify}
+Continue from the last integral,
+
+$$\int_0^\infty \lambda^{\hat{y_1} + a_1 - 1} \cdot \exp(-(b_1 + 1)\lambda)$$
+
+$$ = \int_0^\infty \left(\frac{t}{b_1 + 1}\right)^{\hat{y_1} + a_1 - 1} \cdot \exp(-t) \cdot \frac{1}{b_1 + 1} dt$$
+
+$$ = \left(\frac{1}{b_1 + 1}\right)^{\hat{y_1} + a_1} \cdot \int_0^\infty t^{\hat{y_1} + a_1 -1} \cdot \exp(-t) dt$$
+
+$$ = \left(\frac{1}{b_1 + 1}\right)^{\hat{y_1} + a_1} \cdot \Gamma(\hat{y_1}+a_1)$$
+
+Then,
+
+$$p_{\hat{Y} \mid Y}(\hat{y_1} \mid y) = \frac{b_1^{a_1}}{\Gamma(a_1) \cdot \hat{y_1}!} \cdot \left(\frac{1}{b_1 + 1}\right)^{\hat{y_1} + a_1} \cdot \Gamma(\hat{y_1}+a_1)$$
+
+$$ = \frac{\Gamma(\hat{y_1} + a_1)}{\Gamma(a_1) \cdot \hat{y_1}!} \left(\frac{1}{b_1 + 1}\right)^{\hat{y_1}} \cdot \left(\frac{b_1}{b_1 + 1}\right)^{a_1}$$
+
+$$ = \frac{\Gamma(\hat{y_1} + a_1)}{\Gamma(a_1) \cdot \hat{y_1}!} \left(1 - \frac{b_1}{b_1 + 1}\right)^{\hat{y_1}} \cdot \left(\frac{b_1}{b_1 + 1}\right)^{a_1} \;\;\; (1)$$
+
+{: .text-justify}
+Remember the Negative-Binomial distribution from your basic statistics and probability course at school:
+
+$$p(y) = C(r+y-1,y) \cdot p^r \cdot (1-p)^{y}$$
+
+Where
+
+$$ C(r+y-1,y) = \frac{(r+y-1) \cdot (r+y-2) \cdot ... \cdot r}{y!} = \frac{\Gamma(r+y)}{\Gamma(r) \cdot y!}$$
+
+{: .text-justify}
+So the equation takes the form $$Neg-Bin(a_1, \frac{b_1}{b_1 + 1})$$ and,
+
+$$ \hat{y_1} \mid y \sim Neg-Bin(a_1, \frac{b_1}{b_1 + 1})$$
+
