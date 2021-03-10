@@ -88,6 +88,35 @@ Suppose that we have an dataset, contains observations of coin flipping. But wit
 
 $$ p_{\Theta \mid Y}(\theta \mid y) \propto p_{Y \mid \Theta}(y \mid \theta) \cdot p_{\Theta}(\theta)$$
 
+{: .text-justify}
 If our posterior distribution is from the same family as the prior distribution, we call that prior "conjugate prior". As you can remember, marginal likelihood is computed with an integral over the paramter space \Theta. This integrals are generally computationally expensive. Exact solutions are known for a small class of distributions, when the marginalized-out parameter \theta is the conjugate prior of the likelihood. A conjugate prior is an algebraic convenience, giving a closed-form expression for the posterior. If we can't re-write this denominator integral (marginal likelihood) within closed-form expression, we may have to calculate posterior with numerical analysis methods such as Simpson's Rule, Trapezoidal Rule, Gibbs/Metropolis sampling, Monte Carlo method etc.
 
 ## Binomial-Beta Model
+
+Choosing a prior distribution to be proportional to powers of $$\mu$$ and $$(1-\mu)$$, we have an posterior distribution, which is from the same family as the prior distribution. The Beta distribution is defined as
+
+{: .text-justify}
+$$ Beta(\mu \mida,b) \frac{\mu^{a-1} \cdot (1-\mu)^{(b-1)}}{B(a,b)}$$
+
+where
+
+$$B(a,b) = \frac{\Gamma(a) \cdot \Gamma(b)}{\Gamma(a+b)}$$
+
+with $$\mu \in [0,1]$$
+
+The expectation $$\mathop{\mathbb{E}}[\mu]$$ can be obtained as
+
+$$\mathop{\mathbb{E}}[\mu] = \int_0^1 \mu \cdot Beta(\mu \mida,b) d\mu$$
+
+$$ = \frac{1}{B(a,b)} \cdot \int_0^1 \mu^a \cdot (1-\mu)^{(b-1)} d\mu$$
+
+$$ = \frac{B(a+1,b)}{B(a,b)}$$
+
+$$ = \frac{\Gamma(a+1) \cdot \Gamma(b)}{\Gamma(a+b+1)} \cdot \frac{\Gamma(a) \cdot \Gamma(b)}{\Gamma(a+b)}$$
+
+for $$\Gamma(z+1) = z \cdot \Gamma(z)$$, above equation becomes
+
+$$ = \frac{a}{a+b} \cdot \frac{\Gamma(a) \cdot \Gamma(b) \cdot \Gamma(a+b)}{\Gamma(a) \cdot \Gamma(b) \cdot \Gamma(a+b)}$$
+
+$$ = \mathop{\mathbb{E}}[\mu]$$
+
