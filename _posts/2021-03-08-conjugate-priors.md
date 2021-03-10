@@ -154,7 +154,9 @@ $$p_{\Theta \mid Y}(\mu \mid y) \propto \mu^{m+a-1} \cdot (1-\mu)^(l+b-1) \propt
 
 Now we can calculate our predictive distribution for $$y=1$$, instead of $$p_Y(y=1 \mid D) = \mathop{\mathbb{E}}[\mu] = \bar{y}$$ in frequentist approach, we have
 
-$$p_Y(y=1 \mid D) = \int_0^1 p_Y(y=1 \mid D) \cdot p_\Theta(\mu \mid D) d\mu = \int_0^1 \mu \cdot p_\Theta(\mu \mid D) d\mu = \mathop{\mathbb{E}}[\mu \mid D]$$
+$$p_Y(y=1 \mid D) = \int_0^1 p_Y(y=1 \mid D) \cdot p_\Theta(\mu \mid D) d\mu$$
+
+$$= \int_0^1 \mu \cdot p_\Theta(\mu \mid D) d\mu = \mathop{\mathbb{E}}[\mu \mid D]$$
 
 $$ = \frac{m+a}{m+a+l+b}$$
 
