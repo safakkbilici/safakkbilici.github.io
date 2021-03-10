@@ -35,3 +35,23 @@ for $$\theta \in \Theta$$, $$y \in Y$$.
 Let's define likelihood, prior and posterior distributions. **Likelihood** function is just a probability density function (PDF) or probability mass function (PMF), which is considered as observations are parameterized by $$\theta$$. As you can remember from your introductory statistics & probability course at school, maximizing this likelihood function under $$\theta$$ gives you the most likely value of the $$\theta$$ given the data.
 
 $$ \hat{\theta}_\text{MLE} = \underset{\theta}{\operatorname{argmax}} L(\theta; y)$$
+
+For example, the Bernoulli Distribution. Bernoulli Distribution takes the form $$p(Y=y \mid \mu) = \mu^y \cdot (1-\mu)^{(1-y)}$$ for $$y \sim \text{Bernoulli}(\mu)$$. This is the probability mass function. The likelihood of Bernoulli can be thought of as a function of theta.
+
+$$ p(Y=y \mid \theta) = p(Y_1=y_1, Y_2=y_2, ..., Y_n=y_n \mid \mu)$$
+
+$$ = p(Y_1=y_1 \mid mu) \cdot p(Y_2=y_2 \mid \mu) \cdot ... \cdot p(Y_n=y_n \mid \mu)$$
+
+$$ = \prod_{i=0}^{n} p(Y_i = y_i \mid \mu) = \prod_{i=0}^{n} \mu^{y_i} \cdot (1-\mu)^{(1-y_i)}$$
+
+$$ \mathscr{L}(\mu \mid y) = \prod_{i=0}^{n} \mu^{y_i} \cdot (1-\mu)^{(1-y_i)}$$
+
+$$\mathscr{L}(\mu \mid y)$$ is not a probability distribution anymore.
+
+Maximizing the log-likelihood of Bernoulli takes the form,
+
+$$ \ell(\mu) = \log \mathscr{L}(\mu \mid y) = \log \prod_{i=0}^{n} \mu^{y_i} \cdot (1-\mu)^{(1-y_i)}$$
+
+$$ = \sum_{i=1}^{n} y_i \cdot \log \mu + (1-y_i) \cdot \log(1-\mu)$$
+
+$$ = \left(\sum_{i=0}^{n} y_i\right) \cdot \og \mu + \left(\sum_{i=0}^{n} 1 - y_i\right) \cdot \log (1-\mu)$$
