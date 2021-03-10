@@ -253,7 +253,7 @@ $$\propto \lambda^{n \cdot \bar{y}} \cdot \exp(-n\lambda) \cdot \lambda^{a-1} \c
 
 $$\propto \lambda^{a+n \cdot \bar{y} - 1} \cdot \exp(-(b+n)\lambda)$$
 
-Now our posterior is $$\theta \mid y$ \sim \Gamma(a+\sum y_i, b+n)$$. Recall that the expected value of random variable $$\lambda$$ in conditions of Gamma distribution is $$\mathop{\mathbb{E}}[\mu] = \frac{a}{b}$$, then the posterior mean is $$\mathop{\mathbb{E}}[\mu]=\frac{a+\sum y_i}{a+b+n+\sum y_i}$$
+Now our posterior is $$\theta \mid y \sim \Gamma(a+\sum y_i, b+n)$$. Recall that the expected value of random variable $$\lambda$$ in conditions of Gamma distribution is $$\mathop{\mathbb{E}}[\mu] = \frac{a}{b}$$, then the posterior mean is $$\mathop{\mathbb{E}}[\mu]=\frac{a+\sum y_i}{a+b+n+\sum y_i}$$
 
 Let's examine this posterior mean. We can decompose this equality,
 
@@ -268,3 +268,11 @@ Distribution of the new observations given the observed data is called a posteri
 $$p_{\hat{Y} \mid Y}(\hat{y} \mid y) = \int_\Theta p_{\hat{Y} \mid \Theta}(\hat{y} \mid \theta) \cdot p_{\Theta \mid Y}(\theta \mid y) d\theta$$
 
 The integrand in the formula is a product of the sampling distribution for the new observations given the parameter, and the posterior distribution of the parameter given the old observations.
+
+Let's see what is the posterior predictive distribution for one new observation $$\hat{y_1}$$ for our Poisson-Gamma model. Define $$a_1 = a + n \cdot \bar{y}$$ and $$b_1 = b + n$$. The posterior predictive distribution is
+
+$$p_{\hat{Y} \mid y}(\hat{y_1} \mid y) = \int_\Lambda p_{\hat{Y} \mid \Lambda}(\hat{y} \mid \lambda) \cdot \p_{\Lambda \mid Y}(\lambda \mid y) d\lambda$$
+
+$$ = \int_0^\infty \lambda^{\hat{y_1}} \cdot \frac{\exp(-\lambda)}{\hat{y_1}!} \cdot \frac{b_1^{a_1}}{\Gamma(a_1)} \cdot \lambda^{a_1 - 1} \cdot \exp(-b_1\lambda) d\lambda$$
+
+$$ = \frac{b_1^{a_1}}{\Gamma(a_1) \cdot \hat{y_1}} \int_0^\infty \lambda^{\hat{y_1} + a_1 -1} \cdot \exp(-(b_1 + 1)\cdot \lambda) d\lambda$$
