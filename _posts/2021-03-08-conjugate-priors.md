@@ -365,3 +365,6 @@ $$ = \Gamma(a+b) \cdot \underbrace{\int_0^1 \mu^{a-1} \cdot (1-\mu)^{b-1} d\mu}_
 - Daniel Fink, A Compendium of Conjugate Priors. Environmental Statistics Group, Department of Biology Montana State Univeristy. 1997
 
 - Modified Bayes' Theorem, xkcd. A webcomic of romance, sarcasm, math, and language. URL: https://xkcd.com/2059/ (thumbnail source)
+
+
+![test image size](/images/priors/thumbnail.png){:height="95%" width="95%"}
