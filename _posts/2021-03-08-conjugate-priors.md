@@ -148,10 +148,12 @@ $$\frac{B(m+a-1,l+b-1)}{B(a,b)} \cdot C(N,m)$$
 {: .text-justify}
 just a constant! This allows us to write posterior distribution in the proportional form of likelihood times prior, $$posterior \propto likelihood \times prior$$.
 
+{: .text-justify}
 Thus, the posterior is
 
 $$p_{\Theta \mid Y}(\mu \mid y) \propto \mu^{m+a-1} \cdot (1-\mu)^{(l+b-1)} \propto Beta(m+a,l+b)$$
 
+{: .text-justify}
 Now we can calculate our predictive distribution for $$y=1$$, instead of $$p_Y(y=1 \mid D) = \mathop{\mathbb{E}}[\mu] = \bar{y}$$ in frequentist approach, we have
 
 $$p_Y(y=1 \mid D) = \int_0^1 p_Y(y=1 \mid D) \cdot p_\Theta(\mu \mid D) d\mu$$
@@ -159,4 +161,40 @@ $$p_Y(y=1 \mid D) = \int_0^1 p_Y(y=1 \mid D) \cdot p_\Theta(\mu \mid D) d\mu$$
 $$= \int_0^1 \mu \cdot p_\Theta(\mu \mid D) d\mu = \mathop{\mathbb{E}}[\mu \mid D]$$
 
 $$ = \frac{m+a}{m+a+l+b}$$
+
+{: .text-justify}
+In our example $$N=3$$ and $$m=3$$ for $$D={1,1,1}$$. The expected parameter value from maximum likelihood estimator is w
+
+$$\hat{mu}_{\text{MLE}} = \frac{m}{N} = 3$$
+
+{: .text-justify}
+and choosing $$a=2$$ and $$b=2$$, the expected parameter value from Bayesian Inference is
+
+$$ \frac{m+a}{m+a+l+b} = \frac{5}{7} = 0.7143$$.
+
+{: .text-justify}
+This process can be visualized with using R. Defining $$\mu$$ and $$N, m, a, b$$
+
+```R
+N <- 3
+m <- 3
+a <- 2
+b <- 2
+mu <- seq(from=0.01,to=0.99,by=0.01)
+```
+
+The prior distribution can be visualized with
+
+```R
+plot(mu,dbinom(N,m,mu),type="l",lwd = 3,
+     col="red",xlab = expression(mu),
+     ylab = expression(paste('f(y|', mu, ')')))
+
+legend('topleft', inset = .02,
+      legend = expression(paste("Likelihood Bin(m|N,",mu,")")),
+      col = c('red'), lwd = 2)
+```
+
+![test image size](/images/priors/prior.png){:height="70%" width="70%"}
+
 
