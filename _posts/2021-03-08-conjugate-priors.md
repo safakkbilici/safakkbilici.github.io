@@ -24,6 +24,7 @@ We would like to ask what is the probability of my parameter $$\theta$$'s true v
 {: .text-justify}
 In Bayesian Inference, parameters are not fixed constant as in classical statistical learning. We treat parameters as a random variable. This allows us to make probabilistic statements about the parameter values.
 
+{: .text-justify}
 Bayes' theorem is the cornerstone of making probabilistic statements about the parameter values,
 
-$$\underbrace{p_{\Theta \mid Y}(\theta \mid y)}{\text{posterior}} = \frac{\overbrace{p_{Y \mid \Theta}(y \mid \theta)}{\text{likelihood}} \cdot \overbrace{p_{\Theta}(\theta)}{\text{prior}}}{\underbrace{p_{Y}(y)}{\text{marginal likelihood}}}$$
+$$\underbrace{p_{\Theta \mid Y}(\theta \mid y)}_{\text{posterior}} = \frac{\overbrace{p_{Y \mid \Theta}(y \mid \theta)}^{\text{likelihood}} \cdot \overbrace{p_{\Theta}(\theta)}^{\text{prior}}}{\underbrace{p_{Y}(y)}_{\text{marginal likelihood}}}$$
