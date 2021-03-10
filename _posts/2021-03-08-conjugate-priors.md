@@ -48,10 +48,18 @@ $$ \mathscr{L}(\mu \mid y) = \prod_{i=0}^{n} \mu^{y_i} \cdot (1-\mu)^{(1-y_i)}$$
 
 $$\mathscr{L}(\mu \mid y)$$ is not a probability distribution anymore.
 
-Maximizing the log-likelihood of Bernoulli takes the form,
+Log-likelihood of Bernoulli takes the form,
 
 $$ \ell(\mu) = \log \mathscr{L}(\mu \mid y) = \log \prod_{i=0}^{n} \mu^{y_i} \cdot (1-\mu)^{(1-y_i)}$$
 
 $$ = \sum_{i=1}^{n} y_i \cdot \log \mu + (1-y_i) \cdot \log(1-\mu)$$
 
-$$ = \left(\sum_{i=0}^{n} y_i\right) \cdot \og \mu + \left(\sum_{i=0}^{n} 1 - y_i\right) \cdot \log (1-\mu)$$
+$$ = \left(\sum_{i=0}^{n} y_i\right) \cdot \log \mu + \left(\sum_{i=0}^{n} 1 - y_i\right) \cdot \log (1-\mu)$$
+
+After the log-likelihood, it is more easier to maximize:
+
+$$ \frac{d \ell(\mu)}{d \mu} = \frac{1}{\mu} \sum_i^n y_i - \frac{1}{1-\mu} \sum_i^n 1-y_i = 0$$
+
+$$ \frac{\sum_i^n y_i}{\hat{\mu}} = \frac{\sum_i^n 1 - y_i}{1 - \hat{\mu}}$$
+
+$$ \hat{\mu}_\text{MLE} = \frac{\sum_i^n y_i}{n} = \bar{y} $$
