@@ -209,5 +209,19 @@ legend('topleft', inset = .02,
        col = c('red'), lwd = 2)
 ```
 
+![test image size](/images/priors/likelihood.png){:height="95%" width="95%"}
 
 
+Finally, the posterior is
+
+```R
+plot(mu,dbeta(mu,N+a,N-m+b),type="l",lwd = 3,
+     col="blue",xlab = expression(mu),
+     ylab = expression(paste('f(', mu, '|y)')))
+
+legend('topleft', inset = .02,
+       legend = expression(paste("Posterior Beta(",mu,"|m+a,l+b)")),
+       col = c('blue'), lwd = 2)
+```
+
+![test image size](/images/priors/posterior.png){:height="95%" width="95%"}
