@@ -323,7 +323,7 @@ $$ \hat{y_1} \mid y \sim Neg-Bin(a_1, \frac{b_1}{b_1 + 1})$$
 
 ![image-center](/images/priors/pairs.png){: .align-center} There are other conjugate priors; for example: Normal likelihood + Inverse Gamma prior, Normal likelihood + Scaled inverse chi-squared prior, Uniform likelihood + Pareto prior, Gamma likelihood + Gamma prior etc.
 
-## Appendix I: Beta Distribution
+## Appendix I: Proof Of Beta Distribution Has Normalizing Term That Gives The Range \[0,1\]
 
 $$Beta(\mu \mid a,b) = \frac{\Gamma(a+b)}{\Gamma(a) \cdot \Gamma(b)} \mu^{a-1} \cdot (1 - \mu)^{b-1}$$
 
