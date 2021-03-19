@@ -8,7 +8,7 @@ header:
 This section covers my favorite textbooks/papers/blog posts.
 
 # Textbooks
-![image-center](/_pages/prml.jpg){: .align-left height="30%" width="30%"}
+![image-center](/_pages/prml.jpg){: .align-left height="10%" width="10%"}
 - **Pattern Recognition and Machine Learning (Christopher Bishop)**: I was recommended to read this book to gain more theoretical understanding for Bayesian Machine Learning by my friend Onur. Book is very hard to read, I am still reading it. It starts from meaning of Bayesian Inference and then continues from probability distributions section. Then introduces Bayesian techniques on Machine Learning. Also my friend Onur recommended that taking the "Bayesian Statistics" [course](https://www.coursera.org/learn/bayesian-statistics) on Coursera will be a good preliminary for this book.
 
 - **Deep Learning (Ian Goodfellow et al.)**; I started to learn Deep Learning with this book. An excellent, comprehensive textbook on Deep Learning. But, strongly, I do not recommend this book for beginners in this field. It requires very good mathematics knowledge (Linear Algebra, Advanced Calculus, Statistics and Probability, Information Theory etc. etc.). Yes it covers some mathematical concepts in first chapters but still not enough. If you feel comfortable with deriving matrices, interpreting distribubtions and others. Go on my friend, read the "bible".
