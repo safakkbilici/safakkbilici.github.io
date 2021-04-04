@@ -17,7 +17,7 @@ This section covers my favorite textbooks/papers/blog posts.
 
 - **Machine Learning (Ethem Alpaydın)**; Very good introduction for mathematical interpretation of Machine Learning. I always recommend this book for starters who wants to study this area. Simple language, easily understandable.
 
-- **Speech and Language Processing (Dan Jurafsky)**: I recommend this book for starting Natural Language Processing. This book is important because this is not a Deep Learning book. This book will persuade you to love lingustics. Studying the book plus some Python exercises on web will help yo to gain NLP skills.
+- **Speech and Language Processing (Dan Jurafsky)**: I recommend this book for starting Natural Language Processing. This book is important because this is not a Deep Learning book. This book will persuade you to love linguistics. Studying the book plus some Python exercises on web will help yo to gain NLP skills.
 
 - **Convex Optimization (Stephen Boyd, Lieven Vandenberghe)**; good book for who studies deep learning. It covers convex sets, optimizers and its applications like approximation and fitting.
 
