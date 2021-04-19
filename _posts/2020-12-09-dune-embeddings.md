@@ -19,15 +19,7 @@ image:
 Consider this as an unorthodox way to recommend Dune.
 
 {: .text-justify}
-This blog post covers some experimental word embeddings on the book series called Dune. I am writing this post just for fun. As you may know that, Dune has distinctive linguistic features (the universal language in Dune Universe is Galach), mostly based on varieties of Arabic. I trained a corpus of six main books of Dune: Dune (1), Dune Messiah (2), Children Of Dune (3), God Emperor Of Dune (4), Heretics of Dune (5), Chapterhouse Dune (6). Before dive in the code and analysis, here is the dependencies:
-
-- gensim == 3.6.0
-- re == 2.2.1
-- pandas == 1.1.4
-- numpy == 1.18.5
-- spacy == 2.2.4
-- nltk == 3.2.5
-
+This blog post covers some experimental word embeddings on the book series called Dune. I am writing this post just for fun. As you may know that, Dune has distinctive linguistic features (the universal language in Dune Universe is Galach), mostly based on varieties of Arabic. I trained a corpus of six main books of Dune: Dune (1), Dune Messiah (2), Children Of Dune (3), God Emperor Of Dune (4), Heretics of Dune (5), Chapterhouse Dune (6).
 {: .text-justify}
 As you may know, word2vec \[1\] is proposed in the paper called [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/abs/1310.4546) (Mikolov et al., 2013). It allows you to learn the high-quality distributed vector representations that capture a large number of precise syntactic and semantic word relationships. Word2vec algorithm uses Skip-gram [Mikolov et al., 2013](https://arxiv.org/abs/1301.3781) model to learn efficient vector representations. Those learned word vectors has interesting property, words with semantic and syntactic affinities give the necessary result in mathematical similarity operations. In Skip-gram connections we have an objective to minimize:
 
