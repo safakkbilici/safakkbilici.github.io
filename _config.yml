@@ -24,8 +24,8 @@ description              : "Personal Nerdy Blog"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : /images/logo.png
-logo                     : /images/logo.png
+#teaser                   : /images/logo.png
+#logo                     : /images/logo.png
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 
 header_text:  " "
