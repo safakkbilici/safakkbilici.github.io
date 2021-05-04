@@ -56,8 +56,26 @@ strawberry    | 0              | ...           | 0                 | 0        | 
 fool          | 0              | ...           | 1670              | 1683     | 4      |
 information   | 0              | ...           | 3325              | 3982     | 13     |
 
-The dimensionality of this matrix is $$\mid V \mid \times \mid V \mid$$.  With this approach, the word "cherry" can be represented with \[0, .., 2, 8, 25\] with dimensionality $$\mid V \mid$$. This approach still gives acceptable good analogies with cosine similarity. Cosine similarity is normalized dot product between two word vectors:
+{: .text-justify}
+The dimensionality of this matrix is $$\mid V \mid \times \mid V \mid$$.  With this approach, the word "cherry" can be represented with \[0, ..., 2, 8, 25\] with dimensionality $$\mid V \mid$$. This approach still gives acceptable good analogies with cosine similarity. Cosine similarity is normalized dot product between two word vectors:
 
 $$\text{cosine-sim}(\vec{w_1},\vec{w_2}) = \frac{\vec{w_1} \cdot \vec{w_2}}{\lVert \vec{w_1} \rVert \lVert \vec{w_2} \rVert}$$
 
 It ranges from 1 to -1. Orthogonal vectors (not similar) gives 0.
+
+### TF-IDF
+
+{: .text-justify}
+TF-IDF is just a weighing method for co-occurence matrix. Words that occur nearby frequently (pie nearby cherry) are more important than words that only appear once or twice. Yet words that are too frequent (the, good, that etc.) are unimportant. TF-IDF captures that information. The term frequency (tf) is defined as the frequency of the word $$w$$ in the document $$d$$:
+
+$$\text{tf}_{w,d} = \text{count}(w, d)
+
+and the inverse document frequency (idf) is defined as 
+
+$$\text{idf}_{w} = \log_10 \left( \frac{N}{\text{df}_w} \right)$$
+
+{: .text-justify}
+where $$N$$ is the total number of documents, $$\text{df}_w$$ is is the total number of documents that includes $$w$$. Soi the TF-IDF weighted value for word $$w$$ is defined as
+
+$$w_d = \text{tf}_{w,d} \times \text{idf}_{w}$$
+
