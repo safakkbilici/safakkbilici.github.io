@@ -68,14 +68,36 @@ It ranges from 1 to -1. Orthogonal vectors (not similar) gives 0.
 {: .text-justify}
 TF-IDF is just a weighing method for co-occurence matrix. Words that occur nearby frequently (pie nearby cherry) are more important than words that only appear once or twice. Yet words that are too frequent (the, good, that etc.) are unimportant. TF-IDF captures that information. The term frequency (tf) is defined as the frequency of the word $$w$$ in the document $$d$$:
 
-$$\text{tf}_{w,d} = \text{count}(w, d)
+$$\text{tf}_{w,d} = \text{count}(w, d)$$
 
 and the inverse document frequency (idf) is defined as 
 
-$$\text{idf}_{w} = \log_10 \left( \frac{N}{\text{df}_w} \right)$$
+$$\text{idf}_{w} = \log_{10} \left( \frac{N}{\text{df}_w} \right)$$
 
 {: .text-justify}
 where $$N$$ is the total number of documents, $$\text{df}_w$$ is is the total number of documents that includes $$w$$. Soi the TF-IDF weighted value for word $$w$$ is defined as
 
 $$w_d = \text{tf}_{w,d} \times \text{idf}_{w}$$
 
+### Positive Pointwise Mutual Information (PPMI)
+
+
+### Singular Value Decomposition
+
+## Distributional Hypothesis
+
+### word2vec
+
+### GloVe
+
+## Subword Models
+
+### FastText
+
+### Byte Pair Encoding
+
+## Contextual Representation
+
+### ELMo
+
+### BERT
