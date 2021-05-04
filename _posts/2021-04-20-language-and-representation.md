@@ -58,4 +58,6 @@ information   | 0              | ...           | 3325              | 3982     | 
 
 The dimensionality of this matrix is $$\mid V \mid \times \mid V \mid$$.  With this approach, the word "cherry" can be represented with \[0, .., 2, 8, 25\] with dimensionality $$\mid V \mid$$. This approach still gives acceptable good analogies with cosine similarity. Cosine similarity is normalized dot product between two word vectors:
 
-$$\text{cosine-sim}(\vec{w_1},\vec{w_2}) = \frac{\vec{w_1} \cdot \vec_{w_2}}{\left|w_1 \right|  \left|w_2 \right|}$$
+$$\text{cosine-sim}(\vec{w_1},\vec{w_2}) = \frac{\vec{w_1} \cdot \vec_{w_2}}{\lVert w_1 \rVert \lVert w_2 \rVert}$$
+
+It ranges from 1 to -1. Orthogonal vectors (not similar) gives 0.
