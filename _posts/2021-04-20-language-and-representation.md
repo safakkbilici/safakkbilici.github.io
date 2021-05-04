@@ -27,6 +27,8 @@ Words and meanings are ambigious. ~85% of words are unambigious, however, accoun
 - enable the country to buy **back/RP** about debt
 - I was twenty-one **back/RB** then
 
+## Frequency Matrices
+
 {: .text-justify}
 Even though many words are easy to disambiguate linguistically, it is not always easy to represent this words computationally. Grammar is a mental system, a cognitive part of the brain/mind, which, if
 it is one’s first native language, is acquired as a child without any specific instruction. Children develop language rapidlt nd efficiently, that is, with relatively few errors, because the basic form of language is given to them by human biology (the logical problem of language acquisition, Noam Chomsky, 1955). So, imagine that how hard it is to represent well while we have ambiguity in our brain's understanding. In this post, I will introduce and compare a comprehensive typology of word representation models.
@@ -54,4 +56,6 @@ strawberry    | 0              | ...           | 0                 | 0        | 
 fool          | 0              | ...           | 1670              | 1683     | 4      |
 information   | 0              | ...           | 3325              | 3982     | 13     |
 
+The dimensionality of this matrix is $$\mid V \mid \times \mid V \mid$$.  With this approach, the word "cherry" can be represented with \[0, .., 2, 8, 25\] with dimensionality $$\mid V \mid$$. This approach still gives acceptable good analogies with cosine similarity. Cosine similarity is normalized dot product between two word vectors:
 
+$$\text{cosine-sim}(\vec{w_1},\vec{w_2}) = \frac{\vec{w_1} \cdot \vec_{w_2}}{\left|w_1 \right|  \left|w_2 \right|}$$
