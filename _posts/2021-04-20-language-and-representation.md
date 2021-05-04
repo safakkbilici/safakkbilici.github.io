@@ -28,5 +28,6 @@ Words and meanings are ambigious. ~85% of words are unambigious, however, accoun
 - I was twenty-one **back/RB** then
 
 {: .text-justify}
-Even though many words are easy to disambiguate linguistically, it is not always easy to represent this words computationally. Imagine that how hard it is to represent well while we have ambiguity in our brain's understanding. So, in this post, I will introduce and compare a comprehensive typology of word representation models.
+Even though many words are easy to disambiguate linguistically, it is not always easy to represent this words computationally. Grammar is a mental system, a cognitive part of the brain/mind, which, if
+it is one’s first native language, is acquired as a child without any specific instruction. Children develop language rapidlt nd efficiently, that is, with relatively few errors, because the basic form of language is given to them by human biology (the logical problem of language acquisition, Noam Chomsky, 1955). So, imagine that how hard it is to represent well while we have ambiguity in our brain's understanding. In this post, I will introduce and compare a comprehensive typology of word representation models.
 
