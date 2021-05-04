@@ -31,3 +31,12 @@ Words and meanings are ambigious. ~85% of words are unambigious, however, accoun
 Even though many words are easy to disambiguate linguistically, it is not always easy to represent this words computationally. Grammar is a mental system, a cognitive part of the brain/mind, which, if
 it is one’s first native language, is acquired as a child without any specific instruction. Children develop language rapidlt nd efficiently, that is, with relatively few errors, because the basic form of language is given to them by human biology (the logical problem of language acquisition, Noam Chomsky, 1955). So, imagine that how hard it is to represent well while we have ambiguity in our brain's understanding. In this post, I will introduce and compare a comprehensive typology of word representation models.
 
+{: .text-justify}
+The most simple yet efficient method of representing words is, as traditionally, term-document matrix. It is basically a frequency matrix of "how many times  has this word been in this document".
+
+...    | As You Like It | Twelfth Night | Julius Caesar     | Henry V  |
+:---   | :---:          |    :----:     |          :---:    |  :---:   |
+battle | 1              | 0             | 7                 | 13       |
+god    | 114            | 80            | 62                | 89       |
+fool   | 36             | 58            | 1                 | 4        |
+wit    | 20             | 15            | 2                 | 3        |
