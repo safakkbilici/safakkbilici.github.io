@@ -45,5 +45,13 @@ wit    | 20             | 15            | 2                 | 3        |
 The dimensionality of this matrix is $$\mid V \mid \times \mid d \mid$$, where $$\mid V \mid$$ is our vocabulary length and $$\mid d \mid$$ is document number. With this approach, the document "Julius Caesar" can be represented with \[7, 62, 1, 2, ...\] with dimensionality $$\mid V \mid$$. Also words can be represented with term-document matrix: the word "battle" can be represented with \[1, 0, 7, 13, ...\] with dimensionality $$\mid d \mid$$. 
 
 {: .text-justify}
-Also, word-word co-occurence matrix can be used for representing words.
+Also, word-word co-occurence matrix can be used for representing words.  It is basically a frequency matrix of "how many times has this word been with this word, in some context".
+
+...           | aardvark       | ...           | computer          | data     | sugar  |
+:---          | :---:          |    :----:     |          :---:    |  :---:   | :---:  |
+cherry        | 0              | ...           | 2                 | 8        | 25     |
+strawberry    | 0              | ...           | 0                 | 0        | 19     |
+fool          | 0              | ...           | 1670              | 1683     | 4      |
+information   | 0              | ...           | 3325              | 3982     | 13     |
+
 
