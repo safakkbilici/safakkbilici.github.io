@@ -114,6 +114,9 @@ The matrix $$W$$ tells us how to map our input sparse feature vectors into these
 
 ## Distributional Hypothesis
 
+{: .text-justify}
+Suppose that we have an set $$E = \{e_{w_i}: w_i \in V\}$$. This is a set of our word representations. Say that, those representations are a collection of vectors, that are dense. What are the dimensions of these vectors? Take a look word "queen". Since word "queen" means "the female ruler of an independent state", should it have a dimension that represents "royality" or "gender"?
+
 ### word2vec
 
 ### GloVe
