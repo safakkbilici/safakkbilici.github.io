@@ -83,7 +83,7 @@ $$w_d = \text{tf}_{w,d} \times \text{idf}_{w}$$
 
 Positive Pointwise Mutual Information (PPMI) is an alternative for TF-IDF model. It is defined as 
 
-$$\text{PPMI}(w, c) = \max\left(\log_2\frac{p(w,c)}{p(w)\cdot p(c)}, 0\right).
+$$\text{PPMI}(w, c) = \max\left(\log_2\frac{p(w,c)}{p(w)\cdot p(c)}, 0\right)$$
 
 Assume that we have a co-occurence matrix $$CO$$ with $$\mid V \mid$$ rows (words), $$C$$ columns (contexts). $$CO_{i,j}$$ is "number of times word $$w_i$$ occurs in context $$c_j$$. So,
 
