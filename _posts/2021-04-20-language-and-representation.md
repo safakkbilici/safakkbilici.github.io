@@ -27,11 +27,11 @@ Words and meanings are ambigious. ~85% of words are unambigious, however, accoun
 - enable the country to buy **back/RP** about debt
 - I was twenty-one **back/RB** then
 
-## Frequency Matrices
-
 {: .text-justify}
 Even though many words are easy to disambiguate linguistically, it is not always easy to represent this words computationally. Grammar is a mental system, a cognitive part of the brain/mind, which, if
 it is one’s first native language, is acquired as a child without any specific instruction. Children develop language rapidlt nd efficiently, that is, with relatively few errors, because the basic form of language is given to them by human biology (the logical problem of language acquisition, Noam Chomsky, 1955). So, imagine that how hard it is to represent well while we have ambiguity in our brain's understanding. In this post, I will introduce and compare a comprehensive typology of word representation models.
+
+## Frequency Matrices
 
 {: .text-justify}
 The most simple yet efficient method of representing words is, as traditionally, term-document matrix. It is basically a frequency matrix of "how many times  has this word been in this document". For example, term-document matrix for some of Shakespeare's play.
@@ -80,6 +80,19 @@ where $$N$$ is the total number of documents, $$\text{df}_w$$ is is the total nu
 $$w_d = \text{tf}_{w,d} \times \text{idf}_{w}$$
 
 ### Positive Pointwise Mutual Information (PPMI)
+
+Positive Pointwise Mutual Information (PPMI) is an alternative for TF-IDF model. It is defined as 
+
+$$\text{PPMI}(w, c) = \max\left(\log_2\frac{p(w,c)}{p(w)\cdot p(c)}, 0\right).
+
+Assume that we have a co-occurence matrix $$CO$$ with $$\mid V \mid$$ rows (words), $$C$$ columns (contexts). $$CO_{i,j}$$ is "number of times word $$w_i$$ occurs in context $$c_j$$. So,
+
+$$p(w_i,c_j) = \frac{CO_{i,j}}{\sum_{i=1}^{\mid V \mid} \sum_{j=1}^{C} CO_{i,j}}$$
+
+$$p(w_i) = \frac{\sum_{j=1}^{C} CO_{i,j}}{\sum_{i=1}^{\mid V \mid} \sum_{j=1}^{C} CO_{i,j}}$$
+
+$$p(c_j) = \frac{\sum_{i=1}^{\mid V \mid}CO_{i,j}}{\sum_{i=1}^{\mid V \mid} \sum_{j=1}^{C} CO_{i,j}}$$
+
 
 
 ### Singular Value Decomposition
