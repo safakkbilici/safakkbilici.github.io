@@ -97,8 +97,8 @@ $$p(c_j) = \frac{\sum_{i=1}^{\mid V \mid}CO_{i,j}}{\sum_{i=1}^{\mid V \mid} \sum
 
 Singular Value Decomposition (SVD) is a central matrix decomposition technique in linear algebra. The problem of PPMI and TF-IDF vectors are sparsity. They have too many zero values. Like SVD, Matrix factorization techniques also give good vector representations. In Linear Algebra, any rectangular matrix can be decomposed into three matrices
 
-$$ \begin{bmatrix} X \end{bmatrix}_{\in \mathbb{R}^{\mid \times \mid}} = \begin{bmatrix} W \end{bmatrix}_{\in \mathbb{R}^{\mid \times \mid}} \begin{bmatrix} 
-\sigma_1 & \hdots & 0 \\ \vdots & \ddots &  \vdots\\ 0 &\hdots & \sigma_V \end{bmatrix}_{\in \mathbb{R}^{\mid \times \mid}} \begin{bmatrix} C \end{bmatrix}_{\in \mathbb{R}^{\mid \times \mid}}$$
+$$ \begin{bmatrix} X \end{bmatrix}_{\in \mathbb{R}^{\mid V \mid \times \mid V \mid}} = \begin{bmatrix} W \end{bmatrix}_{\in \mathbb{R}^{\mid V \mid \times \mid V \mid}} \begin{bmatrix} 
+\sigma_1 & \cdots & 0 \\ \vdots & \ddots &  \vdots\\ 0 &\cdots & \sigma_V \end{bmatrix}_{\in \mathbb{R}^{\mid v \mid \times \mid V \mid}}  \begin{bmatrix} C \end{bmatrix}_{\in \mathbb{R}^{\mid V \mid \times \mid V\mid}}$$
 
 ## Distributional Hypothesis
 
