@@ -102,8 +102,8 @@ $$ \begin{bmatrix} X \end{bmatrix}_{\in \mathbb{R}^{\mid V \mid \times \mid V \m
 
 So, our goal is now to create more sophisticated good word vectors, suppose that $$X$$ is our word-word co-occurence matrix. We can get good vector representations by factorizing this matrix, or reducing the dimensionality. It allows us to represent our vectors more densely in lower cost memory.
 
-$$ \begin{bmatrix} X \end{bmatrix}_{\in \mathbb{R}^{\mid V \mid \times k} = \begin{bmatrix} W \end{bmatrix}_{\in \mathbb{R}^{\mid V \mid \times \mid V \mid}} \begin{bmatrix} 
-\sigma_1 & \cdots & 0 \\ \vdots & \ddots &  \vdots\\ 0 &\cdots & \sigma_V \end{bmatrix}_{\in \mathbb{R}^{k \mid k}}  \begin{bmatrix} C \end{bmatrix}_{\in \mathbb{R}^{k \mid V\mid}}$$
+$$ \begin{bmatrix} X \end{bmatrix}_{\in \mathbb{R}^{\mid V \mid \times \mid V \mid}} = \begin{bmatrix} W \end{bmatrix}_{\in \mathbb{R}^{\mid V \mid \times k}} \begin{bmatrix} 
+\sigma_1 & \cdots & 0 \\ \vdots & \ddots &  \vdots\\ 0 &\cdots & \sigma_V \end{bmatrix}_{\in \mathbb{R}^{k \times k}}  \begin{bmatrix} C \end{bmatrix}_{\in \mathbb{R}^{k \times \mid V\mid}}$$
 
 The matrix $$W$$ tells us how to map our input sparse feature vectors into these k-dimensional dense feature vectors.
 
