@@ -289,7 +289,16 @@ The methods that we have talked about are very effective to find good and dense 
 
 ### FastText
 
-FastText ([Enriching Word Vectors with Subword Information, Bojanowski et al., 2016](https://arxiv.org/abs/1607.04606)) has no difference between word2vec. It is word2vec plus Derivational Morphology.
+{: .text-justify}
+FastText ([Enriching Word Vectors with Subword Information, Bojanowski et al., 2016](https://arxiv.org/abs/1607.04606)) has no difference between word2vec. It is word2vec plus Derivational Morphology. The method obtains that by something like parameter sharing. The main idea is representing words as a character n-grams. This type of formulation is important for morphologically rich languages like Turkish. 
+
+{: .text-justify}
+FastText uses char n-grams. For example we have word "fastest". FastText encodes this word as "\<fas", "fast", "aste", "stes", "test", "est\>" when $$n=4$$. From now on, the word vector is representation of sum of its subwords: vec("fastest") = vec("\<fas") + vec("fast") + vec("aste") + vec("stes") + vec("test") + vec("est\>"). Each subword has $$N = 300$$ dimensions and thus so does words. Remember that, we have a scoring function in word2vec $$\exp(v_{w_c}^T v_{w_t})$$. In FastText we have scoring function that is defined as
+
+$$s(w_1, w_2) = \sum_{g \in G_{w_1}} \mathbf{z}_g^T \mathbf{v}_{w_2}$$
+
+{: .text-justify}
+Suppose that you are given a dictionary of $$n$$-grams of size $$G$$ Given a word $$w_1$$, let us denote by $$G_{w_1} \subset \{1,...,G\}$$ the set of $$n$$-grams appearing in $$w_1$$. We associate a vector representation $$\mathbf{z}_{g}$$ to each $$n$$-gram $$g$$. We derive the objection that has this scoring with respect to each $$\mathbf{z}_g^T$$. While we updating our subword vector representations, we update words by sum of its updated subword vector representations.
 
 ### Byte Pair Encoding
 
