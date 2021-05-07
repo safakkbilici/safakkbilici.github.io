@@ -209,7 +209,7 @@ This is the observed representation subtract $$\mathop{\mathbb{E}}[w_j \mid w_t]
 #### Noise Contrastive Estimation
 
 {: .text-justify}
-The Noise Contrastive Estimation (NCE) metric intends to differentiate the target word from noise samples using a logistic regression classifier [Noise-contrastive estimation: A new estimation principle for unnormalized statistical models, Gutmann et al., 2010](http://proceedings.mlr.press/v9/gutmann10a/gutmann10a.pdf). In softmax computation, look at the denominator. The summation over $$\mid V\mid$$ is computationally expensive. The training or evaluation takes asymptotically $O(\mid V \mid)$. In a very large corpora, the most frequent words can easily occur hundreds or millions of times ("in", "and", "the", "a" etc.). Such words provides less information value than the rare words. For example, while the skip-gram model benefits from observing co-occurences of "bach" and "composer", it benefits much less from observing the frequent co-occurences of "bach" and "the" \[3\] . For every training step, instead of looping over the entire vocabulary, we can just sample several negative examples! We "sample" from
+The Noise Contrastive Estimation (NCE) metric intends to differentiate the target word from noise samples using a logistic regression classifier [Noise-contrastive estimation: A new estimation principle for unnormalized statistical models, Gutmann et al., 2010](http://proceedings.mlr.press/v9/gutmann10a/gutmann10a.pdf). In softmax computation, look at the denominator. The summation over $$\mid V\mid$$ is computationally expensive. The training or evaluation takes asymptotically $$O(\mid V \mid)$$. In a very large corpora, the most frequent words can easily occur hundreds or millions of times ("in", "and", "the", "a" etc.). Such words provides less information value than the rare words. For example, while the skip-gram model benefits from observing co-occurences of "bach" and "composer", it benefits much less from observing the frequent co-occurences of "bach" and "the" \[3\] . For every training step, instead of looping over the entire vocabulary, we can just sample several negative examples! We "sample" from
 a noise distribution $$P_n(w)$$ whose probabilities match the ordering of the frequency of the vocabulary. Consider a pair $$(w_t, w_c)$$ of word and context. Did this pair come from the training data? Let’s denote by $$p(D=1 \mid w_t,w_c)$$ the probability that $$(w_t, w_c)$$ came from the corpus data. Correspondingly $$p(D=0 \mid w_t,w_c)$$ will be the probability that $$(w_t, w_c)$$ didn't come from the corpus data \[5\]. First, let’s model $$p(D=1 \mid w_t,w_c)$$ with sigmoid:
 
 $$p(D=1 \mid w_t,w_c) = \sigma(v_{w_c}^T v_{w_t}) = \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})}$$
@@ -270,14 +270,14 @@ $$i$$ and $$j$$ are playing the role of target and context. The term $$w_i^T \ti
 
 - $$f(0) = 0$$. We are going to use a convention that "$$0 \log 0 = 0$$".
 - $$f(x)$$ should be non-decreasing so that rare word co-occurences are not overweighted.
-- $$f(x)$$ should be relatively small for large values of $x$, so that frequent co-occurences are not overweighted.
+- $$f(x)$$ should be relatively small for large values of $$x$$, so that frequent co-occurences are not overweighted.
 \[6\]
 
 Yes there are a lot of functions that have characteristic like $$f$$. GloVe choose $$f$$ as:
 
 $$ f(x)=  \begin{cases}     \left(\frac{x}{x_{\text{max}}}\right)^\alpha,& \text{if } x<x_\text{max}\\     1,              & \text{otherwise} \end{cases} $$
 
-The most beautiful part of this algoirthm is that $$w_i$$ and $$\tilde{w_j}$$ are symmetric. This the role of derivation of objective is same for $$w_i$ and $$\tilde{w_j}$$ when $$i=j$$. $$\rightarrow$$ The model generates two set of vectors, $$W$$ and $$\tilde{W}$$. When $$X$$ is symmetrix, $$W$$ and $$\tilde{W}$$ are equivalent and differ only as a result of their random initializations. At final level, we are able to choose 
+The most beautiful part of this algoirthm is that $$w_i$$ and $$\tilde{w_j}$$ are symmetric. This the role of derivation of objective is same for $$w_i$$ and $$\tilde{w_j}$$ when $$i=j$$. $$\rightarrow$$ The model generates two set of vectors, $$W$$ and $$\tilde{W}$$. When $$X$$ is symmetrix, $$W$$ and $$\tilde{W}$$ are equivalent and differ only as a result of their random initializations. At final level, we are able to choose 
 
 $$\text{word}_{k}^{\text{final}} = \frac{w_k + \tilde{w_k}}{2}$$
 
