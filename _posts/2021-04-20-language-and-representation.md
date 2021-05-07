@@ -128,6 +128,17 @@ For instance, the word "delighted" has high valence while the word "upset" does 
 
 ### word2vec
 
+{: .text-justify}
+word2vec is a word representation algorithm, proposed in the paper called [Distributed Representations of Words and Phrases and their Compositionality (Mikolov et al., 2013)](https://arxiv.org/abs/1310.4546). It allows you to learn the high-quality distributed vector representations that capture a large number of precise syntactic and semantic word relationships \[3\]. word2vec algorithm uses skip-gram [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781) model **to learn efficient vector representations**. Those learned word vectors has interesting property, words with semantic and syntactic affinities give the necessary result in mathematical similarity operations. Suppose that you have a sliding window of a fixed size moving along a sentence: the word in
+the middle is the “target” and those on its left and right within the sliding window are the context words. The skip-gram model is used to predict the probabilities of a word being a context word for
+the given target. 
+
+Target - Context pairs 1         | Target - Context pairs 2
+:-------------------------:|:-------------------------:
+![](/images/language_representation/sent1.png)   |  ![](/images/language_representation/sent2.png)
+
+image source \[5\].
+
 ### GloVe
 
 ## Subword Models
@@ -147,3 +158,9 @@ For instance, the word "delighted" has high valence while the word "upset" does 
 \[1\] Speech and Language Processing (2nd Edition), Jurafsky, Daniel and Martin, James H. 2009. Prentice-Hall, Inc. ISBN: 0131873210
 
 \[2\] Linguistics: An Introduction to Linguistic Theory	Victoria, A. Fromkin, 2011. ISBN: 0631197117
+
+\[3\] Distributed Representations of Words and Phrases and their Compositionality, Mikolov et al., 2013. arXiv: 1310.4546
+
+\[4\] Efficient Estimation of Word Representations in Vector Space, Mikolov et al., 2013. arXiv: 1301.3781
+
+\[5\] Learning word embedding. Weng, Lilian, 2017. URL: [https://lilianweng.github.io/lil-log/2017/10/15/learning-word-embedding.html](https://lilianweng.github.io/lil-log/2017/10/15/learning-word-embedding.html)
