@@ -217,7 +217,7 @@ $$p(D=1 \mid w_t,w_c) = \sigma(v_{w_c}^T v_{w_t}) = \frac{1}{1 + \exp(- v_{w_c}^
 {: .text-justify}
 Now, we build a new objective function that tries to maximize the probability of a word and context being in the corpus data if it indeed is, and maximize the probability of a word and context not being in the corpus data if it indeed is not. Maximum likelihood says:
 
-$$\small \max \prod_{(w_t, w_c) \in D} p(D=1 \mid w_t,w_c) \times \prod_{(w_t, w_c) \in D'} p(D=0 \mid w_t,w_c)$$
+$$ \small \max \prod_{(w_t, w_c) \in D} p(D=1 \mid w_t,w_c) \times \prod_{(w_t, w_c) \in D'} p(D=0 \mid w_t,w_c)$$
 
 $$\small = \max \prod_{(w_t, w_c) \in D} p(D=1 \mid w_t,w_c) \times \prod_{(w_t, w_c) \in D'} 1 - p(D=1 \mid w_t,w_c)$$
 
