@@ -174,6 +174,7 @@ So, How can we calculate those probabilities? Softmax gives the normalized proba
 
 $$p(w_c \mid w_t) = \frac{\exp(v_{w_c}^T v_{w_t})}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})}$$
 
+{: .text-justify}
 maximizing this log-likelihood function under $$v_{w_t}$$ gives you the most likely value of the $$v_{w_t}$$ given the data.
 
 $$ \frac{\partial}{\partial v_{w_t}}\cdot \log \frac{\exp(v_{w_c}^T v_{w_t})}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})}$$
@@ -204,6 +205,57 @@ $$ \underbrace{= v_{w_c} - \sum_{j=0}^{\mid V \mid} p(w_j \mid w_t) \cdot v_{w_j
 
 {: .text-justify}
 This is the observed representation subtract $$\mathop{\mathbb{E}}[w_j \mid w_t]$$.
+
+#### Noise Contrastive Estimation
+
+{: .text-justify}
+The Noise Contrastive Estimation (NCE) metric intends to differentiate the target word from noise samples using a logistic regression classifier [Noise-contrastive estimation: A new estimation principle for unnormalized statistical models, Gutmann et al., 2010](http://proceedings.mlr.press/v9/gutmann10a/gutmann10a.pdf). In softmax computation, look at the denominator. The summation over $$\mid V\mid$$ is computationally expensive. The training or evaluation takes asymptotically $O(\mid V \mid)$. In a very large corpora, the most frequent words can easily occur hundreds or millions of times ("in", "and", "the", "a" etc.). Such words provides less information value than the rare words. For example, while the skip-gram model benefits from observing co-occurences of "bach" and "composer", it benefits much less from observing the frequent co-occurences of "bach" and "the" \[3\] . For every training step, instead of looping over the entire vocabulary, we can just sample several negative examples! We "sample" from
+a noise distribution $$P_n(w)$$ whose probabilities match the ordering of the frequency of the vocabulary. Consider a pair $$(w_t, w_c)$$ of word and context. Did this pair come from the training data? Let’s denote by $$p(D=1 \mid w_t,w_c)$$ the probability that $$(w_t, w_c)$$ came from the corpus data. Correspondingly $$p(D=0 \mid w_t,w_c)$$ will be the probability that $$(w_t, w_c)$$ didn't come from the corpus data \[5\]. First, let’s model $$p(D=1 \mid w_t,w_c)$$ with sigmoid:
+
+$$p(D=1 \mid w_t,w_c) = \sigma(v_{w_c}^T v_{w_t}) = \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})}$$
+
+{: .text-justify}
+Now, we build a new objective function that tries to maximize the probability of a word and context being in the corpus data if it indeed is, and maximize the probability of a word and context not being in the corpus data if it indeed is not. Maximum likelihood says:
+
+$$ \max \prod_{(w_t, w_c) \in D} p(D=1 \mid w_t,w_c) \times \prod_{(w_t, w_c) \in D'} p(D=0 \mid w_t,w_c)$$
+
+$$ = \max \prod_{(w_t, w_c) \in D} p(D=1 \mid w_t,w_c) \times \prod_{(w_t, w_c) \in D'} 1 - p(D=1 \mid w_t,w_c)$$
+
+$$ = \max \sum_{(w_t, w_c) \in D} \log p(D=1 \mid w_t,w_c) + \sum_{(w_t, w_c) \in D'}  \log (1 - p(D=1 \mid w_t,w_c))$$
+
+$$ = \max \sum_{(w_t, w_c) \in D} \log \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})} + \sum_{(w_t, w_c) \in D'} \log \left(1 - \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})}\right)$$
+
+$$ = \max \sum_{(w_t, w_c) \in D} \log \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})} + \sum_{(w_t, w_c) \in D'} \log \frac{1}{1 + \exp(v_{w_c}^T v_{w_t})}$$
+
+{: .text-justify}
+Maximizing the likelihood is the same as minimizing the negative log likelihood:
+
+$$L = - \sum_{(w_t, w_c) \in D} \log \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})} -  \sum_{(w_t, w_c) \in D'} \log \frac{1}{1 + \exp(v_{w_c}^T v_{w_t})}$$
+
+The Negative Sampling (NEG) proposed in the original word2vec paper. NEG approximates the binary classifier’s output with sigmoid functions as follows:
+
+$$p(d=1 \vert v_{w_c}, v_{w_t}) = \sigma(v_{w_c}^T v_{w_t}) $$
+
+$$p(d=0 \vert v_{w_c}, v_{w_t}) = 1 - \sigma(v_{w_c}^T v_{w_t}) = \sigma(-v_{w_c}^T v_{w_t})$$
+
+So the objective is
+
+$$L = - [ \log \sigma(v_{w_c}^T v_{w_t}) +  \sum_{\substack{i=1 \\ \tilde{w}_i \sim Q}}^K \log \sigma(v_{\tilde{w}_i}^T v_{w_t})]$$
+
+{: .text-justify}
+In the above formulation, $${v_{\tilde{w}_i} \mid i = 1 . . . K}$$ are sampled from $$P_n(w)$$. How to define $$P_n(w)$$? In the word2vec paper $$P_n(w)$$ defined as 
+
+$$P_n(w_i) = 1 - \sqrt{\frac{t}{freq(w_i)}} \;\; t \approx 10^{-5}$$
+
+{: .text-justify}
+This distribution assigns lower probability for lower frequency words, higher probability for higher frequency words. Hence, this distribution is sampled form a unigram distribution $$U(w)$$ raised to the $$\frac{3}{4}$$rd power. The unigram distribuiton is defined as
+
+$$P_n(w_i) = \frac{freq(w_i)^\frac{3}{4}}{\sum_{j=0}^M freq(w_j)^\frac{3}{4}}$$
+
+{: .text-justify}
+Raising the unigram distribution $$U(w)$$ to the power of $$\alpha$$ has an effect of smoothing out the distribution. It attempts to combat the imbalance between common words and rare words by decreasing the probability of drawing common words, and increasing the probability drawing rare words.
+
+
 
 
 ### GloVe
