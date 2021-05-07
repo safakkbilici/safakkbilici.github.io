@@ -155,6 +155,7 @@ Our target and context pairs for window size of 5:
 | \[a change in Quality\]         | in          | a, change, Quality        |
 | \[change in Quality\]           | quality     | change, in                |
 
+{: .text-justify}
 Each context-target pair is treated as a new observation in the data. For each position $$t=1, ..., T$$ predict context words within a window of fixed size $$m$$ given center word $$w_j$$. In Skip-gram connections we have an objective to maximize, likelihood (or minimize
 negative log-likelihood):
 
@@ -168,6 +169,7 @@ $$= \min \limits_{\theta} -\frac{1}{T} \prod_{t=1}^T \prod_{-c \leq j \leq c, j 
 
 $$= \min \limits_{\theta} -\frac{1}{T} \sum_{t=1}^T \sum_{-c \leq j \leq c, j \neq c} \log p(w_{t+j}|w_t; \theta)$$
 
+{: .text-justify}
 So, How can we calculate those probabilities? Softmax gives the normalized probabilities. 
 
 $$p(w_c \mid w_t) = \frac{\exp(v_{w_c}^T v_{w_t})}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})}$$
@@ -198,6 +200,7 @@ $$ = v_{w_c} - \sum_{j=0}^{\mid V \mid} \frac{\exp(v_{w_j}^T v_{w_t})}{\sum_{i=0
 
 $$ \underbrace{= v_{w_c} - \sum_{j=0}^{\mid V \mid} p(w_j \mid w_t) \cdot v_{w_j}}_{\nabla_{w_t}\log p(w_c \mid w_t)}$$
 
+{: .text-justify}
 This is the observed representation subtract $$\mathop{\mathbb{E}}[w_j \mid w_t]$$.
 
 
