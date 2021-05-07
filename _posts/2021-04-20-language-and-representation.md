@@ -29,7 +29,7 @@ Words and meanings are ambigious. ~85% of words are unambigious, however, accoun
 
 {: .text-justify}
 Even though many words are easy to disambiguate linguistically, it is not always easy to represent this words computationally. Grammar is a mental system, a cognitive part of the brain/mind, which, if
-it is one’s first native language, is acquired as a child without any specific instruction. Children develop language rapidlt nd efficiently, that is, with relatively few errors, because the basic form of language is given to them by human biology (the logical problem of language acquisition, Noam Chomsky, 1955). So, imagine that how hard it is to represent well while we have ambiguity in our brain's understanding. In this post, I will introduce and compare a comprehensive typology of word representation models.
+it is one’s first native language, is acquired as a child without any specific instruction. Children develop language rapidly and efficiently, that is, with relatively few errors, because the basic form of language is given to them by human biology (the logical problem of language acquisition, Noam Chomsky, 1955) \[2\]. So, imagine that how hard it is to represent well while we have ambiguity in our brain's understanding. In this post, I will introduce and compare a comprehensive typology of word representation models.
 
 ## Frequency Matrices
 
@@ -115,7 +115,16 @@ The matrix $$W$$ tells us how to map our input sparse feature vectors into these
 ## Distributional Hypothesis
 
 {: .text-justify}
-Suppose that we have an set $$E = \{e_{w_i}: w_i \in V\}$$. This is a set of our word representations. Say that, those representations are a collection of vectors, that are dense. What are the dimensions of these vectors? Take a look word "queen". Since word "queen" means "the female ruler of an independent state", should it have a dimension that represents "royality" or "gender"?
+Suppose that we have a set $$E = \{e_{w_i}: w_i \in V\}$$. This is a set of our word representations. Say that, those representations are a collection of vectors, that are dense. What are the dimensions of these vectors? Take a look word "queen". Since the word "queen" means "the female ruler of an independent state", should it has a dimension that represents "royality" or "gender"? Or, the word "teeth", should it has a dimension that represents "plurality"? Maybe we should define more common dimensions. For example, words can have affective meanings \[1\]. Osgood et al. 1957, proposed that words varied along three important dimensions of affective meaning: *valence*, *arousal*, *dominance*:
+
+- valence: the pleasantness of the stimulus.
+
+- arousal: the intensity of emotion provoked by the stimulus.
+
+- dominance: the degree of control exerted by the stimulus.
+
+{: .text-justify}
+For instance, the word "delighted" has high valence while the word "upset" does not. Or, the word "thrilling" has high arousal while the word "serene" does not. More examples can be given. Actually, we don't know exactly what are the dimensions of those vector. Now, our question is "how to get them" or "how can we *learn* those word vectors". The discipline called Distributional Hypothesis plays a big role here. Distributional Hypothesis is mainly introduced by John Rupert Firth in 1957. It basically says, words with similar distributions have similar meanings. Words that occur in similar contexts tend to have similar meanings. The link between similarity and words are distributed and similarity in what they mean is called distributional hypothesis or distributional semantics in the field of Computational Linguistics \[1\]. So what can be counted when we say similar contexts? For example if you surf on the Wikipedia page of Johann Sebastian Bach, the words in this page somehow related with each other in the context of Bach. Or maybe an essay about Johann Sebastian Bach, suppose that you don't know the exact meaning of the word "composer", but you know that Bach is an classical musician and writes music pieces. While reading this essay, you will encounter the word "composer" so many times: "Johann Sebastian Bach is the smartest composer of Baroque period". Then your brain does some kind of acquisition: "Bach writes music and the paragraph says, Bach is a composer. Then the meaning of composer would be the person who writes music. But what is Baroque? The word period comes after Baroque. So Baroque is some kind of period and related with Bach in a comparison way. So Baroque is a historical period that is related with classical music". And, this is the Distributional Hypothesis. But where are the vectors and dimensions?
 
 ### word2vec
 
@@ -132,3 +141,8 @@ Suppose that we have an set $$E = \{e_{w_i}: w_i \in V\}$$. This is a set of our
 ### ELMo
 
 ### BERT
+
+## References
+
+\[1\] Speech and Language Processing (2nd Edition), Jurafsky, Daniel and Martin, James H. 2009. Prentice-Hall, Inc. ISBN: 0131873210
+\[2\] Linguistics: An Introduction to Linguistic Theory	Victoria, A. Fromkin, 2011. ISBN: 0631197117
