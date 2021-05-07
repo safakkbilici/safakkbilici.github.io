@@ -289,6 +289,8 @@ The methods that we have talked about are very effective to find good and dense 
 
 ### FastText
 
+FastText ([Enriching Word Vectors with Subword Information, Bojanowski et al., 2016](https://arxiv.org/abs/1607.04606)) has no difference between word2vec. It is word2vec plus Derivational Morphology.
+
 ### Byte Pair Encoding
 
 ## Contextual Representation
@@ -310,3 +312,5 @@ The methods that we have talked about are very effective to find good and dense 
 \[5\] Learning word embedding. Weng, Lilian, 2017. URL: [https://lilianweng.github.io/lil-log/2017/10/15/learning-word-embedding.html](https://lilianweng.github.io/lil-log/2017/10/15/learning-word-embedding.html)
 
 \[6\] GloVe: Global Vectors for Word Representation, Pennington et al., 2014
+
+\[7\] Enriching Word Vectors with Subword Information, Bojanowski et al., 2016. arXiv: 1607.04606
