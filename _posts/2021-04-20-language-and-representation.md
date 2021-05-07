@@ -298,7 +298,31 @@ FastText uses char n-grams. For example we have word "fastest". FastText encodes
 $$s(w_1, w_2) = \sum_{g \in G_{w_1}} \mathbf{z}_g^T \mathbf{v}_{w_2}$$
 
 {: .text-justify}
-Suppose that you are given a dictionary of $$n$$-grams of size $$G$$ Given a word $$w_1$$, let us denote by $$G_{w_1} \subset \{1,...,G\}$$ the set of $$n$$-grams appearing in $$w_1$$. We associate a vector representation $$\mathbf{z}_{g}$$ to each $$n$$-gram $$g$$. We derive the objection that has this scoring with respect to each $$\mathbf{z}_g^T$$. While we updating our subword vector representations, we update words by sum of its updated subword vector representations.
+Suppose that you are given a dictionary of $$n$$-grams of size $$G$$ Given a word $$w_1$$, let us denote by $$G_{w_1} \subset \{1,...,G\}$$ the set of $$n$$-grams appearing in $$w_1$$. We associate a vector representation $$\mathbf{z}_{g}$$ to each $$n$$-gram $$g$$. We derive the objection that has this scoring with respect to each $$\mathbf{z}_g^T$$ \[7\]. While we updating our subword vector representations, we update words by sum of its updated subword vector representations. This morphological information significally improves syntaxtic tasks, also it gives good representations on small datasets. Let's see some script to play:
+
+```python
+from collections import Iterable
+
+vocab = ["fast","faster","fastest","long","biggest",\
+         "dismembered,","unbounded","antidisestablishmentarianism","dragon"]
+
+n_grams = [[char for char in "<"+word+">"] for word in vocab]
+n_grams = [[a[i:i+n]  for i in range(len(a)) if i<=len(a)-n] for a in n_grams]
+n_grams = [[''.join(gram) for gram in grams] for grams in n_grams]
+
+def flatten(lis):
+    for item in lis:
+        if isinstance(item, Iterable) and not isinstance(item, str):
+            for x in flatten(item):
+                 yield x
+        else:        
+            yield item
+
+n_grams_flatten = list(dict.fromkeys(list(flatten(n_grams))))
+print(n_grams_flatten)
+```
+{: .text-justify}
+You can see that, we capture the so many grammatical morpheme even we have vocabulary size of 9. For instance; "-ment", "-ism\>", "ter\>", "est\>", even the prefix "anti-".
 
 ### Byte Pair Encoding
 
