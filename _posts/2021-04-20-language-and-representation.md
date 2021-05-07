@@ -184,7 +184,9 @@ $$ \frac{\partial}{\partial v_{w_t}} \cdot v_{w_c}^T v_{w_t} =  v_{w_c} \; \; (\
 
 Now, it is time to derive denominator.
 
-$$\frac{\partial}{\partial v_{w_t}}\cdot \log \sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t}) = \frac{1}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})} \cdot \frac{\partial}{\partial v_{w_t}} \sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})$$
+$$\frac{\partial}{\partial v_{w_t}}\cdot \log \sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})$$ 
+
+$$= \frac{1}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})} \cdot \frac{\partial}{\partial v_{w_t}} \sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})$$
 
 $$ = \frac{1}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})} \cdot  \sum_{i=0}^{\mid V \mid} \frac{\partial}{\partial v_{w_t}} \cdot \exp(v_{w_i}^T v_{w_t})$$
 
