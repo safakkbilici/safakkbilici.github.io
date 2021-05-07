@@ -145,4 +145,5 @@ For instance, the word "delighted" has high valence while the word "upset" does 
 ## References
 
 \[1\] Speech and Language Processing (2nd Edition), Jurafsky, Daniel and Martin, James H. 2009. Prentice-Hall, Inc. ISBN: 0131873210
+
 \[2\] Linguistics: An Introduction to Linguistic Theory	Victoria, A. Fromkin, 2011. ISBN: 0631197117
