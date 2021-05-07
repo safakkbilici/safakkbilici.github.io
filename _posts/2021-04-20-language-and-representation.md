@@ -139,6 +139,36 @@ Target - Context pairs 1         | Target - Context pairs 2
 
 image source \[5\].
 
+For example consider this sentence,
+
+> "A change in Quantity also entails a change in Quality"
+
+Our target and context pairs for window size of 5:
+
+| Sliding window (size = 5)       | Target word | Context                   |
+|---------------------------------|-------------|---------------------------|
+| \[A change in\]                 | a           | change, in                |
+| \[A change in Quantity \]       | change      | a, in, quantitiy          |
+| \[A change in Quantity  also\]  | in          | a, change, quantitiy,also |
+| ...                             | ...         | ...                       |
+| \[entails a change in Quality\] | change      | entails, a, in, Quality   |
+| \[a change in Quality\]         | in          | a, change, Quality        |
+| \[change in Quality\]           | quality     | change, in                |
+
+Each context-target pair is treated as a new observation in the data. For each position $$t=1, ..., T$$ predict context words within a window of fixed size $$m$$ given center word $$w_j$$. In Skip-gram connections we have an objective to maximize, likelihood (or minimize
+negative log-likelihood):
+
+$$\max \limits_{\theta} \prod_{\text{center}} \prod_{\text{context}} p(\text{context}|\text{center} ;\theta)$$
+
+$$= \max \limits_{\theta} \prod_{t=1}^T \prod_{-c \leq j \leq c, j \neq c} p(w_{t+j}|w_t; \theta)$$
+
+
+$$= \min \limits_{\theta} -\frac{1}{T} \prod_{t=1}^T \prod_{-c \leq j \leq c, j \neq c} p(w_{t+j}|w_t; \theta)$$
+
+
+$$= \min \limits_{\theta} -\frac{1}{T} \sum_{t=1}^T \sum_{-c \leq j \leq c, j \neq c} \log p(w_{t+j}|w_t; \theta)$$
+
+
 ### GloVe
 
 ## Subword Models
