@@ -255,7 +255,31 @@ $$P_n(w_i) = \frac{freq(w_i)^\frac{3}{4}}{\sum_{j=0}^M freq(w_j)^\frac{3}{4}}$$
 {: .text-justify}
 Raising the unigram distribution $$U(w)$$ to the power of $$\alpha$$ has an effect of smoothing out the distribution. It attempts to combat the imbalance between common words and rare words by decreasing the probability of drawing common words, and increasing the probability drawing rare words.
 
+{: .text-justify}
+In the detail, first word vectors are initialized randomly, then updated by their gradient. word2vec gives good vectors representations, it is successful on semantic and syntactic analogies (cosine similarty tasks). For example “woman is to queen as man is to X. In this example X should be the word king. This behaviour can be formulated linearly: vec("queen") - vec("woman") + vec("man") = vec("king"). Same formulation is valid on syntactic analogies.
+
 ### GloVe
+
+{: .text-justify}
+GloVe [GloVe: Global Vectors for Word Representation, Pennington et al., 2014](https://www.aclweb.org/anthology/D14-1162/) combines the advantages of global matrix factorization (such as Latent Semantic Analysis) and local context window methods. Methods like skip-gram (word2vec) may do better on the analogy task, but they poorly utilize the statistics of the corpus since they train on separate local context windows instead of on global co-occurence counts. GloVe defines a matrix $$\mathbf{X} = [X_{ij}]$$ which represents word-word co-occurence counts. Entries $$[X_{ij}]$$ tabluate the number of times word $$j$$ occurs in the context of word $$i$$. If we choose our context-target pairs as in word2vec algorithm, then $$\mathbf{X}$$ would be symmetric. If we choose our context-target pairs in one direction (left or right), then $$[X_{ij}] \neq [X_{ji}]$$. The objective function of GloVe comes from a relation between symmetry and homomorphism between $$(\mathbb{R}, +)$$ and $$(\mathbb{R}_{>0}, \times)$$. Since this is not scope of the post, we will evaluate the objective function intuitively. The objective function of GloVe is defined as 
+
+$$J = \sum_{i,j=0}^{\mid V \mid} f(X_{ij}) (w_i^T \tilde{w_j} + b_i + \tilde{b_j} - \log X_{ij})^2$$
+
+{: .text-justify}
+$$i$$ and $$j$$ are playing the role of target and context. The term $$w_i^T \tilde{w_j} - \log X_{ij}$$ says that "how related are those two words?" as measured by how often they occur with each other. But what if words $$i$$ and $$j$$ never accour together? Then $$X_{ij} = 0$$, and $$\log 0 $$ is not defined. So we need to define a weigthing term $$f(X_{ij})$$:
+
+- $$f(0) = 0$$. We are going to use a convention that "$$0 \log 0 = 0$$".
+- $$f(x)$$ should be non-decreasing so that rare word co-occurences are not overweighted.
+- $$f(x)$$ should be relatively small for large values of $x$, so that frequent co-occurences are not overweighted.
+\[6\]
+
+Yes there are a lot of functions that have characteristic like $$f$$. GloVe choose $$f$$ as:
+
+$$ f(x)=  \begin{cases}     \left(\frac{x}{x_{\text{max}}}\right)^\alpha,& \text{if } x<x_\text{max}\\     1,              & \text{otherwise} \end{cases} $$
+
+The most beautiful part of this algoirthm is that $$w_i$$ and $$\tilde{w_j}$$ are symmetric. This the role of derivation of objective is same for $$w_i$ and $$\tilde{w_j}$$ when $$i=j$$. $$\rightarrow$$ The model generates two set of vectors, $$W$$ and $$\tilde{W}$$. When $$X$$ is symmetrix, $$W$$ and $$\tilde{W}$$ are equivalent and differ only as a result of their random initializations. At final level, we are able to choose 
+
+$$\text{word}_{k}^{\text{final}} = \frac{w_k + \tilde{w_k}}{2}$$
 
 ## Subword Models
 
@@ -280,3 +304,5 @@ Raising the unigram distribution $$U(w)$$ to the power of $$\alpha$$ has an effe
 \[4\] Efficient Estimation of Word Representations in Vector Space, Mikolov et al., 2013. arXiv: 1301.3781
 
 \[5\] Learning word embedding. Weng, Lilian, 2017. URL: [https://lilianweng.github.io/lil-log/2017/10/15/learning-word-embedding.html](https://lilianweng.github.io/lil-log/2017/10/15/learning-word-embedding.html)
+
+\[6\] GloVe: Global Vectors for Word Representation, Pennington et al., 2014
