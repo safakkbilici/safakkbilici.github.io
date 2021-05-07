@@ -255,9 +255,6 @@ $$P_n(w_i) = \frac{freq(w_i)^\frac{3}{4}}{\sum_{j=0}^M freq(w_j)^\frac{3}{4}}$$
 {: .text-justify}
 Raising the unigram distribution $$U(w)$$ to the power of $$\alpha$$ has an effect of smoothing out the distribution. It attempts to combat the imbalance between common words and rare words by decreasing the probability of drawing common words, and increasing the probability drawing rare words.
 
-
-
-
 ### GloVe
 
 ## Subword Models
