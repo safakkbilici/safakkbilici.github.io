@@ -277,11 +277,15 @@ Yes there are a lot of functions that have characteristic like $$f$$. GloVe choo
 
 $$ f(x)=  \begin{cases}     \left(\frac{x}{x_{\text{max}}}\right)^\alpha,& \text{if } x<x_\text{max}\\     1,              & \text{otherwise} \end{cases} $$
 
+{: .text-justify}
 The most beautiful part of this algoirthm is that $$w_i$$ and $$\tilde{w_j}$$ are symmetric. This the role of derivation of objective is same for $$w_i$$ and $$\tilde{w_j}$$ when $$i=j$$. $$\rightarrow$$ The model generates two set of vectors, $$W$$ and $$\tilde{W}$$. When $$X$$ is symmetrix, $$W$$ and $$\tilde{W}$$ are equivalent and differ only as a result of their random initializations. At final level, we are able to choose 
 
 $$\text{word}_{k}^{\text{final}} = \frac{w_k + \tilde{w_k}}{2}$$
 
 ## Subword Models
+
+{: .text-justify}
+The methods that we have talked about are very effective to find good and dense word representations. But handling not-seen words is hard. We train those models on a specific corpus, and language is infinite. Suppose that we have words "fast", "faster", "fastest" and "‎long", but "‎longer" and "longest" not seen in this corpus. After learning word representations, how can we represent "longer" and "longest" when they are not in the training set? The theory of Derivational Morphology helps us here. Morphology is basically internal structure of words and forms. Words are meaningful linguistics units that can be combined to form phrases and sentences. For example, look at the sentence "Bach composed the piece". The word "Bach" is a free morpheme (lexical morpheme), a free morpheme is a morpheme that can stand alone as a word. The word composed can be decomposed to "compose" and "-d". The suffix "-d" is a past marker here. In linguistics, we call "-d" grammatical morpheme or bound. The word "the" in the sentence is still a grammatical morpheme but it is not bound, it is called independent words. So, Derivational Morphology says that, new words enter language in two main ways - through the addition of words unrelated to any existing words and derivational morphology, the creation of new open-class words (open-class word or lexical content word is basically  nouns, lexical verbs, adjectives, and adverbs) by the addition of morphemes to existing roots. Derivational morphemes increase the vocabulary and may allow speakers to convey their thoughts in a more interesting manner, but their occurence is not related to sentence structure \[2\]. 
 
 ### FastText
 
