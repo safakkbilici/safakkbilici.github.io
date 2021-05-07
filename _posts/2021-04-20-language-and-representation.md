@@ -217,20 +217,20 @@ $$p(D=1 \mid w_t,w_c) = \sigma(v_{w_c}^T v_{w_t}) = \frac{1}{1 + \exp(- v_{w_c}^
 {: .text-justify}
 Now, we build a new objective function that tries to maximize the probability of a word and context being in the corpus data if it indeed is, and maximize the probability of a word and context not being in the corpus data if it indeed is not. Maximum likelihood says:
 
-$$ \max \prod_{(w_t, w_c) \in D} p(D=1 \mid w_t,w_c) \times \prod_{(w_t, w_c) \in D'} p(D=0 \mid w_t,w_c)$$
+$$\small \max \prod_{(w_t, w_c) \in D} p(D=1 \mid w_t,w_c) \times \prod_{(w_t, w_c) \in D'} p(D=0 \mid w_t,w_c)$$
 
-$$ = \max \prod_{(w_t, w_c) \in D} p(D=1 \mid w_t,w_c) \times \prod_{(w_t, w_c) \in D'} 1 - p(D=1 \mid w_t,w_c)$$
+$$\small = \max \prod_{(w_t, w_c) \in D} p(D=1 \mid w_t,w_c) \times \prod_{(w_t, w_c) \in D'} 1 - p(D=1 \mid w_t,w_c)$$
 
-$$ = \max \sum_{(w_t, w_c) \in D} \log p(D=1 \mid w_t,w_c) + \sum_{(w_t, w_c) \in D'}  \log (1 - p(D=1 \mid w_t,w_c))$$
+$$\small = \max \sum_{(w_t, w_c) \in D} \log p(D=1 \mid w_t,w_c) + \sum_{(w_t, w_c) \in D'}  \log (1 - p(D=1 \mid w_t,w_c))$$
 
-$$ = \max \sum_{(w_t, w_c) \in D} \log \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})} + \sum_{(w_t, w_c) \in D'} \log \left(1 - \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})}\right)$$
+$$\small = \max \sum_{(w_t, w_c) \in D} \log \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})} + \sum_{(w_t, w_c) \in D'} \log \left(1 - \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})}\right)$$
 
-$$ = \max \sum_{(w_t, w_c) \in D} \log \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})} + \sum_{(w_t, w_c) \in D'} \log \frac{1}{1 + \exp(v_{w_c}^T v_{w_t})}$$
+$$\small = \max \sum_{(w_t, w_c) \in D} \log \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})} + \sum_{(w_t, w_c) \in D'} \log \frac{1}{1 + \exp(v_{w_c}^T v_{w_t})}$$
 
 {: .text-justify}
 Maximizing the likelihood is the same as minimizing the negative log likelihood:
 
-$$L = - \sum_{(w_t, w_c) \in D} \log \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})} -  \sum_{(w_t, w_c) \in D'} \log \frac{1}{1 + \exp(v_{w_c}^T v_{w_t})}$$
+$$\small L = - \sum_{(w_t, w_c) \in D} \log \frac{1}{1 + \exp(- v_{w_c}^T v_{w_t})} -  \sum_{(w_t, w_c) \in D'} \log \frac{1}{1 + \exp(v_{w_c}^T v_{w_t})}$$
 
 The Negative Sampling (NEG) proposed in the original word2vec paper. NEG approximates the binary classifier’s output with sigmoid functions as follows:
 
