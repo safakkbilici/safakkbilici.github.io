@@ -168,6 +168,38 @@ $$= \min \limits_{\theta} -\frac{1}{T} \prod_{t=1}^T \prod_{-c \leq j \leq c, j 
 
 $$= \min \limits_{\theta} -\frac{1}{T} \sum_{t=1}^T \sum_{-c \leq j \leq c, j \neq c} \log p(w_{t+j}|w_t; \theta)$$
 
+So, How can we calculate those probabilities? Softmax gives the normalized probabilities. 
+
+$$p(w_c \mid w_t) = \frac{\exp(v_{w_c}^T v_{w_t})}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})}$$
+
+maximizing this log-likelihood function under $$v_{w_t}$$ gives you the most likely value of the $$v_{w_t}$$ given the data.
+
+$$ \frac{\partial}{\partial v_{w_t}}\cdot \log \frac{\exp(v_{w_c}^T v_{w_t})}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})}$$
+
+$$ = \frac{\partial}{\partial v_{w_t}}\cdot \log \underbrace{\exp(v_{w_c}^T v_{w_t})}_{\text{numerator}} - \frac{\partial}{\partial v_{w_t}}\cdot \log \underbrace{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})}_{\text{denominator}}$$
+
+$$ \frac{\partial}{\partial v_{w_t}} \cdot v_{w_c}^T v_{w_t} =  v_{w_c} \; \; (\text{numerator})$$
+
+Now, it is time to derive denominator.
+
+$$\frac{\partial}{\partial v_{w_t}}\cdot \log \sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t}) = \frac{1}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})} \cdot \frac{\partial}{\partial v_{w_t}} \sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})$$
+
+$$ = \frac{1}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})} \cdot  \sum_{i=0}^{\mid V \mid} \frac{\partial}{\partial v_{w_t}} \cdot \exp(v_{w_i}^T v_{w_t})$$
+
+$$ = \frac{1}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})} \cdot  \sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t}) \frac{\partial}{\partial v_{w_t}} v_{w_i}^T v_{w_t}$$
+
+$$ = \frac{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t}) \cdot v_{w_i}}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})} \;\; (\text{denominator}) $$
+
+To sum up,
+
+$$\frac{\partial}{\partial w_t} \log p(w_c \mid w_t) = v_{w_c} - \frac{\sum_{j=0}^{\mid V \mid} \exp(v_{w_j}^T v_{w_t}) \cdot v_{w_j}}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})}$$
+
+$$ = v_{w_c} - \sum_{j=0}^{\mid V \mid} \frac{\exp(v_{w_j}^T v_{w_t})}{\sum_{i=0}^{\mid V \mid} \exp(v_{w_i}^T v_{w_t})} \cdot v_{w_j}$$
+
+$$ \underbrace{= v_{w_c} - \sum_{j=0}^{\mid V \mid} p(w_j \mid w_t) \cdot v_{w_j}}_{\nabla_{w_t}\log p(w_c \mid w_t)}$$
+
+This is the observed representation subtract $$\mathop{\mathbb{E}}[w_j \mid w_t]$$.
+
 
 ### GloVe
 
