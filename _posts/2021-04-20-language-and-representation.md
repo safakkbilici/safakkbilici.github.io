@@ -359,9 +359,7 @@ with each backward LSTM layer $$j$$ in a $$L$$ layer deep model producing repres
 {: .text-justify}
 And the formulation jointly maximizes the log-likelihood of the forward and backward directions:
 
-$$\sum_{k=1}^N \left( \log p(t_k \mid t_1, t_2, ..., t_{k-1}; \Theta_x, \vec{\Theta}_{LSTM}, \Theta_s)$$
-
-$$ +  \log p(t_k \mid t_{k+1}, t_{k+2}, ..., t_{N}; \Theta_x, \overleftarrow{\Theta}_{LSTM}, \Theta_s)\right)$$
+$$ \footnotesize \sum_{k=1}^N \left( \log p(t_k \mid t_1, t_2, ..., t_{k-1}; \Theta_x, \vec{\Theta}_{LSTM}, \Theta_s) +  \log p(t_k \mid t_{k+1}, t_{k+2}, ..., t_{N}; \Theta_x, \overleftarrow{\Theta}_{LSTM}, \Theta_s)\right)$$
 
 ![](/images/language_representation/elmo2.png)
 
