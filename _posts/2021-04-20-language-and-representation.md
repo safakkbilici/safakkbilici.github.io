@@ -354,24 +354,24 @@ At each position $$k$$, each LSTM layer outputs a context-dependent representati
 $$p(t_1, t_2, ..., t_N) = \prod_{k=1}^N p(t_k \mid t_{k+1}, t_{k+2}, ..., t_{N})$$
 
 {: .text-justify}
-with each backward LSTM layer $$j$$ in a $$L$$ layer deep model producing representations $$\cev{\mathbf{h}}_{k,j}^{LM}$$ of $$t_k$$ given $$(t_{k+1}, t_{k+2}, ..., t_N)$$.
+with each backward LSTM layer $$j$$ in a $$L$$ layer deep model producing representations $$\overleftarrow{\mathbf{h}}_{k,j}^{LM}$$ of $$t_k$$ given $$(t_{k+1}, t_{k+2}, ..., t_N)$$.
 
 {: .text-justify}
 And the formulation jointly maximizes the log-likelihood of the forward and backward directions:
 
-$$\sum_{k=1}^N \left( \log p(t_k \mid t_1, t_2, ..., t_{k-1}; \Theta_x, \vec{\Theta}_{LSTM}, \Theta_s) +  \log p(t_k \mid t_{k+1}, t_{k+2}, ..., t_{N}; \Theta_x, \cev{\Theta}_{LSTM}, \Theta_s)\right)$$
+$$\sum_{k=1}^N \left( \log p(t_k \mid t_1, t_2, ..., t_{k-1}; \Theta_x, \vec{\Theta}_{LSTM}, \Theta_s) +  \log p(t_k \mid t_{k+1}, t_{k+2}, ..., t_{N}; \Theta_x, \overleftarrow{\Theta}_{LSTM}, \Theta_s)\right)$$
 
 ![](/images/language_representation/elmo2.png)
 
 {: .text-justify}
 ELMo is a task specific combination of the intermediate layer representations in the biLM. Higher-level LSTM states capture context-dependent aspects of word meaning (word sense disambiguation tasks) while lower level states model aspects of syntax (POS tagging). For each token $$t_k$$, a L-layer biLM computes a set of $$2L+1$$ representations (forward + backward + $$x_k$$)
 
-$$R_k = \{\mathbf{x}_{k}^{LM}, \vec{\mathbf{h}}_{k,j}^{LM}, \cev{\mathbf{h}}_{k,j}^{LM} \mid j=1, 2, ..., L\}$$
+$$R_k = \{\mathbf{x}_{k}^{LM}, \vec{\mathbf{h}}_{k,j}^{LM}, \overleftarrow{\mathbf{h}}_{k,j}^{LM} \mid j=1, 2, ..., L\}$$
 
 $$ = \{\mathbf{h}_{k,j}^{LM} \mid j=0, 1, ..., L\}$$
 
 {: .text-justify}
-where $$\mathbf{h}_{k,0}^{LM}$$ is the token layer and $$\mathbf{h}_{k,j}^{LM} = [\vec{\mathbf{h}}_{k,j}^{LM};\cev{\mathbf{h}}_{k,j}^{LM}]$$, for each biLSTM layer. For inclusion in a downstream model, ELMo collapses all layers in $$R$$ into single vector, $$\mathbf{\text{ELMo}_k} = E(R_k; \Theta_e)$$. In the simplest case, ELMo just selects the top layer $$E(R_k) =\mathbf{h}_{k,l}^{LM}$$.
+where $$\mathbf{h}_{k,0}^{LM}$$ is the token layer and $$\mathbf{h}_{k,j}^{LM} = [\vec{\mathbf{h}}_{k,j}^{LM};\overleftarrow{\mathbf{h}}_{k,j}^{LM}]$$, for each biLSTM layer. For inclusion in a downstream model, ELMo collapses all layers in $$R$$ into single vector, $$\mathbf{\text{ELMo}_k} = E(R_k; \Theta_e)$$. In the simplest case, ELMo just selects the top layer $$E(R_k) =\mathbf{h}_{k,l}^{LM}$$.
 
 ### BERT
 
