@@ -326,11 +326,14 @@ You can see that, we capture the so many grammatical morphemes, even though we h
 
 ## Contextual Representation
 
+{: .text-justify}
 Meaning of a word can differ from context to context. Or, words can have different meanings that derive from a common origin (polysemous word). For example, in English the word "pike" has nearly 9 meanings \[8\]. Suppose that, our training corpus have word "pike", do word2vec or other word represetation methods capture this 9 meanings? Arora et al., 2016 \[9\] proposed a linear superposition in standard word embeddings like word2vec. It is a powerful method but requires labeling for polysemous words. For example,
 
 $$v_{\text{pike}} = \alpha_1 \times v_{\text{pike}_1} + ... + \alpha_9 \times v_{\text{pike}_9}$$
 
-Where $$\alpha_n = \frac{\text{freq}(\text{pike}_n)}{\sum_{i=0}^9 \text{freq}(\text{pike}_i)}$$
+Where 
+
+$$\alpha_n = \frac{\text{freq}(\text{pike}_n)}{\sum_{i=0}^9 \text{freq}(\text{pike}_i)}$$
 
 ### ELMo
 
