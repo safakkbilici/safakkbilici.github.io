@@ -341,16 +341,29 @@ $$\alpha_n = \frac{\text{freq}(\text{pike}_n)}{\sum_{i=0}^9 \text{freq}(\text{pi
 
 ## References
 
+{: .text-justify}
 \[1\] Speech and Language Processing (2nd Edition), Jurafsky, Daniel and Martin, James H. 2009. Prentice-Hall, Inc. ISBN: 0131873210
 
+{: .text-justify}
 \[2\] Linguistics: An Introduction to Linguistic Theory	Victoria, A. Fromkin, 2011. ISBN: 0631197117
 
+{: .text-justify}
 \[3\] Distributed Representations of Words and Phrases and their Compositionality, Mikolov et al., 2013. arXiv: 1310.4546
 
+{: .text-justify}
 \[4\] Efficient Estimation of Word Representations in Vector Space, Mikolov et al., 2013. arXiv: 1301.3781
 
-\[5\] Learning word embedding. Weng, Lilian, 2017. URL: [https://lilianweng.github.io/lil-log/2017/10/15/learning-word-embedding.html](https://lilianweng.github.io/lil-log/2017/10/15/learning-word-embedding.html)
+{: .text-justify}
+\[5\] Learning word embedding. Weng, Lilian, 2017. URL: https://lilianweng.github.io/lil-log/2017/10/15/learning-word-embedding.html
 
+{: .text-justify}
 \[6\] GloVe: Global Vectors for Word Representation, Pennington et al., 2014
 
+{: .text-justify}
 \[7\] Enriching Word Vectors with Subword Information, Bojanowski et al., 2016. arXiv: 1607.04606
+
+{: .text-justify}
+\[8\] Natural Language Processing with Deep Learning CS224N/Ling284, Christopher Manning, Lecture 2. URL: http://web.stanford.edu/class/cs224n/slides/cs224n-2021-lecture02-wordvecs2.pdf
+
+{: .text-justify}
+\[9\] Linear Algebraic Structure of Word Senses, with Applications to Polysemy, Arora et al., 2016. arXiv: 1601.03764
