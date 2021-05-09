@@ -343,28 +343,34 @@ Although it improves performance, tagging all polysemous words is not effective.
 {: .text-justify}
 ELMo ([Deep contextualized word representations (Peters et al., 2018)](https://arxiv.org/abs/1802.05365)) was proposed to use contextualized representations of words (in addition, ELMo was not the first one that used contextualized representations, see [Semi-supervised sequence tagging with bidirectional language models (Peters et al., 2017)](https://arxiv.org/abs/1705.00108) and [Learned in Translation: Contextualized Word Vectors (McCann et al., 2017)](https://arxiv.org/abs/1708.00107)).  ELMo uses vectors derived from a bidirectional LSTM that is trained with a coupled language model (LM) objective on large text corpus. ELMo word representations are functions of the ENTIRE input sentence. They are computed on top of two-layer biLM with character convolutions. 
 
+{: .text-justify}
 Given a sequence of $$N$$ tokens $$(t_1, t_2, ..., t_N)$$, a forward language model computes the probability of the sequence by modeling the probability of token $$t_k$$ given the history $$(t_1, t_2, ... t_{k-1})$$: 
 
 $$p(t_1, t_2, ..., t_N) = \prod_{k=1}^N p(t_k \mid t_1, t_2, ..., t_{k-1})$$
 
+{: .text-justify}
 At each position $$k$$, each LSTM layer outputs a context-dependent representation $$\vec{\mathbf{h}}_{k,j}^{LM}$$ where $$j=1, 2, ..., L$$ (number of layers). Top layer LSTM output, $$\vec{\mathbf{h}}_{k,L}^{LM}$$ is used to predict next token $$t_{k+1}$$ with softmax. The equations that we formulated above are for forward LM. The backward LM is similar to forward LM.
 
 $$p(t_1, t_2, ..., t_N) = \prod_{k=1}^N p(t_k \mid t_{k+1}, t_{k+2}, ..., t_{N})$$
 
+{: .text-justify}
 with each backward LSTM layer $$j$$ in a $$L$$ layer deep model producing representations $$\cev{\mathbf{h}}_{k,j}^{LM}$$ of $$t_k$$ given $$(t_{k+1}, t_{k+2}, ..., t_N)$$.
 
+{: .text-justify}
 And the formulation jointly maximizes the log-likelihood of the forward and backward directions:
 
 $$\sum_{k=1}^N \left( \log p(t_k \mid t_1, t_2, ..., t_{k-1}; \Theta_x, \vec{\Theta}_{LSTM}, \Theta_s) +  \log p(t_k \mid t_{k+1}, t_{k+2}, ..., t_{N}; \Theta_x, \cev{\Theta}_{LSTM}, \Theta_s)\right)$$
 
 ![](/images/language_representation/elmo2.png)
 
+{: .text-justify}
 ELMo is a task specific combination of the intermediate layer representations in the biLM. Higher-level LSTM states capture context-dependent aspects of word meaning (word sense disambiguation tasks) while lower level states model aspects of syntax (POS tagging). For each token $$t_k$$, a L-layer biLM computes a set of $$2L+1$$ representations (forward + backward + $$x_k$$)
 
 $$R_k = \{\mathbf{x}_{k}^{LM}, \vec{\mathbf{h}}_{k,j}^{LM}, \cev{\mathbf{h}}_{k,j}^{LM} \mid j=1, 2, ..., L\}$$
 
 $$ = \{\mathbf{h}_{k,j}^{LM} \mid j=0, 1, ..., L\}$$
 
+{: .text-justify}
 where $$\mathbf{h}_{k,0}^{LM}$$ is the token layer and $$\mathbf{h}_{k,j}^{LM} = [\vec{\mathbf{h}}_{k,j}^{LM};\cev{\mathbf{h}}_{k,j}^{LM}]$$, for each biLSTM layer. For inclusion in a downstream model, ELMo collapses all layers in $$R$$ into single vector, $$\mathbf{\text{ELMo}_k} = E(R_k; \Theta_e)$$. In the simplest case, ELMo just selects the top layer $$E(R_k) =\mathbf{h}_{k,l}^{LM}$$.
 
 ### BERT
