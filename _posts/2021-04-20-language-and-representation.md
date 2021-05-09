@@ -298,7 +298,7 @@ FastText uses char n-grams. For example we have word "fastest". FastText encodes
 $$s(w_1, w_2) = \sum_{g \in G_{w_1}} \mathbf{z}_g^T \mathbf{v}_{w_2}$$
 
 {: .text-justify}
-Suppose that you are given a dictionary of $$n$$-grams of size $$G$$ Given a word $$w_1$$, let us denote by $$G_{w_1} \subset \{1,...,G\}$$ the set of $$n$$-grams appearing in $$w_1$$. We associate a vector representation $$\mathbf{z}_{g}$$ to each $$n$$-gram $$g$$. We derive the objection that has this scoring with respect to each $$\mathbf{z}_g^T$$ \[7\]. While we updating our subword vector representations, we update words by sum of its updated subword vector representations. This morphological information significally improves syntaxtic tasks, also it gives good representations on small datasets. Let's see some script to play:
+Suppose that you are given a dictionary of $$n$$-grams of size $$G$$ Given a word $$w_1$$, let us denote by $$G_{w_1} \subset \{1,...,G\}$$ the set of $$n$$-grams appearing in $$w_1$$. We associate a vector representation $$\mathbf{z}_{g}$$ to each $$n$$-gram $$g$$. We derive the objection that has this scoring with respect to each $$\mathbf{z}_g^T$$ \[7\]. While we updating our subword vector representations, we update words by sum of its updated subword vector representations. This morphological information significally improves syntactic tasks, also it gives good representations on small datasets. Let's see some script to play:
 
 ```python
 from collections import Iterable
@@ -322,11 +322,15 @@ n_grams_flatten = list(dict.fromkeys(list(flatten(n_grams))))
 print(n_grams_flatten)
 ```
 {: .text-justify}
-You can see that, we capture the so many grammatical morpheme even we have vocabulary size of 9. For instance; "-ment", "-ism\>", "ter\>", "est\>", even the prefix "anti-".
-
-### Byte Pair Encoding
+You can see that, we capture the so many grammatical morphemes, even though we have vocabulary size of 9. For instance; "-ment", "-ism\>", "ter\>", "est\>", even the prefix "anti-".
 
 ## Contextual Representation
+
+Meaning of a word can differ from context to context. Or, words can have different meanings that derive from a common origin (polysemous word). For example, in English the word "pike" has nearly 9 meanings \[8\]. Suppose that, our training corpus have word "pike", do word2vec or other word represetation methods capture this 9 meanings? Arora et al., 2016 \[9\] proposed a linear superposition in standard word embeddings like word2vec. It is a powerful method but requires labeling for polysemous words. For example,
+
+$$v_{\text{pike}} = \alpha_1 \times v_{\text{pike}_1} + ... + \alpha_9 \times v_{\text{pike}_9}$$
+
+Where $$\alpha_n = \frac{\text{freq}(\text{pike}_n)}{\sum_{i=0}^9 \text{freq}(\text{pike}_i)}$$
 
 ### ELMo
 
