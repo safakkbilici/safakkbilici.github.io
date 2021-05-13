@@ -26,30 +26,4 @@ This section covers my favorite textbooks/papers/blog posts.
 - **Bayesian Reasoning and Machine Learning (David Barber)**; very good introductory machine learning/graphical model book, but in probabilistic way. It is slightly unorthodox introduction to machine learning. Very good resource for who insterested in Bayesian Machine Learning and Bayesian Inference.
 
 
-# Papers
-- Natural Language Processing (almost) from Scratch [[arXiv](https://arxiv.org/abs/1103.0398.pdf)]
-- ImageNet Classification with Deep Convolutional Neural Networks [[NIPS Paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)]
-- On The Difficulty Of Training Recurrent Neural Networks [[arXiv](https://arxiv.org/abs/1211.5063.pdf)]
-- Deep Neural Networks for Object Detection [[NIPS Paper](https://papers.nips.cc/paper/5207-deep-neural-networks-for-object-detection.pdf)]
-- Auto-Encoding Variational Bayes [[arXiv](https://arxiv.org/abs/1312.6114.pdf)]
-- Distributed Representations of Words and Phrases and their Compositionality [[arXiv](https://arxiv.org/abs/1310.4546.pdf)]
-- Very Deep Convolutional Networks For Large-Scale Image Recognition [[arXiv](https://arxiv.org/abs/1409.1556.pdf)]
-- Generative Adversarial Networks [[arXiv](https://arxiv.org/abs/1406.2661.pdf)]
-- Adam: A Method for Stochastic Optimization [[arXiv](https://arxiv.org/abs/1412.6980.pdf)]
-- Neural Machine Translation by Jointly Learning to Align and Translate [[arXiv](https://arxiv.org/abs/1409.0473)]
-- GloVe: Global Vectors for Word Representation[[ACL](https://www.aclweb.org/anthology/D14-1162/)]
-- Effective Approaches to Attention-based Neural Machine Translation [[arXiv](https://arxiv.org/abs/1508.04025)]
-- U-Net: Convolutional Networks for Biomedical Image Segmentation [[arXiv](https://arxiv.org/abs/1505.04597)]
-- Generating Sentences from a Continuous Space [[arXiv](https://arxiv.org/abs/1511.06349)]
-- Tutorial on Variational Autoencoders [[arXiv](https://arxiv.org/abs/1606.05908.pdf)]
-- Enriching Word Vectors with Subword Information [[arXiv](https://arxiv.org/abs/1607.04606)]
-- MuseGAN: Multi-track Sequential Generative Adversarial Networks for Symbolic Music Generation and Accompaniment [[arXiv](https://arxiv.org/pdf/1709.06298.pdf)]
-- Neural Discrete Representation Learning [[arXiv](https://arxiv.org/abs/1711.00937.pdf)]
-- Attention Is All You Need [[arXiv](https://arxiv.org/abs/1706.03762.pdf)]
-- Deep Contextualized Word Representations[[arXiv](https://arxiv.org/abs/1802.05365]
-- An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling [[arXiv](https://arxiv.org/abs/1803.01271.pdf)]
-- Attention U-Net: Learning Where to Look for the Pancreas [[arXiv](https://arxiv.org/abs/1804.03999)]
-- BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding [[arXiv](https://arxiv.org/abs/1810.04805)]
-- Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer [[arXiv](https://arxiv.org/abs/1910.10683.pdf)]
-- Jukebox: A Generative Model for Music [[arXiv](https://arxiv.org/abs/2005.00341.pdf)]
-005.00341.pdf)]
+[notes](/assets/data/notes.md)
