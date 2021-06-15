@@ -7,11 +7,7 @@ header:
 ---
 
 ------------------------
-I am third year CS student [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am a member of [@Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali. My research interests are Natural Language Processing (any topic about Computational Linguistics!), Bayesian Machine Learning and Functional Programming (Haskell). I am also a pianist and Classical Music composer who is obsessed with atonality and microtonality. Even though it is not my major, conducting modern era Classical Music pieces is a passion for me.
-
-![test image size](/images/i_could_care_less.png){:height="90%" width="90%"}
-
-I hate web development, Java and Windows OS. I hate minimalism and simplicity on music. I hate Largo tempo. I hate a lot of things but this is not the place.
+I am third year CS student [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am a member of [@Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali. My research interests are Natural Language Processing (any topic about Computational Linguistics!), Bayesian Machine Learning and Functional Programming (Haskell). I am also a pianist and Classical Music composer who is obsessed with atonality and microtonality. I hate frontend development, Java and Windows OS. I hate minimalism and simplicity on music. I hate Largo tempo. I hate a lot of things but this is not the place.
 
 ### Teaching
 
@@ -22,9 +18,7 @@ I hate web development, Java and Windows OS. I hate minimalism and simplicity on
 	* Lecture Videos \[Turkish\]: [[Youtube Link](https://www.youtube.com/playlist?list=PL8kGuiVdKeKh31pVMF-ObZxu3C2E5A3Y7)]
 	* Lecture Notes: [[Github Link](https://github.com/safakkbilici/Deep-Learning-Lecture-2020-2021-First-Term)]
 * Introduction To Deep Learning: [@eAçık Kaynak](https://eacikkaynak.com/), 03/2021
-  * Course Link: [Completely free!](https://eacikkaynak.com/kurs-izle/derin-ogrenmeye-giris/6043ba0de0bd4c0012347dc2/6043ba6ee0bd4c0012347dcc/6043be56e0bd4c0012347e02)
-* Introduction to Machine Learning: [@YTU SkyLab](https://www.linkedin.com/company/ytuskylab/mycompany/), 2019-2020 Second Term
-	* Lecture Materials: [[Github Link](https://github.com/safakkbilici/ML-101-Course)]
+  * [Course Link](https://eacikkaynak.com/kurs-izle/derin-ogrenmeye-giris/6043ba0de0bd4c0012347dc2/6043ba6ee0bd4c0012347dcc/6043be56e0bd4c0012347e02)
 * Python For Data Science: [@YTU Data Science Community](https://www.linkedin.com/company/yt%C3%BCveribilimi/), 2019-2020 Second Term
 * Algorithms And C Programming: [@YTU SkyLab](https://www.linkedin.com/company/ytuskylab/mycompany/), 2019-2020 First Term
 
@@ -48,4 +42,8 @@ I hate web development, Java and Windows OS. I hate minimalism and simplicity on
 ### Contact
 
 safakk.bilici.2112@gmail.com
+
+### TL;DR
+
+![test image size](/images/i_could_care_less.png){:height="90%" width="90%"}
 
