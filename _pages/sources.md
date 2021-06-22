@@ -23,3 +23,9 @@ This section covers my favorite resources.
 
 - **Bayesian Reasoning and Machine Learning (David Barber)**; very good introductory machine learning/graphical model book, but in probabilistic way. It is slightly unorthodox introduction to machine learning. Very good resource for who insterested in Bayesian Machine Learning and Bayesian Inference.
 
+# Lectures
+
+- [CS224N: Natural Language Processing with Deep Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
+- [Natural Language Processing - Dan Jurafsky](https://www.youtube.com/playlist?list=PLLssT5z_DsK8HbD2sPcUIDfQ7zmBarMYv)
+- [CS228 - Probabilistic Graphical Models](https://cs228.stanford.edu/)
+
