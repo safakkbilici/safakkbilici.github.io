@@ -9,7 +9,7 @@ header:
 ------------------------
 
 {: .text-justify}
-I am third year CS student [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am a member of [@Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali. My research topics are basically Natural Language Processing/Computational Linguistics, Bayesian Machine Learning and Functional Programming (Haskell). I am particularly interested in low-resource language modeling, variational data augmentation, computational language representation and acquisition, and time series modeling. I am also a pianist and Classical Music composer who is obsessed with atonality and microtonality. I hate frontend development, Java and Windows OS. I hate minimalism and simplicity on music. I hate Largo tempo. I hate a lot of things but this is not the place.
+I am fourth year CS student [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am a member of [@Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali. My research topics are basically Natural Language Processing/Computational Linguistics, Bayesian Machine Learning and Functional Programming (Haskell). I am particularly interested in low-resource language modeling, variational data augmentation, computational language representation and acquisition, and time series modeling. I am also a pianist and Classical Music composer who is obsessed with atonality and microtonality. I hate frontend development, Java and Windows OS. I hate minimalism and simplicity on music. I hate Largo tempo. I hate a lot of things but this is not the place.
 
 ### Teaching
 
