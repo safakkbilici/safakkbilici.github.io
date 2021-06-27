@@ -127,9 +127,6 @@ author:
     - label: "Youtube"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/channel/UCFVua8j3Ssal2hSY4VXLj8g"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/safakkbilici"
       
     - label: "Resume"
       icon: "fas fa-fw fa-file"
