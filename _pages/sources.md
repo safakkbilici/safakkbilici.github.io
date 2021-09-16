@@ -9,6 +9,13 @@ This page covers my favorite resources.
 
 # Textbooks
 
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="1604" src="/_pages/1.jpg">|  <img width="1604" src="/_pages/2.jpg" >|<img width="1604" src="/_pages/3.jpg">|
+|<img width="1604" src="/_pages/4.jpg">|  <img width="1604" src="/_pages/5.jpg" >|<img width="1604" src="/_pages/6.jpg">|
+
+
+
 - **Pattern Recognition and Machine Learning (Christopher Bishop)**: Of course not a book for learning Machine Learning. This book introduces probability distributions in detail. Most of the topics in machine learning are covered in fully Bayesian way. But the perspective of the book is not only Machine Learning. It is a good resource to learn graphical models, sampling methods.
 
 - **Deep Learning (Ian Goodfellow et al.)**; I started to learn Deep Learning with this book. An excellent, comprehensive textbook on Deep Learning. It requires very good mathematics knowledge (Linear Algebra, Advanced Calculus, Statistics and Probability, Information Theory etc. etc.). Yes it covers some mathematical concepts in first chapters but still not enough. If you feel comfortable with deriving matrices, interpreting distribubtions and others, read the bible.
