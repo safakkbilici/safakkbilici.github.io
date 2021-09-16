@@ -9,5 +9,3 @@ for idx,f in enumerate(sorted(glob.glob("*.jpg"))):
     img = cv2.resize(img, (370, 499), interpolation = cv2.INTER_CUBIC)
     Image.fromarray(img).save(str(idx+1) + ".jpg")
 
-    #cv2.imwrite(str(idx) + ".jpg", img)
-
