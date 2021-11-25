@@ -131,6 +131,9 @@ author:
     - label: "Resume"
       icon: "fas fa-fw fa-file"
       url: "/assets/data/cv2.pdf"
+    - label: "Scholar"
+      icon: "fa fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=9SHXe3wAAAAJ&hl=en"
 
       
 
