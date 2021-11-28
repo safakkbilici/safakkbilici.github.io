@@ -20,7 +20,7 @@ I hate frontend development, Java and Windows OS. I hate minimalism and simplici
 * E. Sadi Uysal, **M. Şafak Bilici**, B. Selin Zaza, M. Yiğit Özgenç, Onur Boyar, “Exploring The Limits Of Data Augmentation For Retinal Vessel Segmentation”, 2021. arXiv: 2105.09365 \[eess.IV\] ([paper](https://arxiv.org/abs/2105.09365), [repository](https://github.com/safakkbilici/Exploring-The-Limits-Of-Data-Augmentation-For-Retinal-Vessel-Segmentation))
 
 {: .text-justify}
-* **M. Şafak Bilici**, Mehmet Fatih Amasyali, “Variational Sentence Augmentation For Masked Language Modeling”, in Innovations in Intelligent Systems and Applications Conference (ASYU), 2021. ([repository](https://github.com/safakkbilici/Variational-Sentence-Augmentation-For-Masked-Language-Modeling))
+* **M. Şafak Bilici**, Mehmet Fatih Amasyali, “Variational Sentence Augmentation For Masked Language Modeling”, in Innovations in Intelligent Systems and Applications Conference (ASYU), 2021. ([paper](https://ieeexplore.ieee.org/document/9599089), [repository](https://github.com/safakkbilici/Variational-Sentence-Augmentation-For-Masked-Language-Modeling))
 
 ### Some Compositions
 
