@@ -14,6 +14,7 @@ This page covers my favorite resources.
 |<img width="1604" src="/_pages/1.jpg">|  <img width="1604" src="/_pages/2.jpg" >|<img width="1604" src="/_pages/3.jpg">|
 |<img width="1604" src="/_pages/4.jpg">|  <img width="1604" src="/_pages/5.jpg" >|<img width="1604" src="/_pages/6.jpg">|
 |<img width="1604" src="/_pages/7.jpg">|  <img width="1604" src="/_pages/8.jpg" >|<img width="1604" src="/_pages/9.jpg">|
+|<img width="1604" src="/_pages/10.jpg">|  <img width="1604" src="/_pages/11.jpg" >|<img width="1604" src="/_pages/12.jpg">|
 
 # Lectures
 
