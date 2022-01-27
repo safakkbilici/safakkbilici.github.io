@@ -9,7 +9,10 @@ header:
 ------------------------
 
 {: .text-justify}
-I am a senior year CS student (with brilliant scores but not that much brilliant) [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am a member of [@Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali. I mostly work on low resource language models, representation (mostly syntactic) learning for NLP and Bayesian Machine Learning. Besides that; I realy love population biology, language acquisition and biolinguistics. I also play piano and compose Classical Music. However, my piano playing style more like Jazz with atonality, free modality and eastern sounds. If you want to discuss the things that I mentioned above or anything else, buy me a coffee. Damn I really love coffee.
+I am a senior year CS student (with brilliant scores but not that much brilliant) [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am a member of [Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali. I am also part of the [inzva](https://inzva.com/) team as AI Program Specialist. 
+
+{: .text-justify}
+I mostly work on low resource language models, representation (mostly syntactic) learning for NLP and Bayesian Machine Learning. Besides that; I realy love population biology, language acquisition and biolinguistics. I also play piano and compose Classical Music. However, my piano playing style more like Jazz with atonality, free modality and eastern sounds. If you want to discuss the things that I mentioned above or anything else, buy me a coffee. Damn I really love coffee.
 
 {: .text-justify}
 I hate frontend development, Java and Windows OS. I hate minimalism and simplicity on music. I hate Largo tempo. I hate a lot of things but this is not the place.
@@ -21,6 +24,9 @@ I hate frontend development, Java and Windows OS. I hate minimalism and simplici
 
 {: .text-justify}
 * **M. Şafak Bilici**, Mehmet Fatih Amasyali, “Variational Sentence Augmentation For Masked Language Modeling”, in Innovations in Intelligent Systems and Applications Conference (ASYU), 2021. ([paper](https://ieeexplore.ieee.org/document/9599089), [repository](https://github.com/safakkbilici/Variational-Sentence-Augmentation-For-Masked-Language-Modeling))
+
+{: .text-justify}
+* **M. Şafak Bilici**, Mehmet Fatih Amasyali, “Transformers as Neural Augmentors: Class Conditional Sentence Generation via Variational Bayes”, submitted to International Conference on Pattern Recognition (ICPR), 2021. ([repository](https://github.com/safakkbilici/Conditional-Variational-Transformer))
 
 ### Software
 
