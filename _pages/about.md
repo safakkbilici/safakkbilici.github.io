@@ -9,10 +9,10 @@ header:
 ------------------------
 
 {: .text-justify}
-I am a senior year CS student (with brilliant scores but not that much brilliant) [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am a member of [Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali. I am also part of the [inzva](https://inzva.com/) team as AI Program Specialist. 
+I am a senior year CS student (with brilliant scores but not that much brilliant) [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am currently working [@Huawei](https://www.huawei.com/en/) as Research Engineer. I am a member of [Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali. I am also part of the [inzva](https://inzva.com/) team as AI Program Specialist. 
 
 {: .text-justify}
-I mostly work on low resource language models, representation (mostly syntactic) learning for NLP and Bayesian Machine Learning. Besides that; I realy love population biology, language acquisition and biolinguistics. I also play piano and compose Classical Music. However, my piano playing style more like Jazz with atonality, free modality and eastern sounds. If you want to discuss the things that I mentioned above or anything else, buy me a coffee. Damn I really love coffee.
+I mostly work on low-resource language modeling, representation (mostly syntactic) learning for NLP and Bayesian Machine Learning. Besides that; I realy love population biology, language acquisition and biolinguistics. I also play piano and compose Classical Music. However, my piano playing style more like Jazz with atonality, free modality and eastern sounds. If you want to discuss the things that I mentioned above or anything else, buy me a coffee. Damn I really love coffee.
 
 {: .text-justify}
 I hate frontend development, Java and Windows OS. I hate minimalism and simplicity on music. I hate Largo tempo. I hate a lot of things but this is not the place.
