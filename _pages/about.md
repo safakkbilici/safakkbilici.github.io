@@ -9,10 +9,15 @@ header:
 ------------------------
 
 {: .text-justify}
-I am a senior year CS student (with brilliant scores but not that much brilliant) [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am currently working [@Huawei](https://www.huawei.com/en/) as Research Engineer. I am a member of [Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali. I am also part of the [inzva](https://inzva.com/) team as AI Program Specialist. 
+I am a senior year CS student (with brilliant scores but not that much brilliant) [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am currently working [@Huawei](https://www.huawei.com/en/) as Research Engineer. I was a member of member of [Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali during my bachelor. I am also part of the [inzva](https://inzva.com/) team as AI Program Specialist.
 
 {: .text-justify}
-I mostly work on low-resource language modeling, representation (mostly syntactic) learning for NLP and Bayesian Machine Learning. Besides that; I realy love population biology, language acquisition and biolinguistics. I also play piano and compose Classical Music. However, my piano playing style more like Jazz with atonality, free modality and eastern sounds. If you want to discuss the things that I mentioned above or anything else, buy me a coffee. Damn I really love coffee.
+I mostly work on low-resource language modeling, machine translation, representation (mostly syntactic) learning for NLP and Bayesian Machine Learning. Besides that; I realy love population biology, language acquisition and biolinguistics.
+
+I have been studying classical music theory for almost 10 years. I played keyboard and guitar in various bands with different styles (yes, Death Metal too). [I've been composing classical music](https://www.youtube.com/channel/UCFVua8j3Ssal2hSY4VXLj8g) for almost 4 years. My main instrument is piano but my playing style is more like Jazz with atonality, free modality and eastern sounds, so I am cursed by conservative composers... 
+
+{: .text-justify}
+If you want to discuss the things that I mentioned above or anything else, buy me a coffee. My email address at bottom of the page. Damn I really love coffee. 
 
 {: .text-justify}
 I hate frontend development, Java and Windows OS. I hate minimalism and simplicity on music. I hate Largo tempo. I hate a lot of things but this is not the place.
@@ -41,7 +46,7 @@ I hate frontend development, Java and Windows OS. I hate minimalism and simplici
 
 * Applied AI Study Group Guide [@inzva](https://inzva.com/), July 2021, Februar 2022
 	* Guidance for 1 weeks of 5-weeks-long advanced practical AI study group. 
-	* Covered topics: Anomaly Detection, Time Series, Recommender Systems.
+	* Covered topics: Anomaly Detection, Time Series, Recommender Systems, Bayesian Optimization.
 
 * Introduction To Deep Learning: [@YTU SkyLab](https://www.linkedin.com/company/ytuskylab/mycompany/), 2020-2021 First Term
 	* [Lecture Notes](https://github.com/safakkbilici/Deep-Learning-Lecture-2020-2021-First-Term)
