@@ -14,6 +14,7 @@ I am a senior year CS student (with brilliant scores but not that much brilliant
 {: .text-justify}
 I mostly work on low-resource language modeling, machine translation, representation (mostly syntactic) learning for NLP and Bayesian Machine Learning. Besides that; I realy love population biology, language acquisition and biolinguistics.
 
+{: .text-justify}
 I have been studying classical music theory for almost 10 years. I played keyboard and guitar in various bands with different styles (yes, Death Metal too). [I've been composing classical music](https://www.youtube.com/channel/UCFVua8j3Ssal2hSY4VXLj8g) for almost 4 years. My main instrument is piano but my playing style is more like Jazz with atonality, free modality and eastern sounds, so I am cursed by conservative composers... 
 
 {: .text-justify}
