@@ -11,10 +11,10 @@ header:
 ### Şafak Bilici (sha-FUCK billie-G) (\[ʃɑ.ˈfɑk\] [biɭiʤi\])
 
 {: .text-justify}
-I am a senior year CS student (with brilliant scores but not that much brilliant) [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am currently working [@Huawei](https://www.huawei.com/en/) as Research Engineer. I was a member of member of [Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali during my bachelor. I am also part of the [inzva](https://inzva.com/) team as AI Program Specialist.
+I am a senior year CS student (with brilliant scores but not that much brilliant) [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am currently working [@Huawei](https://www.huawei.com/en/) as Research Engineer. I was an undergraduate researcher [@Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali during my bachelor. My BSc thesis was on natural language grounding, with applications on ranking, visual question answering etc. I am also part of the [inzva](https://inzva.com/) team as AI Program Specialist.
 
 {: .text-justify}
-I mostly work on low-resource language modeling, machine translation, representation (mostly syntactic) learning for NLP and Bayesian Machine Learning. Besides that; I realy love population biology, language acquisition and biolinguistics.
+I mostly work on low-resource language modeling, machine translation, representation learning, and bayesian machine learning. Besides that; I realy love population biology, language acquisition and biolinguistics.
 
 {: .text-justify}
 I have been studying classical music theory for almost 10 years. I played keyboard and guitar in various bands with different styles (yes, Death Metal too). [I've been composing classical music](https://www.youtube.com/channel/UCFVua8j3Ssal2hSY4VXLj8g) for almost 4 years. My main instrument is piano but my playing style is more like Jazz with atonality, free modality and eastern sounds, so I am cursed by conservative composers... 
