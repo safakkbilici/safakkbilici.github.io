@@ -20,7 +20,7 @@ title                    : "Safak's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Şafak Bilici"
-description              : "Personal Nerdy Blog"
+description              : "Safak's Personal Blog"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -99,7 +99,7 @@ analytics:
 author:
   name             : "Şafak Bilici"
   avatar           : "/images/phen3.jpg"
-  bio              : "A personal and nerdy blog. Posts on mathematics, computer science and music."
+  bio              : "This is my personal blog. I mostly post about mathematics, computer science, linguistics, and music."
   location         : "Istanbul, Turkey"
   email            :
   links:
