@@ -8,6 +8,8 @@ header:
 
 ------------------------
 
+### Şafak Bilici (sha-FUCK billie-G) (\[ʃɑ.ˈfɑk\] [biɭiʤi\])
+
 {: .text-justify}
 I am a senior year CS student (with brilliant scores but not that much brilliant) [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am currently working [@Huawei](https://www.huawei.com/en/) as Research Engineer. I was a member of member of [Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali during my bachelor. I am also part of the [inzva](https://inzva.com/) team as AI Program Specialist.
 
