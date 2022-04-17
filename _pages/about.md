@@ -11,10 +11,7 @@ header:
 ### Şafak Bilici (sha-FUCK billie-G) (\[ʃɑ.ˈfɑk\] [biɭiʤi\])
 
 {: .text-justify}
-<<<<<<< HEAD
 I am a senior year CS student (with brilliant scores but not that much brilliant) [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am currently working [@Huawei](https://www.huawei.com/en/) as Research Engineer, focusing on optimization of search engines. I was an undergraduate researcher [@Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali during my bachelor. At Nova Lab., I mostly worked on intersection of variational inference and low-resource language models and published two conference papers. My BSc thesis was on multimodal transformers and [natural language grounding](https://katefvision.github.io/LanguageGrounding/), with applications on ranking/retrieval, visual question answering etc. I am also part of the [inzva](https://inzva.com/) team as AI Program Specialist.
-=======
-I am a senior year CS student (with brilliant scores but not that much brilliant) [@Yildiz Technical University](https://www.yildiz.edu.tr/en/). I am currently working [@Huawei](https://www.huawei.com/en/) as Research Engineer, focusing on optimization of search engines. I was an undergraduate researcher [@Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Assoc. Prof. Dr. Fatih Amasyali during my bachelor. My BSc thesis was on [natural language grounding](https://katefvision.github.io/LanguageGrounding/), with applications on ranking, visual question answering etc. I am also part of the [inzva](https://inzva.com/) team as AI Program Specialist.
 
 {: .text-justify}
 I mostly work on low-resource language modeling, machine translation, representation learning, and bayesian machine learning. Besides that; I realy love population biology, language acquisition and biolinguistics.
