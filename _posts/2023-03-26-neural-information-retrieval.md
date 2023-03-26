@@ -35,3 +35,8 @@ Sentence Transformers are introduced in the paper called  [Sentence-BERT: Senten
 **SNLI** dataset consists of a premise, a hypothesis, and a label (entailment, neutral, and contradiction). In this setting, premise and hypothesis is given to the encoder and embeddings $$\mathbf{v}$$ and $$\mathbf{u}$$ are produced. Then, the cross entropy loss is calculated between the class label and
 
 $$ l = \text{softmax}(\mathbf{W_t} \cdot \lbrack \mathbf{u}; \; \mathbf{v}; \; \mid \mathbf{u} - \mathbf{v} \mid \rbrack)$$
+
+{: .text-justify}
+**STS** dataset consists of two sentences and a numeric label that represents the similarity between two santences, in the range of 1 to 5. In this setting, premise and hypothesis is given to the encoder and embeddings $$\mathbf{v}$$ and $$\mathbf{u}$$ are produced. Then, a cosine similarity loss is calculated by MSE
+
+$$ MSE = \frac{1}{B} \sum_{i=1}^{B}\left(L_i - \frac{\mathbf{v} \cdot \mathbf{u}} {\left\| \mathbf{v}\right\| _{2}\left\| \mathbf{u}\right\| _{2}} \right) $$
