@@ -53,7 +53,20 @@ where $$\left\| \cdot \right\| _{p} $$ denotes the $$p$$-norm. $$\varepsilon$$ e
 
 ## SimCSE
 
+{: .text-justify}
 A remarkable contribution came from the paper called [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/abs/2104.08821) \[6\]. In the SimCSE paper, authors proposed unsupervised and supervised approaches to produce sentence embeddings. Each method leverages positive and negative examples. In unsupervised setting, given an input $$x$$, the positive is obtained by applying dropout operation to $$x$$. In simple terms, $$x$$ is passed to the transformer encoder twice (which has dropout rate $$p=0.1$$), and embeddings with different dropouts are obtained. If we denote pair embeddings as $$\mathbf{v}$$ and $$\mathbf{v}^+$$, the objective becomes minimize the negative log-likelihood loss:
 
-$$\ell = \sum_{i=1}^B - \log \frac{\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_i^+))/\tau}{\sum_{j=1, j \neq i}^B \exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^+))/\tau} $$
+$$\ell = - \sum_{i=1}^B \log \frac{\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_i^+))/\tau}{\sum_{j=1, j \neq i}^B \exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^+))/\tau} $$
+
+{: .text-justify}
+where $$B$$ is the batch size. In the denominator, $$\mathbf{v}_j^+$$ can be seen as negative example of $$x$$, because we are trying to maximize the probability of positive example against over all $$\mathbf{v}_j^+$$. Negative examples are chosen from other sample's positive examples in the batch. This loss sometimes is called [multiple negatives ranking loss](https://www.sbert.net/docs/package_reference/losses.html#sentence_transformers.losses.MultipleNegativesRankingLoss).
+
+{: .text-justify}
+In supervised form, there is nothing different. Given a labeled dataset, triplets are $$(x_i, x_i^+, x_i^-)$$. Objective becomes:
+
+$$\ell = - \sum_{i=1}^B \log \frac{\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_i^+))/\tau}{\sum_{j=1, j \neq i}^B \left(\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^+))/\tau +  \exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^-))/\tau \right)} $$
+
+
+
+
 
