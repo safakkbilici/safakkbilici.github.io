@@ -68,14 +68,18 @@ $$\ell = - \sum_{i=1}^B \log \frac{\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_i^+)
 
 ## Knowledge Distillation for Multilinguality
 
-In the paper called [Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation](https://arxiv.org/abs/2004.09813), authors proposes a practical idea (but not novel). For set of translation pairs $$ (s_i, t_i) $$, the aim is to train a new student model $$ M_{\text{student}} $$ to satisfy the conditions  $$ M_{\text{student}}(s_i) \sim  M_{\text{teacher}}(s_i) $$ and $$ M_{\text{student}}(t_i) \sim  M_{\text{teacher}}(s_i) $$. In the work, authors used XLM-R as student model and SBERT model as teacher model.
+{: .text-justify}
+In the paper called [Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation](https://arxiv.org/abs/2004.09813), authors proposes a practical idea (but not novel). For set of translation pairs $$ (s_i, t_i) $$, the aim is to train a new student model $$ M_{\text{student}} $$ to satisfy the conditions  $$ M_{\text{student}}(s_i) \approx  M_{\text{teacher}}(s_i) $$ and $$ M_{\text{student}}(t_i) \approx  M_{\text{teacher}}(s_i) $$. In the work, authors used XLM-R as student model and SBERT model as teacher model.
 
 {: .text-justify}
 The student model $$ M_{\text{student}} $$ is trained by mean-squared loss:
 
 $$ \frac{1}{B} \sum_{i=1}^{B} \left[ ( M_{\text{teacher}}(s_i) -  M_{\text{student}}(s_i))^2 + ( M_{\text{teacher}}(s_i) -  M_{\text{student}}(t_i))^2\right]$$
 
+## Using Sentence Embeddings for Retrieval
 
+{: .text-justify}
+A contrastive model that is trained on (query, positive document) pairs or (query, positive document, negative document) triplets can be used for retrieval. The idea is simple: after the training of the model, embeddings of documents are stored to the database. Then, at inference time, compute the query embedding via trained model, then retrieve the top-$$k$$ relevant apps using a similarity function.
 
-
-
+{: .text-justify}
+However, calculating similarity between a query embedding and all document embeddings (Google has more than 25 billion documents) is not practical. Response from a search engine should be lower than 100 miliseconds. For that purpose, we generally use [approximate nearest neighbor search](https://en.wikipedia.org/wiki/Nearest_neighbor_search). Approximate search consists of specific index structures, clustering, parallelism etc. Luckily, there are a lot of approximate search libraries implemented by software engineers such as [faiss](https://github.com/facebookresearch/faiss), [annoy](https://github.com/spotify/annoy), [spann](https://github.com/microsoft/SPTAG), and [scann](https://github.com/google-research/google-research/tree/master/scann) etc.
