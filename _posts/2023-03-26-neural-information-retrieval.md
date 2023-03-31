@@ -30,6 +30,7 @@ Many approaches modify pre-trained models for information retrieval. For example
 {: .text-justify}
 Sentence Transformers are introduced in the paper called  [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/abs/1908.10084) \[5\]. The idea is simple yet efficient: use siamese or triplet BERT networks and optimize them by metric learning. Authors used three objective function for three different setup:
 
+![test image size](/images/neuralir/dual.png){:height="90%" width="90%"}
 
 {: .text-justify}
 **SNLI** dataset consists of a premise, a hypothesis, and a label (entailment, neutral, and contradiction). In this setting, premise and hypothesis is given to the encoder and embeddings $$\mathbf{v}$$ and $$\mathbf{u}$$ are produced. Then, the cross entropy loss is calculated between the class label and
@@ -97,12 +98,12 @@ The optimization of the Cross-Encoders generally done by passing the representat
 $$ \ell = - \sum_{j \mid y_{ij}=1} \log(s_{ij}) - \sum_{j \mid y_{ij}=0} \log(1 - s_{ij})$$
 
 {: .text-justify}
-where $$y_{ij}$$ is target, $$s_{ij}$$ is predicted score for the pair $i$ and $$j \in D_i$$ where $$D_i$$ is candidate documents. This approach is sometimes called pointwise cross entropy loss because it is calculated for each query-document pair independently.
+where $$y_{ij}$$ is target, $$s_{ij}$$ is predicted score for the pair $$i$$ and $$j \in D_i$$ where $$D_i$$ is candidate documents. This approach is sometimes called pointwise cross entropy loss because it is calculated for each query-document pair independently.
 
 {: .text-justify}
 Another approach is called pairwise softmax cross entropy loss, which is defined as
 
-$$ \ell = -\log \frac{\exp(s_{q_i, p_i^+})}{\exp(s_{q_i, p_i^+}) + \sum_{j=1}^{B} \exp(q_i, p_{i_j}^+)} $$
+$$ \ell = -\log \frac{\exp(s_{q_i, p_i^+})}{\exp(s_{q_i, p_i^+}) + \sum_{j=1}^{B} \exp(s_{q_i, p_{i_j}^+})} $$
 
 {: .text-justify}
 In SBERT library, Cross-Encoders are trained by point-wise loss, which is implemented using binary cross entropy loss with logits:
