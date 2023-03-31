@@ -30,6 +30,7 @@ Many approaches modify pre-trained models for information retrieval. For example
 {: .text-justify}
 Sentence Transformers are introduced in the paper called  [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/abs/1908.10084) \[5\]. The idea is simple yet efficient: use siamese or triplet BERT networks and optimize them by metric learning. Authors used three objective function for three different setup:
 
+{:style="text-align:center;"}
 ![test image size](/images/neuralir/dual.png){:height="30%" width="30%"}
 
 {: .text-justify}
