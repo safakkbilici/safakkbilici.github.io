@@ -107,7 +107,7 @@ Another approach is called pairwise softmax cross entropy loss, which is defined
 $$ \ell = -\log \frac{\exp(s_{q_i, p_i^+})}{\exp(s_{q_i, p_i^+}) + \sum_{j=1}^{B} \exp(s_{q_i, p_{i_j}^+})} $$
 
 {:style="text-align:center;"}
-![test image size](/images/neuralir/ce.png){:height="10%" width="10%"}
+![test image size](/images/neuralir/ce.png){:height="20%" width="20%"}
 
 {: .text-justify}
 In SBERT library, Cross-Encoders are trained by point-wise loss, which is implemented using binary cross entropy loss with logits:
