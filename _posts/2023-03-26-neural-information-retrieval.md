@@ -99,7 +99,15 @@ $$ \ell = - \sum_{j \mid y_{ij}=1} \log(s_{ij}) - \sum_{j \mid y_{ij}=0} \log(1 
 {: .text-justify}
 where $$y_{ij}$$ is target, $$s_{ij}$$ is predicted score for the pair $i$ and $$j \in D_i$$ where $$D_i$$ is candidate documents. This approach is sometimes called pointwise cross entropy loss because it is calculated for each query-document pair independently.
 
-
+{: .text-justify}
 Another approach is called pairwise softmax cross entropy loss, which is defined as
 
 $$ \ell = -\log \frac{\exp(s_{q_i, p_i^+})}{\exp(s_{q_i, p_i^+}) + \sum_{j=1}^{B} \exp(q_i, p_{i_j}^+)} $$
+
+{: .text-justify}
+In SBERT library, Cross-Encoders are trained by point-wise loss, which is implemented using binary cross entropy loss with logits:
+
+$$ \ell(q, d) = L = (l_1, l_2, ..., l_B)^T, \;\; l_i=-w_i \cdot (y_i \cdot \log(s_i) + (1-y_i) \cdot \log(1-s_i))$$
+
+{: .text-justify}
+where $$B$$ is the batch size.
