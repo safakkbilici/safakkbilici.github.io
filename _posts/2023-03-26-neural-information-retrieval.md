@@ -30,7 +30,7 @@ Many approaches modify pre-trained models for information retrieval. For example
 {: .text-justify}
 Sentence Transformers are introduced in the paper called  [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/abs/1908.10084) \[5\]. The idea is simple yet efficient: use siamese or triplet BERT networks and optimize them by metric learning. Authors used three objective function for three different setup:
 
-![test image size](/images/neuralir/dual.png){:height="90%" width="90%"}
+![test image size](/images/neuralir/dual.png){:height="30%" width="30%"}
 
 {: .text-justify}
 **SNLI** dataset consists of a premise, a hypothesis, and a label (entailment, neutral, and contradiction). In this setting, premise and hypothesis is given to the encoder and embeddings $$\mathbf{v}$$ and $$\mathbf{u}$$ are produced. Then, the cross entropy loss is calculated between the class label and
@@ -65,7 +65,7 @@ where $$B$$ is the batch size. In the denominator, $$\mathbf{v}_j^+$$ can be see
 {: .text-justify}
 In supervised form, there is nothing different. Given a labeled dataset, triplets are $$(x_i, x_i^+, x_i^-)$$. Objective becomes:
 
-$$\ell = - \sum_{i=1}^B \log \frac{\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_i^+))/\tau}{\sum_{j=1, j \neq i}^B \left(\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^+))/\tau +  \exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^-))/\tau \right)} $$.
+$$\ell = - \sum_{i=1}^B \log \frac{\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_i^+))/\tau}{\sum_{j=1, j \neq i}^B \left(\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^+))/\tau +  \exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^-))/\tau \right)} $$
 
 Supervised SimCSE outperforms SBERT in all STS benchmarks.
 
