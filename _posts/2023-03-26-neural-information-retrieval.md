@@ -107,7 +107,16 @@ $$ \ell = -\log \frac{\exp(s_{q_i, p_i^+})}{\exp(s_{q_i, p_i^+}) + \sum_{j=1}^{B
 {: .text-justify}
 In SBERT library, Cross-Encoders are trained by point-wise loss, which is implemented using binary cross entropy loss with logits:
 
-$$ \ell(q, d) = L = (l_1, l_2, ..., l_B)^T, \;\; l_i=-w_i \cdot (y_i \cdot \log(s_i) + (1-y_i) \cdot \log(1-s_i))$$
+$$ \ell(q, d) = L = (l_1, l_2, ..., l_B)^T$$
+
+$$l_i=-w_i \cdot (y_i \cdot \log(s_i) + (1-y_i) \cdot \log(1-s_i))$$
 
 {: .text-justify}
 where $$B$$ is the batch size.
+
+## Augmented SBERT
+
+## ColBERT
+
+## RankT5
+
