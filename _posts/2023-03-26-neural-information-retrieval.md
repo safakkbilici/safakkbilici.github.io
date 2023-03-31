@@ -25,7 +25,7 @@ Neural methods in Information Retrieval (IR) are started to be used more often, 
 {: .text-justify}
 Many approaches modify pre-trained models for information retrieval. For example, we can use a single BERT as a retrieval model: extract dense embeddings of documents, get the query embedding at inference time, and search. This approach would be successful, however, we can say introducing some kind of relationship between queries and documents would inject more information into our model intuitively. With that motivation, literature has been designing powerful contrastive learning models for different problems in information retrieval.
 
-## Using Siamese BERT for Retrieval
+# Using Siamese BERT for Retrieval
 
 {: .text-justify}
 Sentence Transformers are introduced in the paper called  [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/abs/1908.10084) \[5\]. The idea is simple yet efficient: use siamese or triplet BERT networks and optimize them by metric learning. Authors used three objective function for three different setup:
@@ -51,7 +51,7 @@ $$ \max(\left\| \mathbf{v}_a - \mathbf{v}_p\right\| _{p} - \left\| \mathbf{v}_a 
 {: .text-justify}
 where $$\left\| \cdot \right\| _{p} $$ denotes the $$p$$-norm. $$\varepsilon$$ ensures that $$\mathbf{v}_p$$ is at least $$\varepsilon$$ closer to $$\mathbf{v}_a$$ than $$\mathbf{v}_n$$
 
-## SimCSE
+# SimCSE
 
 {: .text-justify}
 A remarkable contribution came from the paper called [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/abs/2104.08821) \[6\]. In the SimCSE paper, authors proposed unsupervised and supervised approaches to produce sentence embeddings. Each method leverages positive and negative examples. In unsupervised setting, given an input $$x$$, the positive is obtained by applying dropout operation to $$x$$. In simple terms, $$x$$ is passed to the transformer encoder twice (which has dropout rate $$p=0.1$$), and embeddings with different dropouts are obtained. If we denote pair embeddings as $$\mathbf{v}$$ and $$\mathbf{v}^+$$, the objective becomes minimize the negative log-likelihood loss:
@@ -64,9 +64,11 @@ where $$B$$ is the batch size. In the denominator, $$\mathbf{v}_j^+$$ can be see
 {: .text-justify}
 In supervised form, there is nothing different. Given a labeled dataset, triplets are $$(x_i, x_i^+, x_i^-)$$. Objective becomes:
 
-$$\ell = - \sum_{i=1}^B \log \frac{\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_i^+))/\tau}{\sum_{j=1, j \neq i}^B \left(\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^+))/\tau +  \exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^-))/\tau \right)} $$. Supervised SimCSE outperforms SBERT in all STS benchmarks.
+$$\ell = - \sum_{i=1}^B \log \frac{\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_i^+))/\tau}{\sum_{j=1, j \neq i}^B \left(\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^+))/\tau +  \exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^-))/\tau \right)} $$.
 
-## Knowledge Distillation for Multilinguality
+Supervised SimCSE outperforms SBERT in all STS benchmarks.
+
+# Knowledge Distillation for Multilinguality
 
 {: .text-justify}
 In the paper called [Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation](https://arxiv.org/abs/2004.09813), authors proposes a practical idea (but not novel). For set of translation pairs $$ (s_i, t_i) $$, the aim is to train a new student model $$ M_{\text{student}} $$ to satisfy the conditions  $$ M_{\text{student}}(s_i) \approx  M_{\text{teacher}}(s_i) $$ and $$ M_{\text{student}}(t_i) \approx  M_{\text{teacher}}(s_i) $$. In the work, authors used XLM-R as student model and SBERT model as teacher model.
@@ -76,10 +78,28 @@ The student model $$ M_{\text{student}} $$ is trained by mean-squared loss:
 
 $$ \frac{1}{B} \sum_{i=1}^{B} \left[ ( M_{\text{teacher}}(s_i) -  M_{\text{student}}(s_i))^2 + ( M_{\text{teacher}}(s_i) -  M_{\text{student}}(t_i))^2\right]$$
 
-## Using Sentence Embeddings for Retrieval
+# Using Sentence Embeddings for Retrieval
 
 {: .text-justify}
 A contrastive model that is trained on (query, positive document) pairs or (query, positive document, negative document) triplets can be used for retrieval. The idea is simple: after the training of the model, embeddings of documents are stored to the database. Then, at inference time, compute the query embedding via trained model, then retrieve the top-$$k$$ relevant apps using a similarity function.
 
 {: .text-justify}
 However, calculating similarity between a query embedding and all document embeddings (Google has more than 25 billion documents) is not practical. Response from a search engine should be lower than 100 miliseconds. For that purpose, we generally use [approximate nearest neighbor search](https://en.wikipedia.org/wiki/Nearest_neighbor_search). Approximate search consists of specific index structures, clustering, parallelism etc. Luckily, there are a lot of approximate search libraries implemented by software engineers such as [faiss](https://github.com/facebookresearch/faiss), [annoy](https://github.com/spotify/annoy), [spann](https://github.com/microsoft/SPTAG), and [scann](https://github.com/google-research/google-research/tree/master/scann) etc.
+
+# Cross-Encoders for (Re-)Ranking
+
+{: .text-justify}
+After the retrieval, we rank (or re-rank) the retrieved documents and sort them by some criterion (or by a specific score). Their usage usually achieves superior performance in search systems. Comparing to dual-encoders (SBERT, SimCSE, etc.), Cross-Encoders generally consists of a single encoder. This encoder takes an input, which is the concatenation of query and relevant document. If choose BERT model as cross-encoder, the input becomes "\[CLS\] query \[SEP\] document \[SEP\]".
+
+{: .text-justify}
+The optimization of the Cross-Encoders generally done by passing the representation of \[CLS\] token into a linear function. In simple terms, this computes the relevance score. For example, we can approach this problem as binary classification, whether the given document is relevant with given query:
+
+$$ \ell = - \sum_{j \mid y_{ij}=1} \log(s_{ij}) - \sum_{j \mid y_{ij}=0} \log(1 - s_{ij})$$
+
+{: .text-justify}
+where $$y_{ij}$$ is target, $$s_{ij}$$ is predicted score for the pair $i$ and $$j \in D_i$$ where $$D_i$$ is candidate documents. This approach is sometimes called pointwise cross entropy loss because it is calculated for each query-document pair independently.
+
+
+Another approach is called pairwise softmax cross entropy loss, which is defined as
+
+$$ \ell = -\log \frac{\exp(s_{q_i, p_i^+})}{\exp(s_{q_i, p_i^+}) + \sum_{j=1}^{B} \exp(q_i, p_{i_j}^+)} $$
