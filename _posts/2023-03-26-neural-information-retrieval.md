@@ -64,7 +64,16 @@ where $$B$$ is the batch size. In the denominator, $$\mathbf{v}_j^+$$ can be see
 {: .text-justify}
 In supervised form, there is nothing different. Given a labeled dataset, triplets are $$(x_i, x_i^+, x_i^-)$$. Objective becomes:
 
-$$\ell = - \sum_{i=1}^B \log \frac{\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_i^+))/\tau}{\sum_{j=1, j \neq i}^B \left(\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^+))/\tau +  \exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^-))/\tau \right)} $$
+$$\ell = - \sum_{i=1}^B \log \frac{\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_i^+))/\tau}{\sum_{j=1, j \neq i}^B \left(\exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^+))/\tau +  \exp(\text{sim}(\mathbf{v}_i, \mathbf{v}_j^-))/\tau \right)} $$. Supervised SimCSE outperforms SBERT in all STS benchmarks.
+
+## Knowledge Distillation for Multilinguality
+
+In the paper called [Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation](https://arxiv.org/abs/2004.09813), authors proposes a practical idea (but not novel). For set of translation pairs $$ (s_i, t_i) $$, the aim is to train a new student model $$ M_{\text{student}} $$ to satisfy the conditions  $$ M_{\text{student}}(s_i) \sim  M_{\text{teacher}}(s_i) $$ and $$ M_{\text{student}}(t_i) \sim  M_{\text{teacher}}(s_i) $$. In the work, authors used XLM-R as student model and SBERT model as teacher model.
+
+{: .text-justify}
+The student model $$ M_{\text{student}} $$ is trained by mean-squared loss:
+
+$$ \frac{1}{B} \sum_{i=1}^{B} \left[ ( M_{\text{teacher}}(s_i) -  M_{\text{student}}(s_i))^2 + ( M_{\text{teacher}}(s_i) -  M_{\text{student}}(t_i))^2\right]$$
 
 
 
