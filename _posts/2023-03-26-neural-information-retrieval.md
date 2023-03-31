@@ -39,14 +39,16 @@ $$ l = \text{softmax}(\mathbf{W_t} \cdot \lbrack \mathbf{u}; \; \mathbf{v}; \; \
 {: .text-justify}
 **STS** dataset consists of two sentences and a numeric label that represents the similarity between two santences, in the range of 1 to 5. In this setting, premise and hypothesis is given to the encoder and embeddings $$\mathbf{v}$$ and $$\mathbf{u}$$ are produced. Then, a cosine similarity loss is calculated by MSE
 
-$$ \text{MSE} = \frac{1}{B} \sum_{i=1}^{B}\left(L_i - \frac{\mathbf{v} \cdot \mathbf{u}} {\left\| \mathbf{v}\right\| _{2}\left\| \mathbf{u}\right\| _{2}} \right)^2 $$
+$$ \text{MSE} = \frac{1}{B} \sum_{i=1}^{B}\left(L_i - \frac{\mathbf{v}_i \cdot \mathbf{u}_i} {\left\| \mathbf{v}_i\right\| _{2}\left\| \mathbf{u}_i\right\| _{2}} \right)^2 $$
 
 where $$B$$ is batch size.
 
 {: .text-justify}
-**Triplet Network** can be used for different purposes. Authors used triplet sentence transformer for Wikipedia Sections Distinction dataset. It has an anchor $$a$$, a positive $$p$$, and a negative $$n$$ example. The optimization becomes a margin loss to minimize the distance between $$a$$ and $p$, and maximize the distance between $$a$$ and $$n$$:
+**Triplet Network** can be used for different purposes. Authors used triplet sentence transformer for Wikipedia Sections Distinction dataset. It has an anchor $$a$$, a positive $$p$$, and a negative $$n$$ example. The optimization becomes a margin loss to minimize the distance between $$a$$ and $$p$$, and maximize the distance between $$a$$ and $$n$$:
 
-$$ \max(\left\| \mathbf{v}_a - \mathbf{v}_p\right\| _{2} - \left\| \mathbf{v}_a - \mathbf{v}_n\right\| _{2} + \varepsilon, 0)$$
+$$ \max(\left\| \mathbf{v}_a - \mathbf{v}_p\right\| _{p} - \left\| \mathbf{v}_a - \mathbf{v}_n\right\| _{p} + \varepsilon, 0)$$
 
 {: .text-justify}
-Where $$\varepsilon$$ ensures that $$\mathbf{v}_p$$ is at least $$\varepsilon$$ closer to $$\mathbf{v}_a$$ than $$\mathbf{v}_n$$.
+where $$\left\| \cdot \right\| _{p} $$ denotes the $$p-norm$$. $$\varepsilon$$ ensures that $$\mathbf{v}_p$$ is at least $$\varepsilon$$ closer to $$\mathbf{v}_a$$ than $$\mathbf{v}_n$$
+
+## SimCSE
