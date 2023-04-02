@@ -123,6 +123,17 @@ where $$B$$ is the batch size.
 
 ## Augmented SBERT
 
+{: .text-justify}
+An extremely powerful method in search scenarios is using cross-encoder as an annotator for your scarce data. In the paper called [Augmented SBERT: Data Augmentation Method for Improving Bi-Encoders for Pairwise Sentence Scoring Tasks](https://arxiv.org/abs/2010.08240) \[7\], authors proposed a method called Augmented SBERT. The idea is simple. Suppose that you have a relatively small-sized labeled dataset (gold data) and large-sized unlabeled dataset (silver data). Each sample consists of a pair and a continuous label between 0 (indicates not relevant), and 1 (indicates strong relevancy). In Augmented SBERT, there are 4 steps:
+
+- Train a Cross-Encoder with the gold dataset.
+- Label the silver dataset.
+- Concatenate gold and silver datasets.
+- Train a Dual Encoder.
+
+{: .text-justify}
+In practice, it is not that hard to find a unlabeled sentence pair dataset. For example, your current search system have large amount of query session logs, you can prepare a gold dataset based on a small set of click frequencies, and you can prepare a silver dataset with large set of click frequencies.
+
 ## ColBERT
 
 ## RankT5
