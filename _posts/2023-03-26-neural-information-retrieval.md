@@ -167,5 +167,5 @@ $$ \hat{y}_{ij} = \mathbf{z}_{\text{unused token index}} $$
 
 then, the objective is listwise softmax cross entropy loss
 
-$$ \{ell}(\mathbf{y}_i, \hat{\mathbf{y}}_i) = - \sum_{j=1}^{m} y_{ij} \cdot \log\left(\frac{\exp(\hat{y_{ij}})}{\sum_j^' \exp(\hat{y}_{ij^'})}$$
+$$ \ell(\mathbf{y}_i, \hat{\mathbf{y}}_i) = - \sum_{j=1}^{m} y_{ij} \cdot \log \left( \frac{\exp(\hat{y}_{ij})}{\sum_{j^-} \exp(\hat{y}_{ij^-})} \right)$$ 
 
