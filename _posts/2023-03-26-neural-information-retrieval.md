@@ -137,7 +137,7 @@ In practice, it is not that hard to find a unlabeled sentence pair dataset. For 
 ## ColBERT
 
 {:style="text-align:center;"}
-![test image size](/images/neuralir/colbert.png){:height="25%" width="25%"}
+![test image size](/images/neuralir/colbert.png){:height="26%" width="26%"}
 
 {: .text-justify}
 ColBERT model \[8\] can be used for re-ranking and retrieval. The practical idea behind ColBERT is, you do not have to pass query and documents to re-ranker model at inference time. Due to its late-interaction mechanism, we save the document embeddings and use them at inference time to score. The late-interaction module can be seen as dual-encoder: query and document are passed to the encoder independently, for each token representation, "MaxSim" operation is calculated:
@@ -157,14 +157,17 @@ RankT5 \[9\] is one of the contemporary approaches in ranking. Authors adapted t
 
 $$ x_{ij} = \text{Query:} q_i \text{Document:} d_{ij} $$
 
+{: .text-justify}
 Then calculate the first hidden variable in decoder:
 
 $$ \mathbf{z} = \text{Dense}(\text{Decoder}(\text{Encoder}(x_{ij}))) $$
 
+{: .text-justify}
 Normall, in T5, everthing is in text format. However, authors avoided this structure. They specify a special unused token in the vocabulary of T5 and take its corresponding normalized logits as ranking score.
 
 $$ \hat{y}_{ij} = \mathbf{z}_{\text{unused token index}} $$
 
+{: .text-justify}
 then, the objective is listwise softmax cross entropy loss
 
 $$ \ell(\mathbf{y}_i, \hat{\mathbf{y}}_i) = - \sum_{j=1}^{m} y_{ij} \cdot \log \left( \frac{\exp(\hat{y}_{ij})}{\sum_{j^-} \exp(\hat{y}_{ij^-})} \right)$$ 
