@@ -136,5 +136,36 @@ In practice, it is not that hard to find a unlabeled sentence pair dataset. For 
 
 ## ColBERT
 
+{:style="text-align:center;"}
+![test image size](/images/neuralir/colbert.png){:height="15%" width="15%"}
+
+{: .text-justify}
+ColBERT model \[8\] can be used for re-ranking and retrieval. The practical idea behind ColBERT is, you do not have to pass query and documents to re-ranker model at inference time. Due to its late-interaction mechanism, we save the document embeddings and use them at inference time to score. The late-interaction module can be seen as dual-encoder: query and document are passed to the encoder independently, for each token representation, "MaxSim" operation is calculated:
+
+$$ S_{q, d} = \sum_{i \in \mathbf{v}_q} \max_{j \in \mathbf{v}_d} \mathbf{v}_{q_i} \cdot v_{d_j}^T$$
+
+{: .text-justify}
+Batched operations required padding. In ColBERT, instead of using "[SEP]" as padding token, authors used "[CLS]" token. They claims that this method acts like a query augmentation, learning to expand queries with new terms or to re-weigh existing terms \[8\].
+
+{: .text-justify}
+Since we are storing the document embeddings in ColBERT, it is possible to use the model as end-to-end retrieval model with aprroximate search.
+
 ## RankT5
+
+{: .text-justify}
+RankT5 \[9\] is one of the contemporary approaches in ranking. Authors adapted the T5 \[10\] model to ranking problem. The approach is simple: concatenate query and document:
+
+$$ x_{ij} = \text{Query:} q_i \text{Document:} d_{ij} $$
+
+Then calculate the first hidden variable in decoder:
+
+$$ \mathbf{z} = \text{Dense}(\text{Decoder}(\text{Encoder}(x_{ij}))) $$
+
+Normall, in T5, everthing is in text format. However, authors avoided this structure. They specify a special unused token in the vocabulary of T5 and take its corresponding normalized logits as ranking score.
+
+$$ \hat{y}_{ij} = \mathbf{z}_{\text{unused token index}} $$
+
+then, the objective is listwise softmax cross entropy loss
+
+$$ \{ell}(\mathbf{y}_i, \hat{\mathbf{y}}_i) = - \sum_{j=1}^{m} y_{ij} \cdot \log\left(\frac{\exp(\hat{y_{ij}})}{\sum_j^' \exp(\hat{y}_{ij^'})}$$
 
