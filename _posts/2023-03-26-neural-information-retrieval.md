@@ -137,7 +137,7 @@ In practice, it is not that hard to find a unlabeled sentence pair dataset. For 
 ## ColBERT
 
 {:style="text-align:center;"}
-![test image size](/images/neuralir/colbert.png){:height="20%" width="20%"}
+![test image size](/images/neuralir/colbert.png){:height="60%" width="60%"}
 
 {: .text-justify}
 ColBERT model \[8\] can be used for re-ranking and retrieval. The practical idea behind ColBERT is, you do not have to pass query and documents to re-ranker model at inference time. Due to its late-interaction mechanism, we save the document embeddings and use them at inference time to score. The late-interaction module can be seen as dual-encoder: query and document are passed to the encoder independently, for each token representation, "MaxSim" operation is calculated:
