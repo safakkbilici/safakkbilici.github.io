@@ -153,7 +153,7 @@ Since we are storing the document embeddings in ColBERT, it is possible to use t
 ## RankT5
 
 {: .text-justify}
-RankT5 \[9\] is one of the contemporary approaches in ranking. Authors adapted the T5 \[10\] model to ranking problem. The approach is simple: concatenate query and document:
+RankT5 \[9\] is one of the contemporary approaches in ranking. Authors adapted the T5 \[4\] model to ranking problem. The approach is simple: concatenate query and document:
 
 $$ x_{ij} = \text{Query:} q_i \text{Document:} d_{ij} $$
 
@@ -170,5 +170,52 @@ $$ \hat{y}_{ij} = \mathbf{z}_{\text{unused token index}} $$
 {: .text-justify}
 then, the objective is listwise softmax cross entropy loss
 
-$$ \ell(\mathbf{y}_i, \hat{\mathbf{y}}_i) = - \sum_{j=1}^{m} y_{ij} \cdot \log \left( \frac{\exp(\hat{y}_{ij})}{\sum_{j^-} \exp(\hat{y}_{ij^-})} \right)$$ 
+$$ \ell(\mathbf{y}_i, \hat{\mathbf{y}}_i) = - \sum_{j=1}^{m} y_{ij} \cdot \log \left( \frac{\exp(\hat{y}_{ij})}{\sum_{j^-} \exp(\hat{y}_{ij^-})} \right)$$
+
+# References
+
+{: .text-justify}
+\[1\] Vaswani et al., “Attention Is All You Need” in Advances in Neural Information Processing Systems, 2017.
+
+{: .text-justify}
+\[2\] Devlin et al., “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding”, in Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics, 2019.
+
+{: .text-justify}
+\[3\] Liu et al., “Roberta: A Robustly Optimized BERT Pretraining Approach”, arXiv preprint at arXiv:1907.11692, 2019.
+
+{: .text-justify}
+\[4\] Raffel et al., "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer" in Journal of Machine Learning Research, 2020.
+
+{: .text-justify}
+\[5\] Nils Reimers and Iryna Gurevych, "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks" in Conference on Empirical Methods in Natural Language Processing and International Joint Conference on Natural Language Processing, 2019.
+
+{: .text-justify}
+\[6\] Tianyu Gao, Xingcheng Yao, Danqi Chen, "SimCSE: Simple Contrastive Learning of Sentence Embeddings" in onference on Empirical Methods in Natural Language Processing, 2021.
+
+{: .text-justify}
+\[7\] Thakur et al., "Augmented SBERT: Data Augmentation Method for Improving Bi-Encoders for Pairwise Sentence Scoring Tasks" in Conference of the North American Chapter of the Association for Computational Linguistics, 2021.
+
+{: .text-justify}
+\[8\] Omar Khattab, Matei Zaharia, "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT" in International ACM SIGIR Conference on Research and Development in Information Retrieval, 2020.
+
+{: .text-justify}
+\[9\] Zhuang et al., "RankT5: Fine-Tuning T5 for Text Ranking with Ranking Losses" arXiv preprint at arXiv:2210.10634, 2022.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
