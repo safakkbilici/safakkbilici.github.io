@@ -14,7 +14,7 @@ How to pronounce my name: (sha-FUCK billie-G) or IPA -> (\[[ʃɑ.ˈfɑk](http://
 
 {: .text-justify}
 
-I am currently working at [Huawei](https://www.huawei.com/en/) App Gallery Search as Research Engineer. Nowadays, my challenges can be listed as dense retrieval, dual encoders, and neural re-rankers. Before Huawei, I was an undergraduate researcher [@Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Prof. Dr. Fatih Amasyali. At Nova Lab., I mostly worked on intersection of variational inference and low-resource language models
+I am currently working at [Huawei](https://www.huawei.com/en/) App Gallery Search as Research Engineer. Nowadays, my challenges can be listed as cross-lingual retrieval, neural re-ranking, personalization, etc. Before Huawei, I was an undergraduate researcher [@Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Prof. Dr. Fatih Amasyali. At Nova Lab., I mostly worked on intersection of variational inference and low-resource language models.
 
 {: .text-justify}
 I did my BSc [@YTU](https://www.yildiz.edu.tr/en/) CS. [My BSc thesis](/assets/data/SafakBiliciBScThesis.pdf) was on multimodal transformers and [natural language grounding](https://katefvision.github.io/LanguageGrounding/), with applications on ranking/retrieval, visual question answering etc.
@@ -28,7 +28,13 @@ I have been studying classical music theory for almost 10 years. I played keyboa
 {: .text-justify}
 If you want to discuss the things that I mentioned above or anything else, buy me a coffee. My email address at bottom of the page. Damn I really love coffee. 
 
-### Publications
+### Publications and Preprints
+
+{: .text-justify}
+Can Özbey, Talha Çolakoğlu, **M. Şafak Bilici**, Ekin Can Erkuş, “A Unified Formulation for the Frequency Distribution of Word Frequencies using the Inverse Zipf’s Law”, in Special Interest Group on Information Retrieval (SIGIR), 2023.
+
+{: .text-justify}
+* **M. Şafak Bilici**, Mehmet Fatih Amasyali, “Transformers as Neural Augmentors: Class Conditional Sentence Generation via Variational Bayes”, arXiv preprint arXiv:2205.09391, 2022. ([paper](https://arxiv.org/abs/2205.09391), [repository](https://github.com/safakkbilici/Conditional-Variational-Transformer))
 
 {: .text-justify}
 * E. Sadi Uysal, **M. Şafak Bilici**, B. Selin Zaza, M. Yiğit Özgenç, Onur Boyar, “Exploring The Limits Of Data Augmentation For Retinal Vessel Segmentation”, arXiv preprint arXiv:2105.09365, 2021. ([paper](https://arxiv.org/abs/2105.09365), [repository](https://github.com/safakkbilici/Exploring-The-Limits-Of-Data-Augmentation-For-Retinal-Vessel-Segmentation))
@@ -36,8 +42,6 @@ If you want to discuss the things that I mentioned above or anything else, buy m
 {: .text-justify}
 * **M. Şafak Bilici**, Mehmet Fatih Amasyali, “Variational Sentence Augmentation For Masked Language Modeling”, in Innovations in Intelligent Systems and Applications Conference (ASYU), 2021. ([paper](https://ieeexplore.ieee.org/document/9599089), [repository](https://github.com/safakkbilici/Variational-Sentence-Augmentation-For-Masked-Language-Modeling))
 
-{: .text-justify}
-* **M. Şafak Bilici**, Mehmet Fatih Amasyali, “Transformers as Neural Augmentors: Class Conditional Sentence Generation via Variational Bayes”, arXiv preprint arXiv:2205.09391, 2022. ([paper](https://arxiv.org/abs/2205.09391), [repository](https://github.com/safakkbilici/Conditional-Variational-Transformer))
 
 ### Software
 
