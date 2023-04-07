@@ -166,11 +166,11 @@ $$ \ell_{\text{mono-BERT}} = - \sum_{i} y_i \cdot \log(s_i) - (1 - y_i) \cdot \l
 where $$s_i$$ is the predicted score.
 
 {: .text-justify}
-The last step is using siamese-BERT as pairwise. top-$$k_1$$ of $$R_1$$ is selected and re-ranked. In $$R_1$$ each document $$d_i$$ has a ranking score with $$q_j$$. To be more formal, we have ranking score set, which is defined as $$S = \{r_{i, j} \mid i \in \left|Q\right|, i \in R_1\}. So, we can define a set which represents relevancy of document $$d_i$$ over $$d_j$$: $$P = \{p_{i,j} \mid i \in R_1, j \in R_1, i \neq j \}$$. The input is now concatenation of query and document pairs with "\[SEP\]" token, and the "\[CLS\]" representation is fed to the classification head. The pairwise loss is defined as:
+The last step is using siamese-BERT as pairwise. top-$$k_1$$ of $$R_1$$ is selected and re-ranked. In $$R_1$$ each document $$d_i$$ has a ranking score with $$q_j$$. To be more formal, we have ranking score set, which is defined as $$S = \{r_{i, j} \mid i \in \mid Q \mid, i \in R_1\}. So, we can define a set which represents relevancy of document $$d_i$$ over $$d_j$$: $$P = \{p_{i,j} \mid i \in R_1, j \in R_1, i \neq j \}$$. The input is now concatenation of query and document pairs with "\[SEP\]" token, and the "\[CLS\]" representation is fed to the classification head. The pairwise loss is defined as:
 
 $$ \ell_{\text{siamese-BERT}} = - \sum_{i, j \mid r_i > r_j} \log(p_{i, j}) - \sum_{i, j \mid r_j > r_i} \log(1 - p_{i, j})$$
 
-The final re-ranking score of document $$i$$ is calculated by different aggregation scores, for example sum is defined as $$s_i = \sum_{j} p_{i, j}$$ and binary is defined as $$s_i = \sum_{j} \mathbbm{1}(p_{i, j} > 0.5)$$.
+The final re-ranking score of document $$i$$ is calculated by different aggregation scores, for example sum is defined as $$s_i = \sum_{j} p_{i, j}$$ and binary is defined as $$s_i = \sum_{j} \unicode{x1D7D9}(p_{i, j} > 0.5)$$.
 
 
 ## RankT5
