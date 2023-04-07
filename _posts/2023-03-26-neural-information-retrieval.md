@@ -150,6 +150,29 @@ Batched operations required padding. In ColBERT, instead of using "[SEP]" as pad
 {: .text-justify}
 Since we are storing the document embeddings in ColBERT, it is possible to use the model as end-to-end retrieval model with aprroximate search.
 
+## Multi-Stage Document Ranking with BERT
+
+{: .text-justify}
+A multi-stage ranking system is hierarchical ranking system. More formally, in a document space $$D$$, you retrieve $$R_0$$ documents with a retriever (can be BM25 or a dual encoder), then you rank the retrieved documents and select the top-$$k_1$$ of them: $$R_1$$. The last step is re-ranking $$R_1$$ documents and select the top-$$k_2$$ documents. After applying retrieve, rank and re-rank steps, $$R_3$$ documents are shown in the search.
+
+{: .text-justify}
+In the paper called [Multi-Stage Document Ranking with BERT](https://arxiv.org/abs/1910.14424), authors proposes a mono-encoder (pointwise) for ranking and a siamese-encoder for re-ranking (pairwise). The retrieval algorithm is selected as BM25 algorithm, which means the overall search system is hybrid.
+
+{: .text-justify}
+After retrieving $$R_0$$ documents, mono-BERT is optimized as a binary relevance classifier. Query and documents are concatenated with "\[SEP\]" token, and the "\[CLS\]" representation is fed to the classification head:
+
+$$ \ell_{\text{mono-BERT}} = - \sum_{i} y_i \cdot \log(s_i) - (1 - y_i) \cdot \log(1 - s_i)$$
+
+where $$s_i$$ is the predicted score.
+
+{: .text-justify}
+The last step is using siamese-BERT as pairwise. top-$$k_1$$ of $$R_1$$ is selected and re-ranked. In $$R_1$$ each document $$d_i$$ has a ranking score with $$q_j$$. To be more formal, we have ranking score set, which is defined as $$S = \{r_{i, j} \mid i \in \left|Q\right|, i \in R_1\}. So, we can define a set which represents relevancy of document $$d_i$$ over $$d_j$$: $$P = \{p_{i,j} \mid i \in R_1, j \in R_1, i \neq j \}$$. The input is now concatenation of query and document pairs with "\[SEP\]" token, and the "\[CLS\]" representation is fed to the classification head. The pairwise loss is defined as:
+
+$$ \ell_{\text{siamese-BERT}} = - \sum_{i, j \mid r_i > r_j} \log(p_{i, j}) - \sum_{i, j \mid r_j > r_i} \log(1 - p_{i, j})$$
+
+The final re-ranking score of document $$i$$ is calculated by different aggregation scores, for example sum is defined as $$s_i = \sum_{j} p_{i, j}$$ and binary is defined as $$s_i = \sum_{j} \mathbbm{1}(p_{i, j} > 0.5)$$.
+
+
 ## RankT5
 
 {: .text-justify}
