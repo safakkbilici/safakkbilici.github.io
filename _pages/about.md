@@ -14,7 +14,7 @@ How to pronounce my name: (sha-FUCK billie-G) or IPA -> (\[[ʃɑ.ˈfɑk](http://
 
 {: .text-justify}
 
-I am currently working at [Huawei](https://www.huawei.com/en/) App Gallery Search as Research Engineer. Nowadays, my challenges can be listed as cross-lingual retrieval, neural re-ranking, personalization, etc. Before Huawei, I was an undergraduate researcher [@Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Prof. Dr. Fatih Amasyali. At Nova Lab., I mostly worked on intersection of variational inference and low-resource language models.
+I am curently working at [Insider](https://useinsider.com/) as Machine Learning Engineer. At Insider, I am wrangling complex search applications using state-of-the-art machine learning and software engineering techniques. Prior to Insider, I was Research Engineer at [Huawei](https://www.huawei.com/en/)'s App Gallery Search team. I developed App Gallery's search features such as semantic search, spelling correction, query expansion, etc. for more than 50 millions of users in Russia, Arab countries, Latin America and Asia countries excl. China. Before Huawei, I was a ML researcher [@YTU Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Prof. Dr. Fatih Amasyali. At Nova Lab., I mostly worked on intersection of variational inference and low-resource language models. -- Nowadays, my challenges can be listed as cross-lingual retrieval, few-shot ranking, and personalization.
 
 {: .text-justify}
 I did my BSc [@YTU](https://www.yildiz.edu.tr/en/) CS. [My BSc thesis](/assets/data/SafakBiliciBScThesis.pdf) was on multimodal transformers and [natural language grounding](https://katefvision.github.io/LanguageGrounding/), with applications on ranking/retrieval, visual question answering etc.
@@ -23,7 +23,7 @@ I did my BSc [@YTU](https://www.yildiz.edu.tr/en/) CS. [My BSc thesis](/assets/d
 My research interests are information retrieval, machine translation, and bayesian machine learning. Besides that; I realy love population biology, language acquisition and biolinguistics. To express my field with non-technical terms: I teach computers to understand human language, and I (try to) approximate difficult-to-compute probability densities.
 
 {: .text-justify}
-I have been studying classical music theory for almost 10 years. I played keyboard and guitar in various bands with different styles (yes, Death Metal too). [I've been composing classical music](https://www.youtube.com/channel/UCFVua8j3Ssal2hSY4VXLj8g) for almost 4 years. My main instrument is piano but my playing style is more like Jazz with atonality, free modality and eastern sounds.
+I have been studying classical music theory for almost 10 years. I played keyboard and guitar in various bands with different styles (yes, Death Metal too). [I've been composing classical music](https://www.youtube.com/channel/UCFVua8j3Ssal2hSY4VXLj8g) for almost 4 years. My main instrument is piano.
 
 {: .text-justify}
 If you want to discuss the things that I mentioned above or anything else, buy me a coffee. My email address at bottom of the page. Damn I really love coffee. 
@@ -31,7 +31,7 @@ If you want to discuss the things that I mentioned above or anything else, buy m
 ### Publications and Preprints
 
 {: .text-justify}
-Can Özbey, Talha Çolakoğlu, **M. Şafak Bilici**, Ekin Can Erkuş, “A Unified Formulation for the Frequency Distribution of Word Frequencies using the Inverse Zipf’s Law”, in Special Interest Group on Information Retrieval (SIGIR), 2023.
+* Can Özbey, Talha Çolakoğlu, **M. Şafak Bilici**, Ekin Can Erkuş, “A Unified Formulation for the Frequency Distribution of Word Frequencies using the Inverse Zipf’s Law”, in Special Interest Group on Information Retrieval (SIGIR), 2023.
 
 {: .text-justify}
 * **M. Şafak Bilici**, Mehmet Fatih Amasyali, “Transformers as Neural Augmentors: Class Conditional Sentence Generation via Variational Bayes”, arXiv preprint arXiv:2205.09391, 2022. ([paper](https://arxiv.org/abs/2205.09391), [repository](https://github.com/safakkbilici/Conditional-Variational-Transformer))
