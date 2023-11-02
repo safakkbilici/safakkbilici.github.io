@@ -8,25 +8,25 @@ header:
 
 ------------------------
 
-### Şafak Bilici 
+### Şafak Bilici
 
 How to pronounce my name: (sha-FUCK billie-G) or IPA -> (\[[ʃɑ.ˈfɑk](http://ipa-reader.xyz/?text=%CA%83%C9%91.%CB%88f%C9%91k&voice=Filiz)\] [[biɭiʤi](http://ipa-reader.xyz/?text=bi%C9%ADi%CA%A4i&voice=Filiz)\])
 
 {: .text-justify}
 
-I am curently working at [Insider](https://useinsider.com/) as Machine Learning Engineer, wrangling complex search applications using state-of-the-art machine learning and software engineering techniques. Prior to joining Insider, I was Research Engineer at [Huawei](https://www.huawei.com/en/)'s AppGallery Search team. I developed AppGallery's search features such as semantic search, spelling correction, query expansion, etc. for more than 50 millions of users in Russia, Arab countries, Latin America and Asia countries excl. China. Before Huawei, I was a ML researcher at [YTU Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Prof. Dr. Fatih Amasyali. At Nova Lab., I mostly worked on intersection of variational inference and low-resource language models. -- Nowadays, my challenges can be listed as cross-lingual retrieval, few-shot ranking, and personalization.
+I am currently working at [Insider](https://useinsider.com/) as a Machine Learning Engineer, wrangling complex search applications using state-of-the-art machine learning and software engineering techniques. Before joining Insider, I was a Research Engineer at [Huawei](https://www.huawei.com/en/)’s AppGallery Search team. I developed AppGallery’s search features such as semantic search, spelling correction, query expansion, etc. for more than 50 million users in Russia, Arab countries, Latin America, and Asia countries excl. China. Before Huawei, I was an ML researcher at [YTU Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Prof. Dr. Fatih Amasyali. At Nova Lab., I mostly worked on the intersection of variational inference and low-resource language models. – Nowadays, my challenges can be listed as cross-lingual retrieval, few-shot ranking, and personalization.
 
 {: .text-justify}
 I did my BSc [@YTU](https://www.yildiz.edu.tr/en/) CS. [My BSc thesis](/assets/data/SafakBiliciBScThesis.pdf) was on multimodal transformers and [natural language grounding](https://katefvision.github.io/LanguageGrounding/), with applications on ranking/retrieval, visual question answering etc.
 
 {: .text-justify}
-My research interests are information retrieval, machine translation, and bayesian machine learning. Besides that; I realy love population biology, language acquisition and biolinguistics. To express my field with non-technical terms: I teach computers to understand human language, and I (try to) approximate difficult-to-compute probability densities.
+My research interests are information retrieval, machine translation, and Bayesian machine learning. Besides that; I love population biology, language acquisition, and biolinguistics. To express my field with non-technical terms: I teach computers to understand human language, and I (try to) approximate difficult-to-compute probability densities.
 
 {: .text-justify}
 I have been studying classical music theory for almost 10 years. I played keyboard and guitar in various bands with different styles (yes, Death Metal too). [I've been composing classical music](https://www.youtube.com/channel/UCFVua8j3Ssal2hSY4VXLj8g) for almost 4 years. My main instrument is piano.
 
 {: .text-justify}
-If you want to discuss the things that I mentioned above or anything else, buy me a coffee. My email address at bottom of the page. Damn I really love coffee. 
+If you want to discuss the things that I mentioned above or anything else, buy me a coffee. My email address is at the bottom of the page. Damn, I really love coffee.
 
 ### Publications and Preprints
 
@@ -46,7 +46,7 @@ If you want to discuss the things that I mentioned above or anything else, buy m
 ### Software
 
 {: .text-justify}
-* [bayesmedaug](https://github.com/safakkbilici/bayesmedaug): bayesmedaug optimizes your data augmentation hyperparameters for medical image segmentation tasks by using Bayesian Optimization and Gaussian Process. 
+* [bayesmedaug](https://github.com/safakkbilici/bayesmedaug): bayesmedaug optimizes your data augmentation hyperparameters for medical image segmentation tasks by using Bayesian Optimization and Gaussian Process.
 * [x-tagger](https://github.com/safakkbilici/x-tagger): x-tagger is a Natural Language Processing toolkit for sequence labeling in its simplest form.
 
 ### Teaching
@@ -63,7 +63,7 @@ If you want to discuss the things that I mentioned above or anything else, buy m
 
 {: .text-justify}
 * Applied AI Study Group Guide [@inzva](https://inzva.com/), July 2021, Feeb 2022
-	* Guidance for 1 weeks of 5-weeks-long advanced practical AI study group. 
+	* Guidance for 1 weeks of 5-weeks-long advanced practical AI study group.
 	* Covered topics: Anomaly Detection, Time Series, Recommender Systems, Bayesian Optimization.
 
 {: .text-justify}
@@ -93,4 +93,3 @@ If you want to discuss the things that I mentioned above or anything else, buy m
 
 
 I may be slow to respond
-
