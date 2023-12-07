@@ -14,16 +14,16 @@ How to pronounce my name: (sha-FUCK billie-G) or IPA -> (\[[ʃɑ.ˈfɑk](http://
 
 {: .text-justify}
 
-I am currently working at [Insider](https://useinsider.com/) as a Machine Learning Engineer, wrangling complex search applications using state-of-the-art machine learning and software engineering techniques. Before joining Insider, I was a Research Engineer at [Huawei](https://www.huawei.com/en/)’s AppGallery Search team. I developed AppGallery’s search features such as semantic search, spelling correction, query expansion, etc. for more than 50 million users in Russia, Arab countries, Latin America, and Asia countries excl. China. Before Huawei, I was an ML researcher at [YTU Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Prof. Dr. Fatih Amasyali. At Nova Lab., I mostly worked on the intersection of variational inference and low-resource language models. – Nowadays, my challenges can be listed as cross-lingual retrieval, few-shot ranking, and personalization.
+I am currently working at [Insider](https://useinsider.com/)'s Griffin Team as a Machine Learning Engineer, wrangling complex search applications using state-of-the-art machine learning and software engineering techniques. As Griffin, we aim to personalize search results for online shoppers with AI-led recommendations. Before joining Insider, I was a Research Engineer at [Huawei](https://www.huawei.com/en/)’s AppGallery Search team. I developed AppGallery’s search features such as semantic search, spelling correction, query expansion, etc. for more than 50 million users in Russia, Arab countries, Latin America, and Asia countries excl. China. Before Huawei, I was an ML researcher at [YTU Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Prof. Dr. Fatih Amasyali. At Nova Lab., I mostly worked on the intersection of variational inference and low-resource language models. – Nowadays, my challenges can be listed as cross-lingual retrieval, few-shot ranking, and personalization.
 
 {: .text-justify}
-I did my BSc [@YTU](https://www.yildiz.edu.tr/en/) CS. [My BSc thesis](/assets/data/SafakBiliciBScThesis.pdf) was on multimodal transformers and [natural language grounding](https://katefvision.github.io/LanguageGrounding/), with applications on ranking/retrieval, visual question answering etc.
+I did my BSc [@YTU](https://www.yildiz.edu.tr/en/) CS. [My BSc thesis](/assets/data/SafakBiliciBScThesis.pdf) was on multimodal transformers and [natural language grounding](https://katefvision.github.io/LanguageGrounding/), with applications on low-resource cross-modal retrieval, visual question answering etc.
 
 {: .text-justify}
 My research interests are information retrieval, machine translation, and Bayesian machine learning. Besides that; I love population biology, language acquisition, and biolinguistics. To express my field with non-technical terms: I teach computers to understand human language, and I (try to) approximate difficult-to-compute probability densities.
 
 {: .text-justify}
-I have been studying classical music theory for almost 10 years. I played keyboard and guitar in various bands with different styles (yes, Death Metal too). [I've been composing classical music](https://www.youtube.com/channel/UCFVua8j3Ssal2hSY4VXLj8g) for almost 4 years. My main instrument is piano.
+There are things that I like much more than science: music. I have been studying classical music theory for almost 10 years. If something comes to my mind, [then I compose](https://www.youtube.com/channel/UCFVua8j3Ssal2hSY4VXLj8g). My main instrument is piano, however, I was once a guitar player and vocalist in a death metal band.
 
 {: .text-justify}
 If you want to discuss the things that I mentioned above or anything else, buy me a coffee. My email address is at the bottom of the page. Damn, I really love coffee.
