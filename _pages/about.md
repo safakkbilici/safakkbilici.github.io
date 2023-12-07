@@ -31,7 +31,7 @@ If you want to discuss the things that I mentioned above or anything else, buy m
 ### Publications and Preprints
 
 {: .text-justify}
-* Can Özbey, Talha Çolakoğlu, **M. Şafak Bilici**, Ekin Can Erkuş, “A Unified Formulation for the Frequency Distribution of Word Frequencies using the Inverse Zipf’s Law”, in Special Interest Group on Information Retrieval (SIGIR), 2023.
+* Can Özbey, Talha Çolakoğlu, **M. Şafak Bilici**, Ekin Can Erkuş, “A Unified Formulation for the Frequency Distribution of Word Frequencies using the Inverse Zipf’s Law”, in Special Interest Group on Information Retrieval (SIGIR), 2023. ([paper](https://dl.acm.org/doi/abs/10.1145/3539618.3591942))
 
 {: .text-justify}
 * **M. Şafak Bilici**, Mehmet Fatih Amasyali, “Transformers as Neural Augmentors: Class Conditional Sentence Generation via Variational Bayes”, arXiv preprint arXiv:2205.09391, 2022. ([paper](https://arxiv.org/abs/2205.09391), [repository](https://github.com/safakkbilici/Conditional-Variational-Transformer))
@@ -49,39 +49,6 @@ If you want to discuss the things that I mentioned above or anything else, buy m
 * [bayesmedaug](https://github.com/safakkbilici/bayesmedaug): bayesmedaug optimizes your data augmentation hyperparameters for medical image segmentation tasks by using Bayesian Optimization and Gaussian Process.
 * [x-tagger](https://github.com/safakkbilici/x-tagger): x-tagger is a Natural Language Processing toolkit for sequence labeling in its simplest form.
 
-### Teaching
-
-{: .text-justify}
-* Machine Learning Bootcamp Guide [@Google](https://inzva.com/2022/ai/bootcamps/google-developers-machine-learning-bootcamp), Sep 2022
-  	* Guidance for 2 weeks of 12-weeks-long advanced Machine Learning study group.
-	* Covered topics: Word Embeddings, Machine Translation, Multilingual Embeddings, Cross-Lingual Embeddings.
-
-{: .text-justify}
-* Deep Learning Study Group Guide [@inzva](https://inzva.com/), Apr 2021, Dec 2021, Mar 2022
-	* Guidance for 2 weeks of 12-weeks-long advanced Deep Learning study group.
-	* Covered topics: Recurrent Neural Networks, Word Embeddings, Attention Mechanism, Neural Machine Translation.
-
-{: .text-justify}
-* Applied AI Study Group Guide [@inzva](https://inzva.com/), July 2021, Feeb 2022
-	* Guidance for 1 weeks of 5-weeks-long advanced practical AI study group.
-	* Covered topics: Anomaly Detection, Time Series, Recommender Systems, Bayesian Optimization.
-
-{: .text-justify}
-* Introduction To Deep Learning: [@YTU SkyLab](https://www.linkedin.com/company/ytuskylab/mycompany/), 2020-2021 First Term
-	* [Lecture Notes](https://github.com/safakkbilici/Deep-Learning-Lecture-2020-2021-First-Term)
-
-{: .text-justify}
-* Python For Data Science: [@YTU Data Science Community](https://www.linkedin.com/company/yt%C3%BCveribilimi/), 2019-2020 Second Term
-{: .text-justify}
-* Algorithms And C Programming: [@YTU SkyLab](https://www.linkedin.com/company/ytuskylab/mycompany/), 2019-2020 First Term
-
-### Some Compositions
-
-* The Dance of the Seven in E Minor [[Youtube Link](The Dance of the Seven)]
-* Suicide In Crowd in D Minor [[Youtube Link](https://www.youtube.com/watch?v=aoNPAz8oa2k&t=145s)]
-* Fugue No. 1 in D Minor [[Youtube Link](https://www.youtube.com/watch?v=aoNPAz8oa2k&t=145s)]
-* 20 in D Minor [[Youtube Link](https://www.youtube.com/watch?v=uZDPfiX33oA)]
-* Six Emotions in C Minor [[Youtube Link](https://www.youtube.com/watch?v=pXgIZ9gUBjA)]
 
 ### Contact
 
