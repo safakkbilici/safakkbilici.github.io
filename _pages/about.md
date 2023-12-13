@@ -62,8 +62,8 @@ If you want to discuss the things that I mentioned above or anything else, buy m
 I may be slow to respond
 
 
-### Top 25
-I like to create "top 25 favorites".
+### Top X
+I like to create "top X favorites".
 
 _Here is my top 20 classical pieces (order free)._
 
@@ -88,16 +88,16 @@ _Here is my top 20 classical pieces (order free)._
 * liszt - piano sonata in B minor
 * scriabin - etude op 42, no 5
 
-_Here is my top 20 movies (order free)._
+_Here is my top 25 movies (order free)._
 
 ![test image size](m.png){:height="90%" width="90%"}
 
 
-_Here is my top 20 metal/rock pieces (order free)._
+_Here is my top 25 metal/rock pieces (order free)._
 
 ![test image size](r.png){:height="90%" width="90%"}
 
 
-_Here is my top 20 jazz pieces (order free)._
+_Here is my top 25 jazz pieces (order free)._
 
 ![test image size](j.png){:height="90%" width="90%"}
