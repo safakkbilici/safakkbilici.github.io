@@ -60,3 +60,44 @@ If you want to discuss the things that I mentioned above or anything else, buy m
 
 
 I may be slow to respond
+
+
+### Top 20
+I like to create "top 20 favorites".
+
+_Here is my top 20 classical pieces (order free)._
+
+* strauss - eine alpensinfonie
+* tchaikovsky - symphony no 6
+* stravinsky - le sacre du printemps
+* shostakovich - symphony no 11
+* mendelssohn - symphony no 4
+* mahler - symphony no 5
+* ravel - daphnis et chloe
+* bartok - cantata profana
+* sibelius - symphony no 7
+* schoenberg - verklarte nacht
+* bach - mass in b
+* dvorak - symphony no 7
+* rimsky korsakov - scheherazade
+* poulanc - organ concerto
+* beethoven - piano sonata no 29
+* rachmaninoff - symphony no 1
+* wagner - tristan und isolde
+* prokofiev - piano concerto no 2
+* liszt - piano sonata in B minor
+* scriabin - etude op 42, no 5
+
+_Here is my top 20 movies (order free)._
+
+![test image size](m.png){:height="90%" width="90%"}
+
+
+_Here is my top 20 metal/rock pieces (order free)._
+
+![test image size](r.png){:height="90%" width="90%"}
+
+
+_Here is my top 20 jazz pieces (order free)._
+
+![test image size](j.png){:height="90%" width="90%"}
