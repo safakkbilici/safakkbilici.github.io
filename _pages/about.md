@@ -62,8 +62,8 @@ If you want to discuss the things that I mentioned above or anything else, buy m
 I may be slow to respond
 
 
-### Top 20
-I like to create "top 20 favorites".
+### Top 25
+I like to create "top 25 favorites".
 
 _Here is my top 20 classical pieces (order free)._
 
