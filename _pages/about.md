@@ -7,9 +7,6 @@ header:
 ---
 
 ------------------------
-
-### Şafak Bilici
-
 How to pronounce my name: (sha-FUCK billie-G) or IPA -> (\[[ʃɑ.ˈfɑk](http://ipa-reader.xyz/?text=%CA%83%C9%91.%CB%88f%C9%91k&voice=Filiz)\] [[biɭiʤi](http://ipa-reader.xyz/?text=bi%C9%ADi%CA%A4i&voice=Filiz)\])
 
 {: .text-justify}
@@ -22,10 +19,7 @@ I am currently working at [Insider](https://useinsider.com/)'s Griffin Team as a
 I did my BSc [@YTU](https://www.yildiz.edu.tr/en/) CS. [My BSc thesis](/assets/data/SafakBiliciBScThesis.pdf) was on multimodal transformers and [natural language grounding](https://katefvision.github.io/LanguageGrounding/), with applications on low-resource cross-modal retrieval, visual question answering, and few-shot image classification.
 
 {: .text-justify}
-My research interests are information retrieval, machine translation, and Bayesian machine learning in general. Besides that; I love population biology, language acquisition, and biolinguistics. To express my field with non-technical terms: I teach computers to understand human language, and I (try to) approximate difficult-to-compute probability densities.
-
-{: .text-justify}
-There are things that I like much more than science: music. I have been studying classical music theory for almost 10 years. If something comes to my mind, [then I compose](https://www.youtube.com/channel/UCFVua8j3Ssal2hSY4VXLj8g). My main instrument is piano, however, I was once a guitar player and vocalist in a death metal band.
+I play piano, compose music, and do MTB. 
 
 {: .text-justify}
 If you want to discuss the things that I mentioned above or anything else, buy me a coffee. My email address is at the bottom of the page. Damn, I really love coffee.
@@ -62,44 +56,3 @@ If you want to discuss the things that I mentioned above or anything else, buy m
 
 
 I may be slow to respond
-
-
-### Top X
-I like to create "top X favorites".
-
-_Here is my top 20 classical pieces (order free)._
-
-* strauss - eine alpensinfonie
-* tchaikovsky - symphony no 6
-* stravinsky - le sacre du printemps
-* shostakovich - symphony no 11
-* mendelssohn - symphony no 4
-* mahler - symphony no 5
-* ravel - daphnis et chloe
-* bartok - cantata profana
-* sibelius - symphony no 7
-* schoenberg - verklarte nacht
-* bach - mass in b
-* dvorak - symphony no 7
-* rimsky korsakov - scheherazade
-* poulanc - organ concerto
-* beethoven - piano sonata no 29
-* rachmaninoff - symphony no 1
-* wagner - tristan und isolde
-* prokofiev - piano concerto no 2
-* liszt - piano sonata in B minor
-* scriabin - etude op 42, no 5
-
-_Here is my top 25 movies (order free)._
-
-![test image size](m.png){:height="90%" width="90%"}
-
-
-_Here is my top 25 metal/rock pieces (order free)._
-
-![test image size](r.png){:height="90%" width="90%"}
-
-
-_Here is my top 25 jazz pieces (order free)._
-
-![test image size](j.png){:height="90%" width="90%"}
