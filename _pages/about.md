@@ -11,18 +11,18 @@ How to pronounce my name: (sha-FUCK billie-G) or IPA -> (\[[ʃɑ.ˈfɑk](http://
 
 {: .text-justify}
 
-I am an [AWS certified](https://www.credly.com/badges/ee2c69d1-4870-4b4b-a142-a6707adfe93d/public_url) Machine Learning Engineer with robust experience in large-scale distributed backend systems, cloud services, search engines, and data science in general. My expertise lies in solving real-world, high-scale problems related to low-latency information retrieval, personalization, and product discovery using modern machine learning and software engineering technologies. Currently, I am focused on tackling challenges such as cross-lingual information retrieval, multi-modal search, and leveraging large language models for search.
+I am an [AWS certified](https://www.credly.com/badges/ee2c69d1-4870-4b4b-a142-a6707adfe93d/public_url) Software Engineer with robust experience in large-scale distributed systems, cloud services, search engines, and data science in general. My expertise lies in solving real-world, high-scale problems related to low-latency micro-services, especially information retrieval, personalization, and discovery.
 
-I am currently working at [Insider](https://useinsider.com/)'s Griffin Team as a Machine Learning Engineer, wrangling complex search applications using state-of-the-art machine learning and software engineering techniques. As Griffin, we aim to personalize search results for online shoppers with AI-led recommendations. Before joining Insider, I was a Research Engineer at [Huawei](https://www.huawei.com/en/)’s AppGallery Search team. I developed AppGallery’s search features such as semantic search, spelling correction, query expansion, etc. for more than 50 million users in Russia, Arab countries, Latin America, and Asia countries excl. China. Before Huawei, I was an ML researcher at [YTU Nova Research Lab.](https://www.linkedin.com/company/novaresearchlab/mycompany/) under the supervision of Prof. Dr. Fatih Amasyali. At Nova Lab., I mostly worked on the intersection of variational inference and low-resource language models.
+
+I’m currently working at Insider as a Machine Learning/Software Engineer, where I build and scale a SaaS product search engine. I’ve led, developed, and contributed to key search features including AutoCompletion, Semantic/Hybrid Search, Category Merchandising, as well as countless improvements to their micro-services architecture, infrastructure, and large-scale data processing workflows.
+
+Before joining Insider, I was a Research Engineer at Huawei's AppGallery Search Team, responsible for retrieval, ranking, and query understanding problems. Some of the search features I've led and developed (such as semantic search, spelling correction, etc.) are used by 100s of millions of users with planet-scale low-latency.
 
 {: .text-justify}
 I did my BSc [@YTU](https://www.yildiz.edu.tr/en/) CS. [My BSc thesis](/assets/data/SafakBiliciBScThesis.pdf) was on multimodal transformers and [natural language grounding](https://katefvision.github.io/LanguageGrounding/), with applications on low-resource cross-modal retrieval, visual question answering, and few-shot image classification.
 
 {: .text-justify}
-I play piano, compose music, and do MTB. 
-
-{: .text-justify}
-If you want to discuss the things that I mentioned above or anything else, buy me a coffee. My email address is at the bottom of the page. Damn, I really love coffee.
+I like long-distance running, playing piano, and cycling. 
 
 ### Publications and Preprints
 
