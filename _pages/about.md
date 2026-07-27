@@ -13,7 +13,7 @@ How to pronounce my name: (sha-FUCK billie-G) or IPA -> (\[[ʃɑ.ˈfɑk](https:/
 I'm a software engineer based in Berlin who plays jazz (hard bop, to be precise). I used to compose orchestral stuff and fugues, but then realized life is too short to spend 14 hours listening to the Ring Cycle. Keyboards have always been my thing, though I enjoy playing bass even more.
 
 {: .text-justify}
-Music isn't my only obsession with structure, though. Isn't it amazing that language evolved only in humans? And then there's recursion—structures inside structures, potentially without end. That fascination is what got me into theoretical syntax and biolinguistics.
+Music isn't my only obsession with structure, though. Isn't it amazing that language evolved only in humans? And then there's recursion, structures inside structures, potentially without end. That fascination is what got me into theoretical syntax and biolinguistics.
 
 {: .text-justify}
 Between music and figuring out why humans decided to put sentences inside other sentences, I somehow still find time to watch an unreasonable number of movies. John Waters, Cronenberg and Herzog tend to be the usual suspects.
